@@ -10,7 +10,7 @@ function TopProperties() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     responsive: [
@@ -40,12 +40,13 @@ function TopProperties() {
     ],
   };
   return (
-    <div className="h-[593px] pt-8">
+    <div className="h-[593px] pt-24">
       <div>
-        <h2 className="text-center ">
-          Explore Top Properties <span>Around You!</span>
+        <h2 className="text-center text-2xl">
+          Explore Top Properties{" "}
+          <span className="text-customaccent ">Around You!</span>
         </h2>
-        <p className="text-center ">
+        <p className="text-center text-base ">
           There’s a home for everyone. Find the home that suits you best
         </p>
         <div className="slider-container">

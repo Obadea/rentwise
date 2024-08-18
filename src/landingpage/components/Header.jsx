@@ -9,10 +9,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white text-black text-white">
+    <header className="bg-white text-black ">
       <nav className="container mx-auto p-2 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold">
-          rent<span className="text-customgreen">w</span>ise
+        <a href="#" className="text-2xl font-bold text-customblue">
+          rent<span className="text-yellow-400">w</span>ise
         </a>
         <div className=" hidden flex items-center justify-between md:block">
           {/* location will be automated */}

@@ -32,7 +32,9 @@ function LocationSearch() {
             <option value="saab">Type 1</option>
           </select>
         </div>
-        <button className=" h-10 bg-blue-500 w-44 rounded-lg">Search</button>
+        <button className=" h-10 bg-blue-500 w-44 rounded-lg mt-6">
+          Search
+        </button>
       </form>
     </div>
   );
