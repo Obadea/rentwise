@@ -5,15 +5,15 @@ import funke from "../../assets/funke.png";
 
 function StatemenComponent() {
   return (
-    <div className="flex justify-center pt-12">
+    <div className="flex justify-center pt-12 bg-customaccent100">
       <div>
         <h2 className="text-center text-3xl">Meet Our Statemen</h2>
         <p className="text-center text-base">
           Our expert agents are here to guide you in finding the perfect
           property with personalized, professional service.
         </p>
-        <div className="flex justify-around px-20 gap-1 py-6">
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4">
+        <div className="flex justify-around px-24 gap-2 py-6 ">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-8 bg-white">
             <div>
               <img src={bayo} alt="" />
             </div>
@@ -25,12 +25,12 @@ function StatemenComponent() {
                 Adebayo brings a wealth of knowledge and a passion for helping
                 clients achieve their goals. Specializing in....
               </p>
-              <button className="px-4 py-2 my-4 border text-blue-500">
+              <button className="px-4 py-2 my-2 border text-blue-500">
                 View profile
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white">
             <div>
               <img src={chioma} alt="" />
             </div>
@@ -42,12 +42,12 @@ function StatemenComponent() {
                 detail, Chioma has a proven track record of matching clients
                 with their ideal homes. She believes in building....
               </p>
-              <button className="px-4 py-2 my-4 border text-blue-500">
+              <button className="px-4 py-2 my-2 border text-blue-500">
                 View profile
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white">
             <div>
               <img src={funke} alt="" />
             </div>
@@ -59,7 +59,7 @@ function StatemenComponent() {
                 find the perfect location to thrive. With a strategic approach
                 and a deep understanding of the commercial market,
               </p>
-              <button className="px-4 py-2 my-4 border text-blue-500">
+              <button className="px-4 py-2 my-2 border text-blue-500">
                 View profile
               </button>
             </div>

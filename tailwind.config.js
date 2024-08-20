@@ -8,6 +8,7 @@ module.exports = {
         customgray: "#F5F7F6",
         customwhite: "#F4FFFA",
         customaccent: "#F93B68",
+        customaccent100: "#FFFAFB",
       },
     },
   },
