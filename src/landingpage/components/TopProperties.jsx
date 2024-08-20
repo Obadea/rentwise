@@ -54,13 +54,13 @@ function TopProperties() {
         <p className="text-center text-base ">
           There’s a home for everyone. Find the home that suits you best
         </p>
-        <div className="slider-container px-10 ">
+        <div className="slider-container px-10 mt-8">
           <Slider {...settings}>
-            <div className=" bg-red-500 px-2">
+            <div className=" px-2">
               <div className="h-56 w-full">
                 <img src={palor} alt="kitchen " className="  h-full w-full" />
               </div>
-              <div className="p-4">
+              <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between">
                   <h4 className="text-base">Selewa Albeni Estate</h4>
                   <div className="flex justify-between gap-1">
@@ -69,46 +69,238 @@ function TopProperties() {
                     <FavoriteBorderIcon fontSize="small" />
                   </div>
                 </div>
-                <div className="flex">
+                <div className="flex justify-start ">
                   <LocationOnOutlinedIcon />
                   <p>14, Asiriabo street, Isolo, Lagos.</p>
                 </div>
                 <div className="flex justify-start gap-2">
                   <p>
-                    <LocationOnOutlinedIcon />
+                    <LocationOnOutlinedIcon fontSize="small" />
                     2bed
                   </p>
                   <p>
-                    <LocationOnOutlinedIcon />
+                    <LocationOnOutlinedIcon fontSize="small" />
                     2bed
                   </p>
                   <p>
-                    <LocationOnOutlinedIcon />
+                    <LocationOnOutlinedIcon fontSize="small" />
                     2bed
                   </p>
                 </div>
                 <div className="flex justify-between">
                   <h3>
-                    $2,500,000/ <span>annum</span>
+                    $2,500,000/ <span className="text-sm">annum</span>
                   </h3>
-                  <h4>Download WiseReport</h4>
+                  <button className="text-blue-500 text-sm">
+                    Download WiseReport
+                  </button>
                 </div>
               </div>
             </div>
-            <div className="w-full h-48 bg-red-700">
-              <h3>2</h3>
+            <div className=" px-2">
+              <div className="h-56 w-full">
+                <img src={palor} alt="kitchen " className="  h-full w-full" />
+              </div>
+              <div className="p-4 flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <h4 className="text-base">Selewa Albeni Estate</h4>
+                  <div className="flex justify-between gap-1">
+                    <OpenInFullIcon fontSize="small" />
+                    <AdjustIcon fontSize="small" />
+                    <FavoriteBorderIcon fontSize="small" />
+                  </div>
+                </div>
+                <div className="flex justify-start ">
+                  <LocationOnOutlinedIcon />
+                  <p>14, Asiriabo street, Isolo, Lagos.</p>
+                </div>
+                <div className="flex justify-start gap-2">
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <h3>
+                    $2,500,000/ <span className="text-sm">annum</span>
+                  </h3>
+                  <button className="text-blue-500 text-sm">
+                    Download WiseReport
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="w-full h-48 bg-red-600">
-              <h3>3</h3>
+            <div className=" px-2">
+              <div className="h-56 w-full">
+                <img src={palor} alt="kitchen " className="  h-full w-full" />
+              </div>
+              <div className="p-4 flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <h4 className="text-base">Selewa Albeni Estate</h4>
+                  <div className="flex justify-between gap-1">
+                    <OpenInFullIcon fontSize="small" />
+                    <AdjustIcon fontSize="small" />
+                    <FavoriteBorderIcon fontSize="small" />
+                  </div>
+                </div>
+                <div className="flex justify-start ">
+                  <LocationOnOutlinedIcon />
+                  <p>14, Asiriabo street, Isolo, Lagos.</p>
+                </div>
+                <div className="flex justify-start gap-2">
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <h3>
+                    $2,500,000/ <span className="text-sm">annum</span>
+                  </h3>
+                  <button className="text-blue-500 text-sm">
+                    Download WiseReport
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="w-full h-48 bg-red-800">
-              <h3>4</h3>
+            <div className=" px-2">
+              <div className="h-56 w-full">
+                <img src={palor} alt="kitchen " className="  h-full w-full" />
+              </div>
+              <div className="p-4 flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <h4 className="text-base">Selewa Albeni Estate</h4>
+                  <div className="flex justify-between gap-1">
+                    <OpenInFullIcon fontSize="small" />
+                    <AdjustIcon fontSize="small" />
+                    <FavoriteBorderIcon fontSize="small" />
+                  </div>
+                </div>
+                <div className="flex justify-start ">
+                  <LocationOnOutlinedIcon />
+                  <p>14, Asiriabo street, Isolo, Lagos.</p>
+                </div>
+                <div className="flex justify-start gap-2">
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <h3>
+                    $2,500,000/ <span className="text-sm">annum</span>
+                  </h3>
+                  <button className="text-blue-500 text-sm">
+                    Download WiseReport
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="w-full h-48 bg-red-500">
-              <h3>5</h3>
+            <div className=" px-2">
+              <div className="h-56 w-full">
+                <img src={palor} alt="kitchen " className="  h-full w-full" />
+              </div>
+              <div className="p-4 flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <h4 className="text-base">Selewa Albeni Estate</h4>
+                  <div className="flex justify-between gap-1">
+                    <OpenInFullIcon fontSize="small" />
+                    <AdjustIcon fontSize="small" />
+                    <FavoriteBorderIcon fontSize="small" />
+                  </div>
+                </div>
+                <div className="flex justify-start ">
+                  <LocationOnOutlinedIcon />
+                  <p>14, Asiriabo street, Isolo, Lagos.</p>
+                </div>
+                <div className="flex justify-start gap-2">
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <h3>
+                    $2,500,000/ <span className="text-sm">annum</span>
+                  </h3>
+                  <button className="text-blue-500 text-sm">
+                    Download WiseReport
+                  </button>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3>6</h3>
+            <div className=" px-2">
+              <div className="h-56 w-full">
+                <img src={palor} alt="kitchen " className="  h-full w-full" />
+              </div>
+              <div className="p-4 flex flex-col gap-4">
+                <div className="flex justify-between">
+                  <h4 className="text-base">Selewa Albeni Estate</h4>
+                  <div className="flex justify-between gap-1">
+                    <OpenInFullIcon fontSize="small" />
+                    <AdjustIcon fontSize="small" />
+                    <FavoriteBorderIcon fontSize="small" />
+                  </div>
+                </div>
+                <div className="flex justify-start ">
+                  <LocationOnOutlinedIcon />
+                  <p>14, Asiriabo street, Isolo, Lagos.</p>
+                </div>
+                <div className="flex justify-start gap-2">
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon fontSize="small" />
+                    2bed
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <h3>
+                    $2,500,000/ <span className="text-sm">annum</span>
+                  </h3>
+                  <button className="text-blue-500 text-sm">
+                    Download WiseReport
+                  </button>
+                </div>
+              </div>
             </div>
           </Slider>
         </div>

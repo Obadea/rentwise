@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import TopProperties from "./components/TopProperties";
-import MultipleItems from "./components/MultipleItems";
+import StatemenComponent from "./components/StatemenComponent";
 
 function LandingPage() {
   return (
@@ -10,7 +10,7 @@ function LandingPage() {
       <Header />
       <Banner />
       <TopProperties />
-      <MultipleItems />
+      <StatemenComponent />
     </>
   );
 }
