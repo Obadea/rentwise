@@ -3,6 +3,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TopProperties.css";
+import kitchen from "../../assets/kitchen-view.png";
+import OpenInFullIcon from "@mui/icons-material/OpenInFull";
+import AdjustIcon from "@mui/icons-material/Adjust";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 
 function TopProperties() {
   const settings = {
@@ -51,27 +56,39 @@ function TopProperties() {
         </p>
         <div className="slider-container">
           <Slider {...settings}>
-            <div className="w-full h-[300px] bg-red-500">
-              <div className="h-36">
-                <img
-                  src="../../assets/palors.png"
-                  alt="kitchen "
-                  className="w-full h-full"
-                />
+            <div className="w-full px-2  bg-red-500">
+              <div className="">
+                <img src={kitchen} alt="kitchen " className="w-full h-full" />
               </div>
 
               <div className="flex justify-between">
                 <h4>Selewa Albeni Estate</h4>
-                <div>icons</div>
+                <div>
+                  <OpenInFullIcon />
+                  <AdjustIcon />
+                  <FavoriteBorderIcon />
+                </div>
               </div>
               <div>
-                {/* Location icon here */}
+                <LocationOnOutlinedIcon />
                 <p>14, Asiriabo street, Isolo, Lagos.</p>
               </div>
-              <div>
-                <p>2bed</p>
-                <p>2bed</p>
-                <p>2bed</p>
+              <div className="flex justify-around">
+                <p>
+                  <LocationOnOutlinedIcon /> 2bed
+                </p>
+                <p>
+                  <LocationOnOutlinedIcon /> 2bed
+                </p>
+                <p>
+                  <LocationOnOutlinedIcon /> 2bed
+                </p>
+              </div>
+              <div className="flex justify-between">
+                <h3>
+                  $2,500,000/ <span>annum</span>
+                </h3>
+                <h4>Download WiseReport</h4>
               </div>
             </div>
             <div className="w-full h-48 bg-red-700">

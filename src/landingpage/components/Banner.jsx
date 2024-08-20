@@ -30,10 +30,10 @@ function Banner() {
         <button className="w-30 px-4 mr-1  bg-white rounded-t-lg">
           All Status
         </button>
-        <button className="px-4 py-3 mr-1 w-30 bg-white rounded-t-lg">
+        <button className="px-4 py-3 mr-1 w-30 bg-[#FAD766] rounded-t-lg">
           For Rent
         </button>
-        <button className="px-4 mr-1 w-30 bg-white rounded-t-lg">
+        <button className="px-4 mr-1 w-30 bg-[#FAD766] rounded-t-lg">
           For Sale
         </button>
       </div>
