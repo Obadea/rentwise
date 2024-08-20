@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TopProperties.css";
-import kitchen from "../../assets/kitchen-view.png";
+import palor from "../../assets/palor.png";
 import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -54,41 +54,45 @@ function TopProperties() {
         <p className="text-center text-base ">
           There’s a home for everyone. Find the home that suits you best
         </p>
-        <div className="slider-container">
+        <div className="slider-container px-10 ">
           <Slider {...settings}>
-            <div className="w-full px-2  bg-red-500">
-              <div className="">
-                <img src={kitchen} alt="kitchen " className="w-full h-full" />
+            <div className=" bg-red-500 px-2">
+              <div className="h-56 w-full">
+                <img src={palor} alt="kitchen " className="  h-full w-full" />
               </div>
-
-              <div className="flex justify-between">
-                <h4>Selewa Albeni Estate</h4>
-                <div>
-                  <OpenInFullIcon />
-                  <AdjustIcon />
-                  <FavoriteBorderIcon />
+              <div className="p-4">
+                <div className="flex justify-between">
+                  <h4 className="text-base">Selewa Albeni Estate</h4>
+                  <div className="flex justify-between gap-1">
+                    <OpenInFullIcon fontSize="small" />
+                    <AdjustIcon fontSize="small" />
+                    <FavoriteBorderIcon fontSize="small" />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <LocationOnOutlinedIcon />
-                <p>14, Asiriabo street, Isolo, Lagos.</p>
-              </div>
-              <div className="flex justify-around">
-                <p>
-                  <LocationOnOutlinedIcon /> 2bed
-                </p>
-                <p>
-                  <LocationOnOutlinedIcon /> 2bed
-                </p>
-                <p>
-                  <LocationOnOutlinedIcon /> 2bed
-                </p>
-              </div>
-              <div className="flex justify-between">
-                <h3>
-                  $2,500,000/ <span>annum</span>
-                </h3>
-                <h4>Download WiseReport</h4>
+                <div className="flex">
+                  <LocationOnOutlinedIcon />
+                  <p>14, Asiriabo street, Isolo, Lagos.</p>
+                </div>
+                <div className="flex justify-start gap-2">
+                  <p>
+                    <LocationOnOutlinedIcon />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon />
+                    2bed
+                  </p>
+                  <p>
+                    <LocationOnOutlinedIcon />
+                    2bed
+                  </p>
+                </div>
+                <div className="flex justify-between">
+                  <h3>
+                    $2,500,000/ <span>annum</span>
+                  </h3>
+                  <h4>Download WiseReport</h4>
+                </div>
               </div>
             </div>
             <div className="w-full h-48 bg-red-700">
