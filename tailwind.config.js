@@ -9,6 +9,7 @@ module.exports = {
         customwhite: "#F4FFFA",
         customaccent: "#F93B68",
         customaccent100: "#FFFAFB",
+        customdark: "#333333",
       },
     },
   },

@@ -10,7 +10,7 @@ function Partnership() {
           <span className="text-yellow-500">.</span>
         </h2>
         <h2>
-          rent <span className="text-yellow-500">w</span>ise{" "}
+          rent <span className="text-yellow-500">w</span>ise
           <span className="text-yellow-500">.</span>
         </h2>
         <h2>
