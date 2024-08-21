@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 function Footer() {
   return (
     <div className="px-20 py-16 bg-customblack">
-      <div className="flex justify text-white gap-6  ">
+      <div className="flex justify text-white gap-12  ">
         <div className="flex-1 ">
           <h2 className="text-3xl font-bold mb-8">About Us</h2>
           <p className="text-base font-medium">
@@ -50,7 +50,7 @@ function Footer() {
         </div>
       </div>
       <div className="flex justify-between mt-16">
-        <h2 className="text-white">
+        <h2 className="text-white text-4xl">
           rent<span className="text-yellow-500">w</span>ise
           <span className="text-yellow-500">.</span>
         </h2>
