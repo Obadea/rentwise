@@ -7,11 +7,11 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 function Footer() {
   return (
-    <div>
-      <div>
-        <div>
-          <h2>About Us</h2>
-          <p>
+    <div className="px-20 py-16 bg-customblack">
+      <div className="flex justify text-white gap-6  ">
+        <div className="flex-1 ">
+          <h2 className="text-3xl font-bold mb-8">About Us</h2>
+          <p className="text-base font-medium">
             Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent nunc.
             Sed aliquam mi at urna. Condimentum mi lorem aliquam mattis.
             Consequat est phasellus velit nisl justo dui. Faucibus dictum
@@ -22,23 +22,45 @@ function Footer() {
             purus sed varius euismod.{" "}
           </p>
         </div>
-        <div>
-          <a href="">Blog</a>
-          <a href="">Faqs</a>
-          <a href="">Careers</a>
-          <a href="">Our Team</a>
-          <a href="">Partners</a>
-          <a href="">Events</a>
-          <a href="">Blog</a>
-          <a href="">Blog</a>
+        <div className="flex-1 flex justify-between items-start  flex-wrap ">
+          <a href="#" className="flex-1 p-4  flex-shrink-0 ">
+            Blog
+          </a>
+          <a href="" className="flex-1 p-4  flex-shrink-0">
+            Faqs
+          </a>
+          <a href="" className="flex-1 p-4  flex-shrink-0 ">
+            Careers
+          </a>
+          <a href="" className="flex-2 p-4 whitespace-nowrap flex-shrink-0 ">
+            Our Team
+          </a>
+          <a href="" className="flex-1 p-4  flex-shrink-0 ">
+            Partners
+          </a>
+          <a href="" className="flex-1 p-4 flex-shrink-0 ">
+            Events
+          </a>
+          <a href="" className="flex-1 p-4 flex-shrink-0 ">
+            Blog
+          </a>
+          <a href="" className="flex-1 p-4 flex-shrink-0">
+            Blog
+          </a>
         </div>
       </div>
-      <div>
-        <h2>
-          rent <span className="text-yellow-500">w</span>ise
+      <div className="flex justify-between mt-16">
+        <h2 className="text-white">
+          rent<span className="text-yellow-500">w</span>ise
           <span className="text-yellow-500">.</span>
         </h2>
-        <div>{/* social icons */}</div>
+        <div className="flex gap-4 text-white">
+          <YouTubeIcon />
+          <FacebookIcon />
+          <XIcon />
+          <InstagramIcon />
+          <LinkedInIcon />
+        </div>
       </div>
     </div>
   );

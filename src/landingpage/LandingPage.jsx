@@ -5,6 +5,7 @@ import TopProperties from "./components/TopProperties";
 import StatemenComponent from "./components/StatemenComponent";
 import Enquiry from "./components/Enquiry";
 import Solution from "./components/Solution";
+import Footer from "./components/Footer";
 
 function LandingPage() {
   return (
@@ -15,6 +16,7 @@ function LandingPage() {
       <StatemenComponent />
       <Enquiry />
       <Solution />
+      <Footer />
     </>
   );
 }
