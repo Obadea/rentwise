@@ -12,15 +12,15 @@ function Banner() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex justify-center items-center flex-col h-[80%]">
-        <h2 className="text-white text-center text-[4vw]">
+      <div className="flex justify-center items-center flex-col gap-3 h-[400px]">
+        <h2 className="text-textcolor text-center text-6xl font-bold">
           Welcome to rentwise
         </h2>
         <div>
-          <div className="">
-            <p className="text-white mx-56 text-center text-[1.7vw] px-12">
+          <div className="flex justify-center">
+            <p className="text-textcolor w-[856px] text-center font-medium text-3xl ">
               An AI powered real estate platform; Connecting trusted landlords
-              with reliaable tenants
+              with reliaable tenants.
             </p>
           </div>
         </div>

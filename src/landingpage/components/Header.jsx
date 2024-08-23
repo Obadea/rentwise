@@ -1,5 +1,6 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,19 +13,17 @@ const Header = () => {
     <header className="bg-white text-black ">
       <nav className="container mx-auto p-2 flex items-center justify-between">
         <a href="#" className="text-4xl font-bold">
-          rent<span className="text-yellow-500">w</span>ise
-          <span className="text-yellow-500">.</span>
+          rent<span className="text-customyellow">w</span>ise
+          <span className="text-customyellow">.</span>
         </a>
         <div className=" hidden flex items-center justify-between md:block">
           {/* location will be automated */}
-          <a href="#" className="py-2 px-4 text-lg">
-            Location
-          </a>
+
           <a href="#" className="py-2 px-4 text-lg">
             Home
           </a>
           <a href="#" className="py-2 px-4 text-lg">
-            Manage rentals
+            Residents <KeyboardArrowDownIcon />
           </a>
           <a href="#" className="py-2 px-4 text-lg">
             Blogs
@@ -66,12 +65,15 @@ const Header = () => {
           }`}
         >
           <a href="#" className="block py-2 px-4 text-lg">
-            Sign in
+            Landlords <KeyboardArrowDownIcon />
           </a>
           <a href="#" className="block py-2 px-4 text-lg">
             Sign up
           </a>
-          <a href="#" className="block py-2 px-4 text-lg font-medium">
+          <a
+            href="#"
+            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg"
+          >
             Add property
           </a>
         </div>
