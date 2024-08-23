@@ -20,7 +20,7 @@ function Solution() {
             support you and your clients.
           </p>
           <img src={country} alt="" />
-          <button className="mt-6 px-4 py-3 rounded-lg bg-blue-500 border border-white">
+          <button className="mt-6 px-4 py-3 rounded-lg bg-customDownloadBlue border border-white">
             Learn more
           </button>
         </div>
