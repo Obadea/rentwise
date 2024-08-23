@@ -11,6 +11,7 @@ module.exports = {
         customaccent100: "#FFFAFB",
         customdark: "#333333",
         customblack: "#0D0D0D",
+        addpropertybg: "#F2F2F2",
       },
     },
   },

@@ -4,10 +4,10 @@ function WiseReport() {
   return (
     <div>
       <div>
-        <h2>
+        <h2 className="text-center ">
           Heard about the <span>Wise Report??</span>
         </h2>
-        <div>
+        <div className="flex flex-col bg-blue-600  md:bg-yellow-400 lg:flex lg:flex-row lg:mt-10 lg:bg-red-500 lg:mx-12 ">
           <div>
             <h3>
               Just before you make that payment,{" "}

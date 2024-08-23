@@ -11,8 +11,9 @@ const Header = () => {
   return (
     <header className="bg-white text-black ">
       <nav className="container mx-auto p-2 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold text-customblue">
-          rent<span className="text-yellow-400">w</span>ise
+        <a href="#" className="text-4xl font-bold">
+          rent<span className="text-yellow-500">w</span>ise
+          <span className="text-yellow-500">.</span>
         </a>
         <div className=" hidden flex items-center justify-between md:block">
           {/* location will be automated */}
@@ -70,7 +71,7 @@ const Header = () => {
           <a href="#" className="block py-2 px-4 text-lg">
             Sign up
           </a>
-          <a href="#" className="block py-2 px-4 text-lg">
+          <a href="#" className="block py-2 px-4 text-lg font-medium">
             Add property
           </a>
         </div>

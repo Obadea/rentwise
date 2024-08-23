@@ -6,6 +6,8 @@ import StatemenComponent from "./components/StatemenComponent";
 import Enquiry from "./components/Enquiry";
 import Solution from "./components/Solution";
 import Footer from "./components/Footer";
+import Partnership from "./components/Partnership";
+import WiseReport from "./components/WiseReport";
 
 function LandingPage() {
   return (
@@ -13,8 +15,10 @@ function LandingPage() {
       <Header />
       <Banner />
       <TopProperties />
+      {/* <WiseReport /> */}
       <StatemenComponent />
       <Enquiry />
+      <Partnership />
       <Solution />
       <Footer />
     </>
