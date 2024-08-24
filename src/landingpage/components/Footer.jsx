@@ -49,13 +49,13 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className="flex justify-between mt-16">
+      <div className="flex justify-between items-center mt-16">
         <h2 className="text-white text-4xl">
           rent<span className="text-yellow-500">w</span>ise
           <span className="text-yellow-500">.</span>
         </h2>
         <div>
-          <h4>Follow us</h4>
+          <h4 className="font-sm text-white mb-2">Follow us</h4>
           <div className="flex gap-4 text-white">
             <YouTubeIcon />
             <FacebookIcon />
