@@ -7,8 +7,8 @@ function StatemenComponent() {
   return (
     <div className="flex justify-center pt-12 bg-customaccent100">
       <div>
-        <h2 className="text-center text-3xl">Meet Our Statemen</h2>
-        <p className="text-center text-base">
+        <h2 className="text-center text-3xl font-bold ">Meet Our Statemen</h2>
+        <p className="text-center text-base font-normal">
           Our expert agents are here to guide you in finding the perfect
           property with personalized, professional service.
         </p>
@@ -18,14 +18,18 @@ function StatemenComponent() {
               <img src={bayo} alt="" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Adebayo Adekunle</h3>
-              <p className="text-sm">Senior Property Consultant</p>
-              <p className="text-base">
+              <h3 className="text-lg font-medium text-customNameBlack">
+                Adebayo Adekunle
+              </h3>
+              <p className="text-sm font-normal text-customStreetcolor">
+                Senior Property Consultant
+              </p>
+              <p className="text-sm font-normal text-customBlackShade">
                 With over 6 years of experience in the real estate industry,
                 Adebayo brings a wealth of knowledge and a passion for helping
                 clients achieve their goals. Specializing in....
               </p>
-              <button className="px-4 py-2 my-2 border text-blue-500">
+              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue">
                 View profile
               </button>
             </div>
@@ -35,14 +39,18 @@ function StatemenComponent() {
               <img src={chioma} alt="" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Chioma Okafor</h3>
-              <p className="text-sm">Residential Specialist</p>
-              <p className="text-base">
+              <h3 className="text-lg font-medium text-customNameBlack">
+                Chioma Okafor
+              </h3>
+              <p className="text-sm font-normal text-customStreetcolor">
+                Residential Specialist
+              </p>
+              <p className="text-sm font-normal text-customBlackShade">
                 Known for her approachable demeanor and meticulous attention to
                 detail, Chioma has a proven track record of matching clients
                 with their ideal homes. She believes in building....
               </p>
-              <button className="px-4 py-2 my-2 border text-blue-500">
+              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue">
                 View profile
               </button>
             </div>
@@ -52,14 +60,18 @@ function StatemenComponent() {
               <img src={funke} alt="" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Funke Adeyemi</h3>
-              <p className="text-sm">Commercial Property Advisor</p>
-              <p className="text-base">
+              <h3 className="text-lg font-medium text-customNameBlack">
+                Funke Adeyemi
+              </h3>
+              <p className="text-sm font-normal text-customStreetcolor">
+                Commercial Property Advisor
+              </p>
+              <p className="text-sm font-normal text-customBlackShade ">
                 Funke specializes in commercial real estate, helping businesses
                 find the perfect location to thrive. With a strategic approach
                 and a deep understanding of the commercial market,
               </p>
-              <button className="px-4 py-2 my-2 border text-blue-500">
+              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue">
                 View profile
               </button>
             </div>

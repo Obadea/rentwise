@@ -162,7 +162,7 @@ function TopProperties() {
                   <h3 className="text-customStreetcolor">
                     $2,500,000/ <span className="text-sm">annum</span>
                   </h3>
-                  <button className="text-blue-500 text-sm">
+                  <button className="text-customDownloadBlue text-sm">
                     Download WiseReport
                   </button>
                 </div>
@@ -212,7 +212,7 @@ function TopProperties() {
                   <h3 className="text-customStreetcolor">
                     $2,500,000/ <span className="text-sm">annum</span>
                   </h3>
-                  <button className="text-blue-500 text-sm">
+                  <button className="text-customDownloadBlue text-sm">
                     Download WiseReport
                   </button>
                 </div>
@@ -262,7 +262,7 @@ function TopProperties() {
                   <h3 className="text-customStreetcolor">
                     $2,500,000/ <span className="text-sm">annum</span>
                   </h3>
-                  <button className="text-blue-500 text-sm">
+                  <button className="text-customDownloadBlue text-sm">
                     Download WiseReport
                   </button>
                 </div>
@@ -303,7 +303,7 @@ function TopProperties() {
                   <h3>
                     $2,500,000/ <span className="text-sm">annum</span>
                   </h3>
-                  <button className="text-blue-500 text-sm">
+                  <button className="text-customDownloadBlue text-sm">
                     Download WiseReport
                   </button>
                 </div>
