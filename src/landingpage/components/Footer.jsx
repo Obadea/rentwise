@@ -54,12 +54,15 @@ function Footer() {
           rent<span className="text-yellow-500">w</span>ise
           <span className="text-yellow-500">.</span>
         </h2>
-        <div className="flex gap-4 text-white">
-          <YouTubeIcon />
-          <FacebookIcon />
-          <XIcon />
-          <InstagramIcon />
-          <LinkedInIcon />
+        <div>
+          <h4>Follow us</h4>
+          <div className="flex gap-4 text-white">
+            <YouTubeIcon />
+            <FacebookIcon />
+            <XIcon />
+            <InstagramIcon />
+            <LinkedInIcon />
+          </div>
         </div>
       </div>
     </div>

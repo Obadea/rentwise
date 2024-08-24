@@ -23,6 +23,7 @@ module.exports = {
         customNameBlack: "#4D4D4D",
         customBlackShade: "#A6A6A6",
         customProfileblue: "#6688FA",
+        customgGrayShade1: "#5B5B5B",
       },
     },
   },
