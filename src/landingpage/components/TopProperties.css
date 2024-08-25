@@ -1,9 +1,17 @@
 .slick-next {
+  box-sizing: border-box;
   position: absolute;
   right: 10px; /* adjust the value to your liking */
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  width: 200px;
+  height: 200px;
+  font-size: 200px;
+  font-weight: 800;
+  font-size: 5rem;
+  background-color: blue;
+  color: red;
 }
 .slick-prev {
   position: absolute;
@@ -11,4 +19,10 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+}
+.slick-slide {
+  width: 100%;
+}
+.featured {
+  width: 100%;
 }

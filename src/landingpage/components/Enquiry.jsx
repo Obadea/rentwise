@@ -14,8 +14,18 @@ function Enquiry() {
             euismod. Risus etiam purus donec neque.{" "}
           </p>
         </div>
-        <div className="">
-          <form action="#" className="p-4">
+        <div className="flex justify-center bg-red-300">
+          <form
+            action="#"
+            className="px-8 py-6 w-[514px] h-[813px] flex flex-col"
+          >
+            <h3 className="3xl font-bold text-customNameBlack">
+              rentwise Enquiry Form
+            </h3>
+            <p className="font-normal text-customNameBlack">
+              Fill out this enquiry form and expect a response from our team
+              soon
+            </p>
             <label htmlFor="inquiry">Inquiry</label>
             <select className="" name="Inquiry Type" id="inquiry">
               <option value="" className="hidden">
