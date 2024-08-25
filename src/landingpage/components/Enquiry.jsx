@@ -14,21 +14,22 @@ function Enquiry() {
             euismod. Risus etiam purus donec neque.{" "}
           </p>
         </div>
-        <div className="flex justify-center bg-red-300">
-          <form
-            action="#"
-            className="px-8 py-6 w-[514px] h-[813px] flex flex-col"
-          >
-            <h3 className="3xl font-bold text-customNameBlack">
-              rentwise Enquiry Form
-            </h3>
-            <p className="font-normal text-customNameBlack">
-              Fill out this enquiry form and expect a response from our team
-              soon
-            </p>
-            <label htmlFor="inquiry">Inquiry</label>
+        <div className="flex flex-col bg-red-300 px-8 py-6 w-[514px] h-[813px]">
+          <h3 className="3xl font-bold text-customNameBlack">
+            rentwise Enquiry Form
+          </h3>
+          <p className="font-normal text-customNameBlack">
+            Fill out this enquiry form and expect a response from our team soon
+          </p>
+          <form action="#" className="  flex flex-col">
+            <label htmlFor="inquiry" className="text-customNameBlack">
+              Inquiry
+            </label>
             <select className="" name="Inquiry Type" id="inquiry">
-              <option value="" className="hidden">
+              <option
+                value=""
+                className="hidden text-customBlackShade font-normal"
+              >
                 Property Type
               </option>
               <option value="purchase">Purchase</option>
@@ -38,9 +39,14 @@ function Enquiry() {
               <option value="evaluation">Evaluation</option>
             </select>
 
-            <label htmlFor="inquiry">Inquiry</label>
+            <label htmlFor="inquiry" className="text-customNameBlack">
+              Information
+            </label>
             <select className="block" name="Inquiry Type" id="inquiry">
-              <option value="" className="hidden">
+              <option
+                value=""
+                className="hidden  text-customBlackShade font-normal"
+              >
                 I am a
               </option>
               <option value="propertyOwner">Property Owner</option>
@@ -60,7 +66,12 @@ function Enquiry() {
               <option value="" className="hidden">
                 Select
               </option>
-              <option value="">All Cities in Lagos</option>
+              <option
+                value=""
+                className="hidden text-customBlackShade font-normal"
+              >
+                All Cities in Lagos
+              </option>
               <option value="lagosIsland">Lagos Island</option>
               <option value="victoriaIsland">Victoria Island</option>
               <option value="lekki">Lekki</option>
@@ -70,7 +81,10 @@ function Enquiry() {
 
             <label htmlFor="property">Property</label>
             <select className="" name="property Type" id="property">
-              <option value="" className="hidden">
+              <option
+                value=""
+                className="hidden text-customBlackShade font-normal"
+              >
                 Property Type
               </option>
               <optgroup
