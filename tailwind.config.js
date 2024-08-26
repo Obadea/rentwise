@@ -25,6 +25,7 @@ module.exports = {
         customProfileblue: "#6688FA",
         customgGrayShade1: "#5B5B5B",
         cardBorder: "#FDF1C9",
+        DownloadHover: "#2E3C6B",
       },
     },
   },

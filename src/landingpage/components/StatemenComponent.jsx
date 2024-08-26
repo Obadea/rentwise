@@ -13,7 +13,7 @@ function StatemenComponent() {
           property with personalized, professional service.
         </p>
         <div className="flex justify-around px-24 gap-2 py-6 ">
-          <div className="flex flex-col justify-center items-center text-center px-2 py-8 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)]">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-8 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)] border border-cardBorder">
             <div>
               <img src={bayo} alt="" />
             </div>
@@ -29,12 +29,12 @@ function StatemenComponent() {
                 Adebayo brings a wealth of knowledge and a passion for helping
                 clients achieve their goals. Specializing in....
               </p>
-              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue">
+              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue hover:text-DownloadHover">
                 View profile
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)]">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)] border border-cardBorder">
             <div>
               <img src={chioma} alt="" />
             </div>
@@ -50,12 +50,12 @@ function StatemenComponent() {
                 detail, Chioma has a proven track record of matching clients
                 with their ideal homes. She believes in building....
               </p>
-              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue">
+              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue hover:text-DownloadHover">
                 View profile
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)]">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)] border border-cardBorder">
             <div>
               <img src={funke} alt="" />
             </div>
@@ -71,7 +71,7 @@ function StatemenComponent() {
                 find the perfect location to thrive. With a strategic approach
                 and a deep understanding of the commercial market,
               </p>
-              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue">
+              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue hover:text-DownloadHover">
                 View profile
               </button>
             </div>

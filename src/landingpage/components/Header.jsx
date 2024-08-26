@@ -84,7 +84,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg hover:bg-"
+            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg hover:bg-customyellow"
           >
             Add property
           </a>
