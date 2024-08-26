@@ -18,6 +18,26 @@ function Enquiry() {
                 mattis. Consequat est phasellus velit nisl justo dui. ius
               </p>
             </div>
+            <div>
+              <div>
+                <h2 className="font-bold text-5xl"> 01.</h2>
+                <h3 className="text-3x">Suitable for Landlords and Tenants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
+                  nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam
+                  mattis. Consequat est phasellus velit nisl justo dui. ius
+                </p>
+              </div>
+              <div>
+                <h2 className="font-bold text-5xl"> 03.</h2>
+                <h3 className="text-3x">Suitable for Landlords and Tenants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
+                  nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam
+                  mattis. Consequat est phasellus velit nisl justo dui. ius
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex flex-col bg-red-300 px-8 py-6 w-[514px] h-[813px] ">

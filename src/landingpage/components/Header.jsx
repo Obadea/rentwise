@@ -1,6 +1,7 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import DropdownMenu from "./DropdownMenu";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +20,13 @@ const Header = () => {
         <div className=" hidden flex items-center justify-between md:block">
           {/* location will be automated */}
 
-          <a href="#" className="py-2 px-4 text-lg hover:text-customyellow">
+          <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
             Home
           </a>
-          <a href="#" className="py-2 px-4 text-lg hover:text-customyellow">
-            Residents <KeyboardArrowDownIcon />
-          </a>
-          <a href="#" className="py-2 px-4 text-lg hover:text-customyellow">
+
+          <DropdownMenu />
+
+          <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
             Blogs
           </a>
         </div>

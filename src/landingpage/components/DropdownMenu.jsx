@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 function DropdownMenu() {
   const [hover, setHover] = useState(false);
@@ -9,16 +10,17 @@ function DropdownMenu() {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div>
+      <div className="flex justify-center items-center">
         <button
           type="button"
-          className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="inline-flex justify-center w-full  py-2 px-3 text-lg hover:text-customyellow  font-medium text-gray-700 focus:outline-none   focus:ring-offset-gray-100 focus:ring-indigo-500"
           id="options-menu"
           aria-haspopup="true"
           aria-expanded="true"
         >
-          Dropdown Menu
+          Residents
         </button>
+        <KeyboardArrowDownIcon />
       </div>
 
       {hover && (
