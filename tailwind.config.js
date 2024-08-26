@@ -24,6 +24,7 @@ module.exports = {
         customBlackShade: "#A6A6A6",
         customProfileblue: "#6688FA",
         customgGrayShade1: "#5B5B5B",
+        cardBorder: "#FDF1C9",
       },
     },
   },

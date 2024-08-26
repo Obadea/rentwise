@@ -13,7 +13,7 @@ function StatemenComponent() {
           property with personalized, professional service.
         </p>
         <div className="flex justify-around px-24 gap-2 py-6 ">
-          <div className="flex flex-col justify-center items-center text-center px-2 py-8 bg-white">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-8 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)]">
             <div>
               <img src={bayo} alt="" />
             </div>
@@ -34,7 +34,7 @@ function StatemenComponent() {
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)]">
             <div>
               <img src={chioma} alt="" />
             </div>
@@ -55,7 +55,7 @@ function StatemenComponent() {
               </button>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white">
+          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)]">
             <div>
               <img src={funke} alt="" />
             </div>

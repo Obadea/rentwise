@@ -24,7 +24,12 @@ const Header = () => {
             Home
           </a>
 
-          <DropdownMenu />
+          <DropdownMenu
+            name="Residents"
+            option1="Rent budget calculator"
+            option2="Favourites"
+            option3="Save for rent"
+          />
 
           <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
             Blogs
@@ -65,12 +70,12 @@ const Header = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <a
-            href="#"
-            className="block py-2 px-4 text-lg hover:text-customyellow"
-          >
-            Landlords <KeyboardArrowDownIcon />
-          </a>
+          <DropdownMenu
+            name="Landlords"
+            option1="Apartment for sell"
+            option2="Apartment for rent"
+            option3="Sustainability records"
+          />
           <a
             href="#"
             className="block py-2 px-4 text-lg hover:text-customyellow"

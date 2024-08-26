@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-function DropdownMenu() {
+function DropdownMenu(props) {
   const [hover, setHover] = useState(false);
 
   return (
@@ -18,7 +18,7 @@ function DropdownMenu() {
           aria-haspopup="true"
           aria-expanded="true"
         >
-          Residents
+          {props.name}
         </button>
         <KeyboardArrowDownIcon />
       </div>
@@ -36,21 +36,21 @@ function DropdownMenu() {
               className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
-              Rent budget calculator
+              {props.option1}
             </a>
             <a
               href="#"
               className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
-              Favourites
+              {props.option2}
             </a>
             <a
               href="#"
               className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
-              Save for rent
+              {props.option3}
             </a>
           </div>
         </div>
