@@ -19,7 +19,7 @@ function LandingPage() {
       <TopProperties />
       {/* <WiseReport /> */}
       <StatemenComponent />
-      {/* <Enquiry /> */}
+      <Enquiry />
       <Partnership />
       <Solution />
       <Footer />

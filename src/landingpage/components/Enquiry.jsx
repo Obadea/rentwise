@@ -4,26 +4,35 @@ function Enquiry() {
   return (
     <div>
       <div>
-        <div className="flex flex-col lg:flex ">
-          <h2>Want to add your property to our list?</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent nunc.
-            Sed aliquam mi at urna. Condimentum mi lorem aliquam mattis.
-            Consequat est phasellus velit nisl justo dui. Faucibus dictum
-            habitasse sed vel at nisl non. Nisi placerat purus sed varius
-            euismod. Risus etiam purus donec neque.{" "}
-          </p>
+        <div className="flex flex-col ">
+          <div>
+            <h2 className="font-bold text-[40px]">
+              Why rentwise Is The Perfect Choice?
+            </h2>
+            <div>
+              <h2 className="font-bold text-5xl">02.</h2>
+              <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
+                nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam
+                mattis. Consequat est phasellus velit nisl justo dui. ius
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col bg-red-300 px-8 py-6 w-[514px] ">
-          <h3 className="3xl font-bold text-customNameBlack">
+        <div className="flex flex-col bg-red-300 px-8 py-6 w-[514px] h-[813px] ">
+          <h3 className="text-3xl font-bold text-customNameBlack">
             rentwise Enquiry Form
           </h3>
           <p className="font-normal text-customNameBlack">
             Fill out this enquiry form and expect a response from our team soon
           </p>
-          <form action="#" className="  flex flex-col gap-8">
+          <form action="#" className="  flex flex-col gap-4 mt-3">
             <div className="flex flex-col  gap-1 ">
-              <label htmlFor="inquiry" className="text-customNameBlack">
+              <label
+                htmlFor="inquiry"
+                className="font-medium text-customNameBlack"
+              >
                 Inquiry
               </label>
               <select
@@ -161,7 +170,7 @@ function Enquiry() {
               />
             </div>
 
-            <button className="h-full bg-customSearchblue p-5 rounded-lg text-textcolor font-bold text-xl">
+            <button className="h-full bg-customSearchblue p-5 rounded-lg text-textcolor font-bold text-xl mt-4">
               Submit
             </button>
           </form>
