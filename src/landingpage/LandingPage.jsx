@@ -8,13 +8,11 @@ import Solution from "./components/Solution";
 import Footer from "./components/Footer";
 import Partnership from "./components/Partnership";
 import WiseReport from "./components/WiseReport";
-import DropdownMenu from "./components/DropdownMenu";
 
 function LandingPage() {
   return (
     <>
       <Header />
-      <DropdownMenu />
       <Banner />
       <TopProperties />
       {/* <WiseReport /> */}

@@ -13,7 +13,7 @@ function DropdownMenu() {
       <div className="flex justify-center items-center">
         <button
           type="button"
-          className="inline-flex justify-center w-full  py-2 px-3 text-lg hover:text-customyellow  font-medium text-gray-700 focus:outline-none   focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="inline-flex justify-center w-full  py-2 px-3 text-lg hover:text-customyellow  text-customNameBlack focus:outline-none   focus:ring-offset-gray-100 focus:ring-indigo-500"
           id="options-menu"
           aria-haspopup="true"
           aria-expanded="true"
@@ -33,21 +33,21 @@ function DropdownMenu() {
           <div className="py-1" role="none">
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
               Rent budget calculator
             </a>
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
-              Favoorites
+              Favourites
             </a>
             <a
               href="#"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
               role="menuitem"
             >
               Save for rent
