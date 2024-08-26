@@ -19,13 +19,13 @@ const Header = () => {
         <div className=" hidden flex items-center justify-between md:block">
           {/* location will be automated */}
 
-          <a href="#" className="py-2 px-4 text-lg">
+          <a href="#" className="py-2 px-4 text-lg hover:text-customyellow">
             Home
           </a>
-          <a href="#" className="py-2 px-4 text-lg">
+          <a href="#" className="py-2 px-4 text-lg hover:text-customyellow">
             Residents <KeyboardArrowDownIcon />
           </a>
-          <a href="#" className="py-2 px-4 text-lg">
+          <a href="#" className="py-2 px-4 text-lg hover:text-customyellow">
             Blogs
           </a>
         </div>
@@ -64,15 +64,21 @@ const Header = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <a href="#" className="block py-2 px-4 text-lg">
+          <a
+            href="#"
+            className="block py-2 px-4 text-lg hover:text-customyellow"
+          >
             Landlords <KeyboardArrowDownIcon />
           </a>
-          <a href="#" className="block py-2 px-4 text-lg">
+          <a
+            href="#"
+            className="block py-2 px-4 text-lg hover:text-customyellow"
+          >
             Sign up
           </a>
           <a
             href="#"
-            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg"
+            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg hover:bg-"
           >
             Add property
           </a>

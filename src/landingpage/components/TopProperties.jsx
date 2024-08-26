@@ -70,7 +70,7 @@ function TopProperties() {
         </p>
         <div className="slider-container px-10 mt-8">
           <Slider {...settings}>
-            <div className=" px-2">
+            <div className=" px-2 hover:bg-addpropertybg rounde-lg">
               <div className="h-56 w-full">
                 <img src={palor} alt="kitchen " className="  h-full w-full" />
               </div>
@@ -122,7 +122,7 @@ function TopProperties() {
                 </div>
               </div>
             </div>
-            <div className=" px-2">
+            <div className=" px-2 hover:bg-addpropertybg">
               <div className="h-56 w-full">
                 <img src={palor} alt="kitchen " className="  h-full w-full" />
               </div>
@@ -172,7 +172,7 @@ function TopProperties() {
                 </div>
               </div>
             </div>
-            <div className=" px-2">
+            <div className=" px-2 hover:bg-addpropertybg">
               <div className="h-56 w-full">
                 <img src={palor} alt="kitchen " className="  h-full w-full" />
               </div>
@@ -222,7 +222,7 @@ function TopProperties() {
                 </div>
               </div>
             </div>
-            <div className=" px-2">
+            <div className=" px-2 hover:bg-addpropertybg">
               <div className="h-56 w-full">
                 <img src={palor} alt="kitchen " className="  h-full w-full" />
               </div>
@@ -272,7 +272,7 @@ function TopProperties() {
                 </div>
               </div>
             </div>
-            <div className=" px-2">
+            <div className=" px-2 hover:bg-addpropertybg">
               <div className="h-56 w-full">
                 <img src={palor} alt="kitchen " className="  h-full w-full" />
               </div>
