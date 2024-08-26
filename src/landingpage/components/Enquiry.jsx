@@ -190,7 +190,7 @@ function Enquiry() {
               />
             </div>
 
-            <button className="h-full bg-customSearchblue p-5 rounded-lg text-textcolor font-bold text-xl mt-4">
+            <button className="h-full bg-customSearchblue p-4 rounded-lg text-textcolor font-bold text-xl mt-4">
               Submit
             </button>
           </form>

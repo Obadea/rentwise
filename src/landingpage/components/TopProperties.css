@@ -1,17 +1,19 @@
 .slick-next {
   box-sizing: border-box;
   position: absolute;
-  right: 10px; /* adjust the value to your liking */
+  right: 30px; /* adjust the value to your liking */
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  transform: scale(2.8);
 }
 .slick-prev {
   position: absolute;
-  left: 10px; /* adjust the value to your liking */
+  left: 30px; /* adjust the value to your liking */
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
+  transform: scale(2.5);
 }
 .slick-slide {
   width: 100%;
@@ -19,3 +21,10 @@
 .featured {
   width: 100%;
 }
+
+/* .slick-prev:before {
+  color: rgba(17, 17, 233, 0.733);
+}
+.slick-next:before {
+  color: rgba(17, 17, 233, 0.733);
+} */
