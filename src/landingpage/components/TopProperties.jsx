@@ -76,7 +76,7 @@ function TopProperties() {
               </div>
               <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between">
-                  <h4 className="text-base font-bold">Selewa Albeni Estate</h4>
+                  <h4 className="text-base font-bold">Selewa abeni estate</h4>
                   <div className="flex justify-between gap-1">
                     <OpenInFullIcon fontSize="small" />
                     <AdjustIcon fontSize="small" />
@@ -128,7 +128,7 @@ function TopProperties() {
               </div>
               <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between">
-                  <h4 className="text-base font-bold">Selewa Albeni Estate</h4>
+                  <h4 className="text-base font-bold">Selewa abeni estate</h4>
                   <div className="flex justify-between gap-1">
                     <OpenInFullIcon fontSize="small" />
                     <AdjustIcon fontSize="small" />
@@ -178,7 +178,7 @@ function TopProperties() {
               </div>
               <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between">
-                  <h4 className="text-base font-bold">Selewa Albeni Estate</h4>
+                  <h4 className="text-base font-bold">Selewa abeni estate</h4>
                   <div className="flex justify-between gap-1">
                     <OpenInFullIcon fontSize="small" />
                     <AdjustIcon fontSize="small" />
@@ -228,7 +228,7 @@ function TopProperties() {
               </div>
               <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between">
-                  <h4 className="text-base font-bold">Selewa Albeni Estate</h4>
+                  <h4 className="text-base font-bold">Selewa abeni estate</h4>
                   <div className="flex justify-between gap-1">
                     <OpenInFullIcon fontSize="small" />
                     <AdjustIcon fontSize="small" />
@@ -278,7 +278,7 @@ function TopProperties() {
               </div>
               <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between">
-                  <h4 className="text-base font-bold">Selewa Albeni Estate</h4>
+                  <h4 className="text-base font-bold">Selewa abeni estate</h4>
                   <div className="flex justify-between gap-1">
                     <OpenInFullIcon fontSize="small" />
                     <AdjustIcon fontSize="small" />
@@ -319,7 +319,7 @@ function TopProperties() {
               </div>
               <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between">
-                  <h4 className="text-base">Selewa Albeni Estate</h4>
+                  <h4 className="text-base">Selewa abeni estate</h4>
                   <div className="flex justify-between gap-1">
                     <OpenInFullIcon fontSize="small" />
                     <AdjustIcon fontSize="small" />
