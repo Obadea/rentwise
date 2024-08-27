@@ -24,7 +24,7 @@ function WiseReport() {
               </p>
             </div>
 
-            <h4 className="texl-xl font-normal  text-customStreetcolor">
+            <h4 className="text-xl font-normal  text-customStreetcolor">
               The Wise Report offers a comprehensive resource that equips both
               landlords and prospective tenants with vital information—from
               detailed property insights and landlord profiles to neighborhood
@@ -32,7 +32,7 @@ function WiseReport() {
               empowers landlords to attract well-informed tenants while helping
               tenants make confident, informed decisions.
             </h4>
-            <button className=" text-textcolor text-xl font-medium py-4 rounded-lg  bg-customSearchblue  w-[295px]">
+            <button className=" text-textcolor text-xl font-medium py-4 rounded-2xl  bg-customSearchblue  w-[295px]">
               Download WiseReport
             </button>
           </div>
