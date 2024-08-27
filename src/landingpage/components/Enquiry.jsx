@@ -1,14 +1,17 @@
 import React from "react";
-import chairpalor from "../../assets/chair_table.png";
 
+import "./Enquiry.css";
 function Enquiry() {
   return (
     <div
+      className="background-imagee"
       style={{
         backgroundImage: `url(${require("../../assets/chair_table.png")})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        position: "relative",
+        zIndex: -2,
       }}
     >
       <div className="lg:flex lg:flex-row">
