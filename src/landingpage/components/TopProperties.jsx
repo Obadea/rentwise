@@ -63,7 +63,7 @@ function TopProperties() {
       <div>
         <h2 className="text-center text-2xl font-bold ">
           Explore Top Properties
-          <span className="text-customaccent ">Around You!</span>
+          <span className="text-customaccent "> Around You!</span>
         </h2>
         <p className="text-center text-base font-normal ">
           There’s a home for everyone. Find the home that suits you best

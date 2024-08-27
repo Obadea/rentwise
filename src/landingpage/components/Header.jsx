@@ -1,6 +1,5 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import DropdownMenu from "./DropdownMenu";
 
 const Header = () => {
@@ -84,7 +83,7 @@ const Header = () => {
           </a>
           <a
             href="#"
-            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg hover:bg-customyellow"
+            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg hover:bg-customaddproperty"
           >
             Add property
           </a>
