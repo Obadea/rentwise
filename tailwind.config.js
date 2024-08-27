@@ -26,6 +26,8 @@ module.exports = {
         customgGrayShade1: "#5B5B5B",
         cardBorder: "#FDF1C9",
         DownloadHover: "#2E3C6B",
+        borderbottom: "#99334B",
+        customaddproperty: "#FDC9D5",
       },
     },
   },
