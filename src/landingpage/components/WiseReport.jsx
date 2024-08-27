@@ -1,23 +1,30 @@
 import React from "react";
-
+import reportCard from "../../assets/iPhone 13 mini - 3.png";
 function WiseReport() {
   return (
     <div>
-      <div>
-        <h2 className="text-center ">
-          Heard about the <span>Wise Report??</span>
+      <div className="px-12 ">
+        <h2 className="text-center font-bold text-4xl ">
+          Heard about the{" "}
+          <span className="text-customaccent">Wise Report??</span>
         </h2>
-        <div className="flex flex-col bg-blue-600  md:bg-yellow-400 lg:flex lg:flex-row lg:mt-10 lg:bg-red-500 lg:mx-12 ">
-          <div>
-            <h3>
-              Just before you make that payment,{" "}
-              <a href="#    ">Download the wise report!</a>
-            </h3>
-            <p>
-              Your trusted gateway to seamless and stress free home rentals in
-              Lagos{" "}
-            </p>
-            <h4>
+        <div className=" lg:flex mt-12 gap-12">
+          <div className="flex flex-col gap-[52px] lg:mt-24 max-w-[795px]">
+            <div className="flex flex-col gap-4">
+              <h3 className="font-bold text-3xl text-customNameBlack">
+                Just before you make that payment,
+                <a href="#" className="text-customSearchblue">
+                  {" "}
+                  Download the wise report!
+                </a>
+              </h3>
+              <p className="text-lg font-normal text-customNameBlack">
+                Your trusted gateway to seamless and stress free home rentals in
+                Lagos
+              </p>
+            </div>
+
+            <h4 className="texl-xl font-normal  text-customStreetcolor">
               The Wise Report offers a comprehensive resource that equips both
               landlords and prospective tenants with vital information—from
               detailed property insights and landlord profiles to neighborhood
@@ -25,9 +32,14 @@ function WiseReport() {
               empowers landlords to attract well-informed tenants while helping
               tenants make confident, informed decisions.
             </h4>
-            <button>Download WiseReport</button>
+            <button className=" text-textcolor text-xl font-medium py-4 rounded-lg  bg-customSearchblue  w-[295px]">
+              Download WiseReport
+            </button>
           </div>
-          <div>
+          <div className="lg:min-w-[373px]">
+            <img src={reportCard} alt="report card" className="w-full " />
+          </div>
+          {/* <div> Incase the words are needed
             <div>
               <h3>THE WISE REPORT</h3>
               <h3>AUG 2024</h3>
@@ -71,9 +83,8 @@ function WiseReport() {
             <div>
               <h3>REPORT FEATURES</h3>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div></div>
       </div>
     </div>
   );

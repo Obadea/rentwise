@@ -15,7 +15,7 @@ function LandingPage() {
       <Header />
       <Banner />
       <TopProperties />
-      {/* <WiseReport /> */}
+      <WiseReport />
       <StatemenComponent />
       <Enquiry />
       <Partnership />
