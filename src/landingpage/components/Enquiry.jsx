@@ -1,28 +1,39 @@
 import React from "react";
+import chairpalor from "../../assets/chair_table.png";
 
 function Enquiry() {
   return (
-    <div>
-      <div>
+    <div
+      style={{
+        backgroundImage: `url(${require("../../assets/chair_table.png")})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="lg:flex lg:flex-row">
         <div className="flex flex-col ">
-          <div>
-            <h2 className="font-bold text-[40px]">
-              Why rentwise Is The Perfect Choice?
-            </h2>
+          <div className="       lg:flex">
             <div>
-              <h2 className="font-bold text-5xl">02.</h2>
-              <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
-              <p className="">
-                Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
-                nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam
-                mattis. Consequat est phasellus velit nisl justo dui. ius
-              </p>
-            </div>
-            <div>
+              <h2 className="font-bold text-[40px]">
+                Why rentwise Is The Perfect Choice?
+              </h2>
               <div>
                 <h2 className="font-bold text-5xl"> 01.</h2>
-                <h3 className="text-3x">Suitable for Landlords and Tenants</h3>
+                <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
                 <p>
+                  Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
+                  nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam
+                  mattis. Consequat est phasellus velit nisl justo dui. ius
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <h2 className="font-bold text-5xl">02.</h2>
+                <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
+                <p className="">
                   Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
                   nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam
                   mattis. Consequat est phasellus velit nisl justo dui. ius
@@ -30,7 +41,7 @@ function Enquiry() {
               </div>
               <div>
                 <h2 className="font-bold text-5xl"> 03.</h2>
-                <h3 className="text-3x">Suitable for Landlords and Tenants</h3>
+                <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
                   nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam
