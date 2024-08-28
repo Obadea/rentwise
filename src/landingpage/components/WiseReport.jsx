@@ -8,8 +8,8 @@ function WiseReport() {
           Heard about the{" "}
           <span className="text-customaccent">Wise Report??</span>
         </h2>
-        <div className=" lg:flex mt-12 gap-12">
-          <div className="flex flex-col gap-[52px] lg:mt-24 max-w-[795px]">
+        <div className=" lg:flex justify-between mt-12 gap-12">
+          <div className="flex flex-col gap-[52px] lg:mt-24 min-w-[450px]">
             <div className="flex flex-col gap-4">
               <h3 className="font-bold text-3xl text-customNameBlack">
                 Just before you make that payment,
@@ -36,7 +36,7 @@ function WiseReport() {
               Download WiseReport
             </button>
           </div>
-          <div className="lg:max-w-[600px] h-[500px] flex-grow">
+          <div className="lg:w-[600px] min-w-[450px] flex-grow">
             <img src={reportCard} alt="report card" className="w-full h-full" />
           </div>
           {/* <div> Incase the words are needed
