@@ -4,11 +4,12 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import MultiFooterLink from "./MultiFooterLink";
 
 function Footer() {
   return (
-    <div className="px-20 py-16 bg-customblack">
-      <div className="flex justify text-white gap-12  ">
+    <div className="px-6  py-16 bg-customblack lg:px-20">
+      <div className="flex flex-col lg:flex-row text-white gap-12  ">
         <div className="flex-1 ">
           <h2 className="text-3xl font-bold mb-8">About Us</h2>
           <p className="text-base font-medium">
@@ -22,21 +23,11 @@ function Footer() {
             purus sed varius euismod.{" "}
           </p>
         </div>
-        <div className="flex flex-col justify-between   lg:flex-col ">
-          <div className="flex flex-col justify-center items-center">
-            <a href="#" className=" p-4   ">
-              BLOG
-            </a>
-            <a href="" className="p-4">
-              Faqs
-            </a>
-            <a href="" className="p-4">
-              Careers
-            </a>
-            <a href="" className="p-4 ">
-              Our Team
-            </a>
-          </div>
+        <div className="flex flex-col justify-between  lg:gap-12 lg:flex-row ">
+          <MultiFooterLink />
+          <MultiFooterLink />
+          <MultiFooterLink />
+          <MultiFooterLink />
         </div>
       </div>
       <div className="flex justify-between items-center mt-16">

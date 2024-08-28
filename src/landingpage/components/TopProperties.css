@@ -1,19 +1,20 @@
-.slick-next {
+.slick-next,
+.slick-prev {
   box-sizing: border-box;
   position: absolute;
-  right: 30px; /* adjust the value to your liking */
-  top: 50%;
+  right: 3%; /* adjust the value to your liking */
+  top: 110%;
   transform: translateY(-50%);
   z-index: 10;
   transform: scale(2.8);
 }
 .slick-prev {
   position: absolute;
-  left: 30px; /* adjust the value to your liking */
-  top: 50%;
+  left: 82%; /* adjust the value to your liking */
+  top: 110%;
   transform: translateY(-50%);
   z-index: 10;
-  transform: scale(2.5);
+  transform: scale(2.8);
 }
 .slick-slide {
   width: 100%;
@@ -22,9 +23,9 @@
   width: 100%;
 }
 
-/* .slick-prev:before {
-  color: rgba(17, 17, 233, 0.733);
+.slick-prev:before {
+  color: #3b68f9;
 }
 .slick-next:before {
-  color: rgba(17, 17, 233, 0.733);
-} */
+  color: #3b68f9;
+}

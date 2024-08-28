@@ -14,17 +14,17 @@ function Enquiry() {
         zIndex: 2,
       }}
     >
-      <div className="lg:flex lg:flex-row gap-6">
-        <div className=" text-white  lg:flex lg:gap-20">
-          <div className="flex flex-col lg:gap-28">
+      <div className="flex flex-col py-12  lg:px-0 lg:py-0 lg:flex lg:flex-row lg:gap-6">
+        <div className=" text-white mx-6 lg:mx-0 lg:flex lg:gap-20">
+          <div className="flex flex-col gap-8 mb-10 lg:mb-0 lg:gap-28">
             <div>
-              <h2 className="font-bold text-[40px] pt-2 h-[234px]">
+              <h2 className="font-bold text-[40px] pt-2 h-[150px] lg:h-[234px]">
                 Why rentwise Is The Perfect Choice?
               </h2>
-              <div className="w-48 border border-borderbottom"></div>
+              <div className=" hidden lg:w-48 border lg:border-borderbottom"></div>
             </div>
 
-            <div className="flex flex-col h-[369px] lg:gap-4">
+            <div className="flex flex-col lg:h-[369px] lg:gap-4">
               <h2 className="font-bold text-5xl mb-3"> 01.</h2>
               <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
               <p className="font-medium ">
@@ -38,7 +38,7 @@ function Enquiry() {
 
           <div className="flex flex-col gap-9">
             <div>
-              <div className="h-[330px] flex flex-col gap-4">
+              <div className=" flex flex-col gap-4 mb-8 lg:mb-0 lg:h-[330px]">
                 <h2 className="font-bold text-5xl mb-3">02.</h2>
 
                 <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
@@ -51,7 +51,7 @@ function Enquiry() {
               <div className="w-48 border mb-3 border-borderbottom"></div>
             </div>
 
-            <div className="flex flex-col gap-4 ">
+            <div className="flex flex-col gap-3 mb-12 lg:mb-0 lg:gap-4 ">
               <h2 className="font-bold text-5xl mb-3"> 03.</h2>
               <h3 className="text-3xl">Suitable for Landlords and Tenants</h3>
               <p className="font-medium ">
@@ -64,7 +64,7 @@ function Enquiry() {
           </div>
         </div>
 
-        <div className="flex flex-col bg-white px-8 py-6 w-[514px] h-[813px] ">
+        <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6  h-[813px] ">
           <h3 className="text-3xl font-bold text-customNameBlack">
             rentwise Enquiry Form
           </h3>
