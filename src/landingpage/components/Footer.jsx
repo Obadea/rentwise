@@ -22,31 +22,21 @@ function Footer() {
             purus sed varius euismod.{" "}
           </p>
         </div>
-        <div className="flex-1 flex justify-between items-start  flex-wrap ">
-          <a href="#" className="flex-1 p-4  flex-shrink-0 ">
-            Blog
-          </a>
-          <a href="" className="flex-1 p-4  flex-shrink-0">
-            Faqs
-          </a>
-          <a href="" className="flex-1 p-4  flex-shrink-0 ">
-            Careers
-          </a>
-          <a href="" className="flex-2 p-4 whitespace-nowrap flex-shrink-0 ">
-            Our Team
-          </a>
-          <a href="" className="flex-1 p-4  flex-shrink-0 ">
-            Partners
-          </a>
-          <a href="" className="flex-1 p-4 flex-shrink-0 ">
-            Events
-          </a>
-          <a href="" className="flex-1 p-4 flex-shrink-0 ">
-            Blog
-          </a>
-          <a href="" className="flex-1 p-4 flex-shrink-0">
-            Blog
-          </a>
+        <div className="flex flex-col justify-between   lg:flex-col ">
+          <div className="flex flex-col justify-center items-center">
+            <a href="#" className=" p-4   ">
+              BLOG
+            </a>
+            <a href="" className="p-4">
+              Faqs
+            </a>
+            <a href="" className="p-4">
+              Careers
+            </a>
+            <a href="" className="p-4 ">
+              Our Team
+            </a>
+          </div>
         </div>
       </div>
       <div className="flex justify-between items-center mt-16">
