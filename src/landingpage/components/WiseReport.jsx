@@ -36,8 +36,8 @@ function WiseReport() {
               Download WiseReport
             </button>
           </div>
-          <div className="lg:min-w-[373px]">
-            <img src={reportCard} alt="report card" className="w-full " />
+          <div className="lg:max-w-[600px] h-[500px] flex-grow">
+            <img src={reportCard} alt="report card" className="w-full h-full" />
           </div>
           {/* <div> Incase the words are needed
             <div>
