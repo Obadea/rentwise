@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 
 function LocationSearch() {
-  // State to track the selected button
-  const [selectedButton, setSelectedButton] = useState(1);
-
-  // Function to handle button click
-  const handleButtonClick = (buttonId) => {
-    setSelectedButton(buttonId);
-  };
-
   return (
     <div className="flex justify-center  ">
       <form className="text-black flex justify-evenly bg-gray-100 px-8 py-4 gap-6 rounded-lg">

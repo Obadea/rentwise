@@ -9,6 +9,7 @@ function Banner() {
   const handleButtonClick = (buttonId) => {
     setSelectedButton(buttonId);
   };
+
   return (
     <div
       className="h-[500px] w-full relative mt-16"
@@ -27,7 +28,7 @@ function Banner() {
           <div className="flex justify-center">
             <p className="text-textcolor w-[856px] text-center font-medium text-3xl ">
               An AI powered real estate platform; Connecting trusted landlords
-              with reliaable tenants.
+              with reliable tenants.
             </p>
           </div>
         </div>
@@ -35,16 +36,20 @@ function Banner() {
 
       <div className="flex justify-center">
         <button
-          className={`w-30 px-4 mr-1 transition duration-500 ease-in-out ${
-            selectedButton === 1 ? "bg-[#FAD766]" : "bg-addpropertybg"
-          }  rounded-t-lg`}
+          className={`w-30 px-4 py-3 mr-1 transition duration-500 ease-in-out ${
+            selectedButton === 1
+              ? "bg-[#FAD766] transform scale-[98.5%] "
+              : "bg-addpropertybg "
+          } rounded-t-lg`}
           onClick={() => handleButtonClick(1)}
         >
           All Status
         </button>
         <button
-          className={`px-4 py-3 mr-1 w-30 transition duration-500 ease-in-out ${
-            selectedButton === 2 ? "bg-[#FAD766]" : "bg-addpropertybg"
+          className={`px-4 mr-1 w-30 transition duration-500 ease-in-out ${
+            selectedButton === 2
+              ? "bg-[#FAD766] transform scale-[98.5%] "
+              : "bg-addpropertybg "
           } rounded-t-lg`}
           onClick={() => handleButtonClick(2)}
         >
@@ -52,7 +57,9 @@ function Banner() {
         </button>
         <button
           className={`px-4 mr-1 w-30 transition duration-500 ease-in-out ${
-            selectedButton === 3 ? "bg-[#FAD766]" : "bg-addpropertybg"
+            selectedButton === 3
+              ? "bg-[#FAD766] transform scale-[98.5%] "
+              : "bg-addpropertybg "
           } rounded-t-lg`}
           onClick={() => handleButtonClick(3)}
         >
