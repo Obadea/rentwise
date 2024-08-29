@@ -34,7 +34,7 @@ function Banner() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="hidden lg:flex justify-center">
         <button
           className={`w-30 px-4 py-3 mr-1 transition duration-500 ease-in-out ${
             selectedButton === 1

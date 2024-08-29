@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function LocationSearch() {
   return (
-    <div className="flex justify-center  ">
+    <div className=" hidden lg:flex justify-center  ">
       <form className="text-black flex justify-evenly bg-gray-100 px-8 py-4 gap-6 rounded-lg">
         <div>
           <h3>LOOKING FOR</h3>

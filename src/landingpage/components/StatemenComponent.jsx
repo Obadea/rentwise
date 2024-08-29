@@ -6,14 +6,16 @@ import StatemenCard from "./StatemenCard";
 
 function StatemenComponent() {
   return (
-    <div className="flex justify-center pt-12 bg-customaccent100">
+    <div className=" flex flex-col justify-center pt-12 bg-customaccent100">
       <div>
-        <h2 className="text-center text-3xl font-bold ">Meet Our Statemen</h2>
-        <p className="text-center text-base font-normal">
+        <h2 className="text-center font-bold text-xl lg:text-3xl  ">
+          Meet Our Statemen
+        </h2>
+        <p className="text-center text-small lg:text-base font-normal">
           Our expert agents are here to guide you in finding the perfect
           property with personalized, professional service.
         </p>
-        <div className="flex justify-around px-24 gap-2 py-6 flex-nowrap ">
+        <div className="flex justify-around px-24 gap-2 py-6 flex-wrap ">
           <StatemenCard
             bayo={bayo}
             name="Adebayo Adekunle"
