@@ -3,18 +3,17 @@ import reportCard from "../../assets/iPhone 13 mini - 3.png";
 function WiseReport() {
   return (
     <div>
-      <div className="px-12 pt-16">
+      <div className="px-6 lg:px-12 pt-16">
         <h2 className="text-center font-bold text-xl lg:text-4xl ">
           Heard about the
           <span className="text-customaccent"> Wise Report??</span>
         </h2>
-        <div className=" lg:flex justify-between mt-12 gap-12">
-          <div className="flex flex-col gap-[52px] lg:mt-24 min-w-[450px]">
-            <div className="flex flex-col gap-4">
+        <div className=" lg:flex justify-between mt-5 lg:mt-12 lg:gap-12">
+          <div className="flex flex-col lg:gap-[52px] lg:mt-24 lg:min-w-[450px]">
+            <div className="hidden lg:flex flex-col gap-4">
               <h3 className="font-bold text-3xl text-customNameBlack">
                 Just before you make that payment,
                 <a href="#" className="text-customSearchblue">
-                  {" "}
                   Download the wise report!
                 </a>
               </h3>
@@ -32,11 +31,18 @@ function WiseReport() {
               empowers landlords to attract well-informed tenants while helping
               tenants make confident, informed decisions.
             </h4>
-            <button className=" text-textcolor text-xl font-medium py-4 rounded-2xl  bg-customSearchblue  w-[295px]">
+            <div className="block lg:hidden min-w-[200px] max-w-[400px] my-8 mx-auto flex-grow">
+              <img
+                src={reportCard}
+                alt="report card"
+                className="w-full h-full"
+              />
+            </div>
+            <button className=" text-textcolor w-full max-w-[500px] mx-auto text-base lg:text-xl font-medium py-4 rounded-2xl  bg-customSearchblue  lg:w-[295px]">
               Download WiseReport
             </button>
           </div>
-          <div className="lg:w-[600px] min-w-[300px] lg:min-w-[450px] flex-grow">
+          <div className=" hidden lg:block lg:w-[600px] min-w-[300px] lg:min-w-[450px] flex-grow">
             <img src={reportCard} alt="report card" className="w-full h-full" />
           </div>
           {/* <div> Incase the words are needed
