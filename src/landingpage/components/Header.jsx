@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white text-black fixed z-20  w-full">
+    <header className="bg-white text-black fixed z-20 -mt-16  w-full">
       <nav className="container mx-auto p-2 flex items-center w-full justify-between bg-white ">
         <a href="#" className="text-4xl font-bold">
           rent<span className="text-customyellow">w</span>ise
