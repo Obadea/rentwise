@@ -8,15 +8,13 @@ function StatemenCard(props) {
       </div>
       <div>
         <h3 className="text-lg font-medium text-customNameBlack">
-          Adebayo Adekunle
+          {props.name}
         </h3>
         <p className="text-sm font-normal text-customStreetcolor">
-          Senior Property Consultant
+          {props.level}
         </p>
         <p className="text-sm font-normal text-customBlackShade">
-          With over 6 years of experience in the real estate industry, Adebayo
-          brings a wealth of knowledge and a passion for helping clients achieve
-          their goals. Specializing in....
+          {props.about}
         </p>
         <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue hover:text-DownloadHover">
           View profile

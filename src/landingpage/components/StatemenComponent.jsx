@@ -22,48 +22,22 @@ function StatemenComponent() {
           brings a wealth of knowledge and a passion for helping clients achieve
           their goals. Specializing in...."
           />
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)] border border-cardBorder">
-            <div>
-              <img src={chioma} alt="" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-customNameBlack">
-                Chioma Okafor
-              </h3>
-              <p className="text-sm font-normal text-customStreetcolor">
-                Residential Specialist
-              </p>
-              <p className="text-sm font-normal text-customBlackShade">
-                Known for her approachable demeanor and meticulous attention to
+          <StatemenCard
+            bayo={chioma}
+            name="Chioma Okafor"
+            level="Senior Property Consultant"
+            about="Known for her approachable demeanor and meticulous attention to
                 detail, Chioma has a proven track record of matching clients
-                with their ideal homes. She believes in building....
-              </p>
-              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue hover:text-DownloadHover">
-                View profile
-              </button>
-            </div>
-          </div>
-          <div className="flex flex-col justify-center items-center text-center px-2 py-4 bg-white hover:shadow-[8px_4px_20px_0px_rgba(0,0,0,0.1)] border border-cardBorder">
-            <div>
-              <img src={funke} alt="" />
-            </div>
-            <div>
-              <h3 className="text-lg font-medium text-customNameBlack">
-                Funke Adeyemi
-              </h3>
-              <p className="text-sm font-normal text-customStreetcolor">
-                Commercial Property Advisor
-              </p>
-              <p className="text-sm font-normal text-customBlackShade ">
-                Funke specializes in commercial real estate, helping businesses
+                with their ideal homes. She believes in building...."
+          />
+          <StatemenCard
+            bayo={funke}
+            name="Funke Adeyemi"
+            level="Commercial Property Advisor"
+            about="Funke specializes in commercial real estate, helping businesses
                 find the perfect location to thrive. With a strategic approach
-                and a deep understanding of the commercial market,
-              </p>
-              <button className="px-4 py-2 my-2 text-xs font-bold text-customProfileblue hover:text-DownloadHover">
-                View profile
-              </button>
-            </div>
-          </div>
+                and a deep understanding of the commercial market,"
+          />
         </div>
       </div>
     </div>
