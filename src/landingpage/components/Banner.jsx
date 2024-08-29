@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import LocationSearch from "./LocationSearch";
 
 function Banner() {
+  // State to track the selected button
+  const [selectedButton, setSelectedButton] = useState(1);
+
+  // Function to handle button click
+  const handleButtonClick = (buttonId) => {
+    setSelectedButton(buttonId);
+  };
   return (
     <div
       className="h-[500px] w-full relative mt-16"
@@ -27,13 +34,28 @@ function Banner() {
       </div>
 
       <div className="flex justify-center">
-        <button className="w-30 px-4 mr-1  bg-[#FAD766] rounded-t-lg">
+        <button
+          className={`w-30 px-4 mr-1 transition duration-500 ease-in-out ${
+            selectedButton === 1 ? "bg-[#FAD766]" : "bg-addpropertybg"
+          }  rounded-t-lg`}
+          onClick={() => handleButtonClick(1)}
+        >
           All Status
         </button>
-        <button className="px-4 py-3 mr-1 w-30 bg-addpropertybg rounded-t-lg">
+        <button
+          className={`px-4 py-3 mr-1 w-30 transition duration-500 ease-in-out ${
+            selectedButton === 2 ? "bg-[#FAD766]" : "bg-addpropertybg"
+          } rounded-t-lg`}
+          onClick={() => handleButtonClick(2)}
+        >
           For Rent
         </button>
-        <button className="px-4 mr-1 w-30 bg-addpropertybg rounded-t-lg">
+        <button
+          className={`px-4 mr-1 w-30 transition duration-500 ease-in-out ${
+            selectedButton === 3 ? "bg-[#FAD766]" : "bg-addpropertybg"
+          } rounded-t-lg`}
+          onClick={() => handleButtonClick(3)}
+        >
           For Sale
         </button>
       </div>
