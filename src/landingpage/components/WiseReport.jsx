@@ -4,9 +4,9 @@ function WiseReport() {
   return (
     <div>
       <div className="px-12 pt-16">
-        <h2 className="text-center font-bold text-4xl ">
+        <h2 className="text-center font-bold text-xl lg:text-4xl ">
           Heard about the
-          <span className="text-customaccent">Wise Report??</span>
+          <span className="text-customaccent"> Wise Report??</span>
         </h2>
         <div className=" lg:flex justify-between mt-12 gap-12">
           <div className="flex flex-col gap-[52px] lg:mt-24 min-w-[450px]">
