@@ -31,18 +31,18 @@ function Footer() {
         </div>
       </div>
       <div className="flex justify-between items-center mt-16">
-        <h2 className="text-white text-4xl">
+        <h2 className="text-white text-2xl">
           rent<span className="text-yellow-500">w</span>ise
           <span className="text-yellow-500">.</span>
         </h2>
         <div>
           <h4 className="font-sm text-white mb-2">Follow us</h4>
           <div className="flex gap-4 text-white">
-            <YouTubeIcon />
-            <FacebookIcon />
-            <XIcon />
-            <InstagramIcon />
-            <LinkedInIcon />
+            <YouTubeIcon sx={{ fontSize: 20 }} />
+            <FacebookIcon sx={{ fontSize: 20 }} />
+            <XIcon sx={{ fontSize: 20 }} />
+            <InstagramIcon sx={{ fontSize: 20 }} />
+            <LinkedInIcon sx={{ fontSize: 20 }} />
           </div>
         </div>
       </div>

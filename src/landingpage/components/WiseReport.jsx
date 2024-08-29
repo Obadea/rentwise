@@ -3,9 +3,9 @@ import reportCard from "../../assets/iPhone 13 mini - 3.png";
 function WiseReport() {
   return (
     <div>
-      <div className="px-12 ">
+      <div className="px-12 pt-16">
         <h2 className="text-center font-bold text-4xl ">
-          Heard about the{" "}
+          Heard about the
           <span className="text-customaccent">Wise Report??</span>
         </h2>
         <div className=" lg:flex justify-between mt-12 gap-12">
