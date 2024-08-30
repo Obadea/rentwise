@@ -100,7 +100,7 @@ function Enquiry() {
               </select>
             </div>
 
-            <div className="flex flex-col  w-[450px] h-[72px] gap-1">
+            <div className="flex flex-col  md:w-[450px] md:h-[72px] gap-1">
               <label
                 htmlFor="inquiry"
                 className="font-medium text-customNameBlack"
@@ -108,7 +108,7 @@ function Enquiry() {
                 Information
               </label>
               <select
-                className="font-normal h-[42px] border rounded-lg  text-customBlackShade border-customBlackShade"
+                className="font-normal h-[38px] lg:h-[42px] border rounded-lg  text-customBlackShade border-customBlackShade"
                 name="Inquiry Type"
                 id="inquiry"
               >
@@ -124,20 +124,20 @@ function Enquiry() {
               <input
                 type="text"
                 placeholder="First Name"
-                className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+                className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
               />
 
               <input
                 type="text"
                 placeholder="Last Name"
-                className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+                className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
               />
             </div>
             <div>
               <input
                 type="text"
                 placeholder="Email Address"
-                className="w-full h-[42px] pl-4 border rounded-lg  border-customBlackShade"
+                className="w-full h-[38px] lg:h-[42px] pl-4 border rounded-lg  border-customBlackShade"
               />
             </div>
             <div className="flex flex-col w-[450px] h-[72px] gap-1">
@@ -148,7 +148,7 @@ function Enquiry() {
                 Location
               </label>
               <select
-                className="h-[42px] font-normal border rounded-lg text-customBlackShade border-customBlackShade"
+                className="h-[38px] md:h-[42px] font-normal border rounded-lg text-customBlackShade border-customBlackShade"
                 name="location Type"
                 id="location"
               >
@@ -174,7 +174,7 @@ function Enquiry() {
                 Property
               </label>
               <select
-                className="font-normal h-[42px] border rounded-lg text-customBlackShade border-customBlackShade"
+                className="font-normal h-[38px] md:h-[42px] border rounded-lg text-customBlackShade border-customBlackShade"
                 name="property Type"
                 id="property"
               >
@@ -204,7 +204,7 @@ function Enquiry() {
               </select>
             </div>
 
-            <div className="flex justify-between">
+            {/* <div className="flex justify-between">
               <input
                 type="text"
                 placeholder="Max Price"
@@ -227,7 +227,7 @@ function Enquiry() {
                 placeholder="Number of baths"
                 className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShades"
               />
-            </div>
+            </div> */}
 
             <button className="h-full bg-customSearchblue p-4 rounded-lg text-textcolor font-bold text-xl mt-4">
               Submit

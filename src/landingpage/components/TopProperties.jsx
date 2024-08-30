@@ -65,7 +65,7 @@ function TopProperties() {
         <p className="text-center text-base font-normal ">
           There’s a home for everyone. Find the home that suits you best
         </p>
-        <div className="slider-container px-10 mt-8">
+        <div className="slider-container px-6 md:px-10 mt-8">
           <Slider {...settings}>
             <Slidercard />
             <Slidercard />
