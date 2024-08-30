@@ -64,7 +64,7 @@ function Enquiry() {
           </div>
         </div>
 
-        <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6 w-[400px] h-auto lg:w-autox   lg:h-[813px] ">
+        <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6 w-[330px] h-auto lg:w-auto  lg:h-[813px] ">
           <h3 className=" text-base lg:text-3xl font-bold text-customNameBlack">
             rentwise Enquiry Form
           </h3>
@@ -140,7 +140,7 @@ function Enquiry() {
                 className="w-full h-[38px] lg:h-[42px] pl-4 border rounded-lg  border-customBlackShade"
               />
             </div>
-            <div className="flex flex-col w-[450px] h-[72px] gap-1">
+            <div className="flex flex-col lg:w-[450px] h-[72px] gap-1">
               <label
                 htmlFor="location"
                 className="font-medium text-customNameBlack"
@@ -166,7 +166,7 @@ function Enquiry() {
               </select>
             </div>
 
-            <div className="flex flex-col w-[450px] h-[72px] gap-1">
+            <div className="flex flex-col w-auto lg:w-[450px] h-[72px] gap-1">
               <label
                 htmlFor="property"
                 className=" font-medium text-customNameBlack"
@@ -208,12 +208,12 @@ function Enquiry() {
               <input
                 type="text"
                 placeholder="Max Price"
-                className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+                className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
               />
               <input
                 type="text"
                 placeholder="Minimum size (Sq Ft)"
-                className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+                className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
               />
             </div>
             <div className="flex justify-between">
