@@ -31,7 +31,7 @@ function Footer() {
         </div>
       </div>
       <div className="flex justify-between items-center mt-16">
-        <h2 className="text-white text-2xl">
+        <h2 className="text-white text-2xl lg:text-3xl">
           rent<span className="text-yellow-500">w</span>ise
           <span className="text-yellow-500">.</span>
         </h2>

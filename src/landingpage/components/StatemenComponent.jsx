@@ -104,7 +104,7 @@ function StatemenComponent() {
           </div>
         </div>
 
-        <div className="sm:hidden lg:flex flex-row justify-around px-24 gap-2 py-6  ">
+        <div className="hidden lg:flex flex-row justify-around px-24 gap-2 py-6  ">
           <StatemenCard
             bayo={bayo}
             name="Adebayo Adekunle"
