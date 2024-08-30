@@ -64,7 +64,7 @@ function Enquiry() {
           </div>
         </div>
 
-        <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6 lg:h-[813px] ">
+        <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6 w-[400px] h-auto lg:w-autox   lg:h-[813px] ">
           <h3 className=" text-base lg:text-3xl font-bold text-customNameBlack">
             rentwise Enquiry Form
           </h3>
@@ -148,13 +148,13 @@ function Enquiry() {
                 Location
               </label>
               <select
-                className="h-[38px] md:h-[42px] font-normal border rounded-lg text-customBlackShade border-customBlackShade"
+                className="h-[38px] w-full md:h-[42px] font-normal border rounded-lg text-customBlackShade border-customBlackShade"
                 name="location Type"
                 id="location"
               >
                 <option
                   value=""
-                  className="hidden text-customBlackShade font-normal"
+                  className="hidden text-customBlackShade  font-normal"
                 >
                   All Cities in Lagos
                 </option>
@@ -204,7 +204,7 @@ function Enquiry() {
               </select>
             </div>
 
-            {/* <div className="flex justify-between">
+            <div className="flex justify-between">
               <input
                 type="text"
                 placeholder="Max Price"
@@ -227,7 +227,7 @@ function Enquiry() {
                 placeholder="Number of baths"
                 className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShades"
               />
-            </div> */}
+            </div>
 
             <button className="h-full bg-customSearchblue p-4 rounded-lg text-textcolor font-bold text-xl mt-4">
               Submit
