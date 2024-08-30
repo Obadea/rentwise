@@ -18,7 +18,7 @@ function Enquiry() {
         <div className=" text-white mx-6 lg:mx-0 lg:flex lg:gap-20">
           <div className="flex flex-col gap-8 mb-10 lg:mb-0 lg:gap-28">
             <div>
-              <h2 className="font-bold text-[40px] pt-2 h-[150px] lg:h-[234px]">
+              <h2 className="font-bold text-3xl lg:text-[40px] pt-2 h-[150px] mb-6 lg:mb-0 lg:h-[234px]">
                 Why rentwise Is The Perfect Choice?
               </h2>
               <div className=" hidden lg:w-48 border lg:border-borderbottom"></div>
@@ -64,23 +64,23 @@ function Enquiry() {
           </div>
         </div>
 
-        <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6  h-[813px] ">
-          <h3 className="text-3xl font-bold text-customNameBlack">
+        <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6 lg:h-[813px] ">
+          <h3 className=" text-base lg:text-3xl font-bold text-customNameBlack">
             rentwise Enquiry Form
           </h3>
-          <p className="font-normal text-customNameBlack">
+          <p className="font-small lg:font-normal text-customNameBlack">
             Fill out this enquiry form and expect a response from our team soon
           </p>
           <form action="#" className=" relative flex flex-col gap-4 mt-3">
             <div className="flex flex-col  gap-1 ">
               <label
                 htmlFor="inquiry"
-                className="font-medium text-customNameBlack"
+                className="text-base font-medium text-customNameBlack"
               >
                 Inquiry
               </label>
               <select
-                className="h-[42px] font-normal w-full border rounded-lg text-customBlackShade  border-customBlackShade"
+                className="h-[38px] lg:h-[42px] font-normal w-full border rounded-lg text-customBlackShade  border-customBlackShade"
                 name="Inquiry Type"
                 id="inquiry"
               >
