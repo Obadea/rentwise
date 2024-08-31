@@ -152,12 +152,12 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="Number of beds"
-            className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShades"
+            className="h-[42px] w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
           />
           <input
             type="text"
             placeholder="Number of baths"
-            className="h-[42px] w-[217.5px] pl-4 border rounded-lg  border-customBlackShades"
+            className="h-[42px] w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
           />
         </div>
 
