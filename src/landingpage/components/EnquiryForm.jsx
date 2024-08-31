@@ -59,20 +59,20 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="First Name"
-            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
 
           <input
             type="text"
             placeholder="Last Name"
-            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
           />
         </div>
         <div>
           <input
             type="text"
             placeholder="Email Address"
-            className="w-full h-[38px] lg:h-[42px] pl-4 border rounded-lg  border-customBlackShade"
+            className="w-full h-[38px] lg:h-[42px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
         </div>
         <div className="flex flex-col lg:w-[450px] h-[72px] gap-1">

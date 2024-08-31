@@ -71,7 +71,7 @@ function StatemenComponent() {
         </p>
 
         {/* Slider for mobile view */}
-        <div className=" py-24 lg:hidden">
+        <div className=" pb-24 lg:hidden">
           <div>
             <div className="slider-container px-10 mt-8 ">
               <Slider {...settings} className="">
