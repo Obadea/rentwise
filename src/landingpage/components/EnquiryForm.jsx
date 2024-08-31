@@ -140,24 +140,24 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="Max Price"
-            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
           <input
             type="text"
             placeholder="Minimum size (Sq Ft)"
-            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg  border-customBlackShade"
+            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
         </div>
         <div className="flex justify-between">
           <input
             type="text"
             placeholder="Number of beds"
-            className="h-[42px] w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
+            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
           />
           <input
             type="text"
             placeholder="Number of baths"
-            className="h-[42px] w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
+            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
           />
         </div>
 
