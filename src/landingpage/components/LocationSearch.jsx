@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 function LocationSearch() {
   return (
-    <div className=" hidden lg:flex justify-center  ">
-      <form className="text-black flex justify-evenly bg-gray-100 px-8 py-4 gap-6 rounded-lg">
+    <div className=" hidden lg:flex justify-center overflow-hidden  ">
+      <form className="text-black flex flex-shrink justify-evenly bg-gray-100 px-6 py-4 gap-6 rounded-lg">
         <div>
           <h3>LOOKING FOR</h3>
           <select name="cars" id="cars" className="w-44 p-2 border-black ">
