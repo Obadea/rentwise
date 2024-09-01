@@ -140,24 +140,24 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="Max Price"
-            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] flex-grow pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
           />
           <input
             type="text"
             placeholder="Minimum size (Sq Ft)"
-            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] flex-grow pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
           />
         </div>
         <div className="flex justify-between gap-2 lg:gap-6">
           <input
             type="text"
             placeholder="Number of beds"
-            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] flex-grow pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
           />
           <input
             type="text"
             placeholder="Number of baths"
-            className="h-[38px] w-[140px] md:h-[42px] flex-grow md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
           />
         </div>
 
