@@ -37,7 +37,7 @@ function Footer() {
         </h2>
         <div>
           <h4 className="font-sm text-white mb-2">Follow us</h4>
-          <div className="flex gap-4 text-white">
+          <div className="flex gap-1 lg:gap-4 text-white">
             <YouTubeIcon sx={{ fontSize: 20 }} />
             <FacebookIcon sx={{ fontSize: 20 }} />
             <XIcon sx={{ fontSize: 20 }} />
