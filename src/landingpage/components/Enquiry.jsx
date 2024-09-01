@@ -15,7 +15,7 @@ function Enquiry() {
         zIndex: 2,
       }}
     >
-      <div className="flex flex-col py-12  lg:px-0 lg:py-0 lg:flex lg:flex-row lg:gap-6">
+      <div className="flex flex-col py-12 md:gap-4  lg:px-0 lg:py-0 lg:flex lg:flex-row lg:gap-6">
         <div className=" text-white mx-6 lg:mx-0 lg:flex lg:gap-20">
           <div className="flex flex-col gap-8 mb-10 lg:mb-0 lg:gap-28">
             <div>

@@ -2,7 +2,7 @@ import React from "react";
 
 function EnquiryForm() {
   return (
-    <div className="flex flex-col mx-auto lg:mx-0 bg-white px-4 lg:px-8 py-6 w-[330px] h-auto lg:w-auto  lg:h-[813px] ">
+    <div className="flex flex-col mx-auto w-[90%] lg:mx-0 bg-white px-4 lg:px-8 py-6 lg:w-full  lg:h-[813px] ">
       <h3 className=" text-base lg:text-3xl font-bold text-customNameBlack">
         rentwise Enquiry Form
       </h3>
@@ -38,16 +38,16 @@ function EnquiryForm() {
           </select>
         </div>
 
-        <div className="flex flex-col  md:w-[450px] md:h-[72px] gap-1">
+        <div className="flex flex-col  gap-1">
           <label htmlFor="inquiry" className="font-medium text-customNameBlack">
             Information
           </label>
           <select
-            className="font-normal h-[38px] lg:h-[42px] border rounded-lg  text-customBlackShade border-customBlackShade"
+            className="font-normal h-[38px] lg:h-[42px] border rounded-lg w-full text-customBlackShade border-customBlackShade"
             name="Inquiry Type"
             id="inquiry"
           >
-            <option value="" className="hidden  text-red-500 font-normal">
+            <option value="" className="hidden w-full text-red-500 font-normal">
               I am a
             </option>
             <option value="propertyOwner">Property Owner</option>
@@ -55,17 +55,17 @@ function EnquiryForm() {
           </select>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-2 lg:gap-6">
           <input
             type="text"
             placeholder="First Name"
-            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
 
           <input
             type="text"
             placeholder="Last Name"
-            className="h-[38px] w-[127px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
+            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
           />
         </div>
         <div>
@@ -75,7 +75,7 @@ function EnquiryForm() {
             className="w-full h-[38px] lg:h-[42px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
         </div>
-        <div className="flex flex-col lg:w-[450px] h-[72px] gap-1">
+        <div className="flex flex-col gap-1">
           <label
             htmlFor="location"
             className="font-medium text-customNameBlack"
@@ -136,28 +136,28 @@ function EnquiryForm() {
           </select>
         </div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-2 lg:gap-6">
           <input
             type="text"
             placeholder="Max Price"
-            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] flex-grow pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
           <input
             type="text"
             placeholder="Minimum size (Sq Ft)"
-            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] flex-grow pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-2 lg:gap-6">
           <input
             type="text"
             placeholder="Number of beds"
-            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
+            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] flex-grow pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
           <input
             type="text"
             placeholder="Number of baths"
-            className="h-[38px] w-[140px] md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShades"
+            className="h-[38px] w-[140px] md:h-[42px] flex-grow md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
         </div>
 
