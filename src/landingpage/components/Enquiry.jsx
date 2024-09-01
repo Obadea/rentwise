@@ -19,7 +19,7 @@ function Enquiry() {
         <div className=" text-white mx-6 lg:mx-0 lg:flex lg:gap-20">
           <div className="flex flex-col gap-8 mb-10 lg:mb-0 lg:gap-28">
             <div>
-              <h2 className="font-bold text-3xl lg:text-[40px] pt-2 h-[150px] mb-6 lg:mb-0 lg:h-[234px]">
+              <h2 className="font-bold text-3xl lg:text-[40px] pt-2 h-[150px] lg:max-w-[300px] mb-6 lg:mb-0 lg:h-[234px]">
                 Why rentwise Is The Perfect Choice?
               </h2>
               <div className=" hidden lg:w-48 border lg:border-borderbottom"></div>

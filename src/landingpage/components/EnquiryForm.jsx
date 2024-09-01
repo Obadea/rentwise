@@ -2,7 +2,7 @@ import React from "react";
 
 function EnquiryForm() {
   return (
-    <div className="flex flex-col mx-auto w-[90%] lg:mx-0 bg-white px-4 lg:px-8 py-6 lg:w-full  lg:h-[813px] ">
+    <div className="flex flex-col mx-auto w-[90%] lg:mx-0 bg-white px-4 lg:px-8 py-6 lg:w-[450px]  lg:h-[813px] ">
       <h3 className=" text-base lg:text-3xl font-bold text-customNameBlack">
         rentwise Enquiry Form
       </h3>
@@ -101,7 +101,7 @@ function EnquiryForm() {
           </select>
         </div>
 
-        <div className="flex flex-col w-auto lg:w-[450px] h-[72px] gap-1">
+        <div className="flex flex-col  gap-1">
           <label
             htmlFor="property"
             className=" font-medium text-customNameBlack"
@@ -109,13 +109,13 @@ function EnquiryForm() {
             Property
           </label>
           <select
-            className="font-normal h-[38px] md:h-[42px] border rounded-lg text-customBlackShade border-customBlackShade"
+            className="font-normal h-[38px] lg:h-[42px] border rounded-lg w-full text-customBlackShade border-customBlackShade"
             name="property Type"
             id="property"
           >
             <option
               value=""
-              className="hidden text-customBlackShade font-normal"
+              className="hidden w-full text-customBlackShade font-normal"
             >
               Property Type
             </option>
