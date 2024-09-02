@@ -1,6 +1,7 @@
 // src/components/Navbar.js
 import React, { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
+import Hamburger from "./Hamburger";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,11 +68,7 @@ const Header = () => {
             </svg>
           </button>
         </div> */}
-        <div
-          className={`  lg:items-center lg:space-x-4 flex
-            // isOpen ? "block" : "hidden"
-        `}
-        >
+        <div className=" hidden  lg:items-center lg:space-x-4 lg:flex">
           <a
             href="#"
             className="block py-2 px-4 text-lg hover:text-customyellow"
@@ -85,6 +82,7 @@ const Header = () => {
             Add property
           </a>
         </div>
+        <Hamburger />
       </nav>
     </header>
   );

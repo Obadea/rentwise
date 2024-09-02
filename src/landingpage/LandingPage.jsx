@@ -21,7 +21,7 @@ function LandingPage() {
       <Enquiry />
       <Partnership />
       <Solution />
-      <LocationTest />
+      {/* <LocationTest /> */}
       <Footer />
     </>
   );

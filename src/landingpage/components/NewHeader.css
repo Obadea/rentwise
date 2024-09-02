@@ -1,0 +1,35 @@
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 20px;
+}
+
+.bm-burger-bars {
+  background: #373a47; /* Color of the hamburger bars */
+  height: 4px; /* Height of the bars */
+  width: 100%; /* Full width */
+  margin: 6px 0; /* Space between the bars */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.bm-menu {
+  background: white; /* Background color of the menu */
+  padding: 2.5em 1.5em 0; /* Padding for the menu */
+  font-size: 1.15em; /* Font size for menu items */
+  margin-top: 30px;
+}
+
+.bm-item {
+  display: inline-block; /* Display style for menu items */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 5px; /* Space between items */
+  color: black; /* Color of menu items */
+  transition: color 0.2s; /* Transition for color change */
+}
+
+.bm-item:hover {
+  color: rgba(37, 32, 32, 0.877);
+  background-color: #f9cc3b; /* Color change on hover */
+}
