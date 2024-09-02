@@ -18,13 +18,13 @@ function EnquiryForm() {
             Inquiry
           </label>
           <select
-            className="h-[38px] lg:h-[42px] font-normal w-full border rounded-lg text-customBlackShade  border-customBlackShade"
+            className="h-[38px] lg:h-[42px] font-normal pl-2 w-full border rounded-lg   border-customBlackShade"
             name="Inquiry Type"
             id="inquiry"
           >
             <option
               value=""
-              className="hidden text-customBlackShade font-normal w-full"
+              className="hidden  text-customBlackShade font-normal w-full"
             >
               Property Type
             </option>
@@ -43,7 +43,7 @@ function EnquiryForm() {
             Information
           </label>
           <select
-            className="font-normal h-[38px] lg:h-[42px] border rounded-lg w-full text-customBlackShade border-customBlackShade"
+            className="font-normal h-[38px] pl-2 lg:h-[42px] border rounded-lg w-full  border-customBlackShade"
             name="Inquiry Type"
             id="inquiry"
           >
@@ -83,7 +83,7 @@ function EnquiryForm() {
             Location
           </label>
           <select
-            className="h-[38px] w-full md:h-[42px] font-normal border rounded-lg text-customBlackShade border-customBlackShade"
+            className="h-[38px] w-full md:h-[42px] pl-2 font-normal border rounded-lg  border-customBlackShade"
             name="location Type"
             id="location"
           >
@@ -109,7 +109,7 @@ function EnquiryForm() {
             Property
           </label>
           <select
-            className="font-normal h-[38px] lg:h-[42px] border rounded-lg w-full text-customBlackShade border-customBlackShade"
+            className="font-normal h-[38px] pl-2 lg:h-[42px] border rounded-lg w-full  border-customBlackShade"
             name="property Type"
             id="property"
           >
@@ -161,7 +161,7 @@ function EnquiryForm() {
           />
         </div>
 
-        <button className="h-full bg-customSearchblue p-4 rounded-lg text-textcolor font-bold text-xl mt-4">
+        <button className="h-full px-4 py-3  bg-customSearchblue  rounded-lg text-textcolor font-bold text-xl mt-4">
           Submit
         </button>
       </form>
