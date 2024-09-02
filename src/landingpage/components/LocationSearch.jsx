@@ -6,7 +6,7 @@ function LocationSearch() {
   return (
     <div className=" flex  lg:flex justify-center lg:overflow-hidden  ">
       <div className="max-w-[600px] flex lg:hidden justify-between items-center flex-shrink  gap-2 absolute -bottom-5 ">
-        <div className="bg-customsearchinput min-w-[294px] h-[52px] rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
+        <div className="bg-customsearchinput min-w-[294px] h-[52px] flex justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
           <input
             type="text"
             placeholder="Search"
