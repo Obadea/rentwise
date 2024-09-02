@@ -4,7 +4,7 @@ import "./NewHeader.css"; // Import your CSS file for custom styles
 
 const Hamburger = () => {
   return (
-    <div>
+    <div className="lg:hidden">
       {/* Hamburger Button */}
       <Menu right>
         <a className="menu-item" href="/">

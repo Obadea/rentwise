@@ -82,8 +82,8 @@ const Header = () => {
             Add property
           </a>
         </div>
-        <Hamburger />
       </nav>
+      <Hamburger />
     </header>
   );
 };

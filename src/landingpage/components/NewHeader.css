@@ -1,9 +1,9 @@
 .bm-burger-button {
   position: fixed;
   width: 36px;
-  height: 30px;
+  height: 20px;
   right: 36px;
-  top: 20px;
+  top: 12px;
 }
 
 .bm-burger-bars {
@@ -18,7 +18,6 @@
   background: white; /* Background color of the menu */
   padding: 2.5em 1.5em 0; /* Padding for the menu */
   font-size: 1.15em; /* Font size for menu items */
-  margin-top: 30px;
 }
 
 .bm-item {
