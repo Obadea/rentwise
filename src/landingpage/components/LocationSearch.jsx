@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import SortIcon from "@mui/icons-material/Sort";
+import SearchIcon from "@mui/icons-material/Search";
 
 function LocationSearch() {
   return (
-    <div className=" hidden lg:flex justify-center overflow-hidden  ">
-      <form className="text-black flex flex-shrink justify-evenly bg-gray-100 px-6 py-4 gap-6 rounded-lg">
+    <div className=" flex  lg:flex justify-center lg:overflow-hidden  ">
+      <div className="max-w-[600px] flex lg:hidden justify-between items-center flex-shrink  gap-2 absolute -bottom-5 ">
+        <div className="bg-customsearchinput min-w-[294px] h-[52px] rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
+          <input
+            type="text"
+            placeholder="Search"
+            className=" ml-4 w-[80%] h-[38px] text-2xl focus:outline-none"
+          />
+          <SearchIcon className="text-customBlackShade" sx={{ fontSize: 38 }} />
+        </div>
+        <SortIcon
+          className=" bg-customsearchinput rounded-lg text-customBlackShade shadow-[0px_4px_4px_0px] shadow-custompurple"
+          sx={{ fontSize: 50 }}
+        />
+      </div>
+      <form className="hidden text-black lg:flex flex-shrink justify-evenly bg-gray-100 px-6 py-4 gap-6 rounded-lg">
         <div>
           <h3>LOOKING FOR</h3>
           <select name="cars" id="cars" className="w-44 p-2 border-black ">

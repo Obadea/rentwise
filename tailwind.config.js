@@ -28,6 +28,8 @@ module.exports = {
         DownloadHover: "#2E3C6B",
         borderbottom: "#99334B",
         customaddproperty: "#FDC9D5",
+        custompurple: "#9A83DD",
+        customsearchinput: "#FFFEFA",
       },
     },
   },

@@ -16,7 +16,7 @@ const Header = () => {
           rent<span className="text-customyellow">w</span>ise
           <span className="text-customyellow">.</span>
         </a>
-        <div className=" hidden flex items-center justify-between md:block">
+        <div className=" hidden lg:flex items-center justify-between md:flex">
           {/* location will be automated */}
 
           <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
@@ -30,9 +30,12 @@ const Header = () => {
             option3="Save for rent"
           />
 
-          <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
-            Blogs
-          </a>
+          <DropdownMenu
+            name="Landlords"
+            option1="Apartment for sell"
+            option2="Apartment for rent"
+            option3="Sustainability records"
+          />
         </div>
         {/* <div className="block lg:hidden">
           <button 
@@ -65,16 +68,10 @@ const Header = () => {
           </button>
         </div> */}
         <div
-          className={`lg:flex lg:items-center lg:space-x-4 ${
-            isOpen ? "block" : "hidden"
-          }`}
+          className={`  lg:items-center lg:space-x-4 flex
+            // isOpen ? "block" : "hidden"
+        `}
         >
-          <DropdownMenu
-            name="Landlords"
-            option1="Apartment for sell"
-            option2="Apartment for rent"
-            option3="Sustainability records"
-          />
           <a
             href="#"
             className="block py-2 px-4 text-lg hover:text-customyellow"

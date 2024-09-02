@@ -8,6 +8,7 @@ import Solution from "./components/Solution";
 import Footer from "./components/Footer";
 import Partnership from "./components/Partnership";
 import WiseReport from "./components/WiseReport";
+import LocationTest from "./components/LocationTest";
 
 function LandingPage() {
   return (
@@ -20,6 +21,7 @@ function LandingPage() {
       <Enquiry />
       <Partnership />
       <Solution />
+      <LocationTest />
       <Footer />
     </>
   );
