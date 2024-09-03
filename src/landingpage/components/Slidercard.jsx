@@ -7,7 +7,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 
 function Slidercard() {
   return (
-    <div className=" px-2 hover:bg-addpropertybg rounde-lg">
+    <div className=" px-0 hover:bg-addpropertybg rounde-lg mx-5">
       <div className="h-56 w-full">
         <img src={palor} alt="kitchen " className="  h-full w-full" />
       </div>
