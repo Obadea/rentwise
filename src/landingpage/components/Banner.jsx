@@ -38,7 +38,7 @@ function Banner() {
         <button
           className={`w-30 px-4 py-3 mr-1 transition duration-500 ease-in-out ${
             selectedButton === 1
-              ? "bg-[#FAD766] transform scale-[97%] "
+              ? "bg-[#FAD766] transform "
               : "bg-addpropertybg "
           } rounded-t-lg`}
           onClick={() => handleButtonClick(1)}
@@ -48,7 +48,7 @@ function Banner() {
         <button
           className={`px-4 mr-1 w-30 transition duration-500 ease-in-out ${
             selectedButton === 2
-              ? "bg-[#FAD766] transform scale-[97%] "
+              ? "bg-[#FAD766] transform "
               : "bg-addpropertybg "
           } rounded-t-lg`}
           onClick={() => handleButtonClick(2)}
@@ -58,7 +58,7 @@ function Banner() {
         <button
           className={`px-4 mr-1 w-30 transition duration-500 ease-in-out ${
             selectedButton === 3
-              ? "bg-[#FAD766] transform scale-[97%] "
+              ? "bg-[#FAD766] transform "
               : "bg-addpropertybg "
           } rounded-t-lg`}
           onClick={() => handleButtonClick(3)}

@@ -17,7 +17,7 @@ const Header = () => {
           rent<span className="text-customyellow">w</span>ise
           <span className="text-customyellow">.</span>
         </a>
-        <div className=" hidden lg:flex items-center justify-between ">
+        <div className=" hidden lg:flex items-center gap-4 justify-between ">
           {/* location will be automated */}
 
           <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">

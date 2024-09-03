@@ -10,22 +10,22 @@ function DropdownMenu(props) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center ">
         <button
           type="button"
-          className="inline-flex justify-center w-full  py-2 px-3 text-lg hover:text-customyellow  text-customNameBlack focus:outline-none   focus:ring-offset-gray-100 focus:ring-indigo-500"
+          className="inline-flex justify-center w-full items-center  py-2 px-3 text-lg hover:text-customyellow  text-customNameBlack focus:outline-none   focus:ring-offset-gray-100 focus:ring-indigo-500"
           id="options-menu"
           aria-haspopup="true"
           aria-expanded="true"
         >
           {props.name}
+          <KeyboardArrowDownIcon />
         </button>
-        <KeyboardArrowDownIcon />
       </div>
 
       {hover && (
         <div
-          className="origin-top-right absolute right-0  w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute left-0  w-52 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"
