@@ -5,6 +5,7 @@ import AdjustIcon from "@mui/icons-material/Adjust";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
+import Tooltip from "@mui/material/Tooltip";
 
 function Slidercard() {
   return (
@@ -16,9 +17,15 @@ function Slidercard() {
         <div className="flex justify-between">
           <h4 className="text-base font-bold">Selewa abeni estate</h4>
           <div className="flex justify-between gap-1">
-            <OpenInFullIcon fontSize="small" />
-            <AdjustIcon fontSize="small" />
-            <FavoriteBorderIcon fontSize="small" />
+            <Tooltip title="Add" arrow>
+              <OpenInFullIcon fontSize="small" />
+            </Tooltip>
+            <Tooltip title="Add" arrow>
+              <AdjustIcon fontSize="small" />
+            </Tooltip>
+            <Tooltip title="Add" arrow>
+              <FavoriteBorderIcon fontSize="small" />
+            </Tooltip>
           </div>
         </div>
         <div className="flex justify-start text-sm font-normal">
