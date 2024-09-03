@@ -4,6 +4,7 @@ import OpenInFullIcon from "@mui/icons-material/OpenInFull";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
 
 function Slidercard() {
   return (
@@ -53,7 +54,10 @@ function Slidercard() {
           <h3 className="text-customStreetcolor">
             $2,500,000/ <span className="text-sm">annum</span>
           </h3>
-          <button className="text-customDownloadBlue text-sm hover:text-DownloadHover">
+          <button className="text-customDownloadBlue text-sm hover:text-DownloadHover flex">
+            <div className="transform rotate-45">
+              <AttachFileIcon />
+            </div>
             Download WiseReport
           </button>
         </div>
