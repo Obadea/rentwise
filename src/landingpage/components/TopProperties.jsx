@@ -56,7 +56,7 @@ function TopProperties() {
     ],
   };
   return (
-    <div className=" py-24">
+    <div className=" py-24  bg-gray-100 bg-opacity-25">
       <div>
         <h2 className="text-center text-2xl font-bold ">
           Explore Top Properties
