@@ -20,7 +20,9 @@ function Slidercard() {
           backgroundRepeat: "no-repeat",
         }}
       >
-       <p>RENT</p>
+        <p className="w-auto text-xs bg-black bg-opacity-50 text-white relative inline px-2 py-1 top-4 left-[310px]">
+          FOR RENT
+        </p>
         {/* <img src={palor} alt="kitchen " className="  h-full w-full" /> */}
       </div>
       <div className="p-4 flex flex-col gap-4">
@@ -28,13 +30,16 @@ function Slidercard() {
           <h4 className="text-base font-bold">Selewa abeni estate</h4>
           <div className="flex justify-between gap-3">
             <Tooltip title="Preview" arrow placement="top">
-              <OpenInFullIcon fontSize="small" />
-            </Tooltip>
-            <Tooltip title="Favourite" arrow placement="top">
-              <AddCircleOutlineIcon fontSize="small" />
+              <OpenInFullIcon fontSize="small" className="cursor-pointer" />
             </Tooltip>
             <Tooltip title="Add to Compare" arrow placement="top">
-              <FavoriteBorderIcon fontSize="small" />
+              <AddCircleOutlineIcon
+                fontSize="small"
+                className="cursor-pointer"
+              />
+            </Tooltip>
+            <Tooltip title="Favourite" arrow placement="top">
+              <FavoriteBorderIcon fontSize="small" className="cursor-pointer" />
             </Tooltip>
           </div>
         </div>
