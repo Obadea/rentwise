@@ -1,6 +1,6 @@
 import React from "react";
-import palor from "../../assets/palor.png";
 import OpenInFullIcon from "@mui/icons-material/OpenInFull";
+import palor from "../../assets/chair_table.png";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
@@ -10,9 +10,9 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 function Slidercard() {
   return (
-    <div className=" px-0 bg-white mx-auto hover:bg-addpropertybg w-[400px] rounde-md shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)]">
+    <div className=" px-0 bg-white relative mx-4 flex flex-col lg:mx-4 hover:bg-addpropertybg max-w-[400px] rounde-md shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)]">
       <div
-        className="h-[300px] w-[400px]"
+        className="max-h-[300px] max-w-[400px]"
         style={{
           backgroundImage: `url(${require("../../assets/chair_table.png")})`,
           backgroundSize: "cover",
@@ -20,10 +20,14 @@ function Slidercard() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <p className="w-auto text-xs bg-black bg-opacity-50 text-white relative inline px-2 py-1 top-4 left-[310px]">
+        <p className="w-auto text-[70%] bg-black bg-opacity-50 text-white absolute inline px-2 py-1 top-4 left-[70%]">
           FOR RENT
         </p>
-        {/* <img src={palor} alt="kitchen " className="  h-full w-full" /> */}
+        <img
+          src={palor}
+          alt="kitchen "
+          className="  max-h-[300px] top-0 w-full"
+        />
       </div>
       <div className="p-4 flex flex-col gap-4">
         <div className="flex justify-between">
@@ -78,7 +82,7 @@ function Slidercard() {
           <h3 className="text-customStreetcolor">
             $2,500,000/ <span className="text-sm">annum</span>
           </h3>
-          <button className="text-customDownloadBlue text-sm hover:text-DownloadHover flex">
+          <button className="text-customDownloadBlue text-sm hover:text-DownloadHover flex justify-center items-center">
             <div className="transform rotate-45">
               <AttachFileIcon style={{ fontSize: 16 }} />
             </div>
