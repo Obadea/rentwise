@@ -6,24 +6,34 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import Tooltip from "@mui/material/Tooltip";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 function Slidercard() {
   return (
     <div className=" px-0 hover:bg-addpropertybg w-[400px] rounde-md mx-2">
-      <div className="h-[300px] w-[400px]">
-        <img src={palor} alt="kitchen " className="  h-full w-full" />
+      <div
+        className="h-[300px] w-[400px]"
+        style={{
+          backgroundImage: `url(${require("../../assets/chair_table.png")})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+       <p>RENT</p>
+        {/* <img src={palor} alt="kitchen " className="  h-full w-full" /> */}
       </div>
       <div className="p-4 flex flex-col gap-4">
         <div className="flex justify-between">
           <h4 className="text-base font-bold">Selewa abeni estate</h4>
-          <div className="flex justify-between gap-1">
-            <Tooltip title="Add" arrow>
+          <div className="flex justify-between gap-3">
+            <Tooltip title="Preview" arrow placement="top">
               <OpenInFullIcon fontSize="small" />
             </Tooltip>
-            <Tooltip title="Add" arrow>
-              <AdjustIcon fontSize="small" />
+            <Tooltip title="Favourite" arrow placement="top">
+              <AddCircleOutlineIcon fontSize="small" />
             </Tooltip>
-            <Tooltip title="Add" arrow>
+            <Tooltip title="Add to Compare" arrow placement="top">
               <FavoriteBorderIcon fontSize="small" />
             </Tooltip>
           </div>

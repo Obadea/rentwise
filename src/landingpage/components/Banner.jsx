@@ -22,13 +22,14 @@ function Banner() {
     >
       <div className="flex justify-center items-center flex-col gap-3 h-[400px]">
         <h2 className="text-textcolor text-3xl  text-center lg:text-6xl font-bold">
-          Welcome to rentwise
+          Welcome to rentwise AI
         </h2>
         <div>
           <div className="flex justify-center px-6">
             <p className="text-textcolor  text-base lg:w-[856px] text-center font-medium lg:text-3xl ">
-              An AI powered real estate platform; Connecting trusted landlords
-              with reliable tenants.
+              Finding the perfect home shouldn’t be a gamble. At rentwiseAI, we
+              empower you with the insights and tools that you need to make
+              confident, informed rental decisions
             </p>
           </div>
         </div>

@@ -31,11 +31,15 @@ const Header = () => {
             option3="Save for rent"
           />
 
+          <DropdownMenu name="Landlords" option1="Rental Management" />
+
           <DropdownMenu
-            name="Landlords"
-            option1="Apartment for sell"
-            option2="Apartment for rent"
-            option3="Sustainability records"
+            name="Company"
+            option1="About us"
+            option2="Our Services"
+            option3="Products"
+            option4="Leadership"
+            option5="Partners"
           />
         </div>
         {/* <div className="block lg:hidden">
