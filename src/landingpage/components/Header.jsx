@@ -10,6 +10,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  let options;
   return (
     <header className="bg-white text-black fixed z-20 -mt-16  w-full">
       <nav className="container mx-auto p-2 flex items-center w-full justify-between bg-white ">
@@ -26,20 +27,31 @@ const Header = () => {
 
           <DropdownMenu
             name="Residents"
-            option1="Rent budget calculator"
-            option2="Favourites"
-            option3="Save for rent"
+            dropdown={
+              (options = [
+                "Rent budget calculator",
+                "Favourites",
+                "Save for rent",
+              ])
+            }
           />
 
-          <DropdownMenu name="Landlords" option1="Rental Management" />
+          <DropdownMenu
+            name="Landlords"
+            dropdown={(options = ["Rental Management"])}
+          />
 
           <DropdownMenu
             name="Company"
-            option1="About us"
-            option2="Our Services"
-            option3="Products"
-            option4="Leadership"
-            option5="Partners"
+            dropdown={
+              (options = [
+                "About us",
+                "Our Services",
+                "Products",
+                "Leadership",
+                "Partners",
+              ])
+            }
           />
         </div>
         {/* <div className="block lg:hidden">

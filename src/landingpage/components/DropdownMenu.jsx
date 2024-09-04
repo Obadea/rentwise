@@ -31,27 +31,16 @@ function DropdownMenu(props) {
           aria-labelledby="options-menu"
         >
           <div className="py-1" role="none">
-            <a
-              href="#"
-              className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
-              role="menuitem"
-            >
-              {props.option1}
-            </a>
-            <a
-              href="#"
-              className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
-              role="menuitem"
-            >
-              {props.option2}
-            </a>
-            <a
-              href="#"
-              className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
-              role="menuitem"
-            >
-              {props.option3}
-            </a>
+            {props.dropdown.map((option, index) => (
+              <a
+                href="#"
+                className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
+                role="menuitem"
+                key={index}
+              >
+                {option}
+              </a>
+            ))}
           </div>
         </div>
       )}
