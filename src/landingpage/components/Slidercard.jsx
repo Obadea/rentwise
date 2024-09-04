@@ -10,7 +10,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 function Slidercard() {
   return (
-    <div className=" px-0 bg-white hover:bg-addpropertybg w-[400px] rounde-md mx-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)]">
+    <div className=" px-0 bg-white mx-auto hover:bg-addpropertybg w-[400px] rounde-md shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)]">
       <div
         className="h-[300px] w-[400px]"
         style={{
@@ -27,8 +27,10 @@ function Slidercard() {
       </div>
       <div className="p-4 flex flex-col gap-4">
         <div className="flex justify-between">
-          <h4 className="text-base font-bold">Selewa abeni estate</h4>
-          <div className="flex justify-between gap-3">
+          <h4 className="text-base text-customNameBlack font-bold">
+            Selewa abeni estate
+          </h4>
+          <div className="flex justify-between text-customNameBlack gap-3">
             <Tooltip title="Preview" arrow placement="top">
               <OpenInFullIcon fontSize="small" className="cursor-pointer" />
             </Tooltip>
@@ -78,7 +80,7 @@ function Slidercard() {
           </h3>
           <button className="text-customDownloadBlue text-sm hover:text-DownloadHover flex">
             <div className="transform rotate-45">
-              <AttachFileIcon />
+              <AttachFileIcon style={{ fontSize: 16 }} />
             </div>
             Download WiseReport
           </button>

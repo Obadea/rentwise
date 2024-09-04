@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TopProperties.css";
-
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Slidercard from "./Slidercard";
 
 function TopProperties() {
@@ -15,6 +16,8 @@ function TopProperties() {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+    // nextArrow: <ChevronRightIcon />,
+    // prevArrow: <ChevronLeftIcon />,
 
     responsive: [
       {
@@ -65,8 +68,13 @@ function TopProperties() {
         <p className="text-center text-base font-normal ">
           There’s a home for everyone. Find the home that suits you best
         </p>
-        <div className="slider-container px-6 md:px-10 mt-8 pb-12">
-          <Slider {...settings}>
+        <div className="slider-container px-6 md:px-10 mt-8 mx-auto lg:w-[1400px] pb-12">
+          <Slider
+            prevArrow={<ChevronLeftIcon />}
+            nextArrow={<ChevronRightIcon />}
+            {...settings}
+            className="mx-auto"
+          >
             <Slidercard />
             <Slidercard />
             <Slidercard />
