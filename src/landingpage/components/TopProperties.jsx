@@ -9,7 +9,7 @@ import Slidercard from "./Slidercard";
 function TopProperties() {
   const settings = {
     lazyLoad: "ondemand",
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -20,7 +20,7 @@ function TopProperties() {
       {
         breakpoint: 1024,
         settings: {
-          dots: true,
+          // dots: true,
           infinite: true,
           speed: 500,
           slidesToShow: 2,
@@ -31,7 +31,7 @@ function TopProperties() {
       {
         breakpoint: 600,
         settings: {
-          dots: true,
+          // dots: true,
           infinite: true,
           speed: 500,
           slidesToShow: 1,
@@ -65,7 +65,7 @@ function TopProperties() {
         <p className="text-center text-base font-normal ">
           There’s a home for everyone. Find the home that suits you best
         </p>
-        <div className="slider-container px-6 md:px-10 mt-8">
+        <div className="slider-container px-6 md:px-10 mt-8 pb-12">
           <Slider {...settings}>
             <Slidercard />
             <Slidercard />

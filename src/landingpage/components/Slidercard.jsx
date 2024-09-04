@@ -10,7 +10,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 
 function Slidercard() {
   return (
-    <div className=" px-0 hover:bg-addpropertybg w-[400px] rounde-md mx-2">
+    <div className=" px-0 hover:bg-addpropertybg w-[400px] rounde-md mx-2 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)]">
       <div
         className="h-[300px] w-[400px]"
         style={{
