@@ -1,16 +1,18 @@
 .slick-next,
 .slick-prev {
-  box-sizing: border-box;
-  position: absolute;
-  right: 3%; /* adjust the value to your liking */
+  display: none;
+  /* box-sizing: border-box;
+  /* position: absolute; */
+  right: 3%;
   top: 110%;
   transform: translateY(-50%);
   z-index: 10;
   transform: scale(2.8);
 }
+/*
 .slick-prev {
   position: absolute;
-  left: 82%; /* adjust the value to your liking */
+  left: 82%; 
   top: 110%;
   transform: translateY(-50%);
   z-index: 10;
@@ -28,4 +30,28 @@
 }
 .slick-next:before {
   color: #3b68f9;
+} */
+
+.custom-arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  /* top: 90%; */
+  z-index: 1;
+}
+
+.forward {
+  top: 102%;
+  left: 95%;
+}
+.backward {
+  top: 102%;
+  left: 86%;
 }

@@ -2,12 +2,38 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import "./TopProperties.css";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import "./TopProperties.css";
+import ArrowBack from "@mui/icons-material/ArrowBackIos";
+import ArrowForward from "@mui/icons-material/ArrowForwardIos";
 import Slidercard from "./Slidercard";
 
 function TopProperties() {
+  const CustomPrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div
+        className={`backward custom-arrow border border-customStreetcolor `}
+        onClick={onClick}
+      >
+        <ArrowBack
+          className="text-customStreetcolor   pl-2 "
+          style={{ fontSize: 32 }}
+        />
+      </div>
+    );
+  };
+
+  const CustomNextArrow = (props) => {
+    const { onClick } = props;
+    return (
+      <div
+        className={` forward  custom-arrow border border-customSearchblue  bg-customSearchblue`}
+        onClick={onClick}
+      >
+        <ArrowForward className="text-white bg-customSearchblue " style={{}} />
+      </div>
+    );
+  };
   const settings = {
     lazyLoad: "ondemand",
     // dots: true,
@@ -15,31 +41,10 @@ function TopProperties() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
-    nextArrow: (
-      <div
-        style={{
-          fontSize: 36,
-          color: "black",
-          backgroundColor: "red",
-          border: "1px solid black",
-        }}
-      >
-        <ArrowForwardIosIcon />
-      </div>
-    ),
-    prevArrow: (
-      <div
-        style={{
-          fontSize: 36,
-          color: "black",
-          backgroundColor: "red",
-          border: "1px solid black",
-        }}
-      >
-        <ArrowBackIosIcon />
-      </div>
-    ),
+    // arrows: false,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+
     responsive: [
       {
         breakpoint: 1024,

@@ -26,7 +26,7 @@ function Banner() {
         </h2>
         <div>
           <div className="flex justify-center px-6">
-            <p className="text-textcolor  text-base lg:w-[720px] text-center font-medium lg:text-xl ">
+            <p className="text-textcolor  text-base lg:w-[850px] text-center font-medium lg:text-2xl ">
               Finding the perfect home shouldn’t be a gamble. At rentwiseAI, we
               empower you with the insights and tools that you need to make
               confident, informed rental decisions
