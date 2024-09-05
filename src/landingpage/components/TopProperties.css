@@ -56,11 +56,19 @@
   left: 86%;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 760px) {
   .forward {
-    left: 90%;
+    left: 85%;
   }
   .backward {
-    left: 80%;
+    left: 72%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .forward {
+    left: 85%;
+  }
+  .backward {
+    left: 65%;
   }
 }

@@ -3,7 +3,7 @@ import reportCard from "../../assets/iPhone 13 mini - 3.png";
 function WiseReport() {
   return (
     <div>
-      <div className="px-6 lg:px-12 pt-16">
+      <div className="px-6 lg:px-12 py-16">
         <h2 className="text-center font-bold text-xl lg:text-4xl ">
           Heard about the
           <span className="text-customaccent"> Wise Report??</span>
