@@ -55,3 +55,12 @@
   top: 102%;
   left: 86%;
 }
+
+@media screen and (max-width: 750px) {
+  .forward {
+    left: 90%;
+  }
+  .backward {
+    left: 80%;
+  }
+}
