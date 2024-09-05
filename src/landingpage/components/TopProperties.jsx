@@ -69,7 +69,7 @@ function TopProperties() {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 760,
         settings: {
           dots: true,
           infinite: true,
@@ -77,9 +77,9 @@ function TopProperties() {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: true,
-          prevArrow:
-            '<button type="button" class="slick-prev">Previous</button>',
-          nextArrow: '<button type="button" class="slick-next">Next</button>',
+          // prevArrow:
+          //   '<button type="button" class="slick-prev">Previous</button>',
+          // nextArrow: '<button type="button" class="slick-next">Next</button>',
         },
       },
     ],
@@ -99,7 +99,7 @@ function TopProperties() {
             // prevArrow={<button className="slick-prev">Previous</button>}
             // nextArrow={<button className="slick-prev">Previous</button>}
             {...settings}
-            className="mx-auto"
+            className="mx-auto "
           >
             <Slidercard />
             <Slidercard />
