@@ -1,5 +1,5 @@
 import React from "react";
-import reportCard from "../../assets/iPhone 13 mini - 3.png";
+import reportCard from "../../../assets/iPhone 13 mini - 3.png";
 function WiseReport() {
   return (
     <div>

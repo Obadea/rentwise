@@ -14,7 +14,7 @@ function Banner() {
     <div
       className="h-[500px] w-full relative mt-16 lg:mt-16"
       style={{
-        backgroundImage: `url(${require("../../assets/beach-town.png")})`,
+        backgroundImage: `url(${require("../../../assets/beach-town.png")})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

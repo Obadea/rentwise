@@ -1,6 +1,6 @@
 import React from "react";
-import country from "../../assets/country.png";
-import continent from "../../assets/africa.png";
+import country from "../../../assets/country.png";
+import continent from "../../../assets/africa.png";
 
 function Solution() {
   return (

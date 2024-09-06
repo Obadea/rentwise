@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./TopProperties.css";
 // import Slidercard from "./Slidercard";
-import bayo from "../../assets/bayo.png";
-import chioma from "../../assets/chioma.png";
-import funke from "../../assets/funke.png";
+import bayo from "../../../assets/bayo.png";
+import chioma from "../../../assets/chioma.png";
+import funke from "../../../assets/funke.png";
 import StatemenCard from "./StatemenCard";
 
 function StatemenComponent() {

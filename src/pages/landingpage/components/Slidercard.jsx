@@ -1,6 +1,6 @@
 import React from "react";
 import OpenInFullIcon from "@mui/icons-material/OpenInFull";
-import palor from "../../assets/chair_table.png";
+import palor from "../../../assets/chair_table.png";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
@@ -14,7 +14,7 @@ function Slidercard() {
       <div
         className="max-h-[300px] max-w-[400px]"
         style={{
-          backgroundImage: `url(${require("../../assets/chair_table.png")})`,
+          backgroundImage: `url(${require("../../../assets/chair_table.png")})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

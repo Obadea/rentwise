@@ -2,25 +2,22 @@
 import React, { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import Hamburger from "./Hamburger";
+import Logo from "../../../components/Logo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   let options;
   return (
     <header className="bg-white text-black fixed z-20 -mt-16  w-full">
       <nav className="container mx-auto p-2 flex items-center w-full justify-between bg-white ">
-        <a href="#" className="text-2xl lg:text-4xl text-customblue font-bold">
-          rent<span className="text-customyellow">w</span>ise
-          <span className="text-customyellow">.</span>
-        </a>
         <div className=" hidden lg:flex items-center gap-4 justify-between ">
           {/* location will be automated */}
-
+          <Logo />
           <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
             Home
           </a>
@@ -86,7 +83,7 @@ const Header = () => {
         </div> */}
         <div className=" hidden  lg:items-center lg:space-x-4 lg:flex">
           <a
-            href="#"
+            href="SignInPage.jsx"
             className="block py-2 px-4 text-lg hover:text-customyellow"
           >
             Sign up

@@ -7,7 +7,7 @@ function Enquiry() {
     <div
       className="background-imagee lg:py-24 lg:px-8"
       style={{
-        backgroundImage: `url(${require("../../assets/chair_table.png")})`,
+        backgroundImage: `url(${require("../../../assets/chair_table.png")})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
