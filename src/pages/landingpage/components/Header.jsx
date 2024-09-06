@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import Hamburger from "./Hamburger";
 import Logo from "../../../components/Logo";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,12 +83,14 @@ const Header = () => {
           </button>
         </div> */}
         <div className=" hidden  lg:items-center lg:space-x-4 lg:flex">
-          <a
-            href="SignInPage.jsx"
-            className="block py-2 px-4 text-lg hover:text-customyellow"
+          <Link
+            to="/signin"
+            className="block py-2 px-4 text-lg
+            hover:text-customyellow"
           >
+            {" "}
             Sign up
-          </a>
+          </Link>
           <a
             href="#"
             className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg hover:bg-customaddproperty"
