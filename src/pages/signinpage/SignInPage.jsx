@@ -18,11 +18,8 @@ function SignInPage() {
             </div>
             <div>
               <label htmlFor="password">Password</label>
-              <input
-                type="text"
-                id="password"
-                placeholder="Enter a 4-pin password"
-              />
+              <input type="text" id="password" placeholder="****" />
+              <button>Forgot passsword?</button>
             </div>
             <div>
               <button>Create</button>
@@ -31,6 +28,11 @@ function SignInPage() {
               </p>
             </div>
           </form>
+          <p>or</p>
+          <div>
+            <h4>Sign up Using Google</h4>
+            <h4>Sign up Using Facebook</h4>
+          </div>
         </div>
       </div>
       <div></div>
