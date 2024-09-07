@@ -35,7 +35,27 @@ function SignInPage() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div
+        style={{
+          backgroundImage: `url(${require("../../../src/assets/swimpool.png")})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div>
+          <h4>Something to motivate</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent nunc.
+            Sed aliquam mi at urna. Condimentum mi lorem aliquam mattis.
+            Consequat est phasellus velit nisl justo dui. Faucibus dictum
+            habitasse sed vel at nisl non. Nisi placerat purus sed varius
+            euismod. Risus etiam purus donec neque. Non id mi maecenas quam
+            convallis ut varius feugiat iaculis. Quis porttitor urna malesuada
+            mattis in quam. Quam.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
