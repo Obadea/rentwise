@@ -24,6 +24,12 @@ function SignInPage() {
                 placeholder="Enter a 4-pin password"
               />
             </div>
+            <div>
+              <button>Create</button>
+              <p>
+                Dont have an account? <span>Create an account</span>
+              </p>
+            </div>
           </form>
         </div>
       </div>
