@@ -12,8 +12,18 @@ function SignInPage() {
         </div>
         <div>
           <form action="#">
-            <label htmlFor="email">Email</label>
-            <input type="text" id="email" placeholder="" />
+            <div>
+              <label htmlFor="email">Email</label>
+              <input type="text" id="email" placeholder="" />
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input
+                type="text"
+                id="password"
+                placeholder="Enter a 4-pin password"
+              />
+            </div>
           </form>
         </div>
       </div>
