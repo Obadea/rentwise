@@ -10,6 +10,12 @@ function SignInPage() {
           <h2>Create an account</h2>
           <p>Enter your email and password </p>
         </div>
+        <div>
+          <form action="#">
+            <label htmlFor="email">Email</label>
+            <input type="text" id="email" placeholder="" />
+          </form>
+        </div>
       </div>
       <div></div>
     </div>
