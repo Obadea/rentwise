@@ -4,7 +4,7 @@ import Logo from "../../components/Logo";
 function SignInPage() {
   return (
     <div className="flex flex-col lg:flex-row">
-      <div>
+      <div className="flex-1">
         <Logo />
         <div>
           <h2>Create an account</h2>
@@ -42,7 +42,7 @@ function SignInPage() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="hidden lg:block"
+        className="hidden lg:block flex-1"
       >
         <div>
           <h4>Something to motivate</h4>
