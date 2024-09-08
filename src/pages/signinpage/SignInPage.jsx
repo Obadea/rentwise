@@ -3,7 +3,7 @@ import Logo from "../../components/Logo";
 
 function SignInPage() {
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col lg:flex-row h-screen min-h-[500px]  ">
       <div className="flex-1">
         <Logo />
         <div>
@@ -38,7 +38,7 @@ function SignInPage() {
       <div
         style={{
           backgroundImage: `url(${require("../../../src/assets/swimpool.png")})`,
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
