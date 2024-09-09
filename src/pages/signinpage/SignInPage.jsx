@@ -40,18 +40,37 @@ function SignInPage() {
               <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold ">
                 Sign In
               </button>
-              <p className="text-base font-normal text-customBlackShade">
-                Dont have an account?{" "}
+              <p className="text-base font-normal text-customBlackShade text-center">
+                Already have an account?{" "}
                 <a href="#" className="text-customaccent">
                   Create an account
                 </a>
               </p>
             </div>
           </form>
-          <p>or</p>
-          <div>
-            <h4>Sign up Using Google</h4>
-            <h4>Sign up Using Facebook</h4>
+          <div class="container mx-auto text-center my-12">
+            <div class="or-tag relative inline-block mx-4 flex justify-center items-center">
+              <div class="w-1/2 h-1 bg-gray-300"></div>
+              <span class="mx-4 font-normal text-[18px]">or</span>
+              <div class="w-1/2 h-1 bg-gray-300"></div>
+            </div>
+          </div>
+          <div className="flex">
+            <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor">
+              <img
+                src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
+                className="w-5"
+              />
+              Sign up Using Google
+            </h4>
+
+            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor">
+              <img
+                src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
+                className="w-5"
+              />
+              Sign up Using Facebook
+            </h4>
           </div>
         </div>
       </div>
