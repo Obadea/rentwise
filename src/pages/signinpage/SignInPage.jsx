@@ -3,8 +3,8 @@ import Logo from "../../components/Logo";
 
 function SignInPage() {
   return (
-    <div className="flex flex-col lg:flex-row h-screen min-h-[500px]  ">
-      <div className="flex-1 my-4 mx-auto px-3 lg:pl-24 ">
+    <div className="flex flex-col lg:flex-row h-[800px] min-h-[500px]  ">
+      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  ">
         <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -26,7 +26,7 @@ function SignInPage() {
                 type="text"
                 id="email"
                 placeholder="akomolafe1234@yahoo.com"
-                className="border border-customBlackShade pl-2 py-2"
+                className="border border-customBlackShade pl-2 py-1"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -35,7 +35,7 @@ function SignInPage() {
                 type="text"
                 id="password"
                 placeholder="****"
-                className="border border-customBlackShade pl-2 py-2"
+                className="border border-customBlackShade pl-2 py-1"
               />
               <a href="#" className="text-xs font-bold text-customSearchblue">
                 Forgot passsword?
@@ -47,7 +47,7 @@ function SignInPage() {
                 Sign In
               </button>
               <p className="text-base font-normal text-customBlackShade text-center">
-                Already have an account?{" "}
+                Dont have an account?{" "}
                 <a href="#" className="text-customaccent">
                   Create an account
                 </a>
@@ -89,7 +89,7 @@ function SignInPage() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="hidden lg:block flex-1 relative h-full "
+        className="hidden lg:block flex-1 relative h-full flex-1 "
       >
         <div className="absolute w-[70%] rounded-2xl py-4 px-3 gap-4 bottom-14 right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">
