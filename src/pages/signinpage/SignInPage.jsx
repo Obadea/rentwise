@@ -6,25 +6,42 @@ function SignInPage() {
     <div className="flex flex-col lg:flex-row h-screen min-h-[500px]  ">
       <div className="flex-1 my-4 mx-auto">
         <Logo />
-        <div>
-          <h2>Create an account</h2>
-          <p>Enter your email and password </p>
+        <div className="flex flex-col gap-4 mt-8">
+          <h2 className="text-customblue text-2xl font-bold ">Sign In</h2>
+          <p className="text-base font-normal text-customBlackShade">
+            Enter email address and password you registered with.
+          </p>
         </div>
-        <div>
-          <form action="#">
-            <div>
+        <div className="mt-8">
+          <form action="#" className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
-              <input type="text" id="email" placeholder="" />
+              <input
+                type="text"
+                id="email"
+                placeholder="akomolafe1234@yahoo.com"
+                className="border border-customBlackShade"
+              />
             </div>
-            <div>
+            <div className="flex flex-col gap-2">
               <label htmlFor="password">Password</label>
-              <input type="text" id="password" placeholder="****" />
-              <button>Forgot passsword?</button>
+              <input
+                type="text"
+                id="password"
+                placeholder="****"
+                className="border border-customBlackShade"
+              />
+              <a href="#" className="text-xs font-bold text-customSearchblue">
+                Forgot passsword?
+              </a>
             </div>
-            <div>
-              <button>Create</button>
+
+            <div className="mt-4 flex flex-col gap-8">
+              <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl ">
+                Sign In
+              </button>
               <p>
-                Dont have an account? <span>Create an account</span>
+                Dont have an account? <a href="#">Create an account</a>
               </p>
             </div>
           </form>
