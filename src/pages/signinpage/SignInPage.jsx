@@ -4,7 +4,7 @@ import Logo from "../../components/Logo";
 function SignInPage() {
   return (
     <div className="flex flex-col lg:flex-row h-screen min-h-[500px]  ">
-      <div className="flex-1">
+      <div className="flex-1 my-4 mx-auto">
         <Logo />
         <div>
           <h2>Create an account</h2>
