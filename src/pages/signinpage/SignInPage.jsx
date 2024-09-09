@@ -4,7 +4,7 @@ import Logo from "../../components/Logo";
 function SignInPage() {
   return (
     <div className="flex flex-col lg:flex-row h-screen min-h-[500px]  ">
-      <div className="flex-1 my-4 mx-auto px-3">
+      <div className="flex-1 my-4 mx-auto px-3 lg:pl-24 ">
         <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -89,14 +89,13 @@ function SignInPage() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="hidden lg:block flex-1 relative"
+        className="hidden lg:block flex-1 relative h-full "
       >
-        <div
-          className="absolute w-[70%] rounded-2xl p-6 gap-4 text-white bg-[#00000087];
-"
-        >
-          <h4>Something to motivate</h4>
-          <p>
+        <div className="absolute w-[70%] rounded-2xl py-4 px-3 gap-4 bottom-14 right-24 bg-[#00000087]">
+          <h4 className="text-textcolor font-bold text-lg">
+            Something to motivate
+          </h4>
+          <p className="font-medium text-sm text-[#FFFFFFA8]">
             Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent nunc.
             Sed aliquam mi at urna. Condimentum mi lorem aliquam mattis.
             Consequat est phasellus velit nisl justo dui. Faucibus dictum
