@@ -20,7 +20,7 @@ function SignInPage() {
                 type="text"
                 id="email"
                 placeholder="akomolafe1234@yahoo.com"
-                className="border border-customBlackShade"
+                className="border border-customBlackShade pl-2 py-2"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -29,7 +29,7 @@ function SignInPage() {
                 type="text"
                 id="password"
                 placeholder="****"
-                className="border border-customBlackShade"
+                className="border border-customBlackShade pl-2 py-2"
               />
               <a href="#" className="text-xs font-bold text-customSearchblue">
                 Forgot passsword?
@@ -37,11 +37,14 @@ function SignInPage() {
             </div>
 
             <div className="mt-4 flex flex-col gap-8">
-              <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl ">
+              <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold ">
                 Sign In
               </button>
-              <p>
-                Dont have an account? <a href="#">Create an account</a>
+              <p className="text-base font-normal text-customBlackShade">
+                Dont have an account?{" "}
+                <a href="#" className="text-customaccent">
+                  Create an account
+                </a>
               </p>
             </div>
           </form>
