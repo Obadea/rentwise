@@ -32,9 +32,11 @@ function SignInPage() {
         </div>
 
         <div className="flex flex-col gap-3 mt-8">
-          <h2 className="text-customblue text-2xl font-bold ">Sign In</h2>
+          <h2 className="text-customblue text-2xl font-bold ">
+            Create an Account
+          </h2>
           <p className="text-base font-normal text-customBlackShade">
-            Enter email address and password you registered with.
+            Enter email address and password.
           </p>
         </div>
         <div className="mt-8">
@@ -67,12 +69,12 @@ function SignInPage() {
 
             <div className="mt-4 flex flex-col gap-6">
               <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold ">
-                Sign In
+                Create an Account
               </button>
               <p className="text-base font-normal text-customBlackShade text-center">
-                Dont have an account?{" "}
-                <Link to="/signup" className="text-customaccent">
-                  Create an account
+                Already have an account?{" "}
+                <Link to="/signin" className="text-customaccent">
+                  Sign In
                 </Link>
               </p>
             </div>
