@@ -3,9 +3,15 @@ import Logo from "../../components/Logo";
 
 function SignInPage() {
   return (
-    <div className="flex flex-col lg:flex-row h-screen min-h-[500px] px-3 ">
-      <div className="flex-1 my-4 mx-auto">
-        <Logo />
+    <div className="flex flex-col lg:flex-row h-screen min-h-[500px]  ">
+      <div className="flex-1 my-4 mx-auto px-3">
+        <div className="flex justify-between ">
+          <Logo />
+          <button className="font-bold text-sm text-customSearchblue lg:hidden">
+            Back
+          </button>
+        </div>
+
         <div className="flex flex-col gap-4 mt-8">
           <h2 className="text-customblue text-2xl font-bold ">Sign In</h2>
           <p className="text-base font-normal text-customBlackShade">
@@ -57,7 +63,7 @@ function SignInPage() {
               <div class="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex gap-2 justify-around">
+          <div className="flex gap-2 justify-around mb-3">
             <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
               <img
                 src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
@@ -78,14 +84,17 @@ function SignInPage() {
       </div>
       <div
         style={{
-          backgroundImage: `url(${require("../../../src/assets/swimpool.png")})`,
-          backgroundSize: "contain",
+          backgroundImage: `url(${require("../../../src/assets/swimmingpool.jpg")})`,
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="hidden lg:block flex-1"
+        className="hidden lg:block flex-1 relative"
       >
-        <div>
+        <div
+          className="absolute w-[70%] rounded-2xl p-6 gap-4 text-white bg-[#00000087];
+"
+        >
           <h4>Something to motivate</h4>
           <p>
             Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent nunc.
