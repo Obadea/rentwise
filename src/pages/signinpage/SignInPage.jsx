@@ -3,7 +3,7 @@ import Logo from "../../components/Logo";
 
 function SignInPage() {
   return (
-    <div className="flex flex-col lg:flex-row h-screen min-h-[500px]  ">
+    <div className="flex flex-col lg:flex-row h-screen min-h-[500px] px-3 ">
       <div className="flex-1 my-4 mx-auto">
         <Logo />
         <div className="flex flex-col gap-4 mt-8">
@@ -51,12 +51,14 @@ function SignInPage() {
           <div class="container mx-auto text-center my-12">
             <div class="or-tag relative inline-block mx-4 flex justify-center items-center">
               <div class="w-1/2 h-1 bg-gray-300"></div>
-              <span class="mx-4 font-normal text-[18px]">or</span>
+              <span class="mx-4 font-normal text-customStreetcolor text-[18px]">
+                or
+              </span>
               <div class="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex">
-            <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor">
+          <div className="flex gap-2 justify-around">
+            <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
               <img
                 src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
                 className="w-5"
@@ -64,10 +66,10 @@ function SignInPage() {
               Sign up Using Google
             </h4>
 
-            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor">
+            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
               <img
                 src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
-                className="w-5"
+                className="w-6"
               />
               Sign up Using Facebook
             </h4>
