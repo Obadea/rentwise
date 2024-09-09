@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../components/Logo";
 
 function SignInPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Call API to submit form data
+    console.log("Form submitted:", { email, password });
+    // Replace with your API call
+    // fetch('/api/signin', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ email, password }),
+    // })
+    // .then(response => response.json())
+    // .then(data => console.log(data))
+    // .catch(error => console.error(error));
+  };
+
   return (
-    <div className="flex flex-col lg:flex-row h-[800px] min-h-[500px]  ">
-      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  ">
+    <div className="flex flex-col lg:flex-row  min-h-[500px]  ">
+      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -25,6 +43,8 @@ function SignInPage() {
               <input
                 type="text"
                 id="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
                 placeholder="akomolafe1234@yahoo.com"
                 className="border border-customBlackShade pl-2 py-1"
               />
@@ -34,6 +54,8 @@ function SignInPage() {
               <input
                 type="text"
                 id="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
                 placeholder="****"
                 className="border border-customBlackShade pl-2 py-1"
               />
@@ -85,11 +107,11 @@ function SignInPage() {
       <div
         style={{
           backgroundImage: `url(${require("../../../src/assets/swimmingpool.jpg")})`,
-          backgroundSize: "cover",
+          objectFit: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="hidden lg:block flex-1 relative h-full flex-1 "
+        className="hidden lg:block flex-1 relative  "
       >
         <div className="absolute w-[70%] rounded-2xl py-4 px-3 gap-4 bottom-14 right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">
