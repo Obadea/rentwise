@@ -60,9 +60,12 @@ function SignInPage() {
                 placeholder="****"
                 className="border border-customBlackShade pl-2 py-1"
               />
-              <a href="#" className="text-xs font-bold text-customSearchblue">
+              <Link
+                to="/passwordreset"
+                className="text-xs font-bold text-customSearchblue"
+              >
                 Forgot passsword?
-              </a>
+              </Link>
             </div>
 
             <div className="mt-4 flex flex-col gap-6">
