@@ -22,7 +22,7 @@ function Passwordreset() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row  min-h-[500px]  ">
+    <div className="flex flex-col lg:flex-row h-screen  min-h-[500px]  ">
       <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
@@ -41,7 +41,7 @@ function Passwordreset() {
           </p>
         </div>
         <div className="mt-8">
-          <form action="#" className="flex flex-col gap-4">
+          <form action="#" className="flex flex-col gap-32">
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input
@@ -56,42 +56,10 @@ function Passwordreset() {
 
             <div className="mt-4 flex flex-col gap-6">
               <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold ">
-                Create an Account
+                Send Password Reset Code
               </button>
-              <p className="text-base font-normal text-customBlackShade text-center">
-                Already have an account?{" "}
-                <Link to="/signin" className="text-customaccent">
-                  Sign In
-                </Link>
-              </p>
             </div>
           </form>
-          <div class="container mx-auto text-center my-6">
-            <div class="or-tag relative inline-block mx-4 flex justify-center items-center">
-              <div class="w-1/2 h-1 bg-gray-300"></div>
-              <span class="mx-4 font-normal text-customStreetcolor text-[18px]">
-                or
-              </span>
-              <div class="w-1/2 h-1 bg-gray-300"></div>
-            </div>
-          </div>
-          <div className="flex gap-2 justify-around mb-3">
-            <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
-                className="w-5"
-              />
-              Sign up Using Google
-            </h4>
-
-            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
-                className="w-6"
-              />
-              Sign up Using Facebook
-            </h4>
-          </div>
         </div>
       </div>
       <div
