@@ -55,7 +55,7 @@ function OtpReset() {
               />
             </div>
 
-            <div className="mt-4 flex flex-col gap-6">
+            <div className="mt-4 mb-2 flex flex-col gap-6">
               <Link
                 to="/otpreset"
                 className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold "
