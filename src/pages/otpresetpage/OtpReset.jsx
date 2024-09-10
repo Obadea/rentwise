@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 
-function Passwordreset() {
+function OtpReset() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,8 +36,9 @@ function Passwordreset() {
             Password Reset
           </h2>
           <p className="text-base font-normal text-customBlackShade">
-            Enter email address and password you registered with and we’ll send
-            you an OTP to reset your password.
+            OTP has been sent to{" "}
+            <span className="text-customaccent">akomolafe123@icloud.com</span>
+            If you don’t get the email soon, check your spam folder
           </p>
         </div>
         <div className="mt-8">
@@ -59,8 +60,11 @@ function Passwordreset() {
                 to="/otpreset"
                 className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold "
               >
-                Send Password Reset Code
+                Reset Password
               </Link>
+              <button className="font-medium text-base text-customSearchblue text-center">
+                Resend OTP
+              </button>
             </div>
           </form>
         </div>
@@ -93,4 +97,4 @@ function Passwordreset() {
   );
 }
 
-export default Passwordreset;
+export default OtpReset;
