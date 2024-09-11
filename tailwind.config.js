@@ -30,6 +30,7 @@ module.exports = {
         customaddproperty: "#FDC9D5",
         custompurple: "#9A83DD",
         customsearchinput: "#FFFEFA",
+        customBlackShade1: "#0D0D0D",
       },
     },
   },
