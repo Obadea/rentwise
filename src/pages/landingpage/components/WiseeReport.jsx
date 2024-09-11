@@ -1,4 +1,6 @@
 import React from "react";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import manrun from "../../../assets/man-run.png";
 
 function WiseeReport() {
   return (
@@ -19,7 +21,18 @@ function WiseeReport() {
                 Comprehensive report
               </h4>
               <div>
-                <h3></h3>
+                <h3 className="font-normal text-sm text-customblack">
+                  Informed Decisions
+                </h3>
+                <h4 className="font-medium text-xs text-customResultqueryGrey">
+                  Access Comprehensive reports on properties, .....
+                </h4>
+                <button className="font-bold text-customResultqueryGrey">
+                  More about informed decision <ArrowForwardIcon />
+                </button>
+              </div>
+              <div>
+                <img src={manrun} alt="" />
               </div>
             </div>
           </div>
