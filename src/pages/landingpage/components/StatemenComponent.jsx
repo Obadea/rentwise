@@ -63,7 +63,7 @@ function StatemenComponent() {
     <div className=" flex flex-col justify-center pt-12 bg-customaccent100">
       <div>
         <h2 className="text-center font-bold text-xl lg:text-3xl  ">
-          Meet Our Statemen
+          Meet Our State-men
         </h2>
         <p className="text-center text-small lg:text-base font-normal">
           Our expert agents are here to guide you in finding the perfect
