@@ -37,7 +37,7 @@ function OtpReset() {
           </h2>
           <p className="text-base font-normal text-customBlackShade">
             OTP has been sent to{" "}
-            <span className="text-customaccent">akomolafe123@icloud.com</span>
+            <span className="text-customaccent">akomolafe123@icloud.com</span>{" "}
             If you don’t get the email soon, check your spam folder
           </p>
         </div>

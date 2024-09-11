@@ -14,11 +14,12 @@ const Header = () => {
 
   let options;
   return (
-    <header className="bg-white text-black fixed z-20 -mt-16  w-full">
-      <nav className="container mx-auto p-2 flex items-center w-full justify-between bg-white ">
+    <header className="bg-white  text-black fixed z-20 top-0 w-full ">
+      <nav className=" pl-8 py-2 flex items-center w-full justify-between bg-white lg:py-0  ">
+        <Logo />
         <div className=" hidden lg:flex items-center gap-4 justify-between ">
           {/* location will be automated */}
-          <Logo />
+
           <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
             Home
           </a>
@@ -51,49 +52,18 @@ const Header = () => {
               ])
             }
           />
-        </div>
-        {/* <div className="block lg:hidden">
-          <button 
-            onClick={toggleMenu} 
-            className="text-white focus:outline-none"
-          >
-            <svg 
-              className="w-6 h-6" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isOpen ? (
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth="2" 
-                  d="M6 18L18 6M6 6l12 12" 
-                />
-              ) : (
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth="2" 
-                  d="M4 6h16M4 12h16m-7 6h7" 
-                />
-              )}
-            </svg>
-          </button>
-        </div> */}
-        <div className=" hidden  lg:items-center lg:space-x-4 lg:flex">
+
           <Link
             to="/signin"
             className="block py-2 px-4 text-lg
             hover:text-customyellow"
           >
             {" "}
-            Sign up
+            Sign In
           </Link>
           <a
             href="#"
-            className="block py-3 px-5 text-lg font-medium bg-addpropertybg rounded-lg hover:bg-customaddproperty"
+            className="block py-5 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
           >
             Add property
           </a>
