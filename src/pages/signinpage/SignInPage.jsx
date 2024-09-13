@@ -22,9 +22,9 @@ function SignInPage() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row  min-h-[500px]  ">
-      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
-        <div className="flex justify-between ">
+    <div className="flex flex-col lg:flex-row  ">
+      <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
+        <div className="flex justify-between mt-4">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
             Back
@@ -115,7 +115,7 @@ function SignInPage() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="hidden lg:block flex-1 relative  "
+        className="hidden lg:block  h-full min-h-full w-full relative bg-red-500 "
       >
         <div className="absolute w-[70%] rounded-2xl py-4 px-3 gap-4 bottom-14 right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">
