@@ -22,28 +22,29 @@ function WiseeReport() {
           </p>
         </div>
         <div>
-          <div>
-            <div>
-              <div className="flex flex-row">
-                <div className="flex flex-col">
-                  <h4 className="font-normal text-xs text-customStreetcolor">
-                    Comprehensive report
-                  </h4>
+          <div className="flex gap-2">
+            <div className="flex flex-row gap-12">
+              <div className="flex flex-col justify-between">
+                <h4 className="font-normal text-xs text-customStreetcolor">
+                  Comprehensive report
+                </h4>
+                <div>
                   <h3 className="font-normal text-sm text-customblack">
                     Informed Decisions
                   </h3>
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Access Comprehensive reports on properties, .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey">
+                  <button className="font-bold text-customResultqueryGrey flex">
                     More about informed decision <ArrowForwardIcon />
                   </button>
                 </div>
-                <div>
-                  <img src={manrun} alt="" />
-                </div>
+              </div>
+              <div>
+                <img src={manrun} alt="" />
               </div>
             </div>
+
             <div>
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Real tenant reviews
