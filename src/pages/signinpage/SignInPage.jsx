@@ -23,7 +23,7 @@ function SignInPage() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen h-[600px] ">
+    <div className="flex flex-col lg:flex-row min-h-screen h-[650px] ">
       <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  md:flex-2 lg:flex-2 ">
         <div className="flex justify-between mt-4">
           <Logo />
