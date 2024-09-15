@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
+import swimming from "../../assets/swimmingpool.jpg";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
@@ -22,8 +23,8 @@ function SignInPage() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row  ">
-      <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
+    <div className="flex flex-col lg:flex-row min-h-screen max-h-[1000px] ">
+      <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  lg:flex-2 ">
         <div className="flex justify-between mt-4">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -80,13 +81,13 @@ function SignInPage() {
               </p>
             </div>
           </form>
-          <div class="container mx-auto text-center my-6">
-            <div class="or-tag relative inline-block mx-4 flex justify-center items-center">
-              <div class="w-1/2 h-1 bg-gray-300"></div>
-              <span class="mx-4 font-normal text-customStreetcolor text-[18px]">
+          <div className="container mx-auto text-center my-6">
+            <div className="or-tag relative inline-block mx-4 flex justify-center items-center">
+              <div className="w-1/2 h-1 bg-gray-300"></div>
+              <span className="mx-4 font-normal text-customStreetcolor text-[18px]">
                 or
               </span>
-              <div class="w-1/2 h-1 bg-gray-300"></div>
+              <div className="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
           <div className="flex gap-2 justify-around mb-3">
@@ -108,15 +109,17 @@ function SignInPage() {
           </div>
         </div>
       </div>
+
       <div
-        style={{
-          backgroundImage: `url(${require("../../../src/assets/swimmingpool.jpg")})`,
-          objectFit: "contain",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-        className="hidden lg:block  h-full min-h-full w-full relative bg-red-500 "
+        // style={{
+        //   backgroundImage: `url(${require("../../../src/assets/swimmingpool.jpg")})`,
+        //   objectFit: "contain",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        // }}
+        className="hidden lg:flex flex-1  relative  h-full   "
       >
+        <img src={swimming} alt="" className="h-full w-full " />
         <div className="absolute w-[70%] rounded-2xl py-4 px-3 gap-4 bottom-14 right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">
             Something to motivate
