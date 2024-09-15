@@ -24,7 +24,7 @@ function SignInPage() {
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen max-h-[1000px] ">
-      <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  lg:flex-2 ">
+      <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  md:flex-2 lg:flex-2 ">
         <div className="flex justify-between mt-4">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -117,9 +117,9 @@ function SignInPage() {
         //   backgroundPosition: "center",
         //   backgroundRepeat: "no-repeat",
         // }}
-        className="hidden lg:flex flex-1  relative  h-full   "
+        className="hidden lg:block md:flex-1 lg:flex-3 relative   "
       >
-        <img src={swimming} alt="" className="h-full w-full " />
+        <img src={swimming} alt="" className="h-full w-full object-cover" />
         <div className="absolute w-[70%] rounded-2xl py-4 px-3 gap-4 bottom-14 right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">
             Something to motivate
