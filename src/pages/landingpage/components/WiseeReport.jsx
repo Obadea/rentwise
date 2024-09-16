@@ -37,8 +37,9 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Access Comprehensive reports on properties, .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px] flex">
-                    More about informed decision <ArrowForwardIcon />
+                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                    More about informed decision{" "}
+                    <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
                 </div>
               </div>
