@@ -21,7 +21,9 @@ function WiseeReport() {
             profiles, and neighborhood insights
           </p>
         </div>
-        <div>
+
+        <div className="">
+          {/* First component */}
           <div className="flex gap-2  ">
             <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
               <div className="flex flex-col justify-between h-full flex-1">
@@ -41,7 +43,7 @@ function WiseeReport() {
                 </div>
               </div>
               <div className="flex-1">
-                <img src={manrun} alt="" />
+                <img src={manrun} alt="" className="w-full" />
               </div>
             </div>
 
@@ -66,13 +68,16 @@ function WiseeReport() {
               </div>
             </div>
           </div>
-          <div>
-            <div>
+
+          {/* Second level of components */}
+          <div className="flex gap-2 ">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
               <div>
-                <img src={mandive} alt="" />
+                <img src={mandive} alt="" className="flex justify-center" />
+
                 <h3 className="font-normal text-sm text-customblack">
                   Virtual Tours
                 </h3>
@@ -85,8 +90,8 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div>
-              <div>
+            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
+              <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Property Suggestions{" "}
                 </h4>
@@ -97,19 +102,20 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Tailored property suggestions based on your household......
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey">
+                  <button className="font-bold text-customResultqueryGrey text-[10px] ">
                     More about smart recommendations <ArrowForwardIcon />
                   </button>
                 </div>
-                <div>
-                  <img src={manthink} alt="" />
-                </div>
+              </div>
+              <div>
+                <img src={manthink} alt="" />
               </div>
             </div>
           </div>
-          <div>
-            <div>
-              <div>
+          {/* third Component */}
+          <div className="flex gap-2 ">
+            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
+              <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Landlord’s Record
                 </h4>
@@ -125,17 +131,21 @@ function WiseeReport() {
                     More about ilandlord reliability <ArrowForwardIcon />
                   </button>
                 </div>
-                <div>
-                  <img src={manoffice} alt="" />
-                </div>
+              </div>
+              <div className="flex-1">
+                <img src={manoffice} alt="" />
               </div>
             </div>
-            <div>
+
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Detailed Insights
               </h4>
               <div>
-                <img src={manteach} alt="" />
+                <div className="flex justify-center">
+                  <img src={manteach} alt="" />
+                </div>
+
                 <h3 className="font-normal text-sm text-customblack">
                   Neigbourhood Safety
                 </h3>
