@@ -52,7 +52,7 @@ function WiseeReport() {
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Real tenant reviews
               </h4>
-              <div>
+              <div className="w-[150px]">
                 <div className="flex justify-center">
                   <img src={searchDoc} alt="" />
                 </div>
@@ -63,8 +63,9 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Real tenant reviews......
                 </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px] flex">
-                  More about transparency <ArrowForwardIcon />
+                <button className="font-bold text-customResultqueryGrey text-[10px] flex flex items-center hover:text-customSearchblue">
+                  More about transparency{" "}
+                  <ArrowForwardIcon sx={{ fontSize: 20 }} />
                 </button>
               </div>
             </div>
@@ -72,7 +73,7 @@ function WiseeReport() {
 
           {/* Second level of components */}
           <div className="flex gap-2 ">
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -85,8 +86,9 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Explore homes from the .....
                 </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px]">
-                  More about virtual tours <ArrowForwardIcon />
+                <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                  More about virtual tours{" "}
+                  <ArrowForwardIcon sx={{ fontSize: 20 }} />
                 </button>
               </div>
             </div>
@@ -103,8 +105,9 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Tailored property suggestions based on your household......
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px] ">
-                    More about smart recommendations <ArrowForwardIcon />
+                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                    More about smart recommendations{" "}
+                    <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
                 </div>
               </div>
@@ -128,8 +131,9 @@ function WiseeReport() {
                     Know your landlord's track record and legal compliance
                     before .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px]">
-                    More about ilandlord reliability <ArrowForwardIcon />
+                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                    More about ilandlord reliability{" "}
+                    <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
                 </div>
               </div>
@@ -142,7 +146,7 @@ function WiseeReport() {
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Detailed Insights
               </h4>
-              <div>
+              <div className="w-[150px]">
                 <div className="flex justify-center">
                   <img src={manteach} alt="" />
                 </div>
@@ -153,12 +157,18 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Get detailed insights into ....
                 </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px]">
-                  More about neigbourhood <ArrowForwardIcon />
+                <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                  More about neigbourhood{" "}
+                  <ArrowForwardIcon sx={{ fontSize: 20 }} />
                 </button>
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center">
+          <button className="text-textcolor bg-customSearchblue p-4 font-bold text-base rounded-2xl ">
+            Download 21 Abraham Niyi, Street Orchid Wise Report ( SAMPLE)
+          </button>
         </div>
       </div>
     </div>
