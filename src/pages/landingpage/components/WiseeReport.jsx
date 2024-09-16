@@ -9,9 +9,9 @@ import manthink from "../../../assets/man-think.png";
 
 function WiseeReport() {
   return (
-    <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)]">
-      <div className="w-[630px] mx-auto">
-        <div className="text-center  gap-1 ">
+    <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
+      <div className="w-[630px] mx-auto flex flex-col gap-14">
+        <div className="text-center flex flex-col gap-1 ">
           <h2 className="font-bold text-3xl text-customBlackShade1 ">
             Just Before you Make that Payment Get a copy of the WiseReport
           </h2>
@@ -22,9 +22,9 @@ function WiseeReport() {
           </p>
         </div>
         <div>
-          <div className="flex gap-2">
-            <div className="flex flex-row items-center gap-12 py-2 px-4">
-              <div className="flex flex-col justify-between h-full">
+          <div className="flex gap-2  ">
+            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
+              <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Comprehensive report
                 </h4>
@@ -40,24 +40,27 @@ function WiseeReport() {
                   </button>
                 </div>
               </div>
-              <div>
+              <div className="flex-1">
                 <img src={manrun} alt="" />
               </div>
             </div>
 
-            <div>
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Real tenant reviews
               </h4>
               <div>
-                <img src={searchDoc} alt="" />
+                <div className="flex justify-center">
+                  <img src={searchDoc} alt="" />
+                </div>
+
                 <h3 className="font-normal text-sm text-customblack">
                   Transparency
                 </h3>
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Real tenant reviews......
                 </h4>
-                <button className="font-bold text-customResultqueryGrey">
+                <button className="font-bold text-customResultqueryGrey text-[10px] flex">
                   More about transparency <ArrowForwardIcon />
                 </button>
               </div>
