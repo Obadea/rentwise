@@ -23,8 +23,8 @@ function WiseeReport() {
         </div>
         <div>
           <div className="flex gap-2">
-            <div className="flex flex-row gap-12">
-              <div className="flex flex-col justify-between">
+            <div className="flex flex-row items-center gap-12 py-2 px-4">
+              <div className="flex flex-col justify-between h-full">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Comprehensive report
                 </h4>
@@ -35,7 +35,7 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Access Comprehensive reports on properties, .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey flex">
+                  <button className="font-bold text-customResultqueryGrey text-[10px] flex">
                     More about informed decision <ArrowForwardIcon />
                   </button>
                 </div>
@@ -76,7 +76,7 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Explore homes from the .....
                 </h4>
-                <button className="font-bold text-customResultqueryGrey">
+                <button className="font-bold text-customResultqueryGrey text-[10px]">
                   More about virtual tours <ArrowForwardIcon />
                 </button>
               </div>

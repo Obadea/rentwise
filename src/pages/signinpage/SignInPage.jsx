@@ -120,7 +120,7 @@ function SignInPage() {
         className="hidden lg:block md:flex-1 lg:flex-3 relative   "
       >
         <img src={swimming} alt="" className="h-full w-full object-cover" />
-        <div className="absolute w-[70%] rounded-2xl py-4 px-3 gap-4 bottom-[10%] right-24 bg-[#00000087]">
+        <div className="absolute w-[75%] rounded-2xl py-4 px-3 gap-4 bottom-[10%] right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">
             Something to motivate
           </h4>
