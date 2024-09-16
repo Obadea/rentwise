@@ -22,7 +22,7 @@ function WiseeReport() {
           </p>
         </div>
 
-        <div className="">
+        <div className="flex flex-col gap-3">
           {/* First component */}
           <div className="flex gap-2  ">
             <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
@@ -127,13 +127,13 @@ function WiseeReport() {
                     Know your landlord's track record and legal compliance
                     before .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey">
+                  <button className="font-bold text-customResultqueryGrey text-[10px]">
                     More about ilandlord reliability <ArrowForwardIcon />
                   </button>
                 </div>
               </div>
               <div className="flex-1">
-                <img src={manoffice} alt="" />
+                <img src={manoffice} alt="" className="" />
               </div>
             </div>
 
@@ -152,7 +152,7 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Get detailed insights into ....
                 </h4>
-                <button className="font-bold text-customResultqueryGrey">
+                <button className="font-bold text-customResultqueryGrey text-[10px]">
                   More about neigbourhood <ArrowForwardIcon />
                 </button>
               </div>
