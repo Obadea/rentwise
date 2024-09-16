@@ -24,8 +24,8 @@ function WiseeReport() {
 
         <div className="flex flex-col gap-3">
           {/* First component */}
-          <div className="flex gap-2  ">
-            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
+          <div className="flex flex-col lg:flex-row gap-2 flex-wrap ">
+            <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor py-2 px-4 w-[420px]">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Comprehensive report
@@ -48,11 +48,11 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Real tenant reviews
               </h4>
-              <div className="w-[150px]">
+              <div className="">
                 <div className="flex justify-center">
                   <img src={searchDoc} alt="" />
                 </div>
@@ -63,23 +63,22 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Real tenant reviews......
                 </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px] flex flex items-center hover:text-customSearchblue">
+                <button className="font-bold text-customResultqueryGrey text-[10px]  flex items-center hover:text-customSearchblue">
                   More about transparency{" "}
                   <ArrowForwardIcon sx={{ fontSize: 20 }} />
                 </button>
               </div>
             </div>
-          </div>
 
-          {/* Second level of components */}
-          <div className="flex gap-2 ">
             <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
               <div>
-                <img src={mandive} alt="" className="flex justify-center" />
-
+                <div className="flex justify-center">
+                <img src={mandive} alt=""  />
+                </div>
+                
                 <h3 className="font-normal text-sm text-customblack">
                   Virtual Tours
                 </h3>
@@ -93,7 +92,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
+            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 w-[420px] ">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Property Suggestions{" "}
@@ -116,6 +115,9 @@ function WiseeReport() {
               </div>
             </div>
           </div>
+
+          {/* Second level of components */}
+          {/* <div className="flex gap-2 "></div> */}
           {/* third Component */}
           <div className="flex gap-2 ">
             <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">

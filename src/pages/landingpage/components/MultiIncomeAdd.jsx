@@ -19,7 +19,7 @@ function MultiIncomeAdd() {
           </p>
         </div>
         <div>
-          <div>
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
             <label htmlFor="incomeOne">Income one</label>
             <input type="number" id="incomeOne" placeholder="Enter in NGN" />
           </div>
@@ -34,6 +34,9 @@ function MultiIncomeAdd() {
             <input type="number" id="incomeThree" placeholder="Enter in NGN" />
           </div>
         </div>
+        <button className="bg-customSearchblue py-5 px-2 rounded-lg">
+          Next
+        </button>
       </div>
     </div>
   );
