@@ -48,6 +48,7 @@ function WiseeReport() {
               </div>
             </div>
 
+            <div>
             <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Real tenant reviews
@@ -70,6 +71,30 @@ function WiseeReport() {
               </div>
             </div>
 
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
+              <h4 className="font-normal text-xs text-customStreetcolor">
+                Explore Properties
+              </h4>
+              <div>
+                <div className="flex justify-center">
+                <img src={mandive} alt=""  />
+                </div>
+                
+                <h3 className="font-normal text-sm text-customblack">
+                  Virtual Tours
+                </h3>
+                <h4 className="font-medium text-xs text-customResultqueryGrey">
+                  Explore homes from the .....
+                </h4>
+                <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                  More about virtual tours{" "}
+                  <ArrowForwardIcon sx={{ fontSize: 20 }} />
+                </button>
+              </div>
+            </div>
+
+            </div>
+            
             <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
