@@ -48,7 +48,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div>
+            <div className="flex ">
             <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Real tenant reviews
@@ -71,7 +71,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px] lg:hidden">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -95,7 +95,7 @@ function WiseeReport() {
 
             </div>
             
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px] hidden lg:block">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -144,7 +144,7 @@ function WiseeReport() {
           {/* Second level of components */}
           {/* <div className="flex gap-2 "></div> */}
           {/* third Component */}
-          <div className="flex gap-2 ">
+          <div className="flex flex-col lg:flex-row gap-2 ">
             <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
