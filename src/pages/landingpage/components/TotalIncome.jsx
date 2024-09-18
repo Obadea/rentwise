@@ -9,7 +9,7 @@ function TotalIncome() {
           <div>
             <CloseIcon />
           </div>
-          <div className="flex flex-col justify-center lg:w-[510px]  gap-10">
+          <div className="flex flex-col justify-center lg:w-full  gap-10">
             <div className="flex flex-col gap-4">
               <h2 className="font-bold text-2xl text-customNameBlack">
                 Improve search
@@ -17,7 +17,9 @@ function TotalIncome() {
               <p className="font-normal text-base  text-customgray2">
                 Total annual household income
               </p>
-              <p>{total}</p>
+              <p className="font-medium text-lg text-customaccent text-center">
+                ₦20,000,000
+              </p>
             </div>
           </div>
           <div>
@@ -28,6 +30,14 @@ function TotalIncome() {
             <p className="font-normal text-base  text-customgray2">
               Would you love to continue?
             </p>
+          </div>
+          <div className="w-full">
+            <button
+              className="bg-customSearchblue rounded-lg py-3 font-medium w-full text-textcolor text-base "
+              //   onClick={addTotalValue}
+            >
+              Continue Search
+            </button>
           </div>
         </div>
       </div>

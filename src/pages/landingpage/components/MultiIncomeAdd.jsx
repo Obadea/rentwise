@@ -1,18 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 
 function MultiIncomeAdd() {
-  const [num1, SetNum1] = useState(null);
-  const [num2, SetNum2] = useState(null);
-  const [num3, SetNum3] = useState(null);
-  const [total, SetTotal] = useState(null);
-
-  const addTotalValue = () => {
-    const totalValue = num1 + num2 + num3;
-    console.log(totalValue);
-    SetTotal(totalValue);
-  };
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 ">
       <div className="rounded-3xl flex flex-col gap-10  fixed  py-4 px-4 mx-5 lg:mx-0 lg:px-10 bg-white">
