@@ -2,7 +2,15 @@ import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 
-function MultiIncomeAdd() {
+function MultiIncomeAdd({
+  num1,
+  setNum1,
+  num2,
+  setNum2,
+  num3,
+  setNum3,
+  addTotalValue,
+}) {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 ">
       <div className="rounded-3xl flex flex-col gap-10  fixed  py-4 px-4 mx-5 lg:mx-0 lg:px-10 bg-white">

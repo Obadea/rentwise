@@ -3,6 +3,7 @@ import SortIcon from "@mui/icons-material/Sort";
 import SearchIcon from "@mui/icons-material/Search";
 import MultiIncomeAdd from "./MultiIncomeAdd";
 import TotalIncome from "./TotalIncome";
+import SearchBetter from "./SearchBetter";
 
 function LocationSearch() {
   const [filter, setFilter] = useState(false);
@@ -11,6 +12,8 @@ function LocationSearch() {
   const [num2, setNum2] = useState(null);
   const [num3, setNum3] = useState(null);
   const [total, setTotal] = useState(null);
+
+  const [activePopup, setActivePopup] = useState("");
 
   const addTotalValue = () => {
     const totalValue = num1 + num2 + num3;
@@ -126,21 +129,38 @@ function LocationSearch() {
               <option value="max">Max Price</option>
             </select>
           </div>
-          <button className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6">
+          <button
+            className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
+            onClick={setActivePopup("pop1")}
+          >
             Search
           </button>
         </form>
       </div>
-      <MultiIncomeAdd
-        num1={num1}
-        setNum1={setNum1}
-        num2={num2}
-        setNum2={setNum2}
-        setNum3={setNum3}
-        total={total}
-        setTotal={setTotal}
-      />
-      <TotalIncome />
+      {activePopup === "pop1" ? (
+        <SearchBetter
+          activePopup={activePopup}
+          setActivePopup={setActivePopup}
+        />
+      ) : activePopup === "pop2" ? (
+        <MultiIncomeAdd
+          activePopup={activePopup}
+          setActivePopup={setActivePopup}
+          num1={num1}
+          setNum1={setNum1}
+          num2={num2}
+          setNum2={setNum2}
+          setNum3={setNum3}
+          total={total}
+          addTotalValue={addTotalValue}
+        />
+      ) : activePopup === "pop3" ? (
+        <TotalIncome
+          total={total}
+          activePopup={activePopup}
+          setActivePopup={setActivePopup}
+        />
+      ) : null}
     </div>
   );
 }

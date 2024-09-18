@@ -1,7 +1,7 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
-function TotalIncome() {
+function TotalIncome({ total }) {
   return (
     <div>
       <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 ">
@@ -18,7 +18,7 @@ function TotalIncome() {
                 Total annual household income
               </p>
               <p className="font-medium text-lg text-customaccent text-center">
-                ₦20,000,000
+                {total}
               </p>
             </div>
           </div>
@@ -32,10 +32,7 @@ function TotalIncome() {
             </p>
           </div>
           <div className="w-full">
-            <button
-              className="bg-customSearchblue rounded-lg py-3 font-medium w-full text-textcolor text-base "
-              //   onClick={addTotalValue}
-            >
+            <button className="bg-customSearchblue rounded-lg py-3 font-medium w-full text-textcolor text-base ">
               Continue Search
             </button>
           </div>
