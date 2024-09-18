@@ -10,9 +10,15 @@ function MultiIncomeAdd({
   num3,
   setNum3,
   addTotalValue,
+  activePopup,
+  setActivePopup,
 }) {
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 ">
+    <div
+      className={` ${
+        activePopup === "pop2" ? "flex" : "hidden"
+      } fixed inset-0  items-center justify-center z-50 bg-black bg-opacity-50`}
+    >
       <div className="rounded-3xl flex flex-col gap-10  fixed  py-4 px-4 mx-5 lg:mx-0 lg:px-10 bg-white">
         <div>
           <CloseIcon />
@@ -83,6 +89,7 @@ function MultiIncomeAdd({
             <button
               className="bg-customSearchblue rounded-lg py-3 font-medium w-full text-textcolor text-base "
               onClick={addTotalValue}
+              onclick={setActivePopup("pop3")}
             >
               Next
             </button>
