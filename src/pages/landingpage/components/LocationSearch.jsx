@@ -7,6 +7,17 @@ import TotalIncome from "./TotalIncome";
 function LocationSearch() {
   const [filter, setFilter] = useState(false);
 
+  const [num1, setNum1] = useState(null);
+  const [num2, setNum2] = useState(null);
+  const [num3, setNum3] = useState(null);
+  const [total, setTotal] = useState(null);
+
+  const addTotalValue = () => {
+    const totalValue = num1 + num2 + num3;
+    console.log(totalValue);
+    setTotal(totalValue);
+  };
+
   const handleClick = () => {
     setFilter(!filter);
   };
@@ -120,7 +131,15 @@ function LocationSearch() {
           </button>
         </form>
       </div>
-      <MultiIncomeAdd />
+      <MultiIncomeAdd
+        num1={num1}
+        setNum1={setNum1}
+        num2={num2}
+        setNum2={setNum2}
+        setNum3={setNum3}
+        total={total}
+        setTotal={setTotal}
+      />
       <TotalIncome />
     </div>
   );

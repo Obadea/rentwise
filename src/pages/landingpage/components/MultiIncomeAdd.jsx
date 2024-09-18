@@ -33,7 +33,7 @@ function MultiIncomeAdd() {
                 placeholder="Enter in NGN"
                 className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
                 value={num1}
-                onChange={(e) => SetNum1(parseInt(e.target.value))}
+                onChange={(e) => setNum1(parseInt(e.target.value))}
               />
             </div>
             <AddIcon />
@@ -50,7 +50,7 @@ function MultiIncomeAdd() {
                 placeholder="Enter in NGN"
                 className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
                 value={num2}
-                onChange={(e) => SetNum2(parseInt(e.target.value))}
+                onChange={(e) => setNum2(parseInt(e.target.value))}
               />
             </div>
             <AddIcon />
@@ -67,7 +67,7 @@ function MultiIncomeAdd() {
                 placeholder="Enter in NGN"
                 className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
                 value={num3}
-                onChange={(e) => SetNum3(parseInt(e.target.value))}
+                onChange={(e) => setNum3(parseInt(e.target.value))}
               />
             </div>
           </div>
