@@ -65,7 +65,7 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="Last Name"
-            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
+            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
           />
         </div>
         <div>

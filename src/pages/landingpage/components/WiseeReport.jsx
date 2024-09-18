@@ -10,9 +10,9 @@ import manthink from "../../../assets/man-think.png";
 function WiseeReport() {
   return (
     <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
-      <div className="w-[630px] mx-auto flex flex-col gap-14">
+      <div className="max-w-[630px] mx-auto  flex flex-col gap-14">
         <div className="text-center flex flex-col gap-1 ">
-          <h2 className="font-bold text-3xl text-customBlackShade1 ">
+          <h2 className=" text-xl font-bold lg:text-3xl text-customBlackShade1 ">
             Just Before you Make that Payment Get a copy of the WiseReport
           </h2>
           <p className="text-xs font-normal text-customBlackShade1">
@@ -24,8 +24,8 @@ function WiseeReport() {
 
         <div className="flex flex-col gap-3">
           {/* First component */}
-          <div className="flex flex-col lg:flex-row gap-2 flex-wrap ">
-            <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor py-2 px-4 w-[420px]">
+          <div className="flex flex-col items-center lg:flex-row gap-2 flex-wrap  ">
+            <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor lg:h-[195px] py-2 px-4  max-w-[420px]">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Comprehensive report
@@ -48,8 +48,8 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="flex ">
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px]">
+            <div className="flex gap-3">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] w-[200px]">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Real tenant reviews
               </h4>
@@ -71,7 +71,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px] lg:hidden">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px] h-[195px] lg:hidden">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -95,7 +95,7 @@ function WiseeReport() {
 
             </div>
             
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px] hidden lg:block">
+            <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[200px] hidden lg:flex">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -117,7 +117,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 w-[420px] ">
+            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 max-w-[420px] h-[195px] ">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Property Suggestions{" "}
@@ -144,9 +144,9 @@ function WiseeReport() {
           {/* Second level of components */}
           {/* <div className="flex gap-2 "></div> */}
           {/* third Component */}
-          <div className="flex flex-col lg:flex-row gap-2 ">
-            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 ">
-              <div className="flex flex-col justify-between h-full flex-1">
+          <div className="flex flex-col items-center lg:flex-row gap-2 ">
+            <div className="flex flex-row max-w-[420px]  gap-12 rounded-lg bg-textcolor py-2 px-4  h-[195px] ">
+              <div className="flex flex-col justify-between ">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Landlord’s Record
                 </h4>
@@ -164,12 +164,12 @@ function WiseeReport() {
                   </button>
                 </div>
               </div>
-              <div className="flex-1">
+              <div className="flex items-center">
                 <img src={manoffice} alt="" className="" />
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col h-[195px] w-[200px] gap-7">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Detailed Insights
               </h4>
@@ -192,7 +192,7 @@ function WiseeReport() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="hidden lg:flex justify-center">
           <button className="text-textcolor bg-customSearchblue p-4 font-bold text-base rounded-2xl ">
             Download 21 Abraham Niyi, Street Orchid Wise Report ( SAMPLE)
           </button>

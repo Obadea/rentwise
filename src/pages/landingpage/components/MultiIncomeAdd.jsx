@@ -1,43 +1,47 @@
 import React from "react";
-import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
+import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
 
 function MultiIncomeAdd() {
   return (
-    <div>
+    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+    <div className="rounded-3xl flex flex-col gap-10  fixed  py-4 px-10 bg-white">
       <div>
-        <CancelPresentationIcon />
+        <CloseIcon />
       </div>
-      <div>
-        <div>
-          <h2 className="font-bold text-3xl text-customNameBlack">
-            Search better
+      <div className="flex flex-col justify-center w-[510px]  gap-10" >
+        <div className="flex flex-col gap-4">
+          <h2 className="font-bold text-2xl text-customNameBlack">
+            Improve search
           </h2>
-          <p className="font-normal text-base bg-customStreetcolor">
+          <p className="font-normal text-base  text-customgray2">
             Enter requested details to help us provide better search results for
             your optimized results.
           </p>
         </div>
-        <div>
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-            <label htmlFor="incomeOne">Income one</label>
-            <input type="number" id="incomeOne" placeholder="Enter in NGN" />
+        <div className="flex flex-col lg:flex-row gap-2 lg:gap-2 items-center">
+          <div className="flex flex-col  ">
+            <label htmlFor="incomeOne block" className="font-normal text-sm text-customdark">Income one</label>
+            <input type="number" id="incomeOne" placeholder="Enter in NGN" className="pl-2 py-1 border border-customBlackShade w-[130px] rounded-md focus:outline-none focus:border-gray-500" />
           </div>
           <AddIcon />
-          <div>
-            <label htmlFor="incomeTwo">Income one</label>
-            <input type="number" id="incomeTwo" placeholder="Enter in NGN" />
+          <div className="flex flex-col  ">
+            <label htmlFor="incomeTwo" className="font-normal text-sm text-customdark">Income two</label>
+            <input type="number" id="incomeTwo" placeholder="Enter in NGN" className="pl-2 py-1 border border-customBlackShade w-[130px] rounded-md focus:outline-none focus:border-gray-500" />
           </div>
           <AddIcon />
-          <div>
-            <label htmlFor="incomeThree">Income one</label>
-            <input type="number" id="incomeThree" placeholder="Enter in NGN" />
+          <div className="flex flex-col  ">
+            <label htmlFor="incomeThree" className="font-normal text-sm text-customdark">Income three</label>
+            <input type="number" id="incomeThree" placeholder="Enter in NGN" className="pl-2 py-1 border border-customBlackShade w-[130px] rounded-md focus:outline-none focus:border-gray-500"/>
           </div>
         </div>
-        <button className="bg-customSearchblue py-5 px-2 rounded-lg">
-          Next
-        </button>
+        <div className="w-full">
+          <button className="bg-customSearchblue rounded-lg py-3 font-medium w-full text-textcolor text-base">
+            Next
+          </button>
+        </div>
       </div>
+    </div>
     </div>
   );
 }
