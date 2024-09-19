@@ -1,6 +1,7 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "./NewHeader.css"; // Import your CSS file for custom styles
+import { Link } from "react-router-dom";
 
 const Hamburger = () => {
   return (
@@ -16,9 +17,9 @@ const Hamburger = () => {
         <a className="menu-item" href="/services">
           Landlords
         </a>
-        <a className="menu-item" href="/contact">
+        <Link to="/signup" className="menu-item">
           Sign up
-        </a>
+        </Link>
         <a className="menu-item text-bold" href="/contact">
           Add property
         </a>

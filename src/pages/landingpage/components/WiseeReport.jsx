@@ -10,7 +10,7 @@ import manthink from "../../../assets/man-think.png";
 function WiseeReport() {
   return (
     <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
-      <div className="max-w-[630px] mx-auto  flex flex-col gap-14">
+      <div className="max-w-[630px] mx-auto  flex flex-col gap-14 px-2 lg:x-0">
         <div className="text-center flex flex-col gap-1 ">
           <h2 className=" text-xl font-bold lg:text-3xl text-customBlackShade1 ">
             Just Before you Make that Payment Get a copy of the WiseReport
@@ -22,9 +22,9 @@ function WiseeReport() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 ">
           {/* First component */}
-          <div className="flex flex-col items-center lg:flex-row gap-2 flex-wrap  ">
+          <div className="flex flex-col items-center lg:flex-row gap-2   ">
             <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor lg:h-[195px] py-2 px-4  max-w-[420px]">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
@@ -48,62 +48,61 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="flex gap-3">
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] w-[200px]">
-              <h4 className="font-normal text-xs text-customStreetcolor">
-                Real tenant reviews
-              </h4>
-              <div className="">
-                <div className="flex justify-center">
-                  <img src={searchDoc} alt="" />
-                </div>
-
-                <h3 className="font-normal text-sm text-customblack">
-                  Transparency
-                </h3>
-                <h4 className="font-medium text-xs text-customResultqueryGrey">
-                  Real tenant reviews......
+            <div className="flex flex-row items-center lg:flex-row gap-2 ">
+              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] lg:w-[200px]">
+                <h4 className="font-normal text-xs text-customStreetcolor">
+                  Real tenant reviews
                 </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px]  flex items-center hover:text-customSearchblue">
-                  More about transparency{" "}
-                  <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                </button>
+                <div className="">
+                  <div className="flex justify-center">
+                    <img src={searchDoc} alt="" />
+                  </div>
+
+                  <h3 className="font-normal text-sm text-customblack">
+                    Transparency
+                  </h3>
+                  <h4 className="font-medium text-xs text-customResultqueryGrey">
+                    Real tenant reviews......
+                  </h4>
+                  <button className="font-bold text-customResultqueryGrey text-[10px]  flex items-center hover:text-customSearchblue">
+                    More about transparency{" "}
+                    <ArrowForwardIcon sx={{ fontSize: 20 }} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 lg:w-[200px] h-[195px] lg:hidden">
+                <h4 className="font-normal text-xs text-customStreetcolor">
+                  Explore Properties
+                </h4>
+                <div>
+                  <div className="flex justify-center">
+                    <img src={mandive} alt="" />
+                  </div>
+
+                  <h3 className="font-normal text-sm text-customblack">
+                    Virtual Tours
+                  </h3>
+                  <h4 className="font-medium text-xs text-customResultqueryGrey">
+                    Explore homes from the .....
+                  </h4>
+                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                    More about virtual tours{" "}
+                    <ArrowForwardIcon sx={{ fontSize: 20 }} />
+                  </button>
+                </div>
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 w-[200px] h-[195px] lg:hidden">
-              <h4 className="font-normal text-xs text-customStreetcolor">
-                Explore Properties
-              </h4>
-              <div>
-                <div className="flex justify-center">
-                <img src={mandive} alt=""  />
-                </div>
-                
-                <h3 className="font-normal text-sm text-customblack">
-                  Virtual Tours
-                </h3>
-                <h4 className="font-medium text-xs text-customResultqueryGrey">
-                  Explore homes from the .....
-                </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
-                  More about virtual tours{" "}
-                  <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                </button>
-              </div>
-            </div>
-
-            </div>
-            
             <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[200px] hidden lg:flex">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
               <div>
                 <div className="flex justify-center">
-                <img src={mandive} alt=""  />
+                  <img src={mandive} alt="" />
                 </div>
-                
+
                 <h3 className="font-normal text-sm text-customblack">
                   Virtual Tours
                 </h3>
