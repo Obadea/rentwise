@@ -24,7 +24,7 @@ function TotalIncome({ total, activePopup, setActivePopup }) {
               Total annual household income
             </p>
             <p className="font-medium text-lg text-customaccent text-center">
-              {total}
+              ₦{total}
             </p>
           </div>
         </div>

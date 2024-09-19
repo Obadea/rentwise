@@ -1,6 +1,7 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import AddIcon from "@mui/icons-material/Add";
+import CurrencyInput from "react-currency-input-field";
 
 function MultiIncomeAdd({
   num1,
@@ -44,6 +45,16 @@ function MultiIncomeAdd({
               >
                 Income one
               </label>
+              {/* <CurrencyInput
+                id="validation-example-2-field"
+                placeholder="$1,234,567"
+                allowDecimals={false}
+                className=""
+                onValueChange={validateValue}
+                prefix={"₦"}
+                step={10}
+              /> */}
+
               <input
                 type="number"
                 id="incomeOne"
