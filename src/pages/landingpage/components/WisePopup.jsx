@@ -1,4 +1,7 @@
 import React from "react";
+import XIcon from "@mui/icons-material/X";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function WisePopup() {
   return (
@@ -11,6 +14,7 @@ function WisePopup() {
             <h3>Decisions</h3>
           </div>
           <div>
+            <div></div>
             <h5 className="border-b">Next stop</h5>
 
             <div className="flex">
