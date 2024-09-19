@@ -25,7 +25,7 @@ function WiseeReport() {
         <div className="flex flex-col gap-3 px-2 ">
           {/* First component */}
           <div className="flex flex-col items-center lg:flex-row gap-2 flex-wrap   ">
-            <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor lg:h-[195px] py-2 px-4  max-w-[420px]">
+            <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor lg:h-[195px] py-2 px-4  max-w-[420px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Comprehensive report
@@ -48,8 +48,8 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="flex flex-row items-center lg:flex-row gap-2 ">
-              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] lg:w-[180px]">
+            <div className="flex flex-row items-center lg:flex-row gap-2  ">
+              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] lg:w-[180px] lg:hover:scale-[102%] hover:shadow-lg">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Real tenant reviews
                 </h4>
@@ -94,7 +94,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[180px] hidden lg:flex">
+            <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[180px] hidden lg:flex lg:hover:scale-[102%] hover:shadow-lg">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -116,7 +116,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 max-w-[420px] h-[195px] ">
+            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 max-w-[420px] h-[195px] lg:hover:scale-[102%] hover:shadow-lg ">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Property Suggestions{" "}
@@ -143,8 +143,8 @@ function WiseeReport() {
           {/* Second level of components */}
           {/* <div className="flex gap-2 "></div> */}
           {/* third Component */}
-          <div className="flex flex-col items-center lg:flex-row gap-2 ">
-            <div className="flex flex-row max-w-[420px]  gap-12 rounded-lg bg-textcolor py-2 px-4  h-[195px] ">
+          <div className="flex flex-col items-center lg:flex-row gap-2  ">
+            <div className="flex flex-row max-w-[420px]  gap-12 rounded-lg bg-textcolor py-2 px-4  h-[195px]  lg:hover:scale-[102%] hover:shadow-lg">
               <div className="flex flex-col justify-between ">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Landlord’s Record
@@ -158,7 +158,7 @@ function WiseeReport() {
                     before .....
                   </h4>
                   <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
-                    More about ilandlord reliability{" "}
+                    More about landlord reliability{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
                 </div>
@@ -168,7 +168,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col h-[195px] w-[180px] gap-7">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col h-[195px] w-[180px] gap-7 lg:hover:scale-[102%] hover:shadow-lg">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Detailed Insights
               </h4>
