@@ -13,6 +13,18 @@ function LocationSearch() {
   const [num3, setNum3] = useState(null);
   const [total, setTotal] = useState(null);
 
+  // const [amount, setAmount] = useState({
+  //   num1: 0,
+  //   num2: 0,
+  //   num3: 0,
+  // });
+
+  // function setField(field, value) {
+  //   setAmount((prev) => ({ ...prev, [field]: value }));
+  // }
+
+  // (e) => setField("num2", e.target.value);
+
   const [activePopup, setActivePopup] = useState("");
 
   const addTotalValue = () => {
@@ -161,13 +173,13 @@ function LocationSearch() {
           total={total}
           addTotalValue={addTotalValue}
         />
-      ) : activePopup === "pop3" ? (
-        <TotalIncome
-          total={total}
-          activePopup={activePopup}
-          setActivePopup={setActivePopup}
-        />
-      ) : null}
+      ) : // ) : activePopup === "pop3" ? (
+      //   <TotalIncome
+      //     total={total}
+      //     activePopup={activePopup}
+      //     setActivePopup={setActivePopup}
+      //   />
+      null}
     </div>
   );
 }
