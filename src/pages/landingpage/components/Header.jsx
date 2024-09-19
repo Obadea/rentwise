@@ -28,16 +28,19 @@ const Header = () => {
             name="Residents"
             dropdown={
               (options = [
-                "Rent budget calculator",
-                "Favourites",
-                "Save for rent",
+                "Quick services",
+                "Rent affordability calculator",
+                "RentSaver account",
+                "Short let",
+                "WiseReport",
+                "Compare apartment",
               ])
             }
           />
 
           <DropdownMenu
             name="Landlords"
-            dropdown={(options = ["Rental Management"])}
+            dropdown={(options = ["Rental Management", "Quick Services"])}
           />
 
           <DropdownMenu

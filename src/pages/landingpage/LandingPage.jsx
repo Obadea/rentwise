@@ -10,6 +10,7 @@ import Partnership from "./components/Partnership";
 import WiseReport from "./components/WiseReport";
 import LocationTest from "./components/LocationTest";
 import WiseeReport from "./components/WiseeReport";
+import WisePopup from "./components/WisePopup";
 
 function LandingPage() {
   return (
@@ -17,7 +18,7 @@ function LandingPage() {
       <Header />
       <Banner />
       <TopProperties />
-
+      <WisePopup />
       <WiseeReport />
       {/* <WiseReport /> */}
       <StatemenComponent />
