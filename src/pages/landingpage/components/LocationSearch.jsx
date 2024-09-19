@@ -19,7 +19,7 @@ function LocationSearch() {
   //   num3: 0,
   // });
 
-  // function setField(field, value) {
+  // function setField(field, value) {`
   //   setAmount((prev) => ({ ...prev, [field]: value }));
   // }
 
@@ -71,8 +71,8 @@ function LocationSearch() {
           <div>
             <h3>LOOKING FOR</h3>
             <select
-              name="cars"
-              id="cars"
+              name="properties"
+              id="properties"
               className="w-[100%] lg:w-44 p-2 border-black "
             >
               <option value="" className="text-dropDowmcolor font-normal">
@@ -90,6 +90,18 @@ function LocationSearch() {
                 </option>
                 <option value="shop" className="text-dropDowmcolor font-normal">
                   Shop
+                </option>
+                <option
+                  value="shopLet"
+                  className="text-dropDowmcolor font-normal"
+                >
+                  Short let
+                </option>
+                <option
+                  value="shopLet"
+                  className="text-dropDowmcolor font-normal"
+                >
+                  Event centre
                 </option>
               </optgroup>
               <optgroup
@@ -141,10 +153,12 @@ function LocationSearch() {
               className="w-[100%] lg:w-44 p-2 border-black text-dropDowmcolor "
             >
               <option value="">Max. Range</option>
-              <option value="30000">Less than $30,000</option>
-              <option value="50000">$30,000 to $50,000</option>
-              <option value="100000">$50,000 - $100,000</option>
-              <option value="max">Max Price</option>
+              <option value="30000">Less than ₦30,000</option>
+              <option value="50000">₦30,000 to ₦50,000</option>
+              <option value="100000">₦50,000 - ₦100,000</option>
+              <option value="100000">₦100,000 - ₦500,000</option>
+
+              <option value="max">Max. Price</option>
             </select>
           </div>
           <button

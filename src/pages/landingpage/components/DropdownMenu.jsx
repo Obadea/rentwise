@@ -25,7 +25,7 @@ function DropdownMenu(props) {
 
       {hover && (
         <div
-          className="origin-top-right absolute left-0  w-52 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute left-0  w-auto  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"
@@ -34,7 +34,7 @@ function DropdownMenu(props) {
             {props.dropdown.map((option, index) => (
               <a
                 href="#"
-                className="block px-4 py-2 text-md text-customNameBlack hover:bg-gray-100 hover:text-gray-900"
+                className="block px-4 py-2 text-md text-customNameBlack whitespace-nowrap hover:bg-gray-100 hover:text-gray-900"
                 role="menuitem"
                 key={index}
               >
