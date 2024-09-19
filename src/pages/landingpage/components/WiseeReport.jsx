@@ -10,7 +10,7 @@ import manthink from "../../../assets/man-think.png";
 function WiseeReport() {
   return (
     <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
-      <div className="max-w-[630px] mx-auto  flex flex-col gap-14 px-2 lg:x-0">
+      <div className="max-w-[630px] mx-auto  flex flex-col gap-14 px-2  lg:px-0">
         <div className="text-center flex flex-col gap-1 ">
           <h2 className=" text-xl font-bold lg:text-3xl text-customBlackShade1 ">
             Just Before you Make that Payment Get a copy of the WiseReport
@@ -22,9 +22,9 @@ function WiseeReport() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 ">
+        <div className="flex flex-col gap-3 px-2 ">
           {/* First component */}
-          <div className="flex flex-col items-center lg:flex-row gap-2   ">
+          <div className="flex flex-col items-center lg:flex-row gap-2 flex-wrap   ">
             <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor lg:h-[195px] py-2 px-4  max-w-[420px]">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
@@ -49,7 +49,7 @@ function WiseeReport() {
             </div>
 
             <div className="flex flex-row items-center lg:flex-row gap-2 ">
-              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] lg:w-[200px]">
+              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] lg:w-[180px]">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Real tenant reviews
                 </h4>
@@ -94,7 +94,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[200px] hidden lg:flex">
+            <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[180px] hidden lg:flex">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -168,7 +168,7 @@ function WiseeReport() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col h-[195px] w-[200px] gap-7">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col h-[195px] w-[180px] gap-7">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Detailed Insights
               </h4>
