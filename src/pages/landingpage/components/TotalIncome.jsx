@@ -10,7 +10,10 @@ function TotalIncome({ total, activePopup, setActivePopup }) {
     >
       <div className="rounded-3xl flex flex-col gap-10  fixed  py-4 px-4 mx-5 lg:mx-0 lg:px-10 bg-white">
         <div>
-          <CloseIcon />
+          <CloseIcon
+            className="cursor-pointer"
+            onClick={() => setActivePopup("none")}
+          />
         </div>
         <div className="flex flex-col justify-center lg:w-full  gap-10">
           <div className="flex flex-col gap-4">

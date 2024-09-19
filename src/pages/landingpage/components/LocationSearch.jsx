@@ -34,11 +34,13 @@ function LocationSearch() {
               placeholder="Search"
               className=" ml-4 w-[80%] h-[38px] text-2xl focus:outline-none"
             />
+
             <SearchIcon
               className="text-customBlackShade"
               sx={{ fontSize: 38 }}
             />
           </div>
+
           <SortIcon
             onClick={handleClick}
             className=" bg-customsearchinput rounded-lg text-customBlackShade shadow-[0px_4px_4px_0px] shadow-custompurple cursor-pointer"
@@ -49,6 +51,10 @@ function LocationSearch() {
           className={`${
             filter ? "flex flex-col relative top-32 w-[80%] z-20" : "hidden"
           }  text-black lg:flex flex-shrink justify-evenly bg-gray-100 px-6 py-4 gap-6 rounded-lg`}
+          onSubmit={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
         >
           <div>
             <h3>LOOKING FOR</h3>
@@ -130,8 +136,9 @@ function LocationSearch() {
             </select>
           </div>
           <button
+            type="submit"
             className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
-            onClick={setActivePopup("pop1")}
+            onClick={() => setActivePopup("pop1")}
           >
             Search
           </button>

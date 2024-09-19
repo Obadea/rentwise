@@ -11,14 +11,17 @@ function SearchBetter({ activePopup, setActivePopup }) {
     >
       <div className="rounded-3xl fixed   py-4 px-10 bg-white">
         <div>
-          <CloseIcon />
+          <CloseIcon
+            className="cursor-pointer"
+            onClick={() => setActivePopup("none")}
+          />
         </div>
-        <div className="flex flex-col items-center gap-2">
-          <div className="bg-textcolor w-[140px] h-[140px]  flex justify-center items-center rounded-full">
+        <div className="flex flex-col items-center gap-5">
+          <div className="bg-textcolor w-[100px] h-[100px]  flex justify-center items-center rounded-full">
             <img
               src={binoculars}
               alt=""
-              className="text-customBlackShade"
+              className="text-customBlackShade w-12"
               style={{ color: "#A6A6A6" }}
             />
           </div>
@@ -58,10 +61,10 @@ function SearchBetter({ activePopup, setActivePopup }) {
               </div>
             </div>
           </div>
-          <div className="w-full">
+          <div className="w-full mt-2">
             <button
               className="bg-customSearchblue rounded-lg py-3 font-medium w-full text-textcolor text-base"
-              onClick={setActivePopup("pop2")}
+              onClick={() => setActivePopup("pop2")}
             >
               Search
             </button>

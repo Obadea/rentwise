@@ -21,7 +21,10 @@ function MultiIncomeAdd({
     >
       <div className="rounded-3xl flex flex-col gap-10  fixed  py-4 px-4 mx-5 lg:mx-0 lg:px-10 bg-white">
         <div>
-          <CloseIcon />
+          <CloseIcon
+            className="cursor-pointer"
+            onClick={() => setActivePopup("none")}
+          />
         </div>
         <div className="flex flex-col justify-center lg:w-[510px]  gap-10">
           <div className="flex flex-col gap-4">
@@ -50,7 +53,7 @@ function MultiIncomeAdd({
                 onChange={(e) => setNum1(parseInt(e.target.value))}
               />
             </div>
-            <AddIcon />
+            <AddIcon className="text-customBlackShade" />
             <div className="flex flex-col  ">
               <label
                 htmlFor="incomeTwo"
@@ -67,7 +70,7 @@ function MultiIncomeAdd({
                 onChange={(e) => setNum2(parseInt(e.target.value))}
               />
             </div>
-            <AddIcon />
+            <AddIcon className="text-customBlackShade" />
             <div className="flex flex-col  ">
               <label
                 htmlFor="incomeThree"
@@ -88,8 +91,10 @@ function MultiIncomeAdd({
           <div className="w-full">
             <button
               className="bg-customSearchblue rounded-lg py-3 font-medium w-full text-textcolor text-base "
-              onClick={addTotalValue}
-              onclick={setActivePopup("pop3")}
+              onClick={() => {
+                addTotalValue();
+                setActivePopup("pop3");
+              }}
             >
               Next
             </button>
