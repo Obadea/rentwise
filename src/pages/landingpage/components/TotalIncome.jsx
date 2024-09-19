@@ -1,7 +1,9 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import { formatValue } from "react-currency-input-field";
 
 function TotalIncome({ total, activePopup, setActivePopup }) {
+  const prefix = "₦";
   return (
     <div
       className={` ${
@@ -23,8 +25,9 @@ function TotalIncome({ total, activePopup, setActivePopup }) {
             <p className="font-normal text-base  text-customgray2">
               Total annual household income
             </p>
-            <p className="font-medium text-lg text-customaccent text-center">
-              ₦{total}
+            <p className="font-medium text-3xl text-customaccent text-center">
+              {/* ₦{total} */}
+              {formatValue({ prefix, value: String(total) })}
             </p>
           </div>
         </div>

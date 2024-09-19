@@ -45,24 +45,24 @@ function MultiIncomeAdd({
               >
                 Income one
               </label>
-              {/* <CurrencyInput
+              <CurrencyInput
                 id="validation-example-2-field"
-                placeholder="$1,234,567"
+                placeholder="₦1,234,567"
                 allowDecimals={false}
-                className=""
-                onValueChange={validateValue}
+                className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
+                onValueChange={(value) => setNum1(parseInt(value))}
                 prefix={"₦"}
                 step={10}
-              /> */}
+              />
 
-              <input
+              {/* <input
                 type="number"
                 id="incomeOne"
                 placeholder="Enter in NGN"
                 className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
                 value={num1}
                 onChange={(e) => setNum1(parseInt(e.target.value))}
-              />
+              /> */}
             </div>
             <AddIcon className="text-customBlackShade" />
             <div className="flex flex-col  ">
@@ -72,14 +72,23 @@ function MultiIncomeAdd({
               >
                 Income two
               </label>
-              <input
+              <CurrencyInput
+                id="validation-example-2-field"
+                placeholder="₦1,234,567"
+                allowDecimals={false}
+                className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
+                onValueChange={(value) => setNum2(parseInt(value))}
+                prefix={"₦"}
+                step={10}
+              />
+              {/* <input
                 type="number"
                 id="incomeTwo"
                 placeholder="Enter in NGN"
                 className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
                 value={num2}
                 onChange={(e) => setNum2(parseInt(e.target.value))}
-              />
+              /> */}
             </div>
             <AddIcon className="text-customBlackShade" />
             <div className="flex flex-col  ">
@@ -89,14 +98,23 @@ function MultiIncomeAdd({
               >
                 Income three
               </label>
-              <input
+              <CurrencyInput
+                id="validation-example-2-field"
+                placeholder="₦1,234,567"
+                allowDecimals={false}
+                className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
+                onValueChange={(value) => setNum3(parseInt(value))}
+                prefix={"₦"}
+                step={10}
+              />
+              {/* <input
                 type="number"
                 id="incomeThree"
                 placeholder="Enter in NGN"
                 className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
                 value={num3}
                 onChange={(e) => setNum3(parseInt(e.target.value))}
-              />
+              /> */}
             </div>
           </div>
           <div className="w-full">
