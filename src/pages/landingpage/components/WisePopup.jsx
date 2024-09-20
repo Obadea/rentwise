@@ -5,23 +5,29 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 function WisePopup() {
   return (
-    <div>
-      <div className="bg-white w-full h-6"></div>
-      <div className="">
-        <div className=" flex flex-row ">
-          <div className="">
-            <h3>Informed</h3>
-            <h3>Decisions</h3>
-          </div>
-          <div>
-            <div></div>
-            <h5 className="border-b">Next stop</h5>
+    <div className="w-[720px] relative left-10 ">
+      <div className="bg-white w-full h-12"></div>
+      <div className="flex flex-row  h-[390px]">
+        <div className="flex flex-col w-[600px] justify-center gap-4">
+          <h3>Informed</h3>
+          <h3>Decisions</h3>
+          <p>All the Info You Need in One Place</p>
+        </div>
 
-            <div className="flex">
-              <h4>Date</h4>
-              <h4>Lagos</h4>
+        <div>
+          <div>
+            <div>
+              <XIcon />
+              <FacebookIcon />
+              <InstagramIcon />
             </div>
+            <h5 className="border-b">Next stop</h5>
           </div>
+          <div className="flex">
+            <h4>Date</h4>
+            <h4>Lagos</h4>
+          </div>
+
           <div>
             <h2>Informed Decisions </h2>
             <p>
