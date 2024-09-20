@@ -32,6 +32,7 @@ module.exports = {
         customsearchinput: "#FFFEFA",
         customBlackShade1: "#0D0D0D",
         customgray2: "#A3A5A4",
+        customblue2: "#1F2847",
       },
     },
   },
