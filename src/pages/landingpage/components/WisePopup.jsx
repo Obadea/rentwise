@@ -21,7 +21,7 @@ function WisePopup() {
         </div>
 
         <div className="px-4 bg-customblue2 py-4">
-          <div>
+          <div clas>
             <div className="flex gap-2 justify-end text-white">
               <XIcon />
               <FacebookIcon />
@@ -29,18 +29,23 @@ function WisePopup() {
             </div>
             <h5 className="border-b-2 text-customaccent">Next stop</h5>
           </div>
-          <div className="flex">
-            <h4>Date: {today}</h4>
+          <div className="flex gap-12 text-addpropertybg my-5">
+            <h4> {today}</h4>
             <h4>Lagos</h4>
           </div>
 
-          <div>
-            <h2>Informed Decisions </h2>
-            <p>
+          <div className="flex flex-col gap-5 text-addpropertybg ">
+            <h2 className="font-bold text-2xl ">Informed Decisions </h2>
+            <p className="font-medium text-base">
               Make smarter choices with access to in-depth reports on
               properties. Get a full understanding of property details, rental
               histories, landlord reputations, and community amenities.{" "}
             </p>
+            <div>
+              <button className="border-[0.5px] rounded-md text-base font-normal px-8 py-2 bg-[#353E59] text-textcolor border-textcolor ">
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
