@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import manrun from "../../../assets/man-run.png";
 import searchDoc from "../../../assets/search-icon.png";
@@ -8,6 +8,7 @@ import mandive from "../../../assets/man-dive.png";
 import manthink from "../../../assets/man-think.png";
 
 function WiseeReport() {
+  const [activePopup, setActivePopup] = useState("none");
   return (
     <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
       <div className="max-w-[630px] mx-auto  flex flex-col gap-14 px-2  lg:px-0">

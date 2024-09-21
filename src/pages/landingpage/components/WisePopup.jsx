@@ -14,13 +14,23 @@ function WisePopup() {
     <div className="w-[720px] relative left-10 ">
       <div className="bg-white w-full h-12"></div>
       <div className="flex flex-row  h-[390px]">
-        <div className="flex flex-col w-[600px] justify-center gap-4">
-          <h3>Informed</h3>
-          <h3>Decisions</h3>
-          <p>All the Info You Need in One Place</p>
+        <div
+          className="flex flex-col w-[800px] px-4 justify-center gap-4"
+          style={{
+            backgroundImage: `url(${require("../../../assets/topoffice.png")})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <h3 className="font-bold text-addpropertybg text-2xl">Informed</h3>
+          <h3 className="font-bold text-addpropertybg text-2xl">Decisions</h3>
+          <p className="text-sm font-bold text-addpropertybg">
+            All the Info You Need in One Place
+          </p>
         </div>
 
-        <div className="px-4 bg-customblue2 py-4">
+        <div className="px-12 bg-customblue2 py-5">
           <div clas>
             <div className="flex gap-2 justify-end text-white">
               <XIcon />
@@ -29,7 +39,7 @@ function WisePopup() {
             </div>
             <h5 className="border-b-2 text-customaccent">Next stop</h5>
           </div>
-          <div className="flex gap-12 text-addpropertybg my-5">
+          <div className="flex gap-12 text-addpropertybg font-normal text-xs my-5">
             <h4> {today}</h4>
             <h4>Lagos</h4>
           </div>
