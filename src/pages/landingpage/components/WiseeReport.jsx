@@ -244,7 +244,14 @@ function WiseeReport() {
       </div>
 
       {wisePopup === "pop1" ? (
-        <wisePopup />
+        <wisePopup
+          header1={"Informed"}
+          header2={"Informed"}
+          info={"All the Info You Need in One Place"}
+          details={
+            "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
+          }
+        />
       ) : wisePopup === "pop1" ? (
         <wisePopup />
       ) : wisePopup === "pop1" ? (
