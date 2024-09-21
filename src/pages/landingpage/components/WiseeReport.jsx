@@ -8,7 +8,12 @@ import mandive from "../../../assets/man-dive.png";
 import manthink from "../../../assets/man-think.png";
 
 function WiseeReport() {
-  const [activePopup, setActivePopup] = useState("none");
+  const [wisePopup, setwisePopup] = useState("none");
+
+  const handleClick = (popNum) => {
+    setwisePopup(popNum);
+  };
+
   return (
     <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
       <div className="max-w-[630px] mx-auto  flex flex-col gap-14 px-2  lg:px-0">
@@ -38,7 +43,12 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Access Comprehensive reports on properties, .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                  <button
+                    className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
+                    onClick={() => {
+                      handleClick("pop1");
+                    }}
+                  >
                     More about informed decision{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
@@ -48,7 +58,7 @@ function WiseeReport() {
                 <img src={manrun} alt="" className="w-full" />
               </div>
             </div>
-
+            {/* Real tenant in review in first comp */}
             <div className="flex flex-row items-center lg:flex-row gap-2  ">
               <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 h-[195px] lg:w-[180px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
                 <h4 className="font-normal text-xs text-customStreetcolor">
@@ -65,14 +75,21 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Real tenant reviews......
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px]  flex items-center hover:text-customSearchblue">
+                  <button
+                    className="font-bold text-customResultqueryGrey text-[10px]  flex items-center hover:text-customSearchblue"
+                    onClick={() => {
+                      handleClick("pop2");
+                    }}
+                  >
                     More about transparency{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
                 </div>
               </div>
 
+              {/* Second component */}
               <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col gap-7 lg:w-[200px] h-[195px] lg:hidden">
+                {/* Explore properties */}
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Explore Properties
                 </h4>
@@ -87,14 +104,19 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Explore homes from the .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                  <button
+                    className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
+                    onClick={() => {
+                      handleClick("pop3");
+                    }}
+                  >
                     More about virtual tours{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
                 </div>
               </div>
             </div>
-
+            {/* Explore properties 2 */}
             <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[180px] hidden lg:flex transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
@@ -110,13 +132,19 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Explore homes from the .....
                 </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                <button
+                  className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
+                  onClick={() => {
+                    handleClick("pop3");
+                  }}
+                >
                   More about virtual tours{" "}
                   <ArrowForwardIcon sx={{ fontSize: 20 }} />
                 </button>
               </div>
             </div>
 
+            {/* Property suggestion property */}
             <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 max-w-[420px] h-[195px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg ">
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
@@ -129,7 +157,12 @@ function WiseeReport() {
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Tailored property suggestions based on your household......
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                  <button
+                    className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
+                    onClick={() => {
+                      handleClick("pop4");
+                    }}
+                  >
                     More about smart recommendations{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
@@ -141,7 +174,7 @@ function WiseeReport() {
             </div>
           </div>
 
-          {/* Second level of components */}
+          {/* Landlord records*/}
           {/* <div className="flex gap-2 "></div> */}
           {/* third Component */}
           <div className="flex flex-col items-center lg:flex-row gap-2  ">
@@ -158,7 +191,12 @@ function WiseeReport() {
                     Know your landlord's track record and legal compliance
                     before .....
                   </h4>
-                  <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                  <button
+                    className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
+                    onClick={() => {
+                      handleClick("pop2");
+                    }}
+                  >
                     More about landlord reliability{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
                   </button>
@@ -169,6 +207,7 @@ function WiseeReport() {
               </div>
             </div>
 
+            {/* Detailed Insight comp */}
             <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col h-[195px] w-[180px] gap-7 transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Detailed Insights
@@ -184,7 +223,12 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Get detailed insights into ....
                 </h4>
-                <button className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue">
+                <button
+                  className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
+                  onClick={() => {
+                    handleClick("pop6");
+                  }}
+                >
                   More about neigbourhood{" "}
                   <ArrowForwardIcon sx={{ fontSize: 20 }} />
                 </button>
@@ -198,6 +242,20 @@ function WiseeReport() {
           </button>
         </div>
       </div>
+
+      {wisePopup === "pop1" ? (
+        <wisePopup />
+      ) : wisePopup === "pop1" ? (
+        <wisePopup />
+      ) : wisePopup === "pop1" ? (
+        <wisePopup />
+      ) : wisePopup === "pop1" ? (
+        <wisePopup />
+      ) : wisePopup === "pop1" ? (
+        <wisePopup />
+      ) : wisePopup === "pop1" ? (
+        <wisePopup />
+      ) : null}
     </div>
   );
 }
