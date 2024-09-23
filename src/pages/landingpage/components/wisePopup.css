@@ -19,3 +19,11 @@
     opacity: 0; /* Fade out */
   }
 }
+
+.animate-slideIn {
+  animation: slideIn 2s forwards; /* Adjust duration as needed */
+}
+
+.animate-slideOut {
+  animation: slideOut 2s forwards; /* Adjust duration as needed */
+}

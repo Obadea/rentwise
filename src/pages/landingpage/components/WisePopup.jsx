@@ -3,6 +3,7 @@ import XIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import topOffice from "../../../assets/topoffice.png";
+import "../components/wisePopup.css";
 
 function WisePopup({ wisePopup, header1, header2, info, details }) {
   const [today, setToday] = useState("");
@@ -14,10 +15,14 @@ function WisePopup({ wisePopup, header1, header2, info, details }) {
   return (
     <div
       className={`fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40 transition-all duration-300 ${
-        wisePopup ? "animate-slideIn block" : "animate-slideOut hidden"
+        wisePopup ? " block" : " hidden"
       }`}
     >
-      <div className="w-[720px] bg-white rounded-md shadow-md ">
+      <div
+        className={`w-[720px] bg-white rounded-md shadow-md ${
+          wisePopup ? "animate-slideIn" : "animate-slideOut"
+        } `}
+      >
         <div className="bg-white w-full h-12"></div>
         <div className="flex flex-row  h-[390px]">
           <div

@@ -60,6 +60,10 @@ function WiseeReport() {
     setwisePopup(popNum);
   };
 
+  const handleClose = () => {
+    setwisePopup("none");
+  };
+
   const renderPopup = () => {
     const content = popupContent[wisePopup];
     if (!content) return null;
@@ -71,6 +75,7 @@ function WiseeReport() {
         info={content.info}
         details={content.details}
         wisePopup={wisePopup}
+        onClose={handleClose}
       />
     );
   };
@@ -310,73 +315,11 @@ function WiseeReport() {
         </div>
         <div className="hidden lg:flex justify-center">
           <button className="text-textcolor bg-customSearchblue p-4 font-bold text-base rounded-2xl ">
-            Download 21 Abraham Niyi, Street Orchid Wise Report ( SAMPLE)
+            Download 21 Abraham Niyi, Street Orchid Wise Report (SAMPLE)
           </button>
         </div>
         {renderPopup()}
       </div>
-
-      {/* {wisePopup === "pop1" ? (
-        <WisePopup
-          wisePopup={wisePopup}
-          header1={"Informed"}
-          header2={"Informed"}
-          info={"All the Info You Need in One Place"}
-          details={
-            "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
-          }
-        />
-      ) : wisePopup === "pop2" ? (
-        <WisePopup
-          wisePopup={wisePopup}
-          header1={"Informed"}
-          header2={"Informed"}
-          info={"All the Info You Need in One Place"}
-          details={
-            "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
-          }
-        />
-      ) : wisePopup === "pop3" ? (
-        <WisePopup
-          wisePopup={wisePopup}
-          header1={"Informed"}
-          header2={"Informed"}
-          info={"All the Info You Need in One Place"}
-          details={
-            "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
-          }
-        />
-      ) : wisePopup === "pop4" ? (
-        <WisePopup
-          wisePopup={wisePopup}
-          header1={"Informed"}
-          header2={"Informed"}
-          info={"All the Info You Need in One Place"}
-          details={
-            "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
-          }
-        />
-      ) : wisePopup === "pop5" ? (
-        <WisePopup
-          wisePopup={wisePopup}
-          header1={"Informed"}
-          header2={"Informed"}
-          info={"All the Info You Need in One Place"}
-          details={
-            "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
-          }
-        />
-      ) : wisePopup === "pop6" ? (
-        <WisePopup
-          wisePopup={wisePopup}
-          header1={"Informed"}
-          header2={"Informed"}
-          info={"All the Info You Need in One Place"}
-          details={
-            "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
-          }
-        />
-      ) : null} */}
     </div>
   );
 }

@@ -82,11 +82,11 @@ function Slidercard() {
           <h3 className="text-customStreetcolor">
             $2,500,000/ <span className="text-sm">annum</span>
           </h3>
-          <button className="text-customDownloadBlue text-sm hover:text-DownloadHover flex justify-center items-center">
-            <div className="transform rotate-45">
+          <button className="text-customDownloadBlue text-xs hover:text-DownloadHover font-bold flex justify-center items-center">
+            {/* <div className="transform rotate-45">
               <AttachFileIcon style={{ fontSize: 16 }} />
-            </div>
-            Download WiseReport
+            </div> */}
+            DETAILS
           </button>
         </div>
       </div>
