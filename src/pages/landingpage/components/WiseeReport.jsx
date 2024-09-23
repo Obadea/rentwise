@@ -11,10 +11,80 @@ import WisePopup from "./WisePopup";
 function WiseeReport() {
   const [wisePopup, setwisePopup] = useState("");
 
+  const popupContent = {
+    pop1: {
+      header1: "Informed",
+      header2: "Decisions",
+      info: "All the Info You Need in One Place",
+      details:
+        "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities",
+    },
+    pop2: {
+      header1: "Transparency",
+      header2: "",
+      info: "Real Tenant Reviews and Sustainability Scores",
+      details:
+        "Get the full picture when renting. Real tenant reviews offer honest insights into living conditions, landlord responsiveness, and community vibe. Pair that with sustainability scores, and you'll know if a property is eco-friendly and energy-efficient.",
+    },
+    pop3: {
+      header1: "Virtual Tours",
+      header2: "",
+      info: "Explore Homes from Anywhere",
+      details:
+        "Why wait? With virtual tours, you can explore homes right from your current space. Get a detailed look at properties, room by room, without stepping outside. It’s a convenient way to find your next home on your schedule!",
+    },
+    pop4: {
+      header1: "Smart",
+      header2: "Recommend",
+      info: "Find Homes That Fit Your Budget",
+      details:
+        "Get personalized property suggestions with Smart Recommendations. By considering your household income, we tailor options that match your budget, making it easier to find the perfect home without overspending. House hunting has never been this simple!",
+    },
+    pop5: {
+      header1: "Landlord",
+      header2: "Reliability",
+      info: "Check Before You Commit",
+      details:
+        "Make sure your landlord has a solid track record. Review their history and legal compliance to ensure a hassle-free rental experience. Knowing you can trust your landlord gives peace of mind before you sign the lease.",
+    },
+    pop6: {
+      header1: "Neighborhood ",
+      header2: "Safety",
+      info: "Know Before You Move",
+      details:
+        "Stay informed with detailed insights into neighborhood safety. From crime rates to walkability and nearby amenities, we provide the key details to help you choose a safe and convenient place to live. Make your move with confidence!",
+    },
+  };
+
   const handleClick = (popNum) => {
     setwisePopup(popNum);
-    console.log(wisePopup);
   };
+
+  const renderPopup = () => {
+    const content = popupContent[wisePopup];
+    if (!content) return null;
+
+    return (
+      <WisePopup
+        header1={content.header1}
+        header2={content.header2}
+        info={content.info}
+        details={content.details}
+        wisePopup={wisePopup}
+      />
+    );
+  };
+  // This can replace the above
+  // const handlePopup = () => {
+  //   return popupContent[wisePopup] && (
+  //     <WisePopup
+  //       header1={popupContent[wisePopup].header1}
+  //       header2={popupContent[wisePopup].header2}
+  //       info={popupContent[wisePopup].info}
+  //       details={popupContent[wisePopup].details}
+  //     />
+  //   );
+  // };
 
   return (
     <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
@@ -243,9 +313,10 @@ function WiseeReport() {
             Download 21 Abraham Niyi, Street Orchid Wise Report ( SAMPLE)
           </button>
         </div>
+        {renderPopup()}
       </div>
 
-      {wisePopup === "pop1" ? (
+      {/* {wisePopup === "pop1" ? (
         <WisePopup
           wisePopup={wisePopup}
           header1={"Informed"}
@@ -305,7 +376,7 @@ function WiseeReport() {
             "Make smarter choices with access to in-depth reports on properties. Get a full understanding of property details, rental histories, landlord reputations, and community amenities."
           }
         />
-      ) : null}
+      ) : null} */}
     </div>
   );
 }

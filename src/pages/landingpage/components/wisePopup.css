@@ -1,0 +1,21 @@
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Start off-screen */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateX(0); /* End at its normal position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0); /* Start at its normal position */
+    opacity: 1; /* Fully visible */
+  }
+  to {
+    transform: translateX(100%); /* Move off-screen */
+    opacity: 0; /* Fade out */
+  }
+}
