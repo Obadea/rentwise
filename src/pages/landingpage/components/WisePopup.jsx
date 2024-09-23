@@ -27,7 +27,7 @@ function WisePopup({ wisePopup, header1, header2, info, details, onClose }) {
         } `}
       >
         <div className="bg-white w-full h-12"></div>
-        <div className=" flex flex-row  h-[390px]">
+        <div className=" flex flex-row  lg:h-[390px]">
           <div
             className=" hidden lg:flex flex-col w-[800px] px-4 justify-center gap-4"
             style={{
@@ -42,7 +42,7 @@ function WisePopup({ wisePopup, header1, header2, info, details, onClose }) {
             <p className="text-sm font-bold text-addpropertybg">{info}</p>
           </div>
 
-          <div className="px-12 bg-customblue2 py-5">
+          <div className="px-4 lg:px-12 bg-customblue2 py-5">
             <div>
               <div className="flex gap-2 justify-end text-white">
                 <XIcon />
