@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import topOffice from "../../../assets/topoffice.png";
 import "../components/wisePopup.css";
 
-function WisePopup({ wisePopup, header1, header2, info, details }) {
+function WisePopup({ wisePopup, header1, header2, info, details, onClose }) {
   const [today, setToday] = useState("");
 
   useEffect(() => {
@@ -14,19 +14,22 @@ function WisePopup({ wisePopup, header1, header2, info, details }) {
   }, []);
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40 transition-all duration-300 ${
+      className={`fixed inset-0 bg-black bg-opacity-20 flex justify-center items-center z-40 transition-all duration-300 ${
         wisePopup ? " block" : " hidden"
       }`}
+      onClick={() => {
+        onClose();
+      }}
     >
       <div
-        className={`w-[720px] bg-white rounded-md shadow-md ${
+        className={`w-[80%] lg:w-[720px] bg-white rounded-md shadow-md ${
           wisePopup ? "animate-slideIn" : "animate-slideOut"
         } `}
       >
         <div className="bg-white w-full h-12"></div>
-        <div className="flex flex-row  h-[390px]">
+        <div className=" flex flex-row  h-[390px]">
           <div
-            className="flex flex-col w-[800px] px-4 justify-center gap-4"
+            className=" hidden lg:flex flex-col w-[800px] px-4 justify-center gap-4"
             style={{
               backgroundImage: `url(${topOffice})`,
               backgroundSize: "cover",
@@ -59,7 +62,12 @@ function WisePopup({ wisePopup, header1, header2, info, details }) {
               </h2>
               <p className="font-medium text-base">{details}</p>
               <div>
-                <button className="border-[0.5px] rounded-md text-base font-normal px-8 py-2 bg-[#353E59] text-textcolor border-textcolor ">
+                <button
+                  className="border-[0.5px] rounded-md text-base font-normal px-8 py-2 bg-[#353E59] text-textcolor border-textcolor "
+                  onClick={() => {
+                    onClose();
+                  }}
+                >
                   Close
                 </button>
               </div>
