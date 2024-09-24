@@ -7,20 +7,20 @@ function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Call API to submit form data
-    console.log("Form submitted:", { email, password });
-    // Replace with your API call
-    // fetch('/api/signin', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ email, password }),
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.error(error));
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  // Call API to submit form data
+  // console.log("Form submitted:", { email, password });
+  // Replace with your API call
+  // fetch('/api/signin', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({ email, password }),
+  // })
+  // .then(response => response.json())
+  // .then(data => console.log(data))
+  // .catch(error => console.error(error));
+  // };
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen h-[650px] ">
@@ -95,6 +95,7 @@ function SignInPage() {
               <img
                 src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
                 className="w-5"
+                alt="img"
               />
               Sign up Using Google
             </h4>
@@ -103,6 +104,7 @@ function SignInPage() {
               <img
                 src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
                 className="w-6"
+                alt="img"
               />
               Sign up Using Facebook
             </h4>

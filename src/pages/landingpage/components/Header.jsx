@@ -1,12 +1,12 @@
 // src/components/Navbar.js
-import React, { useState } from "react";
+import React from "react";
 import DropdownMenu from "./DropdownMenu";
 import Hamburger from "./Hamburger";
 import Logo from "../../../components/Logo";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
   // const toggleMenu = () => {
   //   setIsOpen(!isOpen);
@@ -20,7 +20,7 @@ const Header = () => {
         <div className=" hidden lg:flex items-center gap-4 justify-between ">
           {/* location will be automated */}
 
-          <a href="#" className="py-2 px-8 text-lg hover:text-customyellow">
+          <a href="#q" className="py-2 px-8 text-lg hover:text-customyellow">
             Home
           </a>
 
@@ -65,7 +65,7 @@ const Header = () => {
             Sign In
           </Link>
           <a
-            href="#"
+            href="#q"
             className="block py-5 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
           >
             Add property

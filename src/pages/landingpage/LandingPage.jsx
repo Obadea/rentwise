@@ -7,8 +7,6 @@ import Enquiry from "./components/Enquiry";
 import Solution from "./components/Solution";
 import Footer from "./components/Footer";
 import Partnership from "./components/Partnership";
-import WiseReport from "./components/WiseReport";
-import LocationTest from "./components/LocationTest";
 import WiseeReport from "./components/WiseeReport";
 import WisePopup from "./components/WisePopup";
 

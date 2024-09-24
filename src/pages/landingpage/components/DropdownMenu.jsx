@@ -33,7 +33,7 @@ function DropdownMenu(props) {
           <div className="py-1" role="none">
             {props.dropdown.map((option, index) => (
               <a
-                href="#"
+                href="#w"
                 className="block px-4 py-2 text-md text-customNameBlack whitespace-nowrap hover:bg-gray-100 hover:text-gray-900"
                 role="menuitem"
                 key={index}
