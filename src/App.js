@@ -11,7 +11,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<ComingSoon />} />
-      <Route path="/signin" element={<SignInPage />} />
+      <Route path="/signin" element={<ComingSoon />} />
       <Route path="/signup" element={<SignUpPage />} />
       {/* <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="/otpreset" element={<OtpReset />} /> */}
