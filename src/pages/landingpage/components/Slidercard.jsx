@@ -4,9 +4,12 @@ import palor from "../../../assets/chair_table.png";
 import AdjustIcon from "@mui/icons-material/Adjust";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import AttachFileIcon from "@mui/icons-material/AttachFile";
+// import AttachFileIcon from "@mui/icons-material/AttachFile";
 import Tooltip from "@mui/material/Tooltip";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import BedIcon from "@mui/icons-material/Bed";
+import BathtubIcon from "@mui/icons-material/Bathtub";
+import WeekendIcon from "@mui/icons-material/Weekend";
 
 function Slidercard() {
   return (
@@ -57,25 +60,25 @@ function Slidercard() {
         </div>
         <div className="flex justify-start gap-2 text-xs text-customResultqueryGrey font-normal ">
           <p className="bg-customgray rounded-lg p-1">
-            <LocationOnOutlinedIcon
+            <BedIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
             2bed
           </p>
           <p className="bg-customgray rounded-lg p-1">
-            <LocationOnOutlinedIcon
+            <BathtubIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
-            2bed
+            Bath
           </p>
           <p className="bg-customgray rounded-lg p-1">
-            <LocationOnOutlinedIcon
+            <WeekendIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
-            2bed
+            Sitting room
           </p>
         </div>
         <div className="flex justify-between">
