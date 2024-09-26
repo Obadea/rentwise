@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import comingsoon from "../../assets/comingsoon.jpg";
-import Logo from "../../components/Logo";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
