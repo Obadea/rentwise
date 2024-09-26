@@ -27,9 +27,10 @@ function Banner() {
         <div>
           <div className="flex justify-center px-6">
             <p className="text-textcolor  text-base lg:w-[850px] text-center font-medium lg:text-2xl ">
-              Finding the perfect home shouldn’t be a gamble. At rentwiseAI, we
-              empower you with the insights and tools that you need to make
-              confident, informed rental decisions
+              Rentwise AI is a platform that helps you find the best apartment
+              to rent based on your household income. It empowers you with
+              data-driven, cutting-edge tools to make informed and confident
+              rental decisions.
             </p>
           </div>
         </div>
