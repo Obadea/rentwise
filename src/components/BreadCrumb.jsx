@@ -1,32 +1,32 @@
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { useLocation, Link } from "react-router-dom";
 
 const Breadcrumb = () => {
   const location = useLocation();
-  const pathname = location.pathname;
-
-  if (pathname === "/") {
-    // Special case for root path "/"
-    return (
-      <div>
-        <span>Home</span>
-      </div>
-    );
-  }
-
-  const paths = pathname.split("/").filter((path) => path !== "");
+  const pathParts = location.pathname.split("/").filter((part) => part);
 
   return (
-    <div>
-      <Link to="/">Home</Link>
-      {paths.map((path, index) => (
-        <span key={index}>
-          &nbsp;&gt;&nbsp;
-          <Link to={`/${paths.slice(0, index + 1).join("/")}`}>
-            {path.charAt(0).toUpperCase() + path.slice(1)}
+    <nav className="breadcrumb">
+      <ul className="flex space-x-2">
+        <li>
+          <Link to="/" className="text-blue-500 hover:underline">
+            Home
           </Link>
-        </span>
-      ))}
-    </div>
+          {pathParts.length > 0 && <span> &gt; </span>}
+        </li>
+        {pathParts.map((part, index) => {
+          const path = `/${pathParts.slice(0, index + 1).join("/")}`;
+          return (
+            <li key={index}>
+              <Link to={path} className="text-blue-500 hover:underline">
+                {part.charAt(0).toUpperCase() + part.slice(1)}
+              </Link>
+              {index < pathParts.length - 1 && <span> &gt; </span>}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
 

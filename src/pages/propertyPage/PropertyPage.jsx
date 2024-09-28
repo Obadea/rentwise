@@ -7,11 +7,13 @@ function PropertyPage() {
     <div>
       <Header />
       <div>{/* Horizontal navbar for each vertical component */}</div>
-      <div className=" ml-4 mt-24">
-        <Breadcrumb />
-        <h3></h3>
+      <div className="px-8">
+        <div className=" ml-4 mt-24">
+          <Breadcrumb />
+          <h3></h3>
+        </div>
+        <h3>hello</h3>
       </div>
-      <h3>hello</h3>
     </div>
   );
 }
