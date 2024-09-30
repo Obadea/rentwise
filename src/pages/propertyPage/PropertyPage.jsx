@@ -29,14 +29,32 @@ function PropertyPage() {
           </div>
         </div>
 
-        <div className="w-44 ml-4 flex flex-col gap-4 ">
-          <div className="flex gap-2">
-            <FavoriteBorderIcon className="border-2 border-red-500 p-0" />
-            <ShareIcon />
-            <PrintIcon />
+        <div className="w-44 ml-4 flex flex-col gap-4 justify-end ">
+          <div className="flex gap-2 text-customStreetcolor ">
+            <FavoriteBorderIcon
+              style={{
+                fontSize: 26,
+                border: "1px solid #666666",
+                padding: "3px",
+              }}
+            />
+            <ShareIcon
+              style={{
+                fontSize: 26,
+                border: "1px solid #666666",
+                padding: "3px",
+              }}
+            />
+            <PrintIcon
+              style={{
+                fontSize: 26,
+                border: "1px solid #666666",
+                padding: "3px",
+              }}
+            />
           </div>
-          <p>$876,000</p>
-          <p>$7,600/sq ft</p>
+          <p className="font-bold text-2xl text-customaccent ">$876,000</p>
+          <p className="font-normal text-base text-[#666666]">$7,600/sq ft</p>
         </div>
       </div>
     </div>
