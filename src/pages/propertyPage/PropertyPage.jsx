@@ -29,7 +29,7 @@ function PropertyPage() {
           </div>
         </div>
 
-        <div className="w-44 ml-4 flex flex-col gap-4 justify-end ">
+        <div className="w-44 mx-4 flex flex-col gap-4 items-end">
           <div className="flex gap-2 text-customStreetcolor ">
             <FavoriteBorderIcon
               style={{
@@ -55,6 +55,16 @@ function PropertyPage() {
           </div>
           <p className="font-bold text-2xl text-customaccent ">$876,000</p>
           <p className="font-normal text-base text-[#666666]">$7,600/sq ft</p>
+        </div>
+      </div>
+
+      {/* Overview component */}
+      <div>
+        <div>
+          <h4 className="font-medium text-lg">Overview</h4>
+          <p>
+            Property ID: <span>HZ43</span>
+          </p>
         </div>
       </div>
     </div>
