@@ -66,6 +66,9 @@ function PropertyPage() {
             Property ID: <span>HZ43</span>
           </p>
         </div>
+        <div className="flex flex-wrap">
+          <div></div>
+        </div>
       </div>
     </div>
   );
