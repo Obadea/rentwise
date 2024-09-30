@@ -33,6 +33,7 @@ module.exports = {
         customBlackShade1: "#0D0D0D",
         customgray2: "#A3A5A4",
         customblue2: "#1F2847",
+        custommblack1: "#222222",
       },
     },
   },
