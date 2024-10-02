@@ -5,6 +5,7 @@ import RoomIcon from "@mui/icons-material/Room";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
 import PrintIcon from "@mui/icons-material/Print";
+import PropertyOverview from "./components/PropertyOverview";
 
 function PropertyPage() {
   return (
@@ -59,6 +60,7 @@ function PropertyPage() {
       </div>
 
       {/* Overview component */}
+      <PropertyOverview />
     </div>
   );
 }

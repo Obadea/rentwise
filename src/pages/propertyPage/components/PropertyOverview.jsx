@@ -7,14 +7,14 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 function PropertyOverview() {
   return (
-    <div>
-      <div>
+    <div className="px-4 py-6 ">
+      <div className="flex justify-between mb-8 ">
         <h4 className="font-medium text-lg">Overview</h4>
         <p>
           Property ID: <span>HZ43</span>
         </p>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-start gap-9 ">
         <div className="w-[86px]">
           <h4 className="font-bold text-base text-[#333333]">Apartment</h4>
           <p className="font-normal text-sm text-[#666666]">Property Type</p>
