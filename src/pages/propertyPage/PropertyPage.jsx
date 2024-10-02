@@ -6,6 +6,8 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
 import PrintIcon from "@mui/icons-material/Print";
 import PropertyOverview from "./components/PropertyOverview";
+import Description from "./components/Description";
+import Address from "./components/Address";
 
 function PropertyPage() {
   return (
@@ -61,6 +63,8 @@ function PropertyPage() {
 
       {/* Overview component */}
       <PropertyOverview />
+      <Description />
+      <Address />
     </div>
   );
 }
