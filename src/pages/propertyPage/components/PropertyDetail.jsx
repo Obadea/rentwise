@@ -3,7 +3,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 function PropertyDetail() {
   return (
-    <div className="px-4 py-6 lg:p-10 flex flex-col  gap-12 mt-16 ">
+    <div className="px-4 py-6 lg:p-10 flex flex-col  gap-2">
       <div className="flex flex-col  gap-4">
         <div className="flex justify-between py-10 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-lg text-customdark">Details</h4>
@@ -90,7 +90,66 @@ function PropertyDetail() {
       </div>
 
       {/* More Details */}
-      <div></div>
+      <div>
+        <div className="px-4 py-6 lg:p-0 flex flex-col  gap-4  ">
+          <div className=" py-10 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+            <h4 className=" font-medium text-lg text-customdark">
+              Additional details
+            </h4>
+          </div>
+          <div className="flex flex-col md:flex-row flex-wrap gap-2 md:gap-y-4 md:gap-x-10 justify-between">
+            <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+              <h4 className=" font-medium text-sm text-customdark">
+                {" "}
+                Deposit:
+              </h4>
+              <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
+                20%
+              </button>
+            </div>
+            <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+              <h4 className=" font-medium text-sm text-customdark">
+                Pool Size:
+              </h4>
+              <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
+                300 Sqft
+              </button>
+            </div>
+            <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+              <h4 className=" font-medium text-sm text-customdark">
+                Last remodel year:
+              </h4>
+              <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
+                1987
+              </button>
+            </div>
+            <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+              <h4 className=" font-medium text-sm text-customdark">
+                Amenities:
+              </h4>
+              <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
+                Clubhouse
+              </button>
+            </div>
+            <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+              <h4 className=" font-medium text-sm text-customdark">
+                Additional Rooms:
+              </h4>
+              <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
+                Guest Bath
+              </button>
+            </div>
+            <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+              <h4 className=" font-medium text-sm text-customdark">
+                Equipment:
+              </h4>
+              <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
+                Gril gas
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
