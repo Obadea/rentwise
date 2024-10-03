@@ -12,6 +12,8 @@ import PropertyDetail from "./components/PropertyDetail";
 import PhotoGrid from "./components/PhotoGrid";
 import EnergyClass from "./components/EnergyClass";
 import Features from "./components/Features";
+import MortgageCalculator from "./components/MortgageCalculator";
+import Video from "./components/Video";
 
 function PropertyPage() {
   return (
@@ -73,6 +75,8 @@ function PropertyPage() {
       <PhotoGrid />
       <EnergyClass />
       <Features />
+      <MortgageCalculator />
+      <Video />
     </div>
   );
 }
