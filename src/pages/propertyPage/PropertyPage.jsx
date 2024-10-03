@@ -10,6 +10,7 @@ import Description from "./components/Description";
 import Address from "./components/Address";
 import PropertyDetail from "./components/PropertyDetail";
 import PhotoGrid from "./components/PhotoGrid";
+import EnergyClass from "./components/EnergyClass";
 
 function PropertyPage() {
   return (
@@ -69,6 +70,7 @@ function PropertyPage() {
       <Address />
       <PropertyDetail />
       <PhotoGrid />
+      <EnergyClass />
     </div>
   );
 }
