@@ -9,6 +9,7 @@ import PropertyOverview from "./components/PropertyOverview";
 import Description from "./components/Description";
 import Address from "./components/Address";
 import PropertyDetail from "./components/PropertyDetail";
+import PhotoGrid from "./components/PhotoGrid";
 
 function PropertyPage() {
   return (
@@ -67,6 +68,7 @@ function PropertyPage() {
       <Description />
       <Address />
       <PropertyDetail />
+      <PhotoGrid />
     </div>
   );
 }
