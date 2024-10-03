@@ -8,7 +8,7 @@ import palor6 from "../../../assets/palor6.jpg";
 import palor7 from "../../../assets/palor7.jpg";
 function PhotoGrid() {
   return (
-    <div className=" flex justify-center px-6 ">
+    <div className=" flex justify-center px-6  lg:px-10">
       <div>
         <div className="flex flex-wrap ">
           <div className="w-[33.3%] h-28 lg:h-60  ">
