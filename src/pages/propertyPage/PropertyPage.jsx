@@ -8,6 +8,7 @@ import PrintIcon from "@mui/icons-material/Print";
 import PropertyOverview from "./components/PropertyOverview";
 import Description from "./components/Description";
 import Address from "./components/Address";
+import PropertyDetail from "./components/PropertyDetail";
 
 function PropertyPage() {
   return (
@@ -65,6 +66,7 @@ function PropertyPage() {
       <PropertyOverview />
       <Description />
       <Address />
+      <PropertyDetail />
     </div>
   );
 }
