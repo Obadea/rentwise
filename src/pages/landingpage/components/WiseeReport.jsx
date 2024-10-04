@@ -136,7 +136,7 @@ function WiseeReport() {
               </div>
             </div>
             {/* Real tenant in review in first comp */}
-            <div className="flex flex-row w-full lg-auto items-center lg:flex-row gap-2  ">
+            <div className="flex flex-row w-full lg:w-auto items-center lg:flex-row gap-2  ">
               <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-1 flex-col gap-7 h-[195px] lg:w-[180px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Real tenant reviews
