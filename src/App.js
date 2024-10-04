@@ -5,13 +5,14 @@ import SignInPage from "./pages/signinpage/SignInPage";
 import SignUpPage from "./pages/signuppage/SignUpPage.jsx";
 import ComingSoon from "./pages/comingsoon/ComingSoon.jsx";
 import PropertyPage from "./pages/propertyPage/PropertyPage.jsx";
+import LandingPage from "./pages/landingpage/LandingPage.jsx";
 // import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 // import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<ComingSoon />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/signin" element={<ComingSoon />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/apartment/properties" element={<PropertyPage />} />

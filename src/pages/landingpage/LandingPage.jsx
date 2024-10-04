@@ -5,7 +5,7 @@ import TopProperties from "./components/TopProperties";
 import StatemenComponent from "./components/StatemenComponent";
 import Enquiry from "./components/Enquiry";
 import Solution from "./components/Solution";
-import Footer from "./components/Footer";
+import Footer from "../../components/Footer";
 import Partnership from "./components/Partnership";
 import WiseeReport from "./components/WiseeReport";
 import WisePopup from "./components/WisePopup";
@@ -16,7 +16,7 @@ function LandingPage() {
     <>
       <Header />
       <Banner />
-      <ComingSoon />
+      {/* <ComingSoon /> */}
       <TopProperties />
       <WisePopup />
       <WiseeReport />

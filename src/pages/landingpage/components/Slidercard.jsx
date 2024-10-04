@@ -59,21 +59,21 @@ function Slidercard() {
           </p>
         </div>
         <div className="flex justify-start gap-2 text-xs text-customResultqueryGrey font-normal ">
-          <p className="bg-customgray rounded-lg p-1">
+          <p className="bg-customgray flex justify-center gap-1 items-center rounded-lg p-1">
             <BedIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
             2bed
           </p>
-          <p className="bg-customgray rounded-lg p-1">
+          <p className="bg-customgray flex justify-center items-center gap-1 rounded-lg p-1">
             <BathtubIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
             2Bath
           </p>
-          <p className="bg-customgray rounded-lg p-1">
+          <p className="bg-customgray flex justify-center items-center gap-1 rounded-lg p-1">
             <WeekendIcon
               fontSize="small"
               className="text-customLocationIconColor"
