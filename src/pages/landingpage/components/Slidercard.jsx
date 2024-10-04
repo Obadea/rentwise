@@ -71,14 +71,14 @@ function Slidercard() {
               fontSize="small"
               className="text-customLocationIconColor"
             />
-            Bath
+            2Bath
           </p>
           <p className="bg-customgray rounded-lg p-1">
             <WeekendIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
-            Sitting room
+            3Sitting room
           </p>
         </div>
         <div className="flex justify-between">
