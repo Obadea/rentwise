@@ -14,6 +14,7 @@ import EnergyClass from "./components/EnergyClass";
 import Features from "./components/Features";
 import MortgageCalculator from "./components/MortgageCalculator";
 import Video from "./components/Video";
+import WalkScore from "./components/WalkScore";
 
 function PropertyPage() {
   return (
@@ -77,6 +78,7 @@ function PropertyPage() {
       <Features />
       <MortgageCalculator />
       <Video />
+      <WalkScore />
     </div>
   );
 }
