@@ -5,7 +5,7 @@ import FormHelperText from "@mui/material/FormHelperText";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function SelectLabels() {
+export default function MUISelect({ options }) {
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
@@ -20,13 +20,17 @@ export default function SelectLabels() {
           labelId="demo-simple-select-helper-label"
           id="demo-simple-select-helper"
           value={age}
-          label="Age"
+          label="I'm a"
           onChange={handleChange}
         >
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
+          options.map((option, index) => (
+          <div key={index}>
+            <MenuItem value={options.value}>{options.label}</MenuItem>
+          </div>
+          ))
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
