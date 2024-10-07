@@ -19,7 +19,7 @@ const options = [
 function ContactInfo() {
   return (
     <div className="px-4 py-6 lg:p-10 flex flex-col  gap-4 mt-16 ">
-      <div className="flex justify-between py-10 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+      <div className="flex justify-between pt-10 pb-6 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
         <h4 className=" font-medium text-lg text-customdark">Address</h4>
         <button className="font-medium text-xs bg-customSearchblue px-2 text-white flex justify-center items-center">
           View Listing
@@ -33,7 +33,7 @@ function ContactInfo() {
           <h3 className="flex  items-center">
             <PermIdentityIcon /> Ayomide Jamiu
           </h3>
-          <div className="flex">
+          <div className="flex gap-4">
             <p className="flex  items-center">
               <PhoneIcon /> 08113828282
             </p>
@@ -53,24 +53,56 @@ function ContactInfo() {
           </div>
         </div>
       </div>
-      <form action="#">
+      <form action="#" className="flex flex-col gap-6">
         <div className="flex justify-between py-6 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
-          <h4 className=" font-medium text-lg text-customdark">Address</h4>
+          <h4 className=" font-medium text-lg text-customdark">
+            Enquire About This Property
+          </h4>
         </div>
-        <div>
-          <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" />
+        <div className="flex flex-col lg:flex-row justify-between gap-6">
+          <div className="flex flex-col flex-1 ">
+            <label
+              htmlFor="name"
+              className="font-bold text-base text-[#222222]"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              className="pl-2 py-1 border-2 border-customBlackShade w-[100%] text-lg rounded-md focus:outline-none focus:border-gray-500"
+            />
           </div>
-          <div>
-            <label htmlFor="phone">Phone</label>
-            <input type="number" id="phone" placeholder="Enter your phone s" />
+          <div className="flex flex-col flex-1">
+            <label
+              htmlFor="phone"
+              className="font-bold text-base text-[#222222]"
+            >
+              Phone
+            </label>
+            <input
+              type="number"
+              id="phone"
+              placeholder="Enter your phone"
+              className="pl-2 py-1 border-2 border-customBlackShade w-[100%]  text-lg rounded-md focus:outline-none focus:border-gray-500"
+            />
           </div>
         </div>
-        <div>
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="text" id="email" placeholder="Enter your email" />
+        <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col w-[100%]">
+            <label
+              htmlFor="email"
+              className="font-bold text-base text-[#222222]"
+            >
+              Email
+            </label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Enter your email"
+              className="pl-2 py-1 border-2 border-customBlackShade w-[100%] lg:w-[50%] text-lg rounded-md focus:outline-none focus:border-gray-500"
+            />
           </div>
           <div>
             <ReusableSelect
@@ -80,6 +112,32 @@ function ContactInfo() {
               onChange={(value) => console.log(value)}
             />
           </div>
+        </div>
+        <div>
+          <div className="flex flex-col ">
+            <label htmlFor="" className="font-bold text-base text-[#222222]">
+              Message
+            </label>
+            <textarea
+              placeholder="Type your text here..."
+              rows="5"
+              cols="30"
+              className="border-2 border-customgray3 p-2"
+            >
+              Hello, I am interested in..
+            </textarea>
+          </div>
+        </div>
+        <div>
+          <h4>
+            By submitting this form I agree to{" "}
+            <button className="text-customSearchblue">Terms of Use</button>
+          </h4>
+        </div>
+        <div>
+          <button className="text-white bg-customSearchblue px-4 py-3 rounded-lg">
+            Request Information
+          </button>
         </div>
       </form>
     </div>
