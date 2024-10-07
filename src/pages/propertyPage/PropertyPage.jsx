@@ -18,6 +18,7 @@ import WalkScore from "./components/WalkScore";
 import ScheduleTour from "./components/ScheduleTour";
 import ContactInfo from "./components/ContactInfo";
 import Review from "./components/Review";
+import PostReview from "./components/PostReview";
 
 function PropertyPage() {
   return (
@@ -84,6 +85,7 @@ function PropertyPage() {
       <WalkScore />
       <ContactInfo />
       <Review />
+      <PostReview />
     </div>
   );
 }
