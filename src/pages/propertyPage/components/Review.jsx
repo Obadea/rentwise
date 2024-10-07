@@ -1,6 +1,7 @@
 import React from "react";
 import { Rating } from "@mui/material";
 import ThumbsRating from "./ThumbsRating";
+import contactphoto from "../../../assets/contact-phto.png";
 
 function Review() {
   return (
@@ -21,9 +22,9 @@ function Review() {
         </div>
       </div>
       <div>
-        <div>
+        <div className="flex gap-4">
           <div>
-            <img src="" alt="" />
+            <img src={contactphoto} alt="" />
           </div>
           <div className="flex flex-col">
             <h3>Ayodeji</h3>

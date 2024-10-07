@@ -36,7 +36,7 @@ const ThumbsRating = ({ user }) => {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-end">
       <IconButton
         onClick={() => handleVote("up")}
         color="primary"
