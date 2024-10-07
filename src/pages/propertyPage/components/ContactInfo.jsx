@@ -53,17 +53,17 @@ function ContactInfo() {
           </div>
         </div>
       </div>
-      <form action="#" className="flex flex-col gap-6">
-        <div className="flex justify-between py-6 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+      <form action="#" className="flex flex-col gap-8">
+        <div className="flex justify-between py-6 pb-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-lg text-customdark">
             Enquire About This Property
           </h4>
         </div>
         <div className="flex flex-col lg:flex-row justify-between gap-6">
-          <div className="flex flex-col flex-1 ">
+          <div className="flex flex-col flex-1 gap-2 ">
             <label
               htmlFor="name"
-              className="font-bold text-base text-[#222222]"
+              className="font-bold text-base text-customNameBlack"
             >
               Name
             </label>
@@ -71,13 +71,13 @@ function ContactInfo() {
               type="text"
               id="name"
               placeholder="Enter your name"
-              className="pl-2 py-1 border-2 border-customBlackShade w-[100%] text-lg rounded-md focus:outline-none focus:border-gray-500"
+              className="pl-2 py-1 border-2 border-customBlackShade text-lg rounded-md focus:outline-none focus:border-gray-500"
             />
           </div>
-          <div className="flex flex-col flex-1">
+          <div className="flex flex-col gap-2 flex-1">
             <label
               htmlFor="phone"
-              className="font-bold text-base text-[#222222]"
+              className="font-bold text-base text-customNameBlack"
             >
               Phone
             </label>
@@ -89,11 +89,11 @@ function ContactInfo() {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between">
-          <div className="flex flex-col w-[100%]">
+        <div className="flex flex-col lg:flex-row justify-between gap-6">
+          <div className="flex flex-col w-[100%] gap-2">
             <label
               htmlFor="email"
-              className="font-bold text-base text-[#222222]"
+              className="font-bold text-base text-customNameBlack"
             >
               Email
             </label>
@@ -101,7 +101,7 @@ function ContactInfo() {
               type="text"
               id="email"
               placeholder="Enter your email"
-              className="pl-2 py-1 border-2 border-customBlackShade w-[100%] lg:w-[50%] text-lg rounded-md focus:outline-none focus:border-gray-500"
+              className="pl-2 py-1 border-2 border-customBlackShade  text-lg rounded-md focus:outline-none focus:border-gray-500"
             />
           </div>
           <div>
