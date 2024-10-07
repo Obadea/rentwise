@@ -1,5 +1,11 @@
 import React from "react";
 import contactPhoto from "../../../assets/contact-phto.png";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import PhoneIcon from "@mui/icons-material/Phone";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import XIcon from "@mui/icons-material/X";
 
 function ContactInfo() {
   return (
@@ -14,12 +20,27 @@ function ContactInfo() {
         <div>
           <img src={contactPhoto} alt="" />
         </div>
-        <div>
-          <h3>Ayomide Jamiu</h3>
-          <div>
-            <p>08113828282</p>
-            <p>08113828282</p>
-            <p>Whatsapp</p>
+        <div className="flex flex-col">
+          <h3 className="flex  items-center">
+            <PermIdentityIcon /> Ayomide Jamiu
+          </h3>
+          <div className="flex">
+            <p className="flex  items-center">
+              <PhoneIcon /> 08113828282
+            </p>
+            <p className="flex  items-center">
+              <PhoneAndroidIcon />
+              08113828282
+            </p>
+            <p className="flex  items-center">
+              {" "}
+              <WhatsAppIcon />
+              Whatsapp
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <FacebookIcon />
+            <XIcon />
           </div>
         </div>
       </div>
