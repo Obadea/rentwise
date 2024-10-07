@@ -16,11 +16,11 @@ function ContactInfo() {
           View Listing
         </button>
       </div>
-      <div className="flex">
+      <div className="flex gap-4">
         <div>
           <img src={contactPhoto} alt="" />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1 text-sm font-normal text-customStreetcolor">
           <h3 className="flex  items-center">
             <PermIdentityIcon /> Ayomide Jamiu
           </h3>
