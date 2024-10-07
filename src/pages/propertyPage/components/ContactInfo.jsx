@@ -6,15 +6,13 @@ import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
-import ReusableSelect from "../../../components/ReuseableSelect";
+import MUISelect from "../../../components/MUISelect";
 
 const options = [
-  { value: "one", label: "1" },
-  { value: "two", label: "2" },
-  { value: "three", label: "3" },
-  { value: "four", label: "4" },
-  { value: "five", label: "5" },
-  { value: "six", label: "6" },
+  { value: "one", label: "I am a tenant" },
+  { value: "two", label: "I am an agent" },
+  { value: "four", label: "I am a buyer" },
+  { value: "five", label: "other" },
 ];
 function ContactInfo() {
   return (
@@ -53,6 +51,8 @@ function ContactInfo() {
           </div>
         </div>
       </div>
+
+      {/* Enquire component */}
       <form action="#" className="flex flex-col gap-8">
         <div className="flex justify-between py-6 pb-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-lg text-customdark">
@@ -89,8 +89,8 @@ function ContactInfo() {
             />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between gap-6">
-          <div className="flex flex-col w-[100%] gap-2">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6">
+          <div className="flex flex-col flex-1 gap-2 ">
             <label
               htmlFor="email"
               className="font-bold text-base text-customNameBlack"
@@ -98,19 +98,14 @@ function ContactInfo() {
               Email
             </label>
             <input
-              type="text"
+              type="email"
               id="email"
               placeholder="Enter your email"
               className="pl-2 py-1 border-2 border-customBlackShade  text-lg rounded-md focus:outline-none focus:border-gray-500"
             />
           </div>
-          <div>
-            <ReusableSelect
-              options={options}
-              placeholder={"Property Type"}
-              label={"LOOKING FOR"}
-              onChange={(value) => console.log(value)}
-            />
+          <div className="flex-1">
+            <MUISelect options={options} />
           </div>
         </div>
         <div>

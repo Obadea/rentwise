@@ -13,44 +13,24 @@ export default function MUISelect({ options }) {
   };
 
   return (
-    <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
-          value={age}
-          label="I'm a"
-          onChange={handleChange}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          options.map((option, index) => (
-          <div key={index}>
-            <MenuItem value={options.value}>{options.label}</MenuItem>
-          </div>
-          ))
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>With label + helper text</FormHelperText>
-      </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+    <div className="">
+      <FormControl className=" w-full">
         <Select
           value={age}
           onChange={handleChange}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
+          className=" border-2 border-customBlackShade h-10  focus:outline-none focus:border-gray-500"
         >
           <MenuItem value="">
-            <em>None</em>
+            <em>i'm a ...</em>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          {options.map((option, index) => (
+            <MenuItem key={index} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
         </Select>
-        <FormHelperText>Without label</FormHelperText>
       </FormControl>
     </div>
   );
