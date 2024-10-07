@@ -15,6 +15,8 @@ import Features from "./components/Features";
 import MortgageCalculator from "./components/MortgageCalculator";
 import Video from "./components/Video";
 import WalkScore from "./components/WalkScore";
+import ScheduleTour from "./components/ScheduleTour";
+import ContactInfo from "./components/ContactInfo";
 
 function PropertyPage() {
   return (
@@ -67,7 +69,7 @@ function PropertyPage() {
           <p className="font-normal text-base text-[#666666]">$7,600/sq ft</p>
         </div>
       </div>
-
+      <ScheduleTour />
       {/* Overview component */}
       <PropertyOverview />
       <Description />
@@ -79,6 +81,7 @@ function PropertyPage() {
       <MortgageCalculator />
       <Video />
       <WalkScore />
+      <ContactInfo />
     </div>
   );
 }
