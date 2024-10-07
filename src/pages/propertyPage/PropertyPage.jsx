@@ -17,6 +17,7 @@ import Video from "./components/Video";
 import WalkScore from "./components/WalkScore";
 import ScheduleTour from "./components/ScheduleTour";
 import ContactInfo from "./components/ContactInfo";
+import Review from "./components/Review";
 
 function PropertyPage() {
   return (
@@ -82,6 +83,7 @@ function PropertyPage() {
       <Video />
       <WalkScore />
       <ContactInfo />
+      <Review />
     </div>
   );
 }
