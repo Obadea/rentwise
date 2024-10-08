@@ -21,15 +21,17 @@ import Review from "./components/Review";
 import PostReview from "./components/PostReview";
 import SimilarListing from "./components/SimilarListing";
 import Footer from "../../components/Footer";
+import ImageSlider from "./components/ImageSlider";
 
 function PropertyPage() {
   return (
     <div>
       <Header />
+      <ImageSlider />
       <div>{/* Horizontal navbar for each vertical component */}</div>
-      <div className="flex flex-col-reverse lg:flex-row justify-between px-8 mt-24">
+      <div className="flex flex-col-reverse lg:flex-row justify-between lg:px-8 mt-24">
         <div className=" ml-4 flex flex-col gap-4 ">
-          <Breadcrumb className="hidden lg:block" />
+          <Breadcrumb />
           <h3 className="font-bold text-3xl text-customblack1">Glory Suite</h3>
           <div className="flex gap-3">
             <button className="font-bold text-xs text-white bg-customSearchblue p-1">
