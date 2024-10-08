@@ -11,7 +11,7 @@ import BedIcon from "@mui/icons-material/Bed";
 import BathtubIcon from "@mui/icons-material/Bathtub";
 import WeekendIcon from "@mui/icons-material/Weekend";
 
-function Slidercard() {
+function Propertycard() {
   return (
     <div className=" px-0 bg-white relative mx-auto md:mx-4 flex flex-col lg:mx-4 hover:bg-addpropertybg max-w-[400px] rounde-md shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)]">
       <div
@@ -97,4 +97,4 @@ function Slidercard() {
   );
 }
 
-export default Slidercard;
+export default Propertycard;

@@ -19,13 +19,15 @@ import ScheduleTour from "./components/ScheduleTour";
 import ContactInfo from "./components/ContactInfo";
 import Review from "./components/Review";
 import PostReview from "./components/PostReview";
+import SimilarListing from "./components/SimilarListing";
+import Footer from "../../components/Footer";
 
 function PropertyPage() {
   return (
     <div>
       <Header />
       <div>{/* Horizontal navbar for each vertical component */}</div>
-      <div className="flex flex-row justify-between px-8 mt-24">
+      <div className="flex flex-col-reverse lg:flex-row justify-between px-8 mt-24">
         <div className=" ml-4 flex flex-col gap-4 ">
           <Breadcrumb className="hidden lg:block" />
           <h3 className="font-bold text-3xl text-customblack1">Glory Suite</h3>
@@ -43,8 +45,8 @@ function PropertyPage() {
           </div>
         </div>
 
-        <div className="w-44 mx-4 flex flex-col gap-4 items-end">
-          <div className="flex gap-2 text-customStreetcolor ">
+        <div className="w-44 mx-4 flex flex-col gap-4 items-start lg:items-end">
+          <div className=" hidden lg:flex gap-2 text-customStreetcolor  ">
             <FavoriteBorderIcon
               style={{
                 fontSize: 26,
@@ -71,7 +73,7 @@ function PropertyPage() {
           <p className="font-normal text-base text-[#666666]">$7,600/sq ft</p>
         </div>
       </div>
-      <ScheduleTour />
+      {/* <ScheduleTour /> */}
       {/* Overview component */}
       <PropertyOverview />
       <Description />
@@ -86,6 +88,8 @@ function PropertyPage() {
       <ContactInfo />
       <Review />
       <PostReview />
+      <SimilarListing />
+      <Footer />
     </div>
   );
 }
