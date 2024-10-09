@@ -6,6 +6,7 @@ import SignUpPage from "./pages/signuppage/SignUpPage.jsx";
 import ComingSoon from "./pages/comingsoon/ComingSoon.jsx";
 import PropertyPage from "./pages/propertyPage/PropertyPage.jsx";
 import LandingPage from "./pages/landingpage/LandingPage.jsx";
+import AffordabilityCalculator from "./pages/affordabilitycalcuator/AffordabilityCalculator.jsx";
 // import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 // import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
 
@@ -16,6 +17,10 @@ function App() {
       <Route path="/signin" element={<ComingSoon />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/apartment/properties" element={<PropertyPage />} />
+      <Route
+        path="/affordablity-calculator"
+        element={<AffordabilityCalculator />}
+      />
       {/* <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="/otpreset" element={<OtpReset />} /> */}
     </Routes>
