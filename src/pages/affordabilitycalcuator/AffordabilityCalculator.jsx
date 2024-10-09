@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../landingpage/components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
 import CurrencyInput from "react-currency-input-field";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import exitImage from "../../assets/exit.png";
+import saver from "../../assets/openaccount.png";
+import talkstateman from "../../assets/talkstateman.png";
 
 function AffordabilityCalculator() {
+  const [num, setNum] = useState(0);
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+
+  const [total, setTotal] = useState(1000);
+  const [rent, setRent] = useState(1000);
+  const [monthlySavings, setMonthlySavings] = useState(1000);
+  const [charges, setCharges] = useState(1000);
+
+  const handleBlur = () => {
+    const total = num + num1 + num2;
+    setTotal(total);
+    const rent = total * 3;
+    setRent(rent);
+    const monthlySaving = rent / 12;
+    setMonthlySavings(monthlySaving);
+    const charges = monthlySaving * 0.05;
+    setCharges(charges);
+  };
+
+  console.log(total, rent, monthlySavings, charges);
+
   return (
     <div>
       <Header />
@@ -48,7 +74,8 @@ function AffordabilityCalculator() {
                   placeholder="₦1,234,567"
                   allowDecimals={false}
                   className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
-                  //   onValueChange={(value) => setNum2(parseInt(value))}
+                  onValueChange={(value) => setNum(parseInt(value))}
+                  onBlur={() => handleBlur()}
                   prefix={"₦"}
                   step={10}
                 />
@@ -66,7 +93,8 @@ function AffordabilityCalculator() {
                   placeholder="₦1,234,567"
                   allowDecimals={false}
                   className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
-                  //   onValueChange={(value) => setNum2(parseInt(value))}
+                  onValueChange={(value) => setNum1(parseInt(value))}
+                  onBlur={() => handleBlur()}
                   prefix={"₦"}
                   step={10}
                 />
@@ -84,7 +112,8 @@ function AffordabilityCalculator() {
                   placeholder="₦1,234,567"
                   allowDecimals={false}
                   className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
-                  //   onValueChange={(value) => setNum2(parseInt(value))}
+                  onValueChange={(value) => setNum2(parseInt(value))}
+                  onBlur={() => handleBlur()}
                   prefix={"₦"}
                   step={10}
                 />
@@ -94,7 +123,75 @@ function AffordabilityCalculator() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <div className="flex flex-col"></div>
+                <div className="flex flex-col">
+                  <p className="font-normal text-sm text-customNameBlack">
+                    Monthly Total household income
+                  </p>
+                  <p className="text-customaccent font-bold text-4xl"></p>
+                </div>
+                <div className="border-t border-gray-300 gap-6 mt-4">
+                  <div className="flex justify-between">
+                    <p className="text-sm font-medium text-[#666666]">
+                      Monthly Total household income
+                    </p>
+                    <h5>₦1,000,000</h5>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="text-sm font-medium text-[#666666]">
+                      Minimum amount that can be saved monthly
+                    </p>
+                    <h5>₦1,000,000</h5>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="text-sm font-medium text-[#666666]">
+                      System charges
+                    </p>
+                    <h5>₦1,000,000</h5>
+                  </div>
+                </div>
+                <div>
+                  <button className="bg-customSearchblue text-white">
+                    Continue Search
+                  </button>
+                </div>
+              </div>
+
+              {/* options */}
+              <div className="flex flex-col gap-2">
+                <div>
+                  <h2 className="font-normal text-base text-customNameBlack">
+                    WHAT TO DO NEXT
+                  </h2>
+                </div>
+                <div className="flex flex-col gap-6">
+                  <div className="flex flex-row">
+                    <div className="flex flex-col justify-between">
+                      <h4>Exit rent affordability calculator</h4>
+                      <ArrowForwardIcon />
+                    </div>
+                    <div>
+                      <img src={exitImage} alt="exitimage" />
+                    </div>
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="flex flex-col justify-between">
+                      <h4>Exit rent affordability calculator</h4>
+                      <ArrowForwardIcon />
+                    </div>
+                    <div>
+                      <img src={saver} alt="saver-image" />
+                    </div>
+                  </div>
+                  <div className="flex flex-row">
+                    <div className="flex flex-col justify-between">
+                      <h4>Exit rent affordability calculator</h4>
+                      <ArrowForwardIcon />
+                    </div>
+                    <div>
+                      <img src={talkstateman} alt="talkstateman" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
