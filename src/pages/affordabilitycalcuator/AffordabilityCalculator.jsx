@@ -24,11 +24,21 @@ function AffordabilityCalculator() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row ">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <h3 className="font-bold text-3xl text-customNameBlack">
                 How much Rent can I afford?
               </h3>
+              <p className="font-medium text-sm text-customaccent">
+                The platform follows a simple rule, Your Annual rent should not
+                be more than 3 times your total{" "}
+                <span className="font-bold">monthly household income</span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-8">
+              <div>
+                <p className="font-normal text-sm">Your Monthly Income </p>
+              </div>
             </div>
           </div>
         </div>
