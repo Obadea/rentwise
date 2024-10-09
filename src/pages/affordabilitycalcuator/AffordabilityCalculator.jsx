@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../landingpage/components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
+import CurrencyInput from "react-currency-input-field";
 
 function AffordabilityCalculator() {
   return (
@@ -35,9 +36,65 @@ function AffordabilityCalculator() {
                 <span className="font-bold">monthly household income</span>
               </p>
             </div>
+
+            {/* Calculating affordability */}
             <div className="flex flex-col gap-8">
               <div>
-                <p className="font-normal text-sm">Your Monthly Income </p>
+                <p className="font-normal text-sm text-customNameBlack">
+                  Your Monthly Income{" "}
+                </p>
+                <CurrencyInput
+                  id="validation-example-2-field"
+                  placeholder="₦1,234,567"
+                  allowDecimals={false}
+                  className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
+                  //   onValueChange={(value) => setNum2(parseInt(value))}
+                  prefix={"₦"}
+                  step={10}
+                />
+                <div className="flex justify-between">
+                  <p>₦0.0</p>
+                  <p>₦1,000,000,000</p>
+                </div>
+              </div>
+              <div>
+                <p className="font-normal text-sm text-customNameBlack">
+                  Spouse’s Monthly Income (If any) 200,000
+                </p>
+                <CurrencyInput
+                  id="validation-example-2-field"
+                  placeholder="₦1,234,567"
+                  allowDecimals={false}
+                  className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
+                  //   onValueChange={(value) => setNum2(parseInt(value))}
+                  prefix={"₦"}
+                  step={10}
+                />
+                <div className="flex justify-between">
+                  <p>₦0.0</p>
+                  <p>₦1,000,000,000</p>
+                </div>
+              </div>
+              <div>
+                <p className="font-normal text-sm text-customNameBlack">
+                  Monthly Income from other investments (If any)
+                </p>
+                <CurrencyInput
+                  id="validation-example-2-field"
+                  placeholder="₦1,234,567"
+                  allowDecimals={false}
+                  className="pl-2 py-1 border border-customBlackShade w-full lg:w-[130px] rounded-md focus:outline-none focus:border-gray-500"
+                  //   onValueChange={(value) => setNum2(parseInt(value))}
+                  prefix={"₦"}
+                  step={10}
+                />
+                <div className="flex justify-between">
+                  <p>₦0.0</p>
+                  <p>₦1,000,000,000</p>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <div className="flex flex-col"></div>
               </div>
             </div>
           </div>
