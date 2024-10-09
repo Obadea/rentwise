@@ -31,7 +31,7 @@ function ContactInfo() {
           <h3 className="flex  items-center">
             <PermIdentityIcon /> Ayomide Jamiu
           </h3>
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap">
             <p className="flex  items-center">
               <PhoneIcon /> 08113828282
             </p>

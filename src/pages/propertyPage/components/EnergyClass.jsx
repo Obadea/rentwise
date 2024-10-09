@@ -61,13 +61,13 @@ function EnergyClass() {
 
       {/* Band distribution */}
       <div className="flex justify-center text-white">
-        <div className="px-4 md:px-8 py-2 bg-[#33A357]">Band A</div>
-        <div className="px-4 md:px-8 py-2 bg-[#79B752]">Band B</div>
-        <div className="px-4 md:px-8 py-2 bg-[#FFF12C] text-gray-500">
+        <div className="px-1 md:px-8 py-2 bg-[#33A357]">Band A</div>
+        <div className="px-1 md:px-8 py-2 bg-[#79B752]">Band B</div>
+        <div className="px-1 md:px-8 py-2 bg-[#FFF12C] text-gray-500">
           Band C
         </div>
-        <div className="px-4 md:px-8 py-2 bg-[#D66F2C]">Band D</div>
-        <div className="px-4 md:px-8 py-2 bg-[#CC232A]">Band E</div>
+        <div className="px-1 md:px-8 py-2 bg-[#D66F2C]">Band D</div>
+        <div className="px-1 md:px-8 py-2 bg-[#CC232A]">Band E</div>
       </div>
     </div>
   );
