@@ -54,7 +54,7 @@ function AffordabilityCalculator() {
         </div>
         <div className="flex flex-col lg:flex-row ">
           <div className="flex flex-col lg:flex-row gap-6">
-            <div className="flex flex-col w-[475px]">
+            <div className="flex flex-col lg:w-[475px]">
               <div className="flex flex-col gap-2">
                 <h3 className="font-bold text-3xl text-customNameBlack">
                   How much Rent can I afford?
@@ -182,7 +182,7 @@ function AffordabilityCalculator() {
                 </h2>
               </div>
               <div className="flex flex-col gap-2">
-                <div className="flex flex-row items-center p-4 bg-white">
+                <div className="flex flex-row justify-between items-center p-4 bg-white">
                   <div className="flex flex-col justify-between gap-4">
                     <h4>Exit rent affordability calculator</h4>
                     <ArrowForwardIcon />
@@ -191,18 +191,18 @@ function AffordabilityCalculator() {
                     <img src={exitImage} alt="exitimage" />
                   </div>
                 </div>
-                <div className="flex flex-row items-center p-4 bg-white">
+                <div className="flex flex-row items-center justify-between   p-4 bg-white">
                   <div className="flex flex-col justify-between gap-4">
-                    <h4>Exit rent affordability calculator</h4>
+                    <h4>Open rent saver account</h4>
                     <ArrowForwardIcon />
                   </div>
                   <div>
                     <img src={saver} alt="saver-image" />
                   </div>
                 </div>
-                <div className="flex flex-row items-center p-4 bg-white">
+                <div className="flex flex-row justify-between items-center p-4 bg-white">
                   <div className="flex flex-col justify-between gap-4 ">
-                    <h4>Exit rent affordability calculator</h4>
+                    <h4>Talk to a state-man</h4>
                     <ArrowForwardIcon />
                   </div>
                   <div>
