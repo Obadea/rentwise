@@ -6,6 +6,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import exitImage from "../../assets/exit.png";
 import saver from "../../assets/openaccount.png";
 import talkstateman from "../../assets/talkstateman.png";
+import { formatValue } from "react-currency-input-field";
 
 function AffordabilityCalculator() {
   const [num, setNum] = useState(0);
@@ -29,6 +30,8 @@ function AffordabilityCalculator() {
 
     console.log(total, rent, monthlySavings, charges);
   };
+
+  const prefix = "₦";
 
   return (
     <div>
@@ -133,26 +136,34 @@ function AffordabilityCalculator() {
                   <p className="font-normal text-sm text-customNameBlack">
                     Monthly Total household income
                   </p>
-                  <p className="text-customaccent font-bold text-4xl">#600</p>
+                  <p className="text-customaccent font-bold text-4xl">
+                    {formatValue({ prefix, value: String(total) })}
+                  </p>
                 </div>
                 <div className="border-t border-gray-300 flex flex-col gap-6 mt-4">
                   <div className="flex justify-between">
                     <p className="text-sm font-medium text-[#666666]">
                       Your annual rent shouldn’t exceed
                     </p>
-                    <h5>₦1,000,000</h5>
+                    <h5 className="font-bold text-base text-[#333333]">
+                      {formatValue({ prefix, value: String(rent) })}
+                    </h5>
                   </div>
                   <div className="flex justify-between items-center">
                     <p className="text-sm font-medium text-[#666666] pr-3">
                       Minimum amount that can be saved monthly
                     </p>
-                    <h5>₦1,000,000</h5>
+                    <h5 className="font-bold text-base text-[#333333]">
+                      {formatValue({ prefix, value: String(monthlySavings) })}
+                    </h5>
                   </div>
                   <div className="flex justify-between">
                     <p className="text-sm font-medium text-[#666666]">
                       System charges
                     </p>
-                    <h5>₦1,000,000</h5>
+                    <h5 className="font-bold text-base text-[#333333]">
+                      {formatValue({ prefix, value: String(charges) })}
+                    </h5>
                   </div>
                 </div>
               </div>
@@ -163,13 +174,14 @@ function AffordabilityCalculator() {
                 </button>
               </div>
             </div>
+
             <div className="flex flex-col gap-2">
               <div>
                 <h2 className="font-normal text-base text-customNameBlack">
                   WHAT TO DO NEXT
                 </h2>
               </div>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-2">
                 <div className="flex flex-row items-center p-4 bg-white">
                   <div className="flex flex-col justify-between gap-4">
                     <h4>Exit rent affordability calculator</h4>
