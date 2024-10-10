@@ -19,32 +19,41 @@ import SimilarListing from "./components/SimilarListing";
 import Footer from "../../components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import PropertyName from "./components/PropertyName";
+import ScheduleATour from "./components/ScheduleATour";
 
 function PropertyPage() {
   return (
     <div>
       <Header />
-
-      <div>{/* Horizontal navbar for each vertical component */}</div>
       <PropertyName />
-      <ImageSlider />
-      {/* <ScheduleTour /> */}
-      {/* Overview component */}
-      <PropertyOverview />
-      <Description />
-      <Address />
-      <PropertyDetail />
-      <PhotoGrid />
-      <EnergyClass />
-      <Features />
-      <MortgageCalculator />
-      <Video />
-      <WalkScore />
-      <ContactInfo />
-      <Review />
-      <PostReview />
-      <SimilarListing />
-      <Footer />
+      <div className="flex px-16">
+        <div className="flex-1 ">
+          <div>{/* Horizontal navbar for each vertical component */}</div>
+
+          <ImageSlider />
+          {/* <ScheduleTour /> */}
+          {/* Overview component */}
+          <PropertyOverview />
+          <Description />
+          <Address />
+          <PropertyDetail />
+          <PhotoGrid />
+          <EnergyClass />
+          <Features />
+          <MortgageCalculator />
+          <ScheduleATour />
+          <Video />
+          <WalkScore />
+          <ContactInfo />
+          <Review />
+          <PostReview />
+          <SimilarListing />
+          <Footer />
+        </div>
+        <div className="sticky top-40 z-10 f">
+          <ScheduleATour />
+        </div>
+      </div>
     </div>
   );
 }
