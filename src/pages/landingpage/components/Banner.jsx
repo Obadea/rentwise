@@ -12,7 +12,7 @@ function Banner() {
 
   return (
     <div
-      className="h-[500px] w-full mt-10 relative lg:mt-16"
+      className="h-[500px] w-full  relative "
       style={{
         backgroundImage: `url(${require("../../../assets/beach-town.png")})`,
         backgroundSize: "cover",

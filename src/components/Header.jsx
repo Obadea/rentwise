@@ -2,7 +2,7 @@
 import React from "react";
 import DropdownMenu from "./DropdownMenu";
 import Hamburger from "./Hamburger";
-import Logo from "../../../components/Logo";
+import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -14,8 +14,8 @@ const Header = () => {
 
   let options;
   return (
-    <header className="bg-white  text-black fixed z-20 top-0 w-full ">
-      <nav className=" pl-8 py-2 flex items-center w-full justify-between bg-white lg:py-0  ">
+    <header className="bg-white  text-black sticky z-20 top-0 w-full  ">
+      <nav className=" pl-24 py-2 flex items-center w-full justify-between bg-white lg:py-0  ">
         <Logo />
         <div className=" hidden lg:flex items-center gap-4 justify-between ">
           {/* location will be automated */}

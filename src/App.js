@@ -18,7 +18,7 @@ function App() {
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/apartment/properties" element={<PropertyPage />} />
       <Route
-        path="/affordablity-calculator"
+        path="/affordabiltycalculator"
         element={<AffordabilityCalculator />}
       />
       {/* <Route path="/passwordreset" element={<PasswordReset />} />

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../landingpage/components/Header";
+import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
 import RoomIcon from "@mui/icons-material/Room";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";

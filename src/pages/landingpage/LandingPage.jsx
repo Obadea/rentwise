@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "../../components/Header";
 import Banner from "./components/Banner";
 import TopProperties from "./components/TopProperties";
 import StatemenComponent from "./components/StatemenComponent";
@@ -13,7 +13,7 @@ import ComingSoon from "../comingsoon/ComingSoon";
 
 function LandingPage() {
   return (
-    <>
+    <div>
       <Header />
       <Banner />
       {/* <ComingSoon /> */}
@@ -28,7 +28,7 @@ function LandingPage() {
       <Solution />
       {/* <LocationTest /> */}
       <Footer />
-    </>
+    </div>
   );
 }
 
