@@ -36,7 +36,7 @@ function AffordabilityCalculator() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col  py-6 px-24">
+      <div className="flex flex-col  py-6 px-4 lg:px-24">
         <div className="mb-2">
           <Breadcrumb />
         </div>
@@ -140,7 +140,7 @@ function AffordabilityCalculator() {
                     {formatValue({ prefix, value: String(total) })}
                   </p>
                 </div>
-                <div className="border-t border-gray-300 flex flex-col gap-6 mt-4">
+                <div className="border-t border-gray-300 flex flex-col pt-4 gap-6 mt-4">
                   <div className="flex justify-between">
                     <p className="text-sm font-medium text-[#666666]">
                       Your annual rent shouldn’t exceed
@@ -175,7 +175,7 @@ function AffordabilityCalculator() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className=" px-4 lg:px-0 flex flex-col gap-2">
               <div>
                 <h2 className="font-normal text-base text-customNameBlack">
                   WHAT TO DO NEXT
