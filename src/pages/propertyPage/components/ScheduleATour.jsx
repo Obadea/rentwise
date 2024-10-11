@@ -2,7 +2,7 @@ import React from "react";
 
 function ScheduleATour() {
   return (
-    <div className=" sticky top-40 z-10 flex flex-col w-[380px]">
+    <div className="sticky top-8 bottom-0 z-10 flex flex-col w-[380px] mb-6">
       <div className="flex">
         <h4 className="text-customSearchblue text-base font-bold text-center py-3 flex-1">
           Schedule a Tour

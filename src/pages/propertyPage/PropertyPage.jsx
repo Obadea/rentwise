@@ -41,19 +41,19 @@ function PropertyPage() {
           <EnergyClass />
           <Features />
           <MortgageCalculator />
-          <ScheduleATour />
+          {/* <ScheduleATour /> */}
           <Video />
           <WalkScore />
           <ContactInfo />
           <Review />
           <PostReview />
           <SimilarListing />
-          <Footer />
         </div>
-        <div className="sticky top-40 z-10 f">
+        <div className=" ">
           <ScheduleATour />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
