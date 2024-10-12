@@ -20,6 +20,7 @@ import Footer from "../../components/Footer";
 import ImageSlider from "./components/ImageSlider";
 import PropertyName from "./components/PropertyName";
 import ScheduleATour from "./components/ScheduleATour";
+import ScrollSpy from "react-ui-scrollspy";
 
 function PropertyPage() {
   return (
@@ -28,26 +29,43 @@ function PropertyPage() {
       <PropertyName />
       <div className="flex px-16">
         <div className="flex-1 ">
-          <div>{/* Horizontal navbar for each vertical component */}</div>
+          <div>
+            <nav>
+              <p data-to-scrollspy-id="description">Description</p>
+              <p data-to-scrollspy-id="address">Address</p>
+              <p data-to-scrollspy-id="details">Details</p>
+              <p data-to-scrollspy-id="energy">Energy Class</p>
+              <p data-to-scrollspy-id="features">Features</p>
+              <p data-to-scrollspy-id="schedule">Scehdule a Plan</p>
+              <p data-to-scrollspy-id="video">Video</p>
+              <p data-to-scrollspy-id="virtual">360° Virtual Tour</p>
+              <p data-to-scrollspy-id="contact">Contact</p>
+              <p data-to-scrollspy-id="review">Reviews</p>
+              <p data-to-scrollspy-id="imilar">Similar Listing</p>
+            </nav>
+          </div>
 
           <ImageSlider />
           {/* <ScheduleTour /> */}
           {/* Overview component */}
           <PropertyOverview />
-          <Description />
-          <Address />
-          <PropertyDetail />
-          <PhotoGrid />
-          <EnergyClass />
-          <Features />
-          <MortgageCalculator />
-          {/* <ScheduleATour /> */}
-          <Video />
-          <WalkScore />
-          <ContactInfo />
-          <Review />
-          <PostReview />
-          <SimilarListing />
+
+          <ScrollSpy>
+            <Description id="description" />
+            <Address id="address" />
+            <PropertyDetail id="details" />
+            <PhotoGrid />
+            <EnergyClass id="energy" />
+            <Features id="features" />
+            <MortgageCalculator />
+            {/* <ScheduleATour id="schedule" /> */}
+            <Video id="video" />
+            <WalkScore />
+            <ContactInfo id="contact" />
+            <Review id="review" />
+            <PostReview />
+            <SimilarListing id="imilar" />
+          </ScrollSpy>
         </div>
         <div className=" ">
           <ScheduleATour />

@@ -1,8 +1,8 @@
 import React from "react";
 
-function Description() {
+function Description({ id }) {
   return (
-    <div className="px-4 py-6 lg:p-10 flex flex-col gap-4 mt-20">
+    <div id={id} className="px-4 py-6 lg:p-10 flex flex-col gap-4 mt-20">
       <div className=" border-b-2 pb-8 border-[#DCE0E0] font-medium text-lg text-customNameBlack ">
         Description
       </div>
