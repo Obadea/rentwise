@@ -28,13 +28,13 @@ function PropertyPage() {
     <div>
       <Header />
       <div>
-        <nav className="flex fixed top-20 z-40 ">
+        <nav className="flex fixed top-20 z-40 bg-white justify-between w-full py-3 ">
           <p data-to-scrollspy-id="description">Description</p>
           <p data-to-scrollspy-id="address">Address</p>
           <p data-to-scrollspy-id="details">Details</p>
           <p data-to-scrollspy-id="energy">Energy Class</p>
           <p data-to-scrollspy-id="features">Features</p>
-          <p data-to-scrollspy-id="schedule">Scehdule a Plan</p>
+          {/* <p data-to-scrollspy-id="schedule">Scehdule a Plan</p> */}
           <p data-to-scrollspy-id="video">Video</p>
           <p data-to-scrollspy-id="virtual">360° Virtual Tour</p>
           <p data-to-scrollspy-id="contact">Contact</p>
@@ -60,7 +60,7 @@ function PropertyPage() {
             <MortgageCalculator />
             {/* <ScheduleATour id="schedule" /> */}
             <Video id="video" />
-            <VirtualTour />
+            <VirtualTour id="virtual" />
             <WalkScore />
             <ContactInfo id="contact" />
             <Review id="review" />
