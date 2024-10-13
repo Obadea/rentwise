@@ -5,9 +5,11 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
 import PrintIcon from "@mui/icons-material/Print";
 
-function PropertyName() {
+function PropertyName({ className }) {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between lg:px-8 mt-4">
+    <div
+      className={`flex-col-reverse lg:flex-row justify-between lg:px-8 mt-4 ${className}`}
+    >
       <div className=" ml-4 flex flex-col gap-4 ">
         <Breadcrumb />
         <h3 className="font-bold text-3xl text-customblack1">Glory Suite</h3>

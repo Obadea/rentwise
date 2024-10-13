@@ -28,7 +28,7 @@ function PropertyPage() {
     <div>
       <Header className="relative" />
       <div>
-        <nav className="flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold">
+        <nav className=" hidden lg:flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold ">
           <a href="#description" data-to-scrollspy-id="description">
             Description
           </a>
@@ -44,10 +44,11 @@ function PropertyPage() {
           <p data-to-scrollspy-id="imilar">Similar Listing</p>
         </nav>
       </div>
-      <PropertyName />
-      <div className="flex px-16">
+      <PropertyName className="hidden lg:flex" />
+      <div className=" px-3 flex lg:px-16">
         <div className="flex-1 ">
           <ImageSlider />
+          <PropertyName className="flex lg:hidden" />
           {/* <ScheduleTour /> */}
           {/* Overview component */}
           <PropertyOverview />
