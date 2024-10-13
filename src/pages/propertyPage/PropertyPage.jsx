@@ -21,30 +21,30 @@ import ImageSlider from "./components/ImageSlider";
 import PropertyName from "./components/PropertyName";
 import ScheduleATour from "./components/ScheduleATour";
 import ScrollSpy from "react-ui-scrollspy";
+import VirtualTour from "./components/VirtualTour";
 
 function PropertyPage() {
   return (
     <div>
       <Header />
+      <div>
+        <nav className="flex fixed top-20 z-40 ">
+          <p data-to-scrollspy-id="description">Description</p>
+          <p data-to-scrollspy-id="address">Address</p>
+          <p data-to-scrollspy-id="details">Details</p>
+          <p data-to-scrollspy-id="energy">Energy Class</p>
+          <p data-to-scrollspy-id="features">Features</p>
+          <p data-to-scrollspy-id="schedule">Scehdule a Plan</p>
+          <p data-to-scrollspy-id="video">Video</p>
+          <p data-to-scrollspy-id="virtual">360° Virtual Tour</p>
+          <p data-to-scrollspy-id="contact">Contact</p>
+          <p data-to-scrollspy-id="review">Reviews</p>
+          <p data-to-scrollspy-id="imilar">Similar Listing</p>
+        </nav>
+      </div>
       <PropertyName />
       <div className="flex px-16">
         <div className="flex-1 ">
-          <div>
-            <nav>
-              <p data-to-scrollspy-id="description">Description</p>
-              <p data-to-scrollspy-id="address">Address</p>
-              <p data-to-scrollspy-id="details">Details</p>
-              <p data-to-scrollspy-id="energy">Energy Class</p>
-              <p data-to-scrollspy-id="features">Features</p>
-              <p data-to-scrollspy-id="schedule">Scehdule a Plan</p>
-              <p data-to-scrollspy-id="video">Video</p>
-              <p data-to-scrollspy-id="virtual">360° Virtual Tour</p>
-              <p data-to-scrollspy-id="contact">Contact</p>
-              <p data-to-scrollspy-id="review">Reviews</p>
-              <p data-to-scrollspy-id="imilar">Similar Listing</p>
-            </nav>
-          </div>
-
           <ImageSlider />
           {/* <ScheduleTour /> */}
           {/* Overview component */}
@@ -60,6 +60,7 @@ function PropertyPage() {
             <MortgageCalculator />
             {/* <ScheduleATour id="schedule" /> */}
             <Video id="video" />
+            <VirtualTour />
             <WalkScore />
             <ContactInfo id="contact" />
             <Review id="review" />
