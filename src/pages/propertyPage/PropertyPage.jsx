@@ -26,10 +26,12 @@ import VirtualTour from "./components/VirtualTour";
 function PropertyPage() {
   return (
     <div>
-      <Header />
+      <Header className="relative" />
       <div>
-        <nav className="flex fixed top-20 z-40 bg-white justify-between w-full py-3 px-6">
-          <p data-to-scrollspy-id="description">Description</p>
+        <nav className="flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold">
+          <a href="#description" data-to-scrollspy-id="description">
+            Description
+          </a>
           <p data-to-scrollspy-id="address">Address</p>
           <p data-to-scrollspy-id="details">Details</p>
           <p data-to-scrollspy-id="energy">Energy Class</p>

@@ -5,7 +5,7 @@ import Hamburger from "./Hamburger";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ className }) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   // const toggleMenu = () => {
@@ -14,7 +14,9 @@ const Header = () => {
 
   let options;
   return (
-    <header className="bg-white  text-black sticky z-20 top-0 w-full  ">
+    <header
+      className={` ${className} bg-white  text-black relative z-30 top-0 w-full  `}
+    >
       <nav className=" pl-4 lg:pl-24 py-2 flex items-center w-full justify-between bg-white lg:py-0  ">
         <Logo />
         <div className=" hidden lg:flex items-center gap-4 justify-between ">
