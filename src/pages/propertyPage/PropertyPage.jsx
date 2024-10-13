@@ -28,7 +28,7 @@ function PropertyPage() {
     <div>
       <Header />
       <div>
-        <nav className="flex fixed top-20 z-40 bg-white justify-between w-full py-3 ">
+        <nav className="flex fixed top-20 z-40 bg-white justify-between w-full py-3 px-6">
           <p data-to-scrollspy-id="description">Description</p>
           <p data-to-scrollspy-id="address">Address</p>
           <p data-to-scrollspy-id="details">Details</p>
