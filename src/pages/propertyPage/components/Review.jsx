@@ -3,9 +3,9 @@ import { Rating } from "@mui/material";
 import ThumbsRating from "./ThumbsRating";
 import contactphoto from "../../../assets/contact-phto.png";
 
-function Review() {
+function Review({ id }) {
   return (
-    <div className="px-4 py-6 lg:p-10 flex flex-col  gap-4 mt-16 ">
+    <div id={id} className="px-4 py-6 lg:p-10 flex flex-col  gap-4 mt-16 ">
       <div className="flex flex-col lg:flex-row justify-normal lg:justify-between items-start lg:items-center">
         <div className="flex">
           <h3>6 Reviews</h3>

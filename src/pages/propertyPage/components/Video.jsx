@@ -1,9 +1,9 @@
 import React from "react";
 
-function Video() {
+function Video({ id }) {
   return (
     <div>
-      <div className="px-4 py-6 lg:p-10 flex flex-col  gap-4 ">
+      <div id={id} className="px-4 py-6 lg:p-10 flex flex-col  gap-4 ">
         <div className="flex justify-between py-8 border-b-2 border-[#D9D9D9]  ">
           <h4 className=" font-medium text-lg text-customdark">Video</h4>
         </div>
