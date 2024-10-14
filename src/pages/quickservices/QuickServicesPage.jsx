@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
+import ArtisanService from "./components/ArtisanService";
 
 function QuickServicesPage() {
   return (
@@ -20,7 +21,9 @@ function QuickServicesPage() {
           <h2 className="font-bold text-3xl text-customdark text-center">
             What do you need help with today?
           </h2>
-          <div className="flex flex-row flex-wrap gap-4"></div>
+          <div className="flex flex-row flex-wrap gap-4">
+            <ArtisanService />
+          </div>
         </div>
       </div>
     </div>
