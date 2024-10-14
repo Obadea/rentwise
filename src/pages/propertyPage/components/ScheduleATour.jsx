@@ -1,8 +1,10 @@
 import React from "react";
 
-function ScheduleATour() {
+function ScheduleATour({ className }) {
   return (
-    <div className=" hidden lg:flex  sticky top-8 bottom-0 z-10 flex-col w-[380px] mb-6">
+    <div
+      className={` lg:flex   top-8 bottom-0 z-10 flex-col w-full md:w-[300px] lg:w-[380px] mb-6 ${className}`}
+    >
       <div className="flex">
         <h4 className="text-customSearchblue text-base font-bold text-center py-3 flex-1">
           Schedule a Tour

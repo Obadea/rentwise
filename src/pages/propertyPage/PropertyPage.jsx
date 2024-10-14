@@ -22,6 +22,8 @@ import PropertyName from "./components/PropertyName";
 import ScheduleATour from "./components/ScheduleATour";
 import ScrollSpy from "react-ui-scrollspy";
 import VirtualTour from "./components/VirtualTour";
+import ImageMapChanger from "./components/ImageMapChanger";
+import scheduleImg from "../../assets/scheduleImage.png";
 
 function PropertyPage() {
   return (
@@ -47,6 +49,7 @@ function PropertyPage() {
       <PropertyName className="hidden lg:flex" />
       <div className=" px-3 flex lg:px-16">
         <div className="flex-1 ">
+          <ImageMapChanger />
           <ImageSlider />
           <PropertyName className="flex lg:hidden" />
           {/* <ScheduleTour /> */}
@@ -61,7 +64,13 @@ function PropertyPage() {
             <EnergyClass id="energy" />
             <Features id="features" />
             <MortgageCalculator />
-            {/* <ScheduleATour id="schedule" /> */}
+            <div className="flex justify-center items-center">
+              <div className="hidden lg:block">
+                <img src={scheduleImg} alt="" />
+              </div>
+              <ScheduleATour id="schedule" className="relative " />
+            </div>
+
             <Video id="video" />
             <VirtualTour id="virtual" />
             <WalkScore />
@@ -72,7 +81,7 @@ function PropertyPage() {
           </ScrollSpy>
         </div>
         <div className=" ">
-          <ScheduleATour />
+          <ScheduleATour className="sticky hidden" />
         </div>
       </div>
       <Footer />

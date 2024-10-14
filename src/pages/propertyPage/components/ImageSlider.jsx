@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import image1 from "../../../assets/palor6.jpg";
 import image2 from "../../../assets/palor2.jpg";
 import image3 from "../../../assets/palor3.jpg";
@@ -6,6 +7,7 @@ import image4 from "../../../assets/palor4.jpg";
 import image5 from "../../../assets/palor5.jpg";
 import image6 from "../../../assets/palor6.jpg";
 import image7 from "../../../assets/palor7.jpg";
+import ImageMapChanger from "./ImageMapChanger";
 
 const images = [
   image1,
@@ -38,7 +40,11 @@ const ImageSlider = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-2">
-      <div className="relative">
+      <div className="relative ">
+        <div className=" relative top-20 right-[10%]">
+          <ImageMapChanger />
+        </div>
+
         <img
           className="w-full h-auto rounded-lg"
           src={images[currentIndex]}
