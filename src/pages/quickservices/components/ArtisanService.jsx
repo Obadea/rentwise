@@ -128,19 +128,28 @@ const categories = [
 
 function ArtisanService() {
   const [activePopup, setActivePopup] = useState(false);
+  const [activeSelection, setActiveSelection] = useState({});
 
   // const handlePopup() => {
   //     setActivePopup(!activePopup)
   // }
   return (
-    <div className="flex flex-col bg-addpropertybg">
-      <div className="flex flex-row gap-4 justify-between items-center">
-        <img src="" alt="" />
-        <h4 className="font-bold text-base text-customdark">
-          AC / Refrigeration Services
-        </h4>
-      </div>
-    </div>
+    <>
+      {categories.map((category) => (
+        <div key={category.id} className="flex flex-col bg-addpropertybg">
+          <div className="flex flex-row gap-4 justify-between items-center">
+            <img src={category.imageUrl} alt={category.name} />{" "}
+            {/* Add the correct src here */}
+            <h4 className="font-bold text-base text-customdark">
+              {category.name}
+            </h4>
+          </div>
+          <div>
+            <p className="text-customSearchblue">Select</p>
+          </div>
+        </div>
+      ))}
+    </>
   );
 }
 
