@@ -41,8 +41,11 @@ const ImageSlider = () => {
   return (
     <div className="max-w-3xl mx-auto px-2">
       <div className="relative ">
-        <div className=" relative top-20 right-[10%]">
-          <ImageMapChanger />
+        <div className=" relative w-[180px] top-20 left-[75%]">
+          <ImageMapChanger
+            className="text-white bg-[#333333] hidden"
+            newClassName="hidden lg:flex"
+          />
         </div>
 
         <img

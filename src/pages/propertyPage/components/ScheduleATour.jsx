@@ -3,7 +3,7 @@ import React from "react";
 function ScheduleATour({ className }) {
   return (
     <div
-      className={` lg:flex   top-8 bottom-0 z-10 flex-col w-full md:w-[300px] lg:w-[380px] mb-6 ${className}`}
+      className={` lg:flex   top-8 bottom-0 z-10 flex-col w-full lg:w-[380px] mb-6 ${className}`}
     >
       <div className="flex">
         <h4 className="text-customSearchblue text-base font-bold text-center py-3 flex-1">
