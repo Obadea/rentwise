@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
-import image1 from "../../../assets/Image (1).png";
-import image2 from "../../../assets/Image (2).png";
-import image3 from "../../../assets/Image (3).png";
-import image4 from "../../../assets/Image (4).png";
-import image5 from "../../../assets/Image (5).png";
-import image6 from "../../../assets/Image (6).png";
-import image7 from "../../../assets/Image (7).png";
-import image8 from "../../../assets/Image (8).png";
-import image9 from "../../../assets/Image (9).png";
-import image10 from "../../../assets/Image (10).png";
-import image11 from "../../../assets/Image (11).png";
-import image12 from "../../../assets/Image (12).png";
+import image1 from "../../../assets/Image(1).png";
+import image2 from "../../../assets/Image(2).png";
+import image3 from "../../../assets/Image(3).png";
+import image4 from "../../../assets/Image(4).png";
+import image5 from "../../../assets/Image(5).png";
+import image6 from "../../../assets/Image(6).png";
+import image7 from "../../../assets/Image(7).png";
+import image8 from "../../../assets/Image(8).png";
+import image9 from "../../../assets/Image(9).png";
+import image10 from "../../../assets/Image(10).png";
+import image11 from "../../../assets/Image(11).png";
+import image12 from "../../../assets/Image(12).png";
 
 const categories = [
   {
     id: 1,
     name: "AC / Refrigeration Services",
-    image: { image1 },
+    image: image1,
     options: [
       "A.C Gas Filling",
       "A.C Gas Repair and Installation",
@@ -31,13 +31,13 @@ const categories = [
   {
     id: 2,
     name: "Bricklayer / Tiller / POP",
-    image: { image2 },
+    image: image2,
     options: ["Bricklaying", "Tilling", "POP", "Stamp Concrete", "Others"],
   },
   {
     id: 3,
     name: "Carpentry Services",
-    image: { image3 },
+    image: image3,
     options: [
       "Windows and Doors",
       "Cabinetry ",
@@ -49,7 +49,7 @@ const categories = [
   {
     id: 4,
     name: "Cleaning / Laundry / Fumigation",
-    image: { image4 },
+    image: image4,
     options: [
       "Indoor Cleaning",
       "Outdoor Cleaning",
@@ -62,19 +62,19 @@ const categories = [
   {
     id: 5,
     name: "DSTV / CCTV",
-    image: { image5 },
+    image: image5,
     options: ["CCTV Install / Repair", "DSTV Install / Repair", "Others"],
   },
   {
     id: 6,
     name: "Electrical / Inverter Services",
-    image: { image6 },
+    image: image6,
     options: ["Electrical Installations", "Electrical Repairs", "Others"],
   },
   {
     id: 7,
     name: "Generator Services",
-    image: { image7 },
+    image: image7,
     options: [
       "Generator Servicing",
       "Diesel Gen Repair",
@@ -85,13 +85,13 @@ const categories = [
   {
     id: 8,
     name: "Haulage / Movers Services",
-    image: { image8 },
+    image: image8,
     options: ["Car", "Van", "Truck", "Others"],
   },
   {
     id: 9,
     name: "Home Interior Fittings",
-    image: { image9 },
+    image: image9,
     options: [
       "Window Blinds Install / Repair",
       "Curtains Installation",
@@ -101,7 +101,7 @@ const categories = [
   {
     id: 10,
     name: "Painter / Screeder / Wallpaper",
-    image: { image10 },
+    image: image10,
     options: [
       "Exterior Painting",
       "Interior Painting",
@@ -114,7 +114,7 @@ const categories = [
   {
     id: 11,
     name: "Plumbing Services",
-    image: { image11 },
+    image: image11,
     options: [
       "Plumbing Repair/Install",
       "Drain/Leaks Fixing",
@@ -127,7 +127,7 @@ const categories = [
   {
     id: 12,
     name: "Welder Services",
-    image: { image12 },
+    image: image12,
     options: [
       "Gas Metal Welding",
       "Gas Tungsten Welding",
@@ -152,14 +152,18 @@ function ArtisanService() {
   return (
     <>
       {categories.map((category) => (
-        <div key={category.id} className="flex flex-col bg-addpropertybg">
+        <div
+          key={category.id}
+          className="flex flex-col w-[23%] p-4 bg-addpropertybg"
+        >
           <div className="flex flex-row gap-4 justify-between items-center">
-            <img src={category.image} alt="" /> {/* Add the correct src here */}
+            <img src={category.image} alt={category.name} />{" "}
+            {/* Add the correct src here */}
             <h4 className="font-bold text-base text-customdark">
               {category.name}
             </h4>
           </div>
-          <div>
+          <div className="flex justify-end">
             <button
               onClick={() => handlePopup(category.id)}
               className="text-customSearchblue"
