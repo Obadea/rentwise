@@ -154,7 +154,7 @@ function ArtisanService() {
       {categories.map((category) => (
         <div
           key={category.id}
-          className="flex flex-col w-[23%] p-4 bg-addpropertybg"
+          className=" relative flex flex-col w-[350px] md:w-[40%] lg:w-[23%] p-2 bg-addpropertybg"
         >
           <div className="flex flex-row gap-4 justify-between items-center">
             <img src={category.image} alt={category.name} />{" "}
@@ -166,7 +166,7 @@ function ArtisanService() {
           <div className="flex justify-end">
             <button
               onClick={() => handlePopup(category.id)}
-              className="text-customSearchblue"
+              className="text-customSearchblue font-bold text-sm"
             >
               Select
             </button>
@@ -174,7 +174,7 @@ function ArtisanService() {
 
           {/* //Pop up div */}
           {activePopup === category.id && (
-            <div className="relative top-10 flex z-10 flex-col bg-white p-2 gap-2">
+            <div className="absolute min-w-full  flex z-10 flex-col bg-white p-2 gap-2">
               <div className="flex text-end justify-end">
                 <HighlightOffIcon
                   onClick={() => handleClose()}

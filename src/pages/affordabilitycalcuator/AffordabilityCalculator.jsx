@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
 import CurrencyInput from "react-currency-input-field";
@@ -18,7 +18,7 @@ function AffordabilityCalculator() {
   const [monthlySavings, setMonthlySavings] = useState(1000);
   const [charges, setCharges] = useState(1000);
 
-  const handleBlur = () => {
+  useEffect(() => {
     const total = num + num1 + num2;
     setTotal(total);
     const rent = total * 3;
@@ -29,18 +29,18 @@ function AffordabilityCalculator() {
     setCharges(charges);
 
     console.log(total, rent, monthlySavings, charges);
-  };
+  }, [num, num1, num2, monthlySavings]);
 
   const prefix = "₦";
 
   return (
-    <div>
+    <div className=" bg-gray-400  min-h-screen ">
       <Header />
-      <div className="flex flex-col  py-6 px-4 lg:px-24">
+      <div className="flex flex-col lg:gap-12 py-6 px-4 lg:px-24">
         <div className="mb-2">
           <Breadcrumb />
         </div>
-        <div className="hidden">
+        {/* <div className="hidden">
           <div className="flex flex-col gap-2">
             <div>
               <img src="" alt="" />
@@ -51,7 +51,7 @@ function AffordabilityCalculator() {
               </h4>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-col lg:flex-row ">
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex flex-col lg:w-[475px]">
@@ -76,8 +76,7 @@ function AffordabilityCalculator() {
                     placeholder="₦1,234,567"
                     allowDecimals={false}
                     className="pl-2 py-1 border border-customBlackShade w-full  rounded-md focus:outline-none focus:border-gray-500"
-                    onValueChange={(value) => setNum(parseInt(value))}
-                    onBlur={() => handleBlur()}
+                    onValueChange={(value) => setNum(parseInt(value) || 0)}
                     prefix={"₦"}
                     step={10}
                   />
@@ -96,8 +95,7 @@ function AffordabilityCalculator() {
                     placeholder="₦1,234,567"
                     allowDecimals={false}
                     className="pl-2 py-1 border border-customBlackShade w-full  rounded-md focus:outline-none focus:border-gray-500"
-                    onValueChange={(value) => setNum1(parseInt(value))}
-                    onBlur={() => handleBlur()}
+                    onValueChange={(value) => setNum1(parseInt(value) || 0)}
                     prefix={"₦"}
                     step={10}
                   />
@@ -116,8 +114,7 @@ function AffordabilityCalculator() {
                     placeholder="₦1,234,567"
                     allowDecimals={false}
                     className="pl-2 py-1 border border-customBlackShade w-full  rounded-md focus:outline-none focus:border-gray-500"
-                    onValueChange={(value) => setNum2(parseInt(value))}
-                    onBlur={() => handleBlur()}
+                    onValueChange={(value) => setNum2(parseInt(value) || 0)}
                     prefix={"₦"}
                     step={10}
                   />
@@ -130,8 +127,8 @@ function AffordabilityCalculator() {
             </div>
 
             {/* Calculating affordability */}
-            <div className="flex flex-col gap-10 bg-white">
-              <div className="flex flex-col gap-8 mt-6">
+            <div className="flex flex-col gap-10 p-4 bg-white">
+              <div className="flex flex-col gap-8 ">
                 <div className="flex flex-col items-center gap-2">
                   <p className="font-normal text-sm text-customNameBlack">
                     Monthly Total household income
@@ -185,7 +182,7 @@ function AffordabilityCalculator() {
                 <div className="flex flex-row justify-between items-center p-4 bg-white">
                   <div className="flex flex-col justify-between gap-4">
                     <h4>Exit rent affordability calculator</h4>
-                    <ArrowForwardIcon />
+                    <ArrowForwardIcon className="text-customSearchblue" />
                   </div>
                   <div>
                     <img src={exitImage} alt="exitimage" />
@@ -194,7 +191,7 @@ function AffordabilityCalculator() {
                 <div className="flex flex-row items-center justify-between   p-4 bg-white">
                   <div className="flex flex-col justify-between gap-4">
                     <h4>Open rent saver account</h4>
-                    <ArrowForwardIcon />
+                    <ArrowForwardIcon className="text-customSearchblue" />
                   </div>
                   <div>
                     <img src={saver} alt="saver-image" />
@@ -203,7 +200,7 @@ function AffordabilityCalculator() {
                 <div className="flex flex-row justify-between items-center p-4 bg-white">
                   <div className="flex flex-col justify-between gap-4 ">
                     <h4>Talk to a state-man</h4>
-                    <ArrowForwardIcon />
+                    <ArrowForwardIcon className="text-customSearchblue" />
                   </div>
                   <div>
                     <img src={talkstateman} alt="talkstateman" />
