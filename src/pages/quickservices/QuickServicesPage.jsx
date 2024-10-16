@@ -5,7 +5,7 @@ import ArtisanService from "./components/ArtisanService";
 
 function QuickServicesPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#FAFBFF]">
       <Header />
       <div className="flex flex-col gap-3 px-20">
         <Breadcrumb />

@@ -34,7 +34,7 @@ function AffordabilityCalculator() {
   const prefix = "₦";
 
   return (
-    <div className=" bg-gray-400  min-h-screen ">
+    <div className=" bg-[#F2F2F2]  min-h-screen ">
       <Header />
       <div className="flex flex-col lg:gap-12 py-6 px-4 lg:px-24">
         <div className="mb-2">
@@ -75,7 +75,7 @@ function AffordabilityCalculator() {
                     id="validation-example-2-field"
                     placeholder="₦1,234,567"
                     allowDecimals={false}
-                    className="pl-2 py-1 border border-customBlackShade w-full  rounded-md focus:outline-none focus:border-gray-500"
+                    className="pl-2 py-1 border border-customBlackShade w-full bg-[#F2F2F2] rounded-md focus:outline-none focus:border-gray-500"
                     onValueChange={(value) => setNum(parseInt(value) || 0)}
                     prefix={"₦"}
                     step={10}
@@ -94,7 +94,7 @@ function AffordabilityCalculator() {
                     id="validation-example-2-field"
                     placeholder="₦1,234,567"
                     allowDecimals={false}
-                    className="pl-2 py-1 border border-customBlackShade w-full  rounded-md focus:outline-none focus:border-gray-500"
+                    className="pl-2 py-1 border border-customBlackShade w-full bg-[#F2F2F2] rounded-md focus:outline-none focus:border-gray-500"
                     onValueChange={(value) => setNum1(parseInt(value) || 0)}
                     prefix={"₦"}
                     step={10}
@@ -113,7 +113,7 @@ function AffordabilityCalculator() {
                     id="validation-example-2-field"
                     placeholder="₦1,234,567"
                     allowDecimals={false}
-                    className="pl-2 py-1 border border-customBlackShade w-full  rounded-md focus:outline-none focus:border-gray-500"
+                    className="pl-2 py-1 border border-customBlackShade w-full bg-[#F2F2F2]  rounded-md focus:outline-none focus:border-gray-500"
                     onValueChange={(value) => setNum2(parseInt(value) || 0)}
                     prefix={"₦"}
                     step={10}

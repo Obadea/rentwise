@@ -27,8 +27,8 @@ import scheduleImg from "../../assets/scheduleImage.png";
 
 function PropertyPage() {
   return (
-    <div>
-      <Header className="relative" />
+    <div className="bg-[#FAFBFF]">
+      <Header className="relative x" />
       <div>
         <nav className=" hidden lg:flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold ">
           <a href="#description" data-to-scrollspy-id="description">
@@ -49,10 +49,10 @@ function PropertyPage() {
       <PropertyName className="hidden lg:flex" />
       <div className=" px-3 flex lg:px-16">
         <div className="flex-1 ">
-          <ImageMapChanger />
+          {/* <ImageMapChanger className="flex lg:hidden" /> */}
           <ImageSlider />
           <PropertyName className="flex lg:hidden" />
-          {/* <ScheduleTour /> */}
+          {/* <Schedule Tour /> */}
           {/* Overview component */}
           <PropertyOverview />
 
