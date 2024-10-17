@@ -80,6 +80,36 @@ function ServicesAgentPage() {
             </div>
           </div>
         </div>
+
+        {/* Search agent */}
+        <div className="flex flex-col gap-6 p-6">
+          <h3 className="font-medium text-lg text-customdark">Find Agent</h3>
+          <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-2">
+              <input
+                type="text"
+                placeholder="All Cities"
+                className="border border-[#DCE0E0] focus:border-[#DCE0E0] outline-none p-2 rounded-md"
+              />
+              <input
+                type="text"
+                placeholder="All Categories"
+                className="border border-[#DCE0E0] focus:border-[#DCE0E0] outline-none p-2 rounded-md"
+              />
+              <input
+                type="text"
+                placeholder="Enter agent name"
+                className="border border-[#DCE0E0] focus:border-[#DCE0E0] outline-none p-2 rounded-md"
+              />
+            </div>
+            <div>
+              {" "}
+              <button className="bg-customSearchblue text-base font-medium rounded-md">
+                Search Agents
+              </button>{" "}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
