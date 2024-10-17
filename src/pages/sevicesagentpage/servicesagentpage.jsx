@@ -5,8 +5,12 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import agent from "../../assets/agent.png";
+import Rating from "@mui/material/Rating";
+import Box from "@mui/material/Box";
 
 function ServicesAgentPage() {
+  const [value, setValue] = React.useState(3);
+
   return (
     <div>
       <Header />
@@ -22,7 +26,7 @@ function ServicesAgentPage() {
         <input type="text" />
         <button>Search Agent</button>
       </div>
-      <div className="flex flex-col gap-6 p-7">
+      <div className="flex  gap-6 p-7">
         <div className="flex gap-6 justify-between ">
           <div>
             <img src={agent} alt="" />
@@ -34,11 +38,16 @@ function ServicesAgentPage() {
                 Samuel Palmer
               </h4>
               {/* star ratings */}
+              <Box sx={{ "& > legend": { mt: 2 } }}>
+                <Rating name="read-only" value={value} readOnly />
+              </Box>
             </div>
             <div>
-              <p>Company Agent at Modern House Real Estate</p>
+              <p className="font-normal text-sm text-customStreetcolor mb-5">
+                Company Agent at Modern House Real Estate
+              </p>
             </div>
-            <div>
+            <div className="flex flex-col gap-2">
               <div className="flex justify-between border-b border-b-customgray3">
                 <h4 className="font-bold text-sm text-customBlackShade1">
                   Office
@@ -55,7 +64,7 @@ function ServicesAgentPage() {
                   321 456 9865
                 </p>
               </div>
-              <div className="flex justify-between border-b border-b-customgray3">
+              <div className="flex justify-between border-b border-b-customgray3 mb-6">
                 <h4 className="font-bold text-sm text-customBlackShade1">
                   Coverage Location
                 </h4>
@@ -104,7 +113,7 @@ function ServicesAgentPage() {
             </div>
             <div>
               {" "}
-              <button className="bg-customSearchblue text-base font-medium rounded-md">
+              <button className="bg-customSearchblue text-base text-white font-medium rounded-md p-2 w-full">
                 Search Agents
               </button>{" "}
             </div>
