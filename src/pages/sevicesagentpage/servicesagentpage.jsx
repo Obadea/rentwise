@@ -4,6 +4,7 @@ import Breadcrumb from "../../components/BreadCrumb";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import agent from "../../assets/agent.png";
 
 function ServicesAgentPage() {
   return (
@@ -21,15 +22,17 @@ function ServicesAgentPage() {
         <input type="text" />
         <button>Search Agent</button>
       </div>
-      <div>
-        <div className="flex ">
+      <div className="flex flex-col gap-6 p-7">
+        <div className="flex gap-6 justify-between ">
           <div>
-            <img src="" alt="" />
+            <img src={agent} alt="" />
           </div>
           {/* FInd Agent */}
           <div>
             <div className="flex justify-between">
-              <h4>Samuel Palmer</h4>
+              <h4 className="text-lg text-customblack font-normal">
+                Samuel Palmer
+              </h4>
               {/* star ratings */}
             </div>
             <div>
@@ -63,9 +66,12 @@ function ServicesAgentPage() {
               <div className="flex justify-between">
                 {/* for icons */}
                 <div>
-                  <WhatsAppIcon className="text-[#0B8200]" />
-                  <LocalPhoneIcon />
-                  <MailOutlineIcon />
+                  <WhatsAppIcon
+                    sx={{ fontSize: "15px" }}
+                    className="text-[#0B8200]"
+                  />
+                  <LocalPhoneIcon sx={{ fontSize: "15px" }} />
+                  <MailOutlineIcon sx={{ fontSize: "15px" }} />
                 </div>
                 <p className="text-sm text-customSearchblue font-semibold">
                   Book Service
