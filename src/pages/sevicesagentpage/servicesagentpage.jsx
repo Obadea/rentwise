@@ -20,11 +20,15 @@ function ServicesAgentPage() {
           A.C / Refrigeration Services around you
         </h4>
       </div>
-      <div className="flex bg-DownloadHover py-2 ">
+      <div className="flex bg-DownloadHover py-2 gap-4">
         <input type="text" className="text-[#DCE0E0] " />
         <input type="text" />
         <input type="text" />
-        <button>Search Agent</button>
+        <div>
+          <button className="bg-customSearchblue text-base text-white font-medium rounded-md p-2 ">
+            Search Agents
+          </button>
+        </div>
       </div>
       <div className="flex  gap-6 p-7">
         <div className="flex gap-6 justify-between ">
@@ -112,10 +116,9 @@ function ServicesAgentPage() {
               />
             </div>
             <div>
-              {" "}
               <button className="bg-customSearchblue text-base text-white font-medium rounded-md p-2 w-full">
                 Search Agents
-              </button>{" "}
+              </button>
             </div>
           </div>
         </div>

@@ -12,6 +12,7 @@ import image9 from "../../../assets/Image(9).png";
 import image10 from "../../../assets/Image(10).png";
 import image11 from "../../../assets/Image(11).png";
 import image12 from "../../../assets/Image(12).png";
+import { Form, Formik } from "formik";
 
 const categories = [
   {
@@ -181,22 +182,57 @@ function ArtisanService() {
                   className="cursor-pointer"
                 />
               </div>
-              <div className="flex flex-col gap-4">
-                {category.options.map((option, index) => (
-                  <label key={index} className="flex gap-3 pb-1">
-                    <input
-                      type="checkbox"
-                      value={option}
-                      // checked={selectedOptions.includes(option)}
-                      //   onchange={handleCheckboxChange}
-                    />
-                    {option}
-                  </label>
-                ))}
-              </div>
-              <button className="px-4 py-3 bg-customSearchblue text-white rounded-lg">
-                Search
-              </button>
+              <Formik
+                initialValues={{}}
+                onSubmit={(values) => {
+                  console.log({ values });
+                }}
+              >
+                {({ setFieldValue }) => (
+                  <Form>
+                    <div className="flex flex-col gap-4">
+                      {category.options.map((option, index) => (
+                        <label key={index} className="flex gap-3 pb-1">
+                          <input
+                            type="checkbox"
+                            value={option}
+                            onChange={(e) =>
+                              setFieldValue(option, e.target.checked)
+                            }
+                            // checked={selectedOptions.includes(option)}
+                            //   onchange={handleCheckboxChange}
+                          />
+                          {option}
+                        </label>
+                      ))}
+                    </div>
+                    <button
+                      type="submit"
+                      className="px-4 py-3 bg-customSearchblue text-white rounded-lg w-full"
+                    >
+                      Search
+                    </button>
+                  </Form>
+                )}
+              </Formik>
+              {/* <form action="">
+                <div className="flex flex-col gap-4">
+                  {category.options.map((option, index) => (
+                    <label key={index} className="flex gap-3 pb-1">
+                      <input
+                        type="checkbox"
+                        value={option}
+                        // checked={selectedOptions.includes(option)}
+                        //   onchange={handleCheckboxChange}
+                      />
+                      {option}
+                    </label>
+                  ))}
+                </div>
+                <button className="px-4 py-3 bg-customSearchblue text-white rounded-lg w-full">
+                  Search
+                </button>
+              </form> */}
             </div>
           )}
         </div>
