@@ -33,7 +33,7 @@ const Header = ({ className }) => {
                 "Quick services",
                 "Rent affordability calculator",
                 "RentSaver account",
-                "Short let",
+                "Shortlet",
                 "WiseReport",
                 "Compare apartment",
               ])
@@ -44,6 +44,10 @@ const Header = ({ className }) => {
             name="Landlords"
             dropdown={(options = ["Rental Management", "Quick Services"])}
           />
+
+          <a href="#q" className="py-2 px-8 text-lg hover:text-customyellow">
+            Shortlet
+          </a>
 
           <DropdownMenu
             name="Company"
