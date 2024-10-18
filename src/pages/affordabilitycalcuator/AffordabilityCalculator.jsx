@@ -130,10 +130,10 @@ function AffordabilityCalculator() {
             <div className="flex flex-col gap-10 p-4 bg-white">
               <div className="flex flex-col gap-8 ">
                 <div className="flex flex-col items-center gap-2">
-                  <p className="font-normal text-sm text-customNameBlack">
-                    Monthly Total household income
+                  <p className="font-normal text-sm text-[#000000]">
+                    Monthly household income
                   </p>
-                  <p className="text-customaccent font-bold text-4xl">
+                  <p className="text-customNameBlack font-bold text-lg">
                     {formatValue({ prefix, value: String(total) })}
                   </p>
                 </div>
