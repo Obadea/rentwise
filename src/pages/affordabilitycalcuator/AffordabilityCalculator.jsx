@@ -127,17 +127,28 @@ function AffordabilityCalculator() {
             </div>
 
             {/* Calculating affordability */}
-            <div className="flex flex-col gap-10 p-4 bg-white">
+            <div className="flex flex-col gap-8 px-4 py-6 bg-white">
               <div className="flex flex-col gap-8 ">
-                <div className="flex flex-col items-center gap-2">
-                  <p className="font-normal text-sm text-[#000000]">
-                    Monthly household income
-                  </p>
-                  <p className="text-customNameBlack font-bold text-lg">
-                    {formatValue({ prefix, value: String(total) })}
-                  </p>
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col items-center gap-1">
+                    <p className="font-normal text-sm text-[#000000]">
+                      Monthly household income
+                    </p>
+                    <p className="text-customNameBlack font-bold text-lg">
+                      {formatValue({ prefix, value: String(total) })}
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <p className="font-medium text-sm text-customaccent">
+                      Suggested Annual Rent
+                    </p>
+                    <p className="text-customaccent font-bold text-4xl">
+                      {formatValue({ prefix, value: String(rent) })}
+                    </p>
+                  </div>
                 </div>
-                <div className="border-t border-gray-300 flex flex-col pt-4 gap-6 mt-4">
+
+                <div className="border-t border-gray-300 flex flex-col pt-4 gap-6 ">
                   <div className="flex justify-between">
                     <p className="text-sm font-medium text-[#666666]">
                       Your annual rent shouldn’t exceed
