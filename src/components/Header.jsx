@@ -33,7 +33,6 @@ const Header = ({ className }) => {
                 "Quick services",
                 "Rent affordability calculator",
                 "RentSaver account",
-                "Shortlet",
                 "WiseReport",
                 "Compare apartment",
               ])

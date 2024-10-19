@@ -52,7 +52,7 @@ function AffordabilityCalculator() {
             </div>
           </div>
         </div> */}
-        <div className="flex flex-col lg:flex-row ">
+        <div className="flex flex-col lg:flex-row lg:justify-center">
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex flex-col lg:w-[475px]">
               <div className="flex flex-col gap-2">
