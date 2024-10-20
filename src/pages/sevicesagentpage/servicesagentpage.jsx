@@ -20,7 +20,8 @@ function ServicesAgentPage() {
           A.C / Refrigeration Services around you
         </h4>
       </div>
-      <div className="flex bg-DownloadHover py-2 gap-4">
+
+      <div className="flex bg-DownloadHover py-2 gap-4 ">
         <input type="text" className="text-[#DCE0E0] " />
         <input type="text" />
         <input type="text" />
@@ -31,16 +32,16 @@ function ServicesAgentPage() {
         </div>
       </div>
 
-      <div className="flex  gap-6 p-7">
-        <div className="flex-3">
+      <div className="flex  gap-6 p-7 px-20">
+        <div className="flex-[3]">
           <div className="flex gap-6 justify-between p-3  ">
             <div className="h-full">
               <img src={agent} alt="" className="h-full" />
             </div>
             {/* FInd Agent */}
-            <div>
-              <div className="flex justify-between">
-                <h4 className="text-lg text-customblack font-normal">
+            <div className="flex-1">
+              <div className=" flex justify-between">
+                <h4 className=" text-lg text-customblack font-normal">
                   Samuel Palmer
                 </h4>
                 {/* star ratings */}
@@ -98,7 +99,7 @@ function ServicesAgentPage() {
         </div>
 
         {/* Search agent */}
-        <div className="flex flex-col gap-6 p-6">
+        <div className="flex-1 flex flex-col gap-6 p-6">
           <h3 className="font-medium text-lg text-customdark">Find Agent</h3>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-2">
