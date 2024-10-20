@@ -11,17 +11,17 @@ import BedIcon from "@mui/icons-material/Bed";
 import BathtubIcon from "@mui/icons-material/Bathtub";
 import WeekendIcon from "@mui/icons-material/Weekend";
 
-function Slidercard() {
+function Propertycard() {
   return (
     <div className=" px-0 bg-white relative mx-auto md:mx-4 flex flex-col lg:mx-4 hover:bg-addpropertybg max-w-[400px] rounde-md shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)]">
       <div
         className="max-h-[300px] max-w-[400px]"
-        style={{
-          backgroundImage: `url(${require("../../../assets/chair_table.png")})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        // style={{
+        //   backgroundImage: `url(${require("../../../assets/chair_table.png")})`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+        // }}
       >
         <p className="w-auto text-[70%] bg-black bg-opacity-50 text-white absolute inline px-2 py-1 top-4 left-[70%]">
           FOR RENT
@@ -59,21 +59,21 @@ function Slidercard() {
           </p>
         </div>
         <div className="flex justify-start gap-2 text-xs text-customResultqueryGrey font-normal ">
-          <p className="bg-customgray rounded-lg p-1">
+          <p className="bg-customgray flex justify-center gap-1 items-center rounded-lg p-1">
             <BedIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
             2bed
           </p>
-          <p className="bg-customgray rounded-lg p-1">
+          <p className="bg-customgray flex justify-center items-center gap-1 rounded-lg p-1">
             <BathtubIcon
               fontSize="small"
               className="text-customLocationIconColor"
             />
             2Bath
           </p>
-          <p className="bg-customgray rounded-lg p-1">
+          <p className="bg-customgray flex justify-center items-center gap-1 rounded-lg p-1">
             <WeekendIcon
               fontSize="small"
               className="text-customLocationIconColor"
@@ -97,4 +97,4 @@ function Slidercard() {
   );
 }
 
-export default Slidercard;
+export default Propertycard;

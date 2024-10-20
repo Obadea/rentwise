@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./TopProperties.css";
 import ArrowBack from "@mui/icons-material/ArrowBackIos";
 import ArrowForward from "@mui/icons-material/ArrowForwardIos";
-import Slidercard from "./Slidercard";
+import Propertycard from "./Propertycard";
 
 function TopProperties() {
   const CustomPrevArrow = (props) => {
@@ -101,12 +101,12 @@ function TopProperties() {
             {...settings}
             className="mx-auto "
           >
-            <Slidercard />
-            <Slidercard />
-            <Slidercard />
-            <Slidercard />
-            <Slidercard />
-            <Slidercard />
+            <Propertycard />
+            <Propertycard />
+            <Propertycard />
+            <Propertycard />
+            <Propertycard />
+            <Propertycard />
           </Slider>
         </div>
       </div>

@@ -14,3 +14,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.active-scroll-spy {
+  color: #3b68f9;
+  border-bottom: solid 2px #3b68f9;
+}

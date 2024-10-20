@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import image1 from "../../assets/palor1.jpg";
-import image2 from "../../assets/palor2.jpg";
-import image3 from "../../assets/palor3.jpg";
-import image4 from "../../assets/palor4.jpg";
-import image5 from "../../assets/palor5.jpg";
-import image6 from "../../assets/palor6.jpg";
-import image7 from "../../assets/palor7.jpg";
+
+import image1 from "../../../assets/palor6.jpg";
+import image2 from "../../../assets/palor2.jpg";
+import image3 from "../../../assets/palor3.jpg";
+import image4 from "../../../assets/palor4.jpg";
+import image5 from "../../../assets/palor5.jpg";
+import image6 from "../../../assets/palor6.jpg";
+import image7 from "../../../assets/palor7.jpg";
+import ImageMapChanger from "./ImageMapChanger";
 
 const images = [
   image1,
@@ -15,7 +17,7 @@ const images = [
   image5,
   image6,
   image7,
-  image7,
+  image6,
   image7,
 ];
 
@@ -37,8 +39,15 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="relative">
+    <div className="max-w-3xl mx-auto px-2">
+      <div className="relative ">
+        <div className=" relative w-[180px] top-20 left-[75%]">
+          <ImageMapChanger
+            className="text-white bg-[#333333] hidden"
+            newClassName="hidden lg:flex"
+          />
+        </div>
+
         <img
           className="w-full h-auto rounded-lg"
           src={images[currentIndex]}
@@ -46,22 +55,22 @@ const ImageSlider = () => {
         />
         <button
           onClick={handlePrev}
-          className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg"
+          className="absolute text-2xl top-1/2 left-2 transform -translate-y-1/2 bg-white opacity-75 rounded-full px-3 py-1 lg:px-4 lg:py-2  shadow-lg"
         >
           ❮
         </button>
         <button
           onClick={handleNext}
-          className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg"
+          className="absolute text-2xl top-1/2 right-2 transform -translate-y-1/2  bg-white opacity-75 rounded-full px-3 py-1 lg:px-4 lg:py-2  shadow-lg"
         >
           ❯
         </button>
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex overflow-x-auto whitespace-nowrap mt-4 px-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 ">
         {images.map((image, index) => (
           <img
             key={index}
-            className={`w-20 h-auto rounded-lg cursor-pointer transition-opacity duration-300 ${
+            className={`w-20 h-auto  cursor-pointer transition-opacity duration-300 ${
               currentIndex === index ? "opacity-100" : "opacity-60"
             }`}
             src={image}

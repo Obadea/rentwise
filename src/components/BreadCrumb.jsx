@@ -6,7 +6,7 @@ const Breadcrumb = () => {
   const pathParts = location.pathname.split("/").filter((part) => part);
 
   return (
-    <nav className="breadcrumb">
+    <nav className="breadcrumb hidden lg:block">
       <ul className="flex space-x-2">
         <li>
           <Link to="/" className="text-blue-500 hover:underline">

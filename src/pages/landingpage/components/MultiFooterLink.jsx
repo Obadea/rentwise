@@ -1,20 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function MultiFooterLink() {
+function MultiFooterLink({ header, links }) {
+  console.log(links[0].text);
   return (
-    <div className="flex flex-col justify-center items-start mt-4 ">
-      <a href="#" className=" p-1   ">
-        BLOG
-      </a>
-      <a href="" className="p-1">
-        Faqs
-      </a>
-      <a href="" className="p-1">
-        Careers
-      </a>
-      <a href="" className="p-1 ">
-        Our Team
-      </a>
+    <div className="flex flex-col justify-center items-start ">
+      <h3 className="font-bold text-xl pb-2">{header}</h3>
+
+      {links.map((link, index) => (
+        <Link to={link.path} key={index} className="pb-1">
+          {link.text}
+        </Link>
+      ))}
     </div>
   );
 }

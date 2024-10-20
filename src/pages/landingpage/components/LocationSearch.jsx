@@ -167,13 +167,13 @@ function LocationSearch() {
           total={total}
           addTotalValue={addTotalValue}
         />
-      ) : // ) : activePopup === "pop3" ? (
-      //   <TotalIncome
-      //     total={total}
-      //     activePopup={activePopup}
-      //     setActivePopup={setActivePopup}
-      //   />
-      null}
+      ) : activePopup === "pop3" ? (
+        <TotalIncome
+          total={total}
+          activePopup={activePopup}
+          setActivePopup={setActivePopup}
+        />
+      ) : null}
     </div>
   );
 }

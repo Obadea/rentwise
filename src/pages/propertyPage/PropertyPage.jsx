@@ -1,74 +1,90 @@
 import React from "react";
-import Header from "../landingpage/components/Header";
-import Breadcrumb from "../../components/BreadCrumb";
-import RoomIcon from "@mui/icons-material/Room";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ShareIcon from "@mui/icons-material/Share";
-import PrintIcon from "@mui/icons-material/Print";
+import Header from "../../components/Header";
+
 import PropertyOverview from "./components/PropertyOverview";
 import Description from "./components/Description";
 import Address from "./components/Address";
 import PropertyDetail from "./components/PropertyDetail";
 import PhotoGrid from "./components/PhotoGrid";
+import EnergyClass from "./components/EnergyClass";
+import Features from "./components/Features";
+import MortgageCalculator from "./components/MortgageCalculator";
+import Video from "./components/Video";
+import WalkScore from "./components/WalkScore";
+import ScheduleTour from "./components/ScheduleTour";
+import ContactInfo from "./components/ContactInfo";
+import Review from "./components/Review";
+import PostReview from "./components/PostReview";
+import SimilarListing from "./components/SimilarListing";
+import Footer from "../../components/Footer";
+import ImageSlider from "./components/ImageSlider";
+import PropertyName from "./components/PropertyName";
+import ScheduleATour from "./components/ScheduleATour";
+import ScrollSpy from "react-ui-scrollspy";
+import VirtualTour from "./components/VirtualTour";
+import ImageMapChanger from "./components/ImageMapChanger";
+import scheduleImg from "../../assets/scheduleImage.png";
 
 function PropertyPage() {
   return (
-    <div>
-      <Header />
-      <div>{/* Horizontal navbar for each vertical component */}</div>
-      <div className="flex flex-row justify-between px-8 mt-24">
-        <div className=" ml-4 flex flex-col gap-4 ">
-          <Breadcrumb className="hidden lg:block" />
-          <h3 className="font-bold text-3xl text-customblack1">Glory Suite</h3>
-          <div className="flex gap-3">
-            <button className="font-bold text-xs text-white bg-customSearchblue p-1">
-              DOWNLOAD WISEREPORT{" "}
-            </button>
-            <button className="font-bold text-xs text-white bg-customNameBlack  p-1">
-              FOR SALE
-            </button>
-          </div>
-          <div className="flex text-customStreetcolor items-center  ">
-            <RoomIcon />
-            <p className="text-sm font-normal">Allen Avenue, Lagos</p>
-          </div>
-        </div>
+    <div className="bg-[#FAFBFF]">
+      <Header className="relative x" />
+      <div>
+        <nav className=" hidden lg:flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold ">
+          <a href="#description" data-to-scrollspy-id="description">
+            Description
+          </a>
+          <p data-to-scrollspy-id="address">Address</p>
+          <p data-to-scrollspy-id="details">Details</p>
+          <p data-to-scrollspy-id="energy">Energy Class</p>
+          <p data-to-scrollspy-id="features">Features</p>
+          {/* <p data-to-scrollspy-id="schedule">Scehdule a Plan</p> */}
+          <p data-to-scrollspy-id="video">Video</p>
+          <p data-to-scrollspy-id="virtual">360° Virtual Tour</p>
+          <p data-to-scrollspy-id="contact">Contact</p>
+          <p data-to-scrollspy-id="review">Reviews</p>
+          <p data-to-scrollspy-id="imilar">Similar Listing</p>
+        </nav>
+      </div>
+      <PropertyName className="hidden lg:flex" />
+      <div className=" px-3 flex lg:px-16">
+        <div className="flex-1 ">
+          {/* <ImageMapChanger className="flex lg:hidden" /> */}
+          <ImageSlider />
+          <PropertyName className="flex lg:hidden" />
+          {/* <Schedule Tour /> */}
+          {/* Overview component */}
+          <PropertyOverview />
 
-        <div className="w-44 mx-4 flex flex-col gap-4 items-end">
-          <div className="flex gap-2 text-customStreetcolor ">
-            <FavoriteBorderIcon
-              style={{
-                fontSize: 26,
-                border: "1px solid #666666",
-                padding: "3px",
-              }}
-            />
-            <ShareIcon
-              style={{
-                fontSize: 26,
-                border: "1px solid #666666",
-                padding: "3px",
-              }}
-            />
-            <PrintIcon
-              style={{
-                fontSize: 26,
-                border: "1px solid #666666",
-                padding: "3px",
-              }}
-            />
-          </div>
-          <p className="font-bold text-2xl text-customaccent ">$876,000</p>
-          <p className="font-normal text-base text-[#666666]">$7,600/sq ft</p>
+          <ScrollSpy>
+            <Description id="description" />
+            <Address id="address" />
+            <PropertyDetail id="details" />
+            <PhotoGrid />
+            <EnergyClass id="energy" />
+            <Features id="features" />
+            <MortgageCalculator />
+            <div className="flex justify-center items-center">
+              <div className="hidden lg:block">
+                <img src={scheduleImg} alt="" />
+              </div>
+              <ScheduleATour id="schedule" className="relative " />
+            </div>
+
+            <Video id="video" />
+            <VirtualTour id="virtual" />
+            <WalkScore />
+            <ContactInfo id="contact" />
+            <Review id="review" />
+            <PostReview />
+            <SimilarListing id="imilar" />
+          </ScrollSpy>
+        </div>
+        <div className=" ">
+          <ScheduleATour className="sticky hidden" />
         </div>
       </div>
-
-      {/* Overview component */}
-      <PropertyOverview />
-      <Description />
-      <Address />
-      <PropertyDetail />
-      <PhotoGrid />
+      <Footer />
     </div>
   );
 }
