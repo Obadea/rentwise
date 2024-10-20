@@ -12,7 +12,7 @@ function ServicesAgentPage() {
   const [value, setValue] = React.useState(3);
 
   return (
-    <div>
+    <div className="bg-textcolor">
       <Header />
       <div>
         <Breadcrumb />
@@ -33,8 +33,8 @@ function ServicesAgentPage() {
       </div>
 
       <div className="flex  gap-6 p-7 px-20">
-        <div className="flex-[3]">
-          <div className="flex gap-6 justify-between p-3  ">
+        <div className="flex-[3]  ">
+          <div className="flex gap-6 justify-between p-3  bg-white ">
             <div className="h-full">
               <img src={agent} alt="" className="h-full" />
             </div>
@@ -99,7 +99,7 @@ function ServicesAgentPage() {
         </div>
 
         {/* Search agent */}
-        <div className="flex-1 flex flex-col gap-6 p-6">
+        <div className="flex-1 flex flex-col bg-white gap-6 p-6">
           <h3 className="font-medium text-lg text-customdark">Find Agent</h3>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-2">
