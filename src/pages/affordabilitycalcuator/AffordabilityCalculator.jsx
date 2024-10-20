@@ -43,7 +43,7 @@ function AffordabilityCalculator() {
         {/* <div className="hidden">
           <div className="flex flex-col gap-2">
             <div>
-              <img src="" alt="" />
+              <img src="" alt="" />s
             </div>
             <div>
               <h4 className="font-bold text-sm text-customblack2">
@@ -52,7 +52,7 @@ function AffordabilityCalculator() {
             </div>
           </div>
         </div> */}
-        <div className="flex flex-col lg:flex-row lg:justify-center">
+        <div className="flex flex-col lg:flex-row xl:justify-center">
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex flex-col lg:w-[475px]">
               <div className="flex flex-col gap-2">
