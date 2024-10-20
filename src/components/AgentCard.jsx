@@ -2,11 +2,12 @@ import React from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import agent from "../../assets/agent.png";
+import agent from "../assets/agent.png";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 
 function AgentCard() {
+  const [value, setValue] = React.useState(3);
   return (
     <div className="flex-[3]  ">
       <div className="flex gap-6 justify-between p-3  bg-white ">
