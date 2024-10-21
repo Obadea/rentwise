@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import DateAndTimePicker from "../../../components/DateAndTimePicker";
 
 function ScheduleATour({ className }) {
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTIme, setSelectedTime] = useState(null);
+
+  console.log(selectedDate);
   return (
     <div
       className={` lg:flex   top-8 bottom-0 z-10 flex-col w-full lg:w-[380px] mb-6 ${className}`}
@@ -14,7 +18,14 @@ function ScheduleATour({ className }) {
           Request Info
         </h4>
       </div>
-      <DateAndTimePicker />
+      <div>
+        <DateAndTimePicker
+          label="Select the date"
+          value={selectedDate}
+          onChange={(newValue) => setSelectedDate(newValue)}
+        />
+      </div>
+
       <div className="px-2">
         <div className="flex flex-col gap-4">
           <h3 className="font-bold text-base text-[#33333]">Tour type</h3>
