@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 function AgentCard() {
   const [value, setValue] = React.useState(3);
   return (
-    <div className="flex-[3]  ">
+    <div>
       <div className="flex gap-6 justify-between p-3  bg-white ">
         <div className="h-full">
           <img src={agent} alt="" className="h-full" />

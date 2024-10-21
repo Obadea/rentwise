@@ -24,8 +24,8 @@ function ServicesAgentPage() {
       </div>
 
       <div className="flex bg-DownloadHover py-2 gap-4 px-20">
-        <div className=" flex-[3] flex gap-1 items-center bg-white rounded-lg px-1">
-          <SearchIcon />
+        <div className=" flex-[3] flex gap-1 items-center bg-white rounded-sm px-1">
+          <SearchIcon className="text-[#A1A7A8]" />
           <input
             type="text"
             className="text-black text-xl flex-[3]  px-2 focus:outline-none focus:border-transparent  "
@@ -54,22 +54,30 @@ function ServicesAgentPage() {
       </div>
 
       <div className="flex  gap-6 p-7 px-20">
-        <AgentCard />
+        <div className="flex-[3] flex flex-col gap-5 ">
+          <AgentCard />
+          <AgentCard />
+          <AgentCard />
+          <AgentCard />
+        </div>
 
         {/* Search agent */}
         <div className="flex-1 flex flex-col bg-white gap-6 p-6">
           <h3 className="font-medium text-lg text-customdark">Find Agent</h3>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-2">
-              <input
-                type="text"
-                placeholder="All Cities"
-                className="border border-[#DCE0E0] focus:border-[#DCE0E0] outline-none p-2 rounded-md"
+              <ReusableSelect
+                options={locationOptions}
+                placeholder={"All Cities in Lagos"}
+                onChange={(value) => console.log(value)}
+                className="w-full"
               />
-              <input
-                type="text"
-                placeholder="All Categories"
-                className="border border-[#DCE0E0] focus:border-[#DCE0E0] outline-none p-2 rounded-md"
+
+              <ReusableSelect
+                options={locationOptions}
+                placeholder={"All Categories"}
+                onChange={(value) => console.log(value)}
+                className="w-full"
               />
               <input
                 type="text"
