@@ -1,4 +1,5 @@
 import React from "react";
+import DateAndTimePicker from "../../../components/DateAndTimePicker";
 
 function ScheduleATour({ className }) {
   return (
@@ -13,6 +14,7 @@ function ScheduleATour({ className }) {
           Request Info
         </h4>
       </div>
+      <DateAndTimePicker />
       <div className="px-2">
         <div className="flex flex-col gap-4">
           <h3 className="font-bold text-base text-[#33333]">Tour type</h3>
