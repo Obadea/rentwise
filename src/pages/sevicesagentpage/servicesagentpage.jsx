@@ -23,7 +23,7 @@ function ServicesAgentPage() {
         </h4>
       </div>
 
-      <div className="flex bg-DownloadHover py-2 gap-4 px-20">
+      <div className="flex bg-DownloadHover py-2 gap-4 px-2 lg:px-20">
         <div className=" flex-[3] flex gap-1 items-center bg-white rounded-sm px-1">
           <SearchIcon className="text-[#A1A7A8]" />
           <input
@@ -53,8 +53,8 @@ function ServicesAgentPage() {
         </div>
       </div>
 
-      <div className="flex  gap-6 p-7 px-20">
-        <div className="flex-[3] flex flex-col gap-5 ">
+      <div className="flex flex-col lg:flex-row  gap-6 p-7 px-2 lg:px-20 items-start">
+        <div className="flex-[3] flex flex-col gap-5">
           <AgentCard />
           <AgentCard />
           <AgentCard />
@@ -62,7 +62,7 @@ function ServicesAgentPage() {
         </div>
 
         {/* Search agent */}
-        <div className="flex-1 flex flex-col bg-white gap-6 p-6">
+        <div className="  flex-1 w-full lg:w-auto flex flex-col bg-white gap-6 p-6">
           <h3 className="font-medium text-lg text-customdark">Find Agent</h3>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-2">
