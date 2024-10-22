@@ -7,7 +7,7 @@ import AgentSearch from "../../components/AgentSearch";
 function StatesMenPage() {
   return (
     <div>
-      <Header className="bg-[#FAFBFF]" />
+      <Header className="bg-[#FAFBFF]" newclassName="sticky " />
       <div className="py-6 flex flex-col gap-3 px-20">
         <Breadcrumb />
         <h2 className="font-bold text-4xl text-customNameBlack">State-men</h2>
