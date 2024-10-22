@@ -65,12 +65,13 @@ function PropertyPage() {
             <Features id="features" />
             {/* <MortgageCalculator /> */}
             <div className="flex justify-center items-center mt-6 bg-white ">
-              <div className="flex-[2] hidden lg:block">
-                <img src={scheduleImg} alt="" />
+              <div className="flex-[2] hidden lg:flex">
+                <img src={scheduleImg} alt="" className="w-full" />
               </div>
               <ScheduleATour
                 id="schedule"
-                className="relative top-0 flex-[3]"
+                className="relative top-0 flex-[2]"
+                newClassName="hidden"
               />
             </div>
 

@@ -14,7 +14,7 @@ import ComingSoon from "../comingsoon/ComingSoon";
 function LandingPage() {
   return (
     <div>
-      <Header />
+      <Header newclassName="sticky" className="bg-white" />
       <Banner />
       {/* <ComingSoon /> */}
       <TopProperties />

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePickerCustom from "../../../components/DatePickerCustom";
 import TimePickerCustom from "../../../components/TimePickerCustom";
 
-function ScheduleATour({ className }) {
+function ScheduleATour({ className, newClassName }) {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTIme, setSelectedTime] = useState(null);
 
@@ -15,7 +15,9 @@ function ScheduleATour({ className }) {
         <h4 className="text-customSearchblue text-base font-bold text-center py-3 flex-1">
           Schedule a Tour
         </h4>
-        <h4 className="text-[#333333] text-base font-bold text-center py-3 bg-textcolor flex-1">
+        <h4
+          className={`${newClassName} text-[#333333] text-base font-bold text-center py-3 bg-textcolor flex-1`}
+        >
           Request Info
         </h4>
       </div>
@@ -40,7 +42,9 @@ function ScheduleATour({ className }) {
             <h4 className="text-customSearchblue text-base font-bold py-3 text-center border-2 border-customSearchblue rounded-md flex-1">
               In Person
             </h4>
-            <h4 className="text-[#333333] text-base font-bold text-center  border-2 border-customgray3 rounded-md py-3 flex-1">
+            <h4
+              className={`${newClassName} text-[#333333] text-base font-bold text-center  border-2 border-customgray3 rounded-md py-3 flex-1`}
+            >
               Video
             </h4>
           </div>
