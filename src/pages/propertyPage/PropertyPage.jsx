@@ -64,16 +64,19 @@ function PropertyPage() {
             <EnergyClass id="energy" />
             <Features id="features" />
             {/* <MortgageCalculator /> */}
-            <div className="flex justify-center items-center">
-              <div className="  flex-[2] hidden lg:block">
+            <div className="flex justify-center items-center mt-6 bg-white ">
+              <div className="flex-[2] hidden lg:block">
                 <img src={scheduleImg} alt="" />
               </div>
-              <ScheduleATour id="schedule" className="relative flex-[3]" />
+              <ScheduleATour
+                id="schedule"
+                className="relative top-0 flex-[3]"
+              />
             </div>
 
             <Video id="video" />
             <VirtualTour id="virtual" />
-            <WalkScore />
+            {/* <WalkScore /> */}
             <ContactInfo id="contact" />
             <Review id="review" />
             <PostReview />

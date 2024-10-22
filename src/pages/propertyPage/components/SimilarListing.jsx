@@ -10,10 +10,10 @@ function SimilarListing({ id }) {
         </h4>
       </div>
       <div className="flex flex-wrap gap-3">
-        <Propertycard />
-        <Propertycard />
-        <Propertycard />
-        <Propertycard />
+        <Propertycard className="lg:w-32%" />
+        <Propertycard className="lg:w-32%" />
+        <Propertycard className="lg:w-32%" />
+        <Propertycard className="lg:w-32%" />
       </div>
     </div>
   );
