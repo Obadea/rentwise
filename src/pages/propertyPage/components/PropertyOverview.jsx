@@ -7,7 +7,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 function PropertyOverview() {
   return (
-    <div className="px-4 py-6 lg:p-10">
+    <div className="px-4 py-6 lg:p-10 bg-white">
       <div className="flex justify-between mb-8 border-b-[1px] border-[#DCE0E0]">
         <h4 className="font-medium text-lg">Overview</h4>
         <p>
