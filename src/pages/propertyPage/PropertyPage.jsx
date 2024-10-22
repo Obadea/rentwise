@@ -47,8 +47,8 @@ function PropertyPage() {
         </nav>
       </div>
       <PropertyName className="hidden lg:flex" />
-      <div className=" px-3 flex lg:px-16">
-        <div className="flex-1 ">
+      <div className=" px-3 flex gap-3 lg:px-12">
+        <div className="flex-[3] ">
           {/* <ImageMapChanger className="flex lg:hidden" /> */}
           <ImageSlider />
           <PropertyName className="flex lg:hidden" />
@@ -63,12 +63,12 @@ function PropertyPage() {
             <PhotoGrid />
             <EnergyClass id="energy" />
             <Features id="features" />
-            <MortgageCalculator />
+            {/* <MortgageCalculator /> */}
             <div className="flex justify-center items-center">
-              <div className="hidden lg:block">
+              <div className="  flex-[2] hidden lg:block">
                 <img src={scheduleImg} alt="" />
               </div>
-              <ScheduleATour id="schedule" className="relative " />
+              <ScheduleATour id="schedule" className="relative flex-[3]" />
             </div>
 
             <Video id="video" />
@@ -80,7 +80,7 @@ function PropertyPage() {
             <SimilarListing id="imilar" />
           </ScrollSpy>
         </div>
-        <div className=" ">
+        <div className="flex-0 ">
           <ScheduleATour className="sticky hidden" />
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import DateAndTimePicker from "../../../components/DateAndTimePicker";
+import DatePickerCustom from "../../../components/DatePickerCustom";
+import TimePickerCustom from "../../../components/TimePickerCustom";
 
 function ScheduleATour({ className }) {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -8,7 +9,7 @@ function ScheduleATour({ className }) {
   console.log(selectedDate);
   return (
     <div
-      className={` lg:flex   top-8 bottom-0 z-10 flex-col w-full lg:w-[380px] mb-6 ${className}`}
+      className={` lg:flex -top-1 bottom-0 z-10 bg-white flex-col w-full  mb-6 ${className}`}
     >
       <div className="flex">
         <h4 className="text-customSearchblue text-base font-bold text-center py-3 flex-1">
@@ -18,11 +19,16 @@ function ScheduleATour({ className }) {
           Request Info
         </h4>
       </div>
-      <div>
-        <DateAndTimePicker
+      <div className="flex justify-evenly">
+        <DatePickerCustom
           label="Select the date"
           value={selectedDate}
           onChange={(newValue) => setSelectedDate(newValue)}
+        />
+        <TimePickerCustom
+          label="Select time"
+          value={selectedTIme}
+          onChange={(newValue) => setSelectedTime(newValue)}
         />
       </div>
 
