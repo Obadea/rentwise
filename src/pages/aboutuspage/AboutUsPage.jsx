@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import AboutTextContent from "./components/AboutTextContent";
+import AboutPhotoCard from "./components/AboutPhotoCard";
 
 function AboutUsPage() {
   return (
@@ -17,16 +18,17 @@ function AboutUsPage() {
         professional, or a growing family, our mission is to transform the way
         you search for and secure your next home in Lagos, Nigeria."
         />
+        <AboutTextContent
+          header="Who We Are"
+          paragraph="RentWise was created with a clear vision: to eliminate the frustrations and uncertainties often associated with the rental process. Lagos is a vibrant and dynamic city, but finding a trustworthy landlord, a safe neighborhood, and a home that fits your budget can be a daunting task. We are here to change that."
+        />
+        <AboutTextContent paragraph="Our team of real estate experts, tech enthusiasts, and customer service professionals is committed to bringing you a smarter and more efficient rental experience. We combine cutting-edge technology with local expertise to empower renters to make the best decisions for themselves and their families." />
+        <AboutTextContent
+          header="Our Vision"
+          paragraph="We envision a world where finding a home is as simple as making a few clicks. A world where every renter feels empowered to make informed choices and where every rental transaction is built on transparency and trust. With RentWise, that vision is becoming a reality, one rental at a time."
+        />
       </div>
-      <AboutTextContent
-        header="Who We Are"
-        paragraph="RentWise was created with a clear vision: to eliminate the frustrations and uncertainties often associated with the rental process. Lagos is a vibrant and dynamic city, but finding a trustworthy landlord, a safe neighborhood, and a home that fits your budget can be a daunting task. We are here to change that."
-      />
-      <AboutTextContent paragraph="Our team of real estate experts, tech enthusiasts, and customer service professionals is committed to bringing you a smarter and more efficient rental experience. We combine cutting-edge technology with local expertise to empower renters to make the best decisions for themselves and their families." />
-      <AboutTextContent
-        header="Our Vision"
-        paragraph="We envision a world where finding a home is as simple as making a few clicks. A world where every renter feels empowered to make informed choices and where every rental transaction is built on transparency and trust. With RentWise, that vision is becoming a reality, one rental at a time."
-      />
+
       <div className="px-24 py-12">
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col gap-2">
@@ -37,7 +39,9 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row"></div>
+          <div className="flex flex-col lg:flex-row">
+            <AboutPhotoCard />
+          </div>
         </div>
       </div>
     </div>
