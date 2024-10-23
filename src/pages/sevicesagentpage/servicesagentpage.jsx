@@ -16,8 +16,8 @@ const locationOptions = [
 ];
 function ServicesAgentPage() {
   return (
-    <div className="bg-textcolor" newclassName="sticky  ">
-      <Header className="bg-[#FAFBFF]" />
+    <div className="bg-textcolor">
+      <Header className="bg-[#FAFBFF]" newclassName="sticky  " />
       <div className="py-6 flex flex-col gap-3 px-20">
         <Breadcrumb />
         <h4 className="font-bold text-sm text-customNameBlack">

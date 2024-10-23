@@ -21,6 +21,12 @@ const ReusableSelect = ({
       <label htmlFor={label}>{label}</label>
       <Select
         className={`${className} relative w-52`}
+        styles={{
+          menu: (provided) => ({
+            ...provided,
+            zIndex: 9999, // Set a high z-index
+          }),
+        }}
         placeholder={placeholder}
         options={options}
         isSearchable={isSearchable}
