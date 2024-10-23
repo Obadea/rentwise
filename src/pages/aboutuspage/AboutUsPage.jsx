@@ -10,7 +10,7 @@ function AboutUsPage() {
       <div className="h-[200px] bg-slate-700 flex items-end pb-12 px-24">
         <h3 className="font-bold text-white text-3xl">About Us</h3>
       </div>
-      <div className="flex flex-col px-2 py-4 lg:px-24 lg:py-10 lg:flex-row flex-wrap gap-4 lg:gap-8">
+      <div className="flex flex-col px-2 py-4 lg:px-24 lg:py-10 lg:flex-row flex-wrap gap-10 lg:gap-8 mt-10 bg-white">
         <AboutTextContent
           header="Welcome to RentWise, where renting meets wisdom."
           paragraph="At RentWise, we believe that finding a home should be simple,
@@ -18,11 +18,15 @@ function AboutUsPage() {
         professional, or a growing family, our mission is to transform the way
         you search for and secure your next home in Lagos, Nigeria."
         />
-        <AboutTextContent paragraph="Our team of real estate experts, tech enthusiasts, and customer service professionals is committed to bringing you a smarter and more efficient rental experience. We combine cutting-edge technology with local expertise to empower renters to make the best decisions for themselves and their families." />
+        <AboutTextContent
+          className="hidden lg:flex"
+          paragraph="Our team of real estate experts, tech enthusiasts, and customer service professionals is committed to bringing you a smarter and more efficient rental experience. We combine cutting-edge technology with local expertise to empower renters to make the best decisions for themselves and their families."
+        />
 
         <AboutTextContent
           header="Who We Are"
           paragraph="RentWise was created with a clear vision: to eliminate the frustrations and uncertainties often associated with the rental process. Lagos is a vibrant and dynamic city, but finding a trustworthy landlord, a safe neighborhood, and a home that fits your budget can be a daunting task. We are here to change that."
+          paragraph1="Our team of real estate experts, tech enthusiasts, and customer service professionals is committed to bringing you a smarter and more efficient rental experience. We combine cutting-edge technology with local expertise to empower renters to make the best decisions for themselves and their families."
         />
         <AboutTextContent
           header="Our Vision"
@@ -40,7 +44,7 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div className="flex flex-col justify-between gap-2 lg:gap-6 lg:flex-row ">
+          <div className="flex flex-col justify-between gap-4 lg:gap-6 lg:flex-row ">
             <AboutPhotoCard />
             <AboutPhotoCard />
             <AboutPhotoCard />
@@ -48,6 +52,7 @@ function AboutUsPage() {
           </div>
         </div>
       </div>
+      <div></div>
     </div>
   );
 }

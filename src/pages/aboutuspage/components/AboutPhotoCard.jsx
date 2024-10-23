@@ -3,7 +3,7 @@ import image from "../../../assets/scheduleImage.png";
 
 function AboutPhotoCard() {
   return (
-    <div class="relative flex-1 max-w-[300px] h-[400px]">
+    <div class="relative lg:flex-1 max-w-[300px] h-[400px]">
       <img
         src={image}
         alt="Description"
