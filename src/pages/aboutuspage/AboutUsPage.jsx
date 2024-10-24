@@ -52,7 +52,33 @@ function AboutUsPage() {
           </div>
         </div>
       </div>
-      <div></div>
+      {/* Services */}
+      <div className="px-24 py-12">
+        <div className="flex flex-col gap-6 ">
+          <div className="flex flex-col gap-2">
+            <h3 className="font-normal text-3xl text-[#000000] ">Services</h3>
+            <p className="font-normal text-base text-customStreetcolor">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            </p>
+          </div>
+          <div></div>
+        </div>
+      </div>
+
+      {/* Blog */}
+      <div className="px-24 py-12">
+        <div className="flex flex-col gap-6 ">
+          <div className="flex flex-col gap-2">
+            <h3 className="font-normal text-3xl text-[#000000] ">
+              Read From Our Blog
+            </h3>
+            <p className="font-normal text-base text-customStreetcolor">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            </p>
+          </div>
+          <div>{/* Blog post component */}</div>
+        </div>
+      </div>
     </div>
   );
 }
