@@ -1,4 +1,5 @@
 import React from "react";
+import blogimage from "../../../assets/blogroom.png";
 
 function AboutBlogPost() {
   return (
