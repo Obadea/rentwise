@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import AboutTextContent from "./components/AboutTextContent";
 import AboutPhotoCard from "./components/AboutPhotoCard";
+import image from "../../assets/min-room.jpg";
 
 function AboutUsPage() {
   return (
@@ -61,7 +62,29 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div></div>
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* small squares */}
+            <div className="flex flex-wrap flex-1">
+              <div class="relative lg:flex-1 max-w-[20vw] h-[20vw]">
+                <div className="relative z-10 top-4 left-0 right-0">
+                  <p className=" font-normal text-xs text-white">Services</p>
+                  <h4 className="  font-normal text-lg text-white">
+                    Rentwise Report
+                  </h4>
+                </div>
+                <img
+                  src={image}
+                  alt="Description"
+                  class="absolute inset-0 object-cover w-full h-full"
+                />
+                <div class="absolute inset-0 bg-black   opacity-30"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
+                  Anita Nwabale
+                </div>
+              </div>
+            </div>
+            {/* big rectangless */}
+          </div>
         </div>
       </div>
 
