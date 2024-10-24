@@ -1,10 +1,10 @@
 import React from "react";
-import image from "../../assets/min-room.jpg";
+import image from "../../../assets/min-room.jpg";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
-function AboutServicePhotoCard() {
+function AboutServicePhotoCard({ className }) {
   return (
-    <div class="relative pl-4 lg:flex-1 max-w-[20vw] h-[20vw]">
+    <div class={` ${className} relative pl-4 lg:flex-1`}>
       <div className="relative z-10 top-4 left-0 right-0">
         <p className=" font-normal text-xs text-white">Services</p>
         <h4 className="  font-normal text-lg text-white">Rentwise Report</h4>

@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import AboutTextContent from "./components/AboutTextContent";
 import AboutPhotoCard from "./components/AboutPhotoCard";
+import AboutServicePhotoCard from "./components/AboutServicePhotoCard";
 
 function AboutUsPage() {
   return (
@@ -63,8 +64,17 @@ function AboutUsPage() {
           </div>
           <div className="flex flex-col lg:flex-row gap-8">
             {/* small squares */}
-            <div className="flex flex-wrap flex-1"></div>
+            <div className="flex flex-wrap gap-10 flex-1 ">
+              <AboutServicePhotoCard className=" flex-1 lg:min-w-[45%] lg:max-h-[45%]" />
+              <AboutServicePhotoCard className="flex-1  lg:min-w-[45%] lg:max-h-[45%]" />
+              <AboutServicePhotoCard className="flex-1  lg:min-w-[45%] lg:max-h-[45%]" />
+              <AboutServicePhotoCard className="flex-1  lg:min-w-[45%] lg:max-h-[45%]" />
+            </div>
             {/* big rectangless */}
+            <div className="flex gap-12 flex-1">
+              <AboutServicePhotoCard className="max-w-[220px] h-[30vw]" />
+              <AboutServicePhotoCard className="max-w-[220px] h-[30vw]" />
+            </div>
           </div>
         </div>
       </div>
