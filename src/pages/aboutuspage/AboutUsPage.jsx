@@ -64,16 +64,35 @@ function AboutUsPage() {
           </div>
           <div className="flex flex-col lg:flex-row gap-8">
             {/* small squares */}
-            <div className="flex flex-wrap gap-10 flex-1 ">
-              <AboutServicePhotoCard className=" flex-1 lg:min-w-[45%] lg:max-h-[45%]" />
-              <AboutServicePhotoCard className="flex-1  lg:min-w-[45%] lg:max-h-[45%]" />
-              <AboutServicePhotoCard className="flex-1  lg:min-w-[45%] lg:max-h-[45%]" />
-              <AboutServicePhotoCard className="flex-1  lg:min-w-[45%] lg:max-h-[45%]" />
+            <div className="flex flex-col lg:flex-wrap gap-6 lg:gap-10 lg:flex-1 ">
+              <AboutServicePhotoCard
+                className="  w-full h-[40vw] lg:min-w-[45%] lg:max-h-[45%]"
+                service="service"
+                paragraph="Rentwise Report"
+              />
+              <AboutServicePhotoCard
+                className=" w-full h-[40vw] lg:min-w-[45%] lg:max-h-[45%]"
+                paragraph="3D Virtual Tour"
+              />
+              <AboutServicePhotoCard
+                className=" w-full h-[50vw] lg:min-w-[45%] lg:max-h-[45%]"
+                paragraph="Rent Saver"
+              />
+              <AboutServicePhotoCard
+                className=" w-full h-[50vw] lg:min-w-[45%] lg:max-h-[45%]"
+                paragraph="Quick Services"
+              />
             </div>
             {/* big rectangless */}
-            <div className="flex gap-12 flex-1">
-              <AboutServicePhotoCard className="max-w-[220px] h-[30vw]" />
-              <AboutServicePhotoCard className="max-w-[220px] h-[30vw]" />
+            <div className="flex flex-col lg:flex-row gap-12 flex-1">
+              <AboutServicePhotoCard
+                className=" w-full h-[80vw] lg:max-w-[220px] lg:h-[30vw]"
+                paragraph="Rent Calculator"
+              />
+              <AboutServicePhotoCard
+                className=" w-full h-[80vw] lg:max-w-[220px] lg:h-[30vw]"
+                paragraph="Recover Asset Value"
+              />
             </div>
           </div>
         </div>
