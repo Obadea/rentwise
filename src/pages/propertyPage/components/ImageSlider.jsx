@@ -7,7 +7,7 @@ import image4 from "../../../assets/palor4.jpg";
 import image5 from "../../../assets/palor5.jpg";
 import image6 from "../../../assets/palor6.jpg";
 import image7 from "../../../assets/palor7.jpg";
-import ImageMapChanger from "./ImageMapChanger";
+// import ImageMapChanger from "./ImageMapChanger";
 
 const images = [
   image1,
@@ -42,10 +42,10 @@ const ImageSlider = () => {
     <div className="max-w-3xl mx-auto px-2">
       <div className="relative ">
         <div className=" relative w-[180px] top-20 left-[75%]">
-          <ImageMapChanger
+          {/* <ImageMapChanger
             className="text-white bg-[#333333] hidden"
             newClassName="hidden lg:flex"
-          />
+          /> */}
         </div>
 
         <img
