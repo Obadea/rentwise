@@ -22,7 +22,7 @@ import PropertyName from "./components/PropertyName";
 import ScheduleATour from "./components/ScheduleATour";
 import ScrollSpy from "react-ui-scrollspy";
 import VirtualTour from "./components/VirtualTour";
-import ImageMapChanger from "./components/ImageMapChanger";
+// import ImageMapChanger from "./components/ImageMapChanger"
 import scheduleImg from "../../assets/scheduleImage.png";
 
 function PropertyPage() {
