@@ -8,10 +8,10 @@ import PropertyDetail from "./components/PropertyDetail";
 import PhotoGrid from "./components/PhotoGrid";
 import EnergyClass from "./components/EnergyClass";
 import Features from "./components/Features";
-import MortgageCalculator from "./components/MortgageCalculator";
+// import MortgageCalculator from "./components/MortgageCalculator";
 import Video from "./components/Video";
-import WalkScore from "./components/WalkScore";
-import ScheduleTour from "./components/ScheduleTour";
+// import WalkScore from "./components/WalkScore";
+// import ScheduleTour from "./components/ScheduleTour";
 import ContactInfo from "./components/ContactInfo";
 import Review from "./components/Review";
 import PostReview from "./components/PostReview";
@@ -22,7 +22,7 @@ import PropertyName from "./components/PropertyName";
 import ScheduleATour from "./components/ScheduleATour";
 import ScrollSpy from "react-ui-scrollspy";
 import VirtualTour from "./components/VirtualTour";
-// import ImageMapChanger from "./components/ImageMapChanger"
+// import ImageMapChanger from "./components/ImageMapChanger";
 import scheduleImg from "../../assets/scheduleImage.png";
 
 function PropertyPage() {
