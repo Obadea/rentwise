@@ -8,7 +8,7 @@ import PropertyPage from "./pages/propertyPage/PropertyPage.jsx";
 // import LandingPage from "./pages/landingpage/LandingPage.jsx";
 import AffordabilityCalculator from "./pages/affordabilitycalcuator/AffordabilityCalculator.jsx";
 import QuickServicesPage from "./pages/quickservices/QuickServicesPage.jsx";
-import ServicesAgentPage from "./pages/sevicesagentpage/ServicesAgentPage.jsx";
+import ServicesAgentPage from "./pages/servicesagentpage/ServicesAgentPage.jsx";
 import AboutUsPage from "./pages/AboutUSPage/AboutUsPage.jsx";
 // import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 // import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
