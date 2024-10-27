@@ -1,22 +1,22 @@
 // import LandingPage from "./pages/landingpage/LandingPage";
 import "./fonts.css";
 import { Route, Routes } from "react-router-dom";
-import SignInPage from "./pages/signinpage/SignInPage";
+// import SignInPage from "./pages/signinpage/SignInPage";
 import SignUpPage from "./pages/signuppage/SignUpPage.jsx";
 import ComingSoon from "./pages/comingsoon/ComingSoon.jsx";
 import PropertyPage from "./pages/propertyPage/PropertyPage.jsx";
-import LandingPage from "./pages/landingpage/LandingPage.jsx";
+// import LandingPage from "./pages/landingpage/LandingPage.jsx";
 import AffordabilityCalculator from "./pages/affordabilitycalcuator/AffordabilityCalculator.jsx";
 import QuickServicesPage from "./pages/quickservices/QuickServicesPage.jsx";
 import ServicesAgentPage from "./pages/sevicesagentpage/ServicesAgentPage.jsx";
-import AboutUsPage from "./pages/aboutuspage/AboutUsPage.jsx";
+import AboutUsPage from "./pages/AboutUSPage/AboutUsPage.jsx";
 // import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 // import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<ComingSoon />} />
       <Route path="/signin" element={<ComingSoon />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/apartment/properties" element={<PropertyPage />} />

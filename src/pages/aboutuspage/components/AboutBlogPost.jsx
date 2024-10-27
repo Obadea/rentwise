@@ -1,7 +1,59 @@
 import React from "react";
-import blogimage from "../../../assets/blogroom.png";
+import AboutBlogPostCard from "./AboutBlogPostCard";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../../landingpage/components/TopProperties";
 
 function AboutBlogPost() {
+  const settings = {
+    lazyLoad: "ondemand",
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          // prevArrow:
+          //   '<button type="button" class="slick-prev">Previous</button>',
+          // nextArrow: '<button type="button" class="slick-next">Next</button>',
+        },
+      },
+    ],
+  };
   return (
     <div className="px-4 lg:px-24 py-12">
       <div className="flex flex-col gap-6 ">
@@ -13,23 +65,23 @@ function AboutBlogPost() {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit
           </p>
         </div>
-        <div className="flex flex-col px-2">
-          <img src="" alt="" />
-          <div className="p-2 flex flex-col border-b-2">
-            <div></div>
-            <h4 className="font-medium font-base text-customdark">
-              Skills That You Can Learn In The Real Estate Market{" "}
-            </h4>
-            <p className="font-normal text-xs text-customStreetcolor">
-              Lorem ipsum dolor sit amejdnskxkmlzsldnska.knhiwnsanx
-              ZJbnklnxsk......consectetur adipiscing elit.{" "}
-            </p>
-            <button className="text-customSearchblue font-bold text-sm">
-              Continue reading
-            </button>
+        <div className="hidden lg:flex justify-between">
+          <AboutBlogPostCard />
+          <AboutBlogPostCard />
+          <AboutBlogPostCard />
+          <AboutBlogPostCard />
+        </div>
+        <div className=" pb-12  lg:hidden">
+          <div>
+            <div className="slider-container px-10 mt-8 ">
+              <Slider {...settings} className="">
+                <AboutBlogPostCard className="w-full" />
+                <AboutBlogPostCard className="w-full" />
+                <AboutBlogPostCard className="w-full" />
+                <AboutBlogPostCard className="w-full" />
+              </Slider>
+            </div>
           </div>
-          {/* add animation author */}
-          <div> by Mike Moore</div>
         </div>
       </div>
     </div>
