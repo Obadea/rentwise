@@ -9,7 +9,6 @@ import Footer from "../../components/Footer";
 import Partnership from "./components/Partnership";
 import WiseeReport from "./components/WiseeReport";
 import WisePopup from "./components/WisePopup";
-import ComingSoon from "../comingsoon/ComingSoon";
 
 function LandingPage() {
   return (
