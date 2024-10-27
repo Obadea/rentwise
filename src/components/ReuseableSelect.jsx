@@ -7,6 +7,7 @@ const ReusableSelect = ({
   isSearchable = false,
   placeholder,
   onChange,
+  className,
 }) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -16,10 +17,16 @@ const ReusableSelect = ({
   };
 
   return (
-    <div className="relative">
+    <div className={`${className} relative`}>
       <label htmlFor={label}>{label}</label>
       <Select
-        className="relative w-52"
+        className={`${className} relative w-52`}
+        styles={{
+          menu: (provided) => ({
+            ...provided,
+            zIndex: 9999, // Set a high z-index
+          }),
+        }}
         placeholder={placeholder}
         options={options}
         isSearchable={isSearchable}

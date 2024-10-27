@@ -17,7 +17,7 @@ function ComingSoon() {
   }, []);
 
   function calculateTimeLeft() {
-    const futureDate = new Date("Nov 1, 2024 00:00:00").getTime();
+    const futureDate = new Date("Jan 1, 2025 00:00:00").getTime();
     const todayDate = new Date().getTime();
     const t = futureDate - todayDate;
 

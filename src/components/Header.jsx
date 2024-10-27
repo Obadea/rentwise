@@ -5,7 +5,7 @@ import Hamburger from "./Hamburger";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 
-const Header = ({ className }) => {
+const Header = ({ className, newclassName }) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   // const toggleMenu = () => {
@@ -15,14 +15,16 @@ const Header = ({ className }) => {
   let options;
   return (
     <header
-      className={` ${className} bg-white  text-black relative z-30 top-0 w-full  `}
+      className={` ${newclassName}  bg-white  text-black relative z-30 top-0 w-full  `}
     >
-      <nav className=" pl-4 lg:pl-24 py-2 flex items-center w-full justify-between bg-white lg:py-0  ">
+      <nav
+        className={` ${className} pl-4 lg:pl-24 py-2 flex items-center w-full justify-between  lg:py-0 `}
+      >
         <Logo />
-        <div className=" hidden lg:flex items-center gap-4 justify-between ">
+        <div className=" hidden lg:flex items-center gap-3 justify-between ">
           {/* location will be automated */}
 
-          <a href="#q" className="py-2 px-8 text-lg hover:text-customyellow">
+          <a href="#q" className="py-2 px-4 text-lg hover:text-customyellow">
             Home
           </a>
 
@@ -44,7 +46,7 @@ const Header = ({ className }) => {
             dropdown={(options = ["Rental Management", "Quick Services"])}
           />
 
-          <a href="#q" className="py-2 px-8 text-lg hover:text-customyellow">
+          <a href="#q" className="py-2 px-4 text-lg hover:text-customyellow">
             Shortlet
           </a>
 

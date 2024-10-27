@@ -16,7 +16,10 @@ const options = [
 ];
 function ContactInfo({ id }) {
   return (
-    <div id={id} className="px-4 py-6 lg:p-10 flex flex-col  gap-4 mt-16 ">
+    <div
+      id={id}
+      className="px-4 py-6 lg:p-10 flex flex-col bg-white gap-4 mt-16 "
+    >
       <div className="flex justify-between pt-10 pb-6 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
         <h4 className=" font-medium text-lg text-customdark">
           Contact Information

@@ -92,24 +92,26 @@ function LocationSearch() {
             <input
               type="text"
               placeholder="Search"
-              className=" ml-4 w-[80%] h-[38px] text-2xl focus:outline-none"
+              className=" ml-4 xs:w-[60%] w-[80%] h-[38px] text-2xl focus:outline-none"
             />
 
             <SearchIcon
-              className="text-customBlackShade"
+              className="text-customBlackShade cursor-pointer"
               sx={{ fontSize: 38 }}
             />
           </div>
 
           <SortIcon
-            onClick={handleClick}
+            onClick={() => handleClick()}
             className=" bg-customsearchinput rounded-lg text-customBlackShade shadow-[0px_4px_4px_0px] shadow-custompurple cursor-pointer"
             sx={{ fontSize: 50 }}
           />
         </div>
         <form
           className={`${
-            filter ? "flex flex-col relative top-32 w-[80%] z-20" : "hidden"
+            filter
+              ? "flex flex-col items-center  relative top-32 w-[80%] z-10 lg:hidden"
+              : "hidden"
           }  text-black lg:flex flex-shrink justify-evenly bg-gray-100 px-6 py-4 gap-6 rounded-lg`}
           onSubmit={(e) => {
             e.preventDefault();

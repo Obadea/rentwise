@@ -3,7 +3,7 @@ import RatingControl from "./RatingControl";
 
 function PostReview() {
   return (
-    <div className="px-4 py-6 lg:p-10 flex flex-col  gap-4 mt-16 ">
+    <div className="px-4 py-6 lg:p-10 flex flex-col bg-white gap-4 mt-16 ">
       <form action="#" className="flex flex-col gap-8">
         <div className="flex justify-between py-6 pb-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-lg text-customdark">
