@@ -5,6 +5,7 @@ import AboutPhotoCard from "./components/AboutPhotoCard";
 import AboutServicePhotoCard from "./components/AboutServicePhotoCard";
 import AboutBlogPost from "./components/AboutBlogPost";
 import AboutTestimonials from "./components/AboutTestimonials";
+import Footer from "../../components/Footer";
 
 function AboutUsPage() {
   return (
@@ -104,6 +105,7 @@ function AboutUsPage() {
 
       {/* Testimonials */}
       <AboutTestimonials />
+      <Footer />
     </div>
   );
 }

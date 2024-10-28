@@ -1,12 +1,9 @@
 import React from "react";
-import AboutBlogPostCard from "./AboutBlogPostCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../landingpage/components/TopProperties";
 import TestimonialCard from "./TestimonialCard";
-import Header from "../../../components/Header";
-import Footer from "../../../components/Footer";
 
 function AboutTestimonials() {
   const settings = {
@@ -66,13 +63,24 @@ function AboutTestimonials() {
             What others says about us
           </p>
         </div>
-        <div className="flex flex-row gap-4 justify-between flex-wrap ">
+        {/* <div className="hidden lg:flex flex-row gap-4 justify-between flex-wrap ">
           <TestimonialCard />
           <TestimonialCard />
           <TestimonialCard />
+        </div> */}
+        <div className=" pb-12  lg:hidden">
+          <div>
+            <div className="slider-container px-10 mt-8 ">
+              <Slider {...settings} className="">
+                <TestimonialCard className="w-full" />
+                {/* <TestimonialCard className="w-full" />
+                <TestimonialCard className="w-full" />
+                <TestimonialCard className="w-full" /> */}
+              </Slider>
+            </div>
+          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

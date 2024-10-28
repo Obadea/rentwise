@@ -4,10 +4,12 @@ import testimonial from "../../../assets/testimonials.png";
 
 import Rating from "@mui/material/Rating";
 
-function TestimonialCard() {
+function TestimonialCard({ className }) {
   const [value, setValue] = useState(4);
   return (
-    <div className="flex flex-col flex-shrink bg-[#FAFBFF] gap-4 lg:w-[400px] py-8 px-6 rounded-lg shadow-lg">
+    <div
+      className={`${className} flex flex-col flex-shrink bg-[#FAFBFF] gap-4 w-full lg:w-[400px] py-8 px-6 rounded-lg shadow-lg`}
+    >
       <img src={quote} alt="" className="w-[10%]" />
       <h5 className="font-normal text-base text-[#454F54] mb-8">
         RentWise made my house-hunting so much easier! I was able to find the
