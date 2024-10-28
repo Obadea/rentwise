@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import quote from "../../../assets/Open-Quote--Streamline-Ultimate.png.png";
 import testimonial from "../../../assets/testimonials.png";
 
@@ -7,7 +7,7 @@ import Rating from "@mui/material/Rating";
 function TestimonialCard() {
   const [value, setValue] = useState(4);
   return (
-    <div className="flex flex-col  bg-[#FAFBFF] gap-4 lg:w-[400px] py-8 px-6 rounded-lg shadow-lg">
+    <div className="flex flex-col flex-shrink bg-[#FAFBFF] gap-4 lg:w-[400px] py-8 px-6 rounded-lg shadow-lg">
       <img src={quote} alt="" className="w-[10%]" />
       <h5 className="font-normal text-base text-[#454F54] mb-8">
         RentWise made my house-hunting so much easier! I was able to find the
