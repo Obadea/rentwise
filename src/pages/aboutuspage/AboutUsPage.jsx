@@ -4,6 +4,7 @@ import AboutTextContent from "./components/AboutTextContent";
 import AboutPhotoCard from "./components/AboutPhotoCard";
 import AboutServicePhotoCard from "./components/AboutServicePhotoCard";
 import AboutBlogPost from "./components/AboutBlogPost";
+import AboutTestimonials from "./components/AboutTestimonials";
 
 function AboutUsPage() {
   return (
@@ -63,7 +64,7 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row  gap-8">
             {/* small squares */}
             <div className="flex flex-col lg:flex-row lg:flex-wrap gap-6 lg:gap-10 lg:flex-1 ">
               <AboutServicePhotoCard
@@ -84,13 +85,13 @@ function AboutUsPage() {
               />
             </div>
             {/* big rectangless */}
-            <div className="flex flex-col lg:flex-row gap-12 flex-1">
+            <div className="flex flex-col lg:flex-row lg:justify-between  gap-12 flex-1">
               <AboutServicePhotoCard
-                className=" w-full h-[80vw] lg:max-w-[220px] lg:h-[30vw]"
+                className=" w-full h-[80vw] lg:max-w-[280px] lg:w-[45%] lg:h-[30vw]"
                 paragraph="Rent Calculator"
               />
               <AboutServicePhotoCard
-                className=" w-full h-[80vw] lg:max-w-[220px] lg:h-[30vw]"
+                className=" w-full h-[80vw] lg:max-w-[280px] lg:w-[45%] lg:h-[30vw]"
                 paragraph="Recover Asset Value"
               />
             </div>
@@ -100,6 +101,9 @@ function AboutUsPage() {
 
       {/* Blog */}
       <AboutBlogPost />
+
+      {/* Testimonials */}
+      <AboutTestimonials />
     </div>
   );
 }
