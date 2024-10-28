@@ -63,19 +63,19 @@ function AboutTestimonials() {
             What others says about us
           </p>
         </div>
-        {/* <div className="hidden lg:flex flex-row gap-4 justify-between flex-wrap ">
+        <div className="hidden lg:flex flex-row gap-4 justify-between flex-wrap ">
           <TestimonialCard />
           <TestimonialCard />
           <TestimonialCard />
-        </div> */}
+        </div>
         <div className=" pb-12  lg:hidden">
           <div>
             <div className="slider-container px-10 mt-8 ">
               <Slider {...settings} className="">
                 <TestimonialCard className="w-full" />
-                {/* <TestimonialCard className="w-full" />
                 <TestimonialCard className="w-full" />
-                <TestimonialCard className="w-full" /> */}
+                <TestimonialCard className="w-full" />
+                <TestimonialCard className="w-full" />
               </Slider>
             </div>
           </div>
