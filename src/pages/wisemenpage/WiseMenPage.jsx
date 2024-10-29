@@ -6,8 +6,11 @@ import AgentSearch from "../../components/AgentSearch";
 import Footer from "../../components/Footer";
 
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import XIcon from "@mui/icons-material/X";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import PinterestIcon from "@mui/icons-material/Pinterest";
 
 function WiseMenPage() {
   return (
@@ -27,13 +30,20 @@ function WiseMenPage() {
                 sx={{ fontSize: "15px" }}
                 className="text-[#0B8200]"
               />
-              <LocalPhoneIcon sx={{ fontSize: "15px" }} />
-              <MailOutlineIcon sx={{ fontSize: "15px" }} />
-              <WhatsAppIcon
+              <FacebookIcon
                 sx={{ fontSize: "15px" }}
                 className="text-[#0B8200]"
               />
-              <WhatsAppIcon
+              <LinkedInIcon
+                sx={{ fontSize: "15px" }}
+                className="text-[#0B8200]"
+              />
+              <XIcon />
+              <InstagramIcon
+                sx={{ fontSize: "15px" }}
+                className="text-[#0B8200]"
+              />
+              <PinterestIcon
                 sx={{ fontSize: "15px" }}
                 className="text-[#0B8200]"
               />
