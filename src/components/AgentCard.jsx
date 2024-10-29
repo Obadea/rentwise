@@ -6,7 +6,7 @@ import agent from "../assets/agent.png";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 
-function AgentCard() {
+function AgentCard({ className }) {
   const [value, setValue] = React.useState(3);
   return (
     <div>
@@ -63,7 +63,9 @@ function AgentCard() {
                 <LocalPhoneIcon sx={{ fontSize: "15px" }} />
                 <MailOutlineIcon sx={{ fontSize: "15px" }} />
               </div>
-              <p className="text-sm text-customSearchblue font-semibold">
+              <p
+                className={`${className} text-sm text-customSearchblue font-semibold`}
+              >
                 Book Service
               </p>
             </div>
