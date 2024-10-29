@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
-import blogimage from "../../../assets/blogroom.png";
+import blogimage from "../../assets/frame.png";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import blogphoto from "../../assets/blogphoto.png";
 import ForumIcon from "@mui/icons-material/Forum";
 import Pagination from "@mui/material/Pagination";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import Footer from "../../components/Footer";
 
 function BlogPage() {
   const [posts, setPosts] = useState([]);
@@ -34,31 +35,34 @@ function BlogPage() {
     setCurrentPage(value);
   };
 
-  if (loading) {
-    return <h1>Loading....</h1>;
-  }
+  //   if (loading) {
+  //     return <h1>Loading....</h1>;
+  //   }
   return (
     <div className="bg-textcolor">
       <Header newclassName="sticky" className="bg-textcolor" />
       <div className="px-20 ">
         <div className={` flex flex-col lg:w-full`}>
-          <img src={blogimage} alt="" className="w-full" />
-          <div className="p-2 flex flex-col gap-3 border-b-2">
+          <img src={blogimage} alt="" className="w-full h-[400px]" />
+          <div className="p-2 flex flex-col lg:px-10 mb-9 gap-3 border-b-2">
             <div className="flex gap-3 "></div>
-            <h4 className="font-medium font-base text-customdark">
+            <h4 className="font-bold text-3xl text-customNameBlack">
               Skills That You Can Learn In The Real Estate Market{" "}
             </h4>
-            <p className="font-normal text-xs text-customStreetcolor">
-              Lorem ipsum dolor sit amejdnskxkmlzsldnska.knhiwnsanx
-              ZJbnklnxsk......consectetur adipiscing elit.{" "}
+            <p className="font-normal text-lg text-customStreetcolor ">
+              Whether you are a real estate agent looking to build a website for
+              your company or a web developer seeking a perfect WordPress theme
+              for your next project, you are certain to appreciate the numerous
+              features and benefits that our theme provides Whether you are a
+              real estate agent looking to build a website for your company or a
+              web developer seeking a perfect WordPress theme for your next
+              project, you are certain to appreciate the numerous features and
+              benefits that our theme provides
             </p>
-            <button className="text-customSearchblue font-bold text-start text-sm">
-              Continue reading
-            </button>
           </div>
           {/* add animation author */}
-          <div className=" font-normal px-2 gap-4 text-lg text-customStreetcolor flex items-center">
-            <div className="flex gap-2 items-center">
+          <div className=" font-normal   gap-6 text-lg text-customStreetcolor flex items-center">
+            <div className="flex gap-2 lg:px-10 items-center">
               <img src={blogphoto} alt="" />
               <p>by Mike Moore</p>
             </div>
@@ -67,7 +71,7 @@ function BlogPage() {
                 sx={{ fontSize: "16px" }}
                 className="text-customBlackShade"
               />
-              <h5 className="font-normal text-xs text-customStreetcolor">
+              <h5 className="font-normal text-base text-customNameBlack">
                 {" "}
                 March 9, 2024
               </h5>
@@ -77,16 +81,18 @@ function BlogPage() {
                 sx={{ fontSize: "16px" }}
                 className="text-customBlackShade"
               />
-              <p className="font-normal text-xs text-customaccent">Business</p>
+              <p className="font-normal text-base text-customNameBlack">
+                Business
+              </p>
             </div>{" "}
             <div className="flex gap-2 items-center">
-              <ForumIcon />
+              <ForumIcon className="text-customBlackShade" />
               12
             </div>
           </div>
         </div>
       </div>
-      <div className="py-4">
+      <div className="py-4 flex justify-center">
         <Pagination
           count={10}
           count={Math.ceil(posts.length / postsPerPage)}
@@ -96,6 +102,7 @@ function BlogPage() {
           shape="rounded"
         />
       </div>
+      <Footer />
     </div>
   );
 }
