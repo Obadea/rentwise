@@ -5,6 +5,10 @@ import AgentCard from "../../components/AgentCard";
 import AgentSearch from "../../components/AgentSearch";
 import Footer from "../../components/Footer";
 
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+
 function WiseMenPage() {
   return (
     <div>
@@ -17,10 +21,24 @@ function WiseMenPage() {
       </div>
       <div className="flex flex-col lg:flex-row  gap-6 p-7 px-2 lg:px-20 items-center lg:items-start">
         <div className="lg:flex-[3] flex flex-col w-full lg:w-auto gap-5">
-          <AgentCard />
-          <AgentCard />
-          <AgentCard />
-          <AgentCard />
+          <AgentCard className="hidden">
+            <div>
+              <WhatsAppIcon
+                sx={{ fontSize: "15px" }}
+                className="text-[#0B8200]"
+              />
+              <LocalPhoneIcon sx={{ fontSize: "15px" }} />
+              <MailOutlineIcon sx={{ fontSize: "15px" }} />
+              <WhatsAppIcon
+                sx={{ fontSize: "15px" }}
+                className="text-[#0B8200]"
+              />
+              <WhatsAppIcon
+                sx={{ fontSize: "15px" }}
+                className="text-[#0B8200]"
+              />
+            </div>
+          </AgentCard>
         </div>
 
         {/* Search agent */}
@@ -29,7 +47,6 @@ function WiseMenPage() {
       <div>
         <Footer />
       </div>
-    </div>
     </div>
   );
 }
