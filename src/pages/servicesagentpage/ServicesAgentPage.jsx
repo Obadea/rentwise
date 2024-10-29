@@ -25,12 +25,12 @@ function ServicesAgentPage() {
         </h4>
       </div>
 
-      <div className="flex flex-col lg:flex-row bg-DownloadHover py-2 gap-4 px-3  lg:px-20">
-        <div className=" flex-[3] flex gap-1 items-center bg-white rounded-md px-1">
+      <div className="flex flex-col lg:flex-row bg-DownloadHover py-2 gap-4  px-3  lg:px-20">
+        <div className="w-full lg:w-auto lg:flex-[3] flex gap-1 items-center bg-white rounded-md px-1">
           <SearchIcon className="text-[#A1A7A8]" />
           <input
             type="text"
-            className="text-black text-xl flex-[3] px-2  focus:outline-none focus:border-transparent  "
+            className="text-black text-base md:text-xl lg:flex-[3] px-2  focus:outline-none focus:border-transparent  "
             placeholder="Enter agent name"
           />
         </div>
@@ -55,8 +55,8 @@ function ServicesAgentPage() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row  gap-6 p-7 px-2 lg:px-20 items-start">
-        <div className="lg:flex-[3] flex flex-col  gap-5">
+      <div className="flex flex-col lg:flex-row  gap-6 p-7 px-2 lg:px-20 items-center lg:items-start">
+        <div className="lg:flex-[3] flex flex-col w-full lg:w-auto gap-5">
           <AgentCard />
           <AgentCard />
           <AgentCard />

@@ -10,7 +10,7 @@ function AgentCard() {
   const [value, setValue] = React.useState(3);
   return (
     <div>
-      <div className="flex gap-6 justify-between p-3  bg-white ">
+      <div className="flex flex-col items-center md:items-start md:flex-row  gap-6 justify-between p-3  bg-white ">
         <div className="h-full">
           <img src={agent} alt="" className="h-full" />
         </div>
