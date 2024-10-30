@@ -94,12 +94,12 @@ function BlogPage() {
       </div>
       <div className="py-4 flex justify-center">
         <Pagination
-          count={10}
-          count={Math.ceil(posts.length / postsPerPage)}
-          page={currentPage}
-          onChange={handlePageChange}
-          variant="outlined"
-          shape="rounded"
+        //   count={10}
+        //     count={Math.ceil(posts.length / postsPerPage)}
+        //   page={currentPage}
+        //   onChange={handlePageChange}
+        //   variant="outlined"
+        //   shape="rounded"
         />
       </div>
       <Footer />
