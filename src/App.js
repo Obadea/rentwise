@@ -33,7 +33,7 @@ function App() {
       <Route path="/aboutus" element={<AboutUsPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/wisemen" element={<WiseMenPage />} />
-      <Route path="/contactus" element={<ContactUsPage />} />
+      <Route path="/contact" element={<ContactUsPage />} />
       {/* <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="/otpreset" element={<OtpReset />} /> */}
     </Routes>
