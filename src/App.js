@@ -13,6 +13,7 @@ import AboutUsPage from "./pages/aboutuspage/AboutUsPage.jsx";
 import BlogPage from "./pages/blogpage/BlogPage.jsx";
 import WiseMenPage from "./pages/wisemenpage/WiseMenPage.jsx";
 import ContactUsPage from "./pages/contactuspage/ContactUsPage.jsx";
+import AccessCodePage from "./pages/accesscodepage/AccessCodePage.jsx";
 
 // import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 // import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
@@ -34,6 +35,7 @@ function App() {
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/wisemen" element={<WiseMenPage />} />
       <Route path="/contact" element={<ContactUsPage />} />
+      <Route path="/accessId" element={<AccessCodePage />} />
       {/* <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="/otpreset" element={<OtpReset />} /> */}
     </Routes>
