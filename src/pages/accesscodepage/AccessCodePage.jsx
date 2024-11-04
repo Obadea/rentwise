@@ -1,10 +1,11 @@
 import React from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
-
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 function AccessCodePage() {
   return (
-    <div className="flex flex-col lg:flex-row  min-h-[500px]  ">
+    <div className="flex flex-col lg:flex-row  min-h-screen  ">
       <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
@@ -52,19 +53,13 @@ function AccessCodePage() {
           </div>
           <div className="flex gap-2 justify-around mb-3">
             <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
-                className="w-5"
-              />
-              Sign up Using Google
+              <WhatsAppIcon />
+              Contact through Whatsapp
             </h4>
 
             <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
-                className="w-6"
-              />
-              Sign up Using Facebook
+              <MailOutlineIcon />
+              Send us a mail
             </h4>
           </div>
         </div>
