@@ -36,7 +36,7 @@ function AccessCodePage() {
               />
             </div>
 
-            <div className="m-4 flex flex-col ">
+            <div className="lg:m-4 flex flex-col ">
               <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-xl flex justify-center items-center  font-bold ">
                 Continue
               </button>
