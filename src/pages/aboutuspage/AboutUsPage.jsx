@@ -48,7 +48,7 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div className="flex  justify-between flex-wrap gap-4 lg:gap-6 md:flex-row  lg:flex-nowrap">
+          <div className="flex  justify-evenly flex-wrap gap-4 lg:gap-6 md:flex-row  lg:flex-nowrap">
             <AboutPhotoCard />
             <AboutPhotoCard />
             <AboutPhotoCard />
