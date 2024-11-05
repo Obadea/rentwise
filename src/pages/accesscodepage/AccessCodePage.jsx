@@ -14,7 +14,7 @@ function AccessCodePage() {
           </button>
         </div>
 
-        <div className="flex flex-col gap-3 mt-8">
+        <div className="flex flex-col gap-3 my-10">
           <h2 className="text-customblue text-2xl font-bold ">
             Enter Access ID
           </h2>
@@ -22,7 +22,7 @@ function AccessCodePage() {
             Enter required access ID
           </p>
         </div>
-        <div className="mt-8">
+        <div className="lg:gap-6 mt-8">
           <form action="#" className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Access ID</label>
@@ -36,13 +36,13 @@ function AccessCodePage() {
               />
             </div>
 
-            <div className="mt-4 flex flex-col ">
+            <div className="m-4 flex flex-col ">
               <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-xl flex justify-center items-center  font-bold ">
                 Continue
               </button>
             </div>
           </form>
-          <div className="container mx-auto text-center my-6">
+          <div className="container mx-auto text-center mt-16 mb-6">
             <div className="or-tag relative  mx-4 flex justify-center items-center">
               <div className="w-1/2 h-1 bg-gray-300"></div>
               <span className=" mx-4 font-normal text-customBlackShade text-[18px] text-nowrap">
@@ -57,7 +57,7 @@ function AccessCodePage() {
               Contact through Whatsapp
             </h4>
 
-            <h4 className=" flex-1 flex border px-5 items-center gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
+            <h4 className=" flex-1 flex border justify-center px-5 items-center gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
               <MailOutlineIcon className="text-customNameBlack" />
               Send us a mail
             </h4>
