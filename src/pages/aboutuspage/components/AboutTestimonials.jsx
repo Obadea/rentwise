@@ -63,7 +63,7 @@ function AboutTestimonials() {
             What others says about us
           </p>
         </div>
-        <div className="hidden lg:flex flex-row gap-4 justify-between flex-wrap ">
+        <div className="hidden lg:flex flex-row gap-4 justify-between ">
           <TestimonialCard />
           <TestimonialCard />
           <TestimonialCard />
