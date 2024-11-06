@@ -2,13 +2,22 @@ import React from "react";
 import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
 import Footer from "../../components/Footer";
+import imageInbackground from "../../assets/contactUsbackgroundImg.png";
 
 function ContactUsPage() {
   return (
     <div className="bg-textcolor">
       <Header newclassName="sticky" className="bg-textcolor" />
-      <div className="h-[200px] bg-slate-700 flex items-end pb-12  lg:px-24">
-        <h3 className="font-bold text-white text-3xl">About Us</h3>
+      <div
+        className={` px-4 bg-cover bg-center h-[200px] flex items-end pb-12 lg:px-24`}
+        style={{
+          backgroundImage: `url(${imageInbackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "200px",
+        }}
+      >
+        <h3 className="font-bold text-white text-3xl">Contact Us</h3>
       </div>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-[10%] lg:items-start py-12 pb-6 px-2 lg:px-20">
         <div className="flex flex-[3] flex-col  lg:gap-10 lg:py-4 lg:px-8 bg-white ">
