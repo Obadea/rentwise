@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
+import ManageRentalsCard from "./components/ManageRentalsCard";
 
 function ManageRentals() {
   return (
@@ -28,6 +29,9 @@ function ManageRentals() {
               requests, or manage rent collection seamlessly, we are here to
               assist you!
             </p>
+          </div>
+          <div className="flex flex-row flex-wrap ">
+            <ManageRentalsCard />
           </div>
         </div>
       </div>
