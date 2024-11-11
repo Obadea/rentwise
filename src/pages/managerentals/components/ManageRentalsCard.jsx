@@ -6,7 +6,7 @@ function ManageRentalsCard() {
       <img src="" alt="" className="w-[200px] h-[200px]" />
       <div className="flex flex-col justify-center gap-12">
         <div className="flex flex-col justify-center items-center">
-          <h4 className="font-bold text-lg text-customdark">Add Property</h4>
+          <h4 className="font-bold text-lg text-customdark ">Add Property</h4>
           <p className="font-bold text-sm text-customBlackShade">
             Add your property and have your property seen by millions of people
           </p>
