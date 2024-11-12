@@ -8,7 +8,7 @@ function NotFoundPage() {
           404 Not found
         </h2>
         <p className="text-customStreetcolor text-base font-normal">
-          This page does not exist
+          This page does not exist.
         </p>
       </div>
     </div>
