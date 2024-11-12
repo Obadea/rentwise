@@ -15,6 +15,7 @@ import WiseMenPage from "./pages/wisemenpage/WiseMenPage.jsx";
 import ContactUsPage from "./pages/contactuspage/ContactUsPage.jsx";
 import AccessCodePage from "./pages/accesscodepage/AccessCodePage.jsx";
 import ManageRentals from "./pages/managerentals/ManageRentals.jsx";
+import NotFoundPage from "./pages/notfoundpage/NotFoundPage.jsx";
 
 // import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 // import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
@@ -38,6 +39,7 @@ function App() {
       <Route path="/contact" element={<ContactUsPage />} />
       <Route path="/accessId" element={<AccessCodePage />} />
       <Route path="/landlord/manage rentals" element={<ManageRentals />} />
+      <Route path="*" element={<NotFoundPage />} />
 
       {/* <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="/otpreset" element={<OtpReset />} /> */}
