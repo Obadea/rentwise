@@ -1,70 +1,99 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Comprehensive Project Documentation
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+**Project Name**: RentWise  
+**Summary**: RentWise is an artificial intelligence platform designed to simplify the process of finding and renting a home in Lagos. It helps users avoid fake listings and untrustworthy agents by providing verified properties and reliable information about landlords and neighborhoods. With RentWise, users can access honest reviews from previous tenants, take virtual tours of properties, and obtain detailed reports to facilitate informed decision-making. It serves as a trusted guide through the rental process, ensuring a seamless experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Active Branches
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Main**: The stable version of the application containing production-ready code.
+- **Feature Branch**: A branch for testing and implementing changes before merging into the main branch.
 
-### `npm test`
+## Setup and Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js
+- NPM (latest version)
+- Git Bash
 
-### `npm run build`
+### Installation Steps
+1. Clone the GitHub repository:
+   ```bash
+   git clone https://github.com/yourusername/rentwise.git
+   ```
+2. Change directory into the RentWise folder:
+   ```bash
+   cd rentwise
+   ```
+3. Install all dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the application:
+   ```bash
+   npm start
+   ```
+5. Access the application by visiting `http://localhost:3000/`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Third-Party Libraries Used
+- `emotion/styled`: "^11.13.0"
+- `mui/icons-material`: "^5.16.7"
+- `mui/material`: "^5.16.7"
+- `mui/x-date-pickers`: "^7.21.0"
+- `testing-library/jest-dom`: "^5.17.0"
+- `testing-library/react`: "^13.4.0"
+- `testing-library/user-event`: "^13.5.0"
+- `dayjs`: "^1.11.13"
+- `formik`: "^2.4.6"
+- `slick-carousel`: "^1.8.1"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Pages Built
+- Landing Page
+- About Us Page
+- Access Code Page
+- Affordability Calculator Page
+- Blog Page
+- Coming Soon Page
+- Compare Page (Inconclusive)
+- Manage Rentals Page (Inconclusive)
+- Not Found Page (Error 404)
+- OTP Reset Page
+- Password Reset Page
+- Property Page
+- Quick Services Page
+- Search Result Page
+- Services Agent Page
+- Sign Up Page
+- Log In Page
+- Statesmen Page
+- Wisemen Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Known Issues and Pending Tasks
 
-### `npm run eject`
+1. **Lack of Backend Developer**: Limits our ability to complete most pages due to the inability to implement APIs or test functionality.
+2. **No Backend Data**: Currently no data available for testing or development purposes.
+3. **User Flow Deficiencies**: Lack of cohesive user flow makes it challenging to route and link pages together.
+4. **Frequent Design Changes**: Numerous design changes have made it difficult to track modifications consistently.
+5. **Incomplete Pages**: Several pages are incomplete, making it impractical to start or modify them without clear specifications.
+6. **Implementation Challenges**: Difficulties in determining the best method for implementing certain features.
+7. **Impractical Features**: Some proposed technologies are impractical given current constraints.
+8. **Responsive UI Issues**: Certain UI elements do not render correctly on mobile devices.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Suggested Solutions for Improvement
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Hire or allocate a backend developer to facilitate API integration.
+2. Establish a mock data service or utilize sample datasets for front-end development.
+3. Develop a comprehensive user flow diagram outlining navigation paths between pages.
+4. Implement a version control system for design assets with a clear approval process.
+5. Prioritize completion of incomplete pages by defining specifications and assigning resources.
+6. Conduct collaborative brainstorming sessions to explore viable implementation strategies.
+7. Reassess feature feasibility based on available technologies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Conclusion
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In accordance with company privacy policies, this repository is maintained as a private resource. To gain access to the repository, please send an email to me with your GitHub username to manage access securely.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
