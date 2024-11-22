@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
+import { GoogleLogin } from "@react-oauth/google";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
@@ -21,6 +22,13 @@ function SignInPage() {
   // .then(data => console.log(data))
   // .catch(error => console.error(error));
   // };
+
+  const responseMessage = (response) => {
+    console.log(response);
+  };
+  const errorMessage = (response) => {
+    console.log(response);
+  };
 
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
@@ -92,12 +100,13 @@ function SignInPage() {
           </div>
           <div className="flex gap-2 justify-around mb-3">
             <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
+              {/* <img
                 src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
                 className="w-5"
                 alt="img"
-              />
+              /> */}
               Sign in Using Google
+              <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
             </h4>
 
             <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
