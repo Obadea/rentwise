@@ -23,9 +23,9 @@ function SignInPage() {
   // };
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen h-[650px] ">
-      <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  md:flex-2 lg:flex-2 ">
-        <div className="flex justify-between mt-4">
+    <div className="flex flex-col lg:flex-row  min-h-screen  ">
+      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
+        <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
             Back
@@ -97,7 +97,7 @@ function SignInPage() {
                 className="w-5"
                 alt="img"
               />
-              Sign up Using Google
+              Sign in Using Google
             </h4>
 
             <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
@@ -106,7 +106,7 @@ function SignInPage() {
                 className="w-6"
                 alt="img"
               />
-              Sign up Using Facebook
+              Sign in Using Facebook
             </h4>
           </div>
         </div>
