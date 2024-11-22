@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
-import { GoogleLogin } from "@react-oauth/google";
+import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
@@ -105,7 +105,7 @@ function SignInPage() {
                 className="w-5"
                 alt="img"
               /> */}
-              Sign in Using Google
+
               <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
             </h4>
 
