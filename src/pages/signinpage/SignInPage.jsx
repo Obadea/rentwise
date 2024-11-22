@@ -1,13 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
+import axios from "axios";
+import Profile from "./Profile";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState([]);
+  const [profiler, setProfiler] = useState([]);
 
+  const login = GoogleLogin({
+    onSuccess: (codeResponse) => setUser(codeResponse),
+    onError: (error) => console.log("Login Failed:", error),
+  });
+
+  useEffect(() => {
+    if (user) {
+      axios
+        .get(
+          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
+          {
+            headers: {
+              Authorization: `Bearer ${user.access_token}`,
+              Accept: "application/json",
+            },
+          }
+        )
+        .then((res) => setProfiler(res.data))
+        .catch((err) => console.log(err));
+    }
+  }, [user]);
+
+  const logOut = () => {
+    googleLogout();
+    setProfiler(null);
+  };
   // const handleSubmit = (event) => {
   //   event.preventDefault();
   // Call API to submit form data
@@ -30,6 +60,9 @@ function SignInPage() {
     console.log(response);
   };
 
+  if (profiler) {
+    return <Profile user={profiler} profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
+  }
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
       <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
@@ -146,7 +179,7 @@ function SignInPage() {
           </p>
         </div>
       </div>
-    </div>
+    </div>}
   );
 }
 
