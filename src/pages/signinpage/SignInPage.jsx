@@ -2,15 +2,21 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
-import { GoogleLogin, googleLogout } from "@react-oauth/google";
+import { useGoogleLogin, googleLogout } from "@react-oauth/google";
 import axios from "axios";
 import Profile from "./Profile";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState([]);
 
+  const [user, setUser] = useState(null);
+  const [profiler, setProfiler] = useState(null);
+
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => setUser(codeResponse),
+    onError: (error) => console.log("Login Failed:", error),
+  });
   useEffect(() => {
     console.log(user);
     if (user?.access_token) {
@@ -19,12 +25,13 @@ function SignInPage() {
           `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
           {
             headers: {
-              Authorization: `Bearer ${user.access_token}`,
+              Authorization: `Bearer ${user.clientId}`,
+              Accept: "application/json",
             },
           }
         )
         .then((res) => {
-          setUser((prevUser) => ({ ...prevUser, profile: res.data }));
+          setProfiler(res.data);
         })
         .catch((err) => console.log(err));
     }
@@ -32,8 +39,9 @@ function SignInPage() {
 
   const logOut = () => {
     googleLogout();
-    setUser(null);
+    setProfiler(null);
   };
+
   // const handleSubmit = (event) => {
   //   event.preventDefault();
   // Call API to submit form data
@@ -49,9 +57,9 @@ function SignInPage() {
   // .catch(error => console.error(error));
   // };
 
-  console.log(JSON.stringify(user, null, 2));
-  if (user) {
-    return <Profile profile={user} logOut={logOut} />; // Render Profile component if user is logged in
+  console.log(JSON.stringify(profiler));
+  if (profiler) {
+    return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
   }
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
@@ -129,10 +137,7 @@ function SignInPage() {
                 alt="img"
               /> */}
 
-              <GoogleLogin
-                onSuccess={(response) => setUser(response)}
-                onError={(error) => console.log("Login Failed:", error)}
-              />
+              <button onClick={() => login()}>Sign in via google </button>
             </h4>
 
             <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
