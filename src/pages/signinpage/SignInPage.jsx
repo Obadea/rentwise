@@ -14,7 +14,7 @@ function SignInPage() {
   const [profiler, setProfiler] = useState(null);
 
   const login = useGoogleLogin({
-    onSuccess: (codeResponse) => setUser(codeResponse),
+    onSuccess: (userData) => setUser(userData),
     onError: (error) => console.log("Login Failed:", error),
   });
   useEffect(() => {
@@ -57,7 +57,7 @@ function SignInPage() {
   // .catch(error => console.error(error));
   // };
 
-  console.log(JSON.stringify(profiler));
+  console.log(profiler);
   if (profiler) {
     return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
   }
