@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
 import ReactFacebookLogin from "react-facebook-login";
 import FacebookLogin from "react-facebook-login";
 import GoogleOauth from "./components/GoogleOauth";
+import Profile from "./Profile";
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,7 +38,9 @@ function SignInPage() {
   // .then(data => console.log(data))
   // .catch(error => console.error(error));
   // };
-
+  if (profiler) {
+    return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
+  }
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
       <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
@@ -106,7 +109,7 @@ function SignInPage() {
               <div className="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex gap-2 justify-around mb-3">
+          <div className="flex gap-2 justify-between mb-3">
             <GoogleOauth
               user={user}
               setUser={setUser}
@@ -114,46 +117,31 @@ function SignInPage() {
               setProfiler={setProfiler}
             />
 
-            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
-                className="w-6"
-                alt="img"
-              />
-              Sign in Using Facebook
-            </h4>
+            {/* <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
+                <img
+                  src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
+                  className="w-6"
+                  alt="img"
+                />
+                Sign in Using Facebook
+              </h4> */}
 
             {/* Testing the facebook API */}
             <div>
-              <h2>Facebook Login</h2>
               <ReactFacebookLogin
-                appId="427304073760688" // Replace with your Facebook App ID
+                appId="" // Replace with your Facebook App ID
                 autoLoad={false}
                 fields="name,email,picture"
                 callback={responseFacebook}
                 icon="fa-facebook"
+                className="bg-white"
               />
-
-              {user && (
-                <div>
-                  <h3>Welcome, {user.name}</h3>
-                  <img src={user.picture.data.url} alt="profile" />
-                </div>
-              )}
             </div>
           </div>
         </div>
       </div>
 
-      <div
-        // style={{
-        //   backgroundImage: `url(${require("../../../src/assets/swimmingpool.jpg")})`,
-        //   objectFit: "contain",
-        //   backgroundPosition: "center",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-        className="hidden lg:block md:flex-1 lg:flex-3 relative   "
-      >
+      <div className="hidden lg:block md:flex-1 lg:flex-3 relative   ">
         <img src={swimming} alt="" className="h-full w-full object-cover" />
         <div className="absolute w-[75%] rounded-2xl py-4 px-3 gap-4 bottom-[10%] right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">

@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
-import Profile from "./Profile";
+
 import { useGoogleLogin, googleLogout } from "@react-oauth/google";
 
 import axios from "axios";
 
 function GoogleOauth({ user, setUser, profiler, setProfiler }) {
+  console.log(user);
+
   const login = useGoogleLogin({
     onSuccess: (userData) => setUser(userData),
     onError: (error) => console.log("Login Failed:", error),
@@ -34,16 +36,13 @@ function GoogleOauth({ user, setUser, profiler, setProfiler }) {
     }
   }, [user]);
 
-  if (profiler) {
-    return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
-  }
   return (
     <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-      {/* <img
-    src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
-    className="w-5"
-    alt="img"
-  /> */}
+      <img
+        src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
+        className="w-5"
+        alt="img"
+      />
 
       <button onClick={() => login()}>Sign in via google </button>
     </h4>
