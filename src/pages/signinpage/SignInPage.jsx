@@ -5,6 +5,8 @@ import swimming from "../../assets/swimmingpool.jpg";
 import ReactFacebookLogin from "react-facebook-login";
 import FacebookLogin from "react-facebook-login";
 import GoogleOauth from "./components/GoogleOauth";
+import { googleLogout } from "@react-oauth/google";
+
 import Profile from "./Profile";
 function SignInPage() {
   const [email, setEmail] = useState("");
@@ -13,6 +15,10 @@ function SignInPage() {
   const [user, setUser] = useState(null);
   const [profiler, setProfiler] = useState(null);
 
+  const logOut = () => {
+    googleLogout();
+    setProfiler(null);
+  };
   // More on testing the facebook Api
   const responseFacebook = (response) => {
     if (response.accessToken) {

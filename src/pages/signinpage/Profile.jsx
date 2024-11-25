@@ -1,5 +1,6 @@
 import React from "react";
 
+// This is for testing the google Oauth and Facebook Oauth Login
 function Profile({ profile, logOut }) {
   return (
     <div>
