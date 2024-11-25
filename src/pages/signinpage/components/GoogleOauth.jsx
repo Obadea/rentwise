@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Profile from "./Profile";
 import { useGoogleLogin, googleLogout } from "@react-oauth/google";
-import ReactFacebookLogin from "react-facebook-login";
+
 import axios from "axios";
 
 function GoogleOauth({ user, setUser, profiler, setProfiler }) {

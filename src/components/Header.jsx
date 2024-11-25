@@ -24,7 +24,10 @@ const Header = ({ className, newclassName }) => {
         <div className=" hidden lg:flex items-center gap-3 justify-between ">
           {/* location will be automated */}
 
-          <a href="#q" className="py-2 px-4 text-lg hover:text-customyellow">
+          <a
+            href="#q"
+            className="py-2 px-4 text-lg text-customNameBlack hover:text-customyellow"
+          >
             Home
           </a>
 
@@ -71,12 +74,12 @@ const Header = ({ className, newclassName }) => {
             {" "}
             Sign In
           </Link>
-          <a
-            href="#q"
+          <Link
+            to="accessId"
             className="block py-5 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
           >
             Add property
-          </a>
+          </Link>
         </div>
       </nav>
       <Hamburger />

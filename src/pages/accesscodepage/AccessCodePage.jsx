@@ -6,7 +6,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 function AccessCodePage() {
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
-      <div className=" my-4 mx-auto px-4 w-full  lg:pl-24 lg:pr-16 lg:pt-20 lg:w-[50%] ">
+      <div className=" my-4 mx-auto px-4 w-full  lg:pl-24 lg:pr-16  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -52,12 +52,12 @@ function AccessCodePage() {
             </div>
           </div>
           <div className="flex gap-3 flex-col lg:flex-row lg:gap-6 justify-evenly mb-3">
-            <h4 className=" px-5 flex-1 flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
+            <h4 className=" px-5 flex-1 flex border gap-3 cursor-pointer justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
               <WhatsAppIcon className="text-[#25D366]" />
               Contact through Whatsapp
             </h4>
 
-            <h4 className=" flex-1 flex border justify-center px-5 items-center gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
+            <h4 className=" flex-1 flex border justify-center px-5 items-center cursor-pointer gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
               <MailOutlineIcon className="text-customNameBlack" />
               Send us a mail
             </h4>

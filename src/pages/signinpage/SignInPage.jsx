@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
-
-import axios from "axios";
-
+import ReactFacebookLogin from "react-facebook-login";
 import FacebookLogin from "react-facebook-login";
 import GoogleOauth from "./components/GoogleOauth";
 function SignInPage() {
