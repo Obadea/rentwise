@@ -2,46 +2,17 @@ import React, { useState, useEffect } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
-import { useGoogleLogin, googleLogout } from "@react-oauth/google";
+
 import axios from "axios";
-import Profile from "./Profile";
-import ReactFacebookLogin from "react-facebook-login";
+
 import FacebookLogin from "react-facebook-login";
+import GoogleOauth from "./components/GoogleOauth";
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const [user, setUser] = useState(null);
   const [profiler, setProfiler] = useState(null);
-
-  const login = useGoogleLogin({
-    onSuccess: (userData) => setUser(userData),
-    onError: (error) => console.log("Login Failed:", error),
-  });
-  useEffect(() => {
-    console.log(user);
-    if (user?.access_token) {
-      axios
-        .get(
-          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
-          {
-            headers: {
-              Authorization: `Bearer ${user.clientId}`,
-              Accept: "application/json",
-            },
-          }
-        )
-        .then((res) => {
-          setProfiler(res.data);
-        })
-        .catch((err) => console.log(err));
-    }
-  }, [user]);
-
-  const logOut = () => {
-    googleLogout();
-    setProfiler(null);
-  };
 
   // More on testing the facebook Api
   const responseFacebook = (response) => {
@@ -69,10 +40,6 @@ function SignInPage() {
   // .catch(error => console.error(error));
   // };
 
-  console.log(profiler);
-  if (profiler) {
-    return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
-  }
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
       <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
@@ -142,15 +109,12 @@ function SignInPage() {
             </div>
           </div>
           <div className="flex gap-2 justify-around mb-3">
-            <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              {/* <img
-                src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
-                className="w-5"
-                alt="img"
-              /> */}
-
-              <button onClick={() => login()}>Sign in via google </button>
-            </h4>
+            <GoogleOauth
+              user={user}
+              setUser={setUser}
+              profiler={profiler}
+              setProfiler={setProfiler}
+            />
 
             <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
               <img
@@ -165,8 +129,8 @@ function SignInPage() {
             <div>
               <h2>Facebook Login</h2>
               <ReactFacebookLogin
-                appId="1242181570351916" // Replace with your Facebook App ID
-                autoLoad={true}
+                appId="427304073760688" // Replace with your Facebook App ID
+                autoLoad={false}
                 fields="name,email,picture"
                 callback={responseFacebook}
                 icon="fa-facebook"
