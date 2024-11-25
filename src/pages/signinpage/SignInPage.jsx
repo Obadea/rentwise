@@ -5,7 +5,8 @@ import swimming from "../../assets/swimmingpool.jpg";
 import { useGoogleLogin, googleLogout } from "@react-oauth/google";
 import axios from "axios";
 import Profile from "./Profile";
-
+import ReactFacebookLogin from "react-facebook-login";
+import FacebookLogin from "react-facebook-login";
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,6 +41,17 @@ function SignInPage() {
   const logOut = () => {
     googleLogout();
     setProfiler(null);
+  };
+
+  // More on testing the facebook Api
+  const responseFacebook = (response) => {
+    if (response.accessToken) {
+      // You can handle the login response here
+      console.log("Login Success", response);
+      setUser(response);
+    } else {
+      console.log("Login Failed", response);
+    }
   };
 
   // const handleSubmit = (event) => {
@@ -148,6 +160,25 @@ function SignInPage() {
               />
               Sign in Using Facebook
             </h4>
+
+            {/* Testing the facebook API */}
+            <div>
+              <h2>Facebook Login</h2>
+              <ReactFacebookLogin
+                appId="1242181570351916" // Replace with your Facebook App ID
+                autoLoad={true}
+                fields="name,email,picture"
+                callback={responseFacebook}
+                icon="fa-facebook"
+              />
+
+              {user && (
+                <div>
+                  <h3>Welcome, {user.name}</h3>
+                  <img src={user.picture.data.url} alt="profile" />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

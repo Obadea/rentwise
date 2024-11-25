@@ -1,32 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { googleLogout, useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 
-function LocationTest() {
-  const [showTooltip, setShowTooltip] = useState(false);
+function App() {
+  const [user, setUser] = useState([]);
+  const [profile, setProfile] = useState([]);
 
-  const handleMouseOver = () => {
-    setShowTooltip(true);
-  };
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => setUser(codeResponse),
+    onError: (error) => console.log("Login Failed:", error),
+  });
 
-  const handleMouseOut = () => {
-    setShowTooltip(false);
+  useEffect(() => {
+    if (user) {
+      axios
+        .get(
+          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
+          {
+            headers: {
+              Authorization: `Bearer ${user.access_token}`,
+              Accept: "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          setProfile(res.data);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [user]);
+
+  // log out function to log the user out of google and set the profile array to null
+  const logOut = () => {
+    googleLogout();
+    setProfile(null);
   };
 
   return (
-    <div
-      className="relative inline-block"
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-    >
-      dldldl
-      <i className="fas fa-heart text-lg text-red-500"></i>
-      {showTooltip && (
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded py-1 px-2 text-sm text-gray-600">
-          Click to add to favorite
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-l border-r border-b border-gray-200 w-0 h-0"></div>
+    <div>
+      <h2>React Google Login</h2>
+      <br />
+      <br />
+      {profile ? (
+        <div>
+          <img src={profile.picture} alt="user image" />
+          <h3>User Logged in</h3>
+          <p>Name: {profile.name}</p>
+          <p>Email Address: {profile.email}</p>
+          <br />
+          <br />
+          <button onClick={logOut}>Log out</button>
         </div>
+      ) : (
+        <button onClick={() => login()}>Sign in with Google 🚀 </button>
       )}
     </div>
   );
 }
-
-export default LocationTest;
+export default App;
