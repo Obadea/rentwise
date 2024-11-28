@@ -24,10 +24,10 @@ import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/signin" element={<SignInPage />} />
-      <Route path="/signup" element={<SignUpPage />} />
-      <Route path="/apartment/properties" element={<PropertyPage />} />
+      <Route path="/" element={<ComingSoon />} />
+      <Route path="/signin" element={<ComingSoon />} />
+      <Route path="/signup" element={<ComingSoon />} />
+      <Route path="/apartment/properties" element={<ComingSoon />} />
       <Route
         path="/Rent affordability calculator"
         element={<AffordabilityCalculator />}
