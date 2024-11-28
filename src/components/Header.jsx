@@ -18,13 +18,16 @@ const Header = ({ className, newclassName }) => {
       className={` ${newclassName}  bg-white  text-black relative z-30 top-0 w-full  `}
     >
       <nav
-        className={` ${className} pl-4 lg:pl-24 py-2 flex items-center w-full justify-between  lg:py-0 `}
+        className={` ${className} pl-4 lg:pl-20 py-2 flex items-center w-full justify-between  lg:py-0 `}
       >
         <Logo />
         <div className=" hidden lg:flex items-center gap-3 justify-between ">
           {/* location will be automated */}
 
-          <a href="#q" className="py-2 px-4 text-lg hover:text-customyellow">
+          <a
+            href="#q"
+            className="py-2 px-4 text-lg text-customNameBlack hover:text-customyellow"
+          >
             Home
           </a>
 
@@ -71,12 +74,12 @@ const Header = ({ className, newclassName }) => {
             {" "}
             Sign In
           </Link>
-          <a
-            href="#q"
+          <Link
+            to="accessId"
             className="block py-5 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
           >
             Add property
-          </a>
+          </Link>
         </div>
       </nav>
       <Hamburger />

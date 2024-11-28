@@ -22,7 +22,7 @@ function SignInPage() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row  min-h-[500px]  ">
+    <div className="flex flex-col lg:flex-row  min-h-screen  ">
       <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
@@ -62,17 +62,17 @@ function SignInPage() {
                 placeholder="****"
                 className="border border-customBlackShade pl-2 py-1"
               />
-              <a href="#" className="text-xs font-bold text-customSearchblue">
+              {/* <a href="#" className="text-xs font-bold text-customSearchblue">
                 Forgot passsword?
-              </a>
+              </a> */}
             </div>
 
             <div className="mt-4 flex flex-col gap-6">
               <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold ">
-                Create an Account
+                Create Account
               </button>
               <p className="text-base font-normal text-customBlackShade text-center">
-                Already have an account?{" "}
+                Already have an Account?{" "}
                 <Link to="/signin" className="text-customaccent">
                   Sign In
                 </Link>

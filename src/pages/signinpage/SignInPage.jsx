@@ -2,10 +2,33 @@ import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
+import ReactFacebookLogin from "react-facebook-login";
+import FacebookLogin from "react-facebook-login";
+import GoogleOauth from "./components/GoogleOauth";
+import { googleLogout } from "@react-oauth/google";
 
+import Profile from "./Profile";
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [user, setUser] = useState(null);
+  const [profiler, setProfiler] = useState(null);
+
+  const logOut = () => {
+    googleLogout();
+    setProfiler(null);
+  };
+  // More on testing the facebook Api
+  const responseFacebook = (response) => {
+    if (response.accessToken) {
+      // You can handle the login response here
+      console.log("Login Success", response);
+      setUser(response);
+    } else {
+      console.log("Login Failed", response);
+    }
+  };
 
   // const handleSubmit = (event) => {
   //   event.preventDefault();
@@ -21,11 +44,13 @@ function SignInPage() {
   // .then(data => console.log(data))
   // .catch(error => console.error(error));
   // };
-
+  if (profiler) {
+    return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
+  }
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen h-[650px] ">
-      <div className=" mx-auto px-3 lg:pl-24 lg:pr-16  md:flex-2 lg:flex-2 ">
-        <div className="flex justify-between mt-4">
+    <div className="flex flex-col lg:flex-row  min-h-screen  ">
+      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
+        <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
             Back
@@ -90,37 +115,39 @@ function SignInPage() {
               <div className="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex gap-2 justify-around mb-3">
-            <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
-                className="w-5"
-                alt="img"
-              />
-              Sign up Using Google
-            </h4>
+          <div className="flex gap-2 justify-between mb-3">
+            <GoogleOauth
+              user={user}
+              setUser={setUser}
+              profiler={profiler}
+              setProfiler={setProfiler}
+            />
 
-            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
-                className="w-6"
-                alt="img"
+            {/* <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
+                <img
+                  src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
+                  className="w-6"
+                  alt="img"
+                />
+                Sign in Using Facebook
+              </h4> */}
+
+            {/* Testing the facebook API */}
+            <div>
+              <ReactFacebookLogin
+                appId="" // Replace with your Facebook App ID
+                autoLoad={false}
+                fields="name,email,picture"
+                callback={responseFacebook}
+                icon="fa-facebook"
+                className="bg-white"
               />
-              Sign up Using Facebook
-            </h4>
+            </div>
           </div>
         </div>
       </div>
 
-      <div
-        // style={{
-        //   backgroundImage: `url(${require("../../../src/assets/swimmingpool.jpg")})`,
-        //   objectFit: "contain",
-        //   backgroundPosition: "center",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-        className="hidden lg:block md:flex-1 lg:flex-3 relative   "
-      >
+      <div className="hidden lg:block md:flex-1 lg:flex-3 relative   ">
         <img src={swimming} alt="" className="h-full w-full object-cover" />
         <div className="absolute w-[75%] rounded-2xl py-4 px-3 gap-4 bottom-[10%] right-24 bg-[#00000087]">
           <h4 className="text-textcolor font-bold text-lg">

@@ -4,12 +4,23 @@ import AboutTextContent from "./components/AboutTextContent";
 import AboutPhotoCard from "./components/AboutPhotoCard";
 import AboutServicePhotoCard from "./components/AboutServicePhotoCard";
 import AboutBlogPost from "./components/AboutBlogPost";
+import AboutTestimonials from "./components/AboutTestimonials";
+import Footer from "../../components/Footer";
+import imageInbackground from "../../assets/aboutUsbackgroundImg.png";
 
 function AboutUsPage() {
   return (
     <div className="bg-textcolor">
       <Header newclassName="sticky" className="bg-textcolor" />
-      <div className="h-[200px] bg-slate-700 flex items-end pb-12  lg:px-24">
+      <div
+        className={` px-4 bg-cover bg-center h-[200px] flex items-end pb-12 lg:px-24`}
+        style={{
+          backgroundImage: `url(${imageInbackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "200px",
+        }}
+      >
         <h3 className="font-bold text-white text-3xl">About Us</h3>
       </div>
       <div className="flex flex-col px-2 py-4 lg:px-24 lg:py-10 lg:flex-row flex-wrap gap-10 lg:gap-8 mt-10 bg-white">
@@ -46,7 +57,7 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div className="flex flex-col justify-between gap-4 lg:gap-6 lg:flex-row ">
+          <div className="flex  justify-evenly flex-wrap gap-4 lg:gap-6 md:flex-row  lg:flex-nowrap">
             <AboutPhotoCard />
             <AboutPhotoCard />
             <AboutPhotoCard />
@@ -63,7 +74,7 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex flex-col lg:flex-row  gap-8">
             {/* small squares */}
             <div className="flex flex-col lg:flex-row lg:flex-wrap gap-6 lg:gap-10 lg:flex-1 ">
               <AboutServicePhotoCard
@@ -84,13 +95,13 @@ function AboutUsPage() {
               />
             </div>
             {/* big rectangless */}
-            <div className="flex flex-col lg:flex-row gap-12 flex-1">
+            <div className="flex flex-col lg:flex-row lg:justify-between  gap-12 flex-1">
               <AboutServicePhotoCard
-                className=" w-full h-[80vw] lg:max-w-[220px] lg:h-[30vw]"
+                className=" w-full h-[80vw] lg:max-w-[280px] lg:w-[45%] lg:h-[30vw]"
                 paragraph="Rent Calculator"
               />
               <AboutServicePhotoCard
-                className=" w-full h-[80vw] lg:max-w-[220px] lg:h-[30vw]"
+                className=" w-full h-[80vw] lg:max-w-[280px] lg:w-[45%] lg:h-[30vw]"
                 paragraph="Recover Asset Value"
               />
             </div>
@@ -100,6 +111,10 @@ function AboutUsPage() {
 
       {/* Blog */}
       <AboutBlogPost />
+
+      {/* Testimonials */}
+      <AboutTestimonials />
+      <Footer />
     </div>
   );
 }

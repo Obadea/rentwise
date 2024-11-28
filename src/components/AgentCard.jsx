@@ -6,11 +6,11 @@ import agent from "../assets/agent.png";
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
 
-function AgentCard() {
+function AgentCard({ className, children }) {
   const [value, setValue] = React.useState(3);
   return (
     <div>
-      <div className="flex gap-6 justify-between p-3  bg-white ">
+      <div className="flex flex-col items-center md:items-start md:flex-row  gap-6 justify-between p-3  bg-white ">
         <div className="h-full">
           <img src={agent} alt="" className="h-full" />
         </div>
@@ -55,7 +55,7 @@ function AgentCard() {
             </div>
             <div className="flex justify-between">
               {/* for icons */}
-              <div>
+              <div className={`${className}`}>
                 <WhatsAppIcon
                   sx={{ fontSize: "15px" }}
                   className="text-[#0B8200]"
@@ -63,7 +63,10 @@ function AgentCard() {
                 <LocalPhoneIcon sx={{ fontSize: "15px" }} />
                 <MailOutlineIcon sx={{ fontSize: "15px" }} />
               </div>
-              <p className="text-sm text-customSearchblue font-semibold">
+              {children}
+              <p
+                className={`${className} text-sm text-customSearchblue font-semibold`}
+              >
                 Book Service
               </p>
             </div>
