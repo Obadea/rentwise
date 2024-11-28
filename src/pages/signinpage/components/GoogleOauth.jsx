@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { useGoogleLogin, googleLogout } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 
 import axios from "axios";
 
@@ -12,10 +12,6 @@ function GoogleOauth({ user, setUser, profiler, setProfiler }) {
     onError: (error) => console.log("Login Failed:", error),
   });
 
-  const logOut = () => {
-    googleLogout();
-    setProfiler(null);
-  };
   useEffect(() => {
     console.log(user);
     if (user?.access_token) {

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { Link } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
-import ReactFacebookLogin from "react-facebook-login";
-import FacebookLogin from "react-facebook-login";
 import GoogleOauth from "./components/GoogleOauth";
 import { googleLogout } from "@react-oauth/google";
 
@@ -123,25 +121,25 @@ function SignInPage() {
               setProfiler={setProfiler}
             />
 
-            {/* <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-                <img
-                  src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
-                  className="w-6"
-                  alt="img"
-                />
-                Sign in Using Facebook
-              </h4> */}
+            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
+              <img
+                src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
+                className="w-6"
+                alt="img"
+              />
+              Sign in Using Facebook
+            </h4>
 
             {/* Testing the facebook API */}
             <div>
-              <ReactFacebookLogin
+              {/* <ReactFacebookLogin
                 appId="" // Replace with your Facebook App ID
                 autoLoad={false}
                 fields="name,email,picture"
                 callback={responseFacebook}
                 icon="fa-facebook"
                 className="bg-white"
-              />
+              /> */}
             </div>
           </div>
         </div>
