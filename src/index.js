@@ -4,14 +4,17 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { NextUIProvider } from "@nextui-org/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <GoogleOAuthProvider clientId="690059917144-uch23k85c1ksgbf1oihkf57hktain6qr.apps.googleusercontent.com">
     <React.StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <NextUIProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </NextUIProvider>
     </React.StrictMode>
   </GoogleOAuthProvider>
 );

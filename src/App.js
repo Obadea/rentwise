@@ -20,6 +20,7 @@ import SignInPage from "./pages/signinpage/SignInPage.jsx";
 
 import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
+import SearchResultpage from "./pages/searchresultpage/SearchResultpage.jsx";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
       <Route path="/accessId" element={<AccessCodePage />} />
       <Route path="/landlord/manage rentals" element={<ManageRentals />} />
       <Route path="*" element={<NotFoundPage />} />
+      <Route path="/search" element={<SearchResultpage />} />
 
       <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="/otpreset" element={<OtpReset />} />
