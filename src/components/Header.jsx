@@ -1,9 +1,9 @@
 // src/components/Navbar.js
-import React from "react";
-import DropdownMenu from "./DropdownMenu";
-import Hamburger from "./Hamburger";
-import Logo from "./Logo";
-import { Link } from "react-router-dom";
+import React from 'react';
+import DropdownMenu from './DropdownMenu';
+import Hamburger from './Hamburger';
+import Logo from './Logo';
+import { Link } from 'react-router-dom';
 
 const Header = ({ className, newclassName }) => {
   // const [isOpen, setIsOpen] = useState(false);
@@ -35,18 +35,18 @@ const Header = ({ className, newclassName }) => {
             name="Residents"
             dropdown={
               (options = [
-                "Quick services",
-                "Rent affordability calculator",
-                "RentSaver account",
-                "WiseReport",
-                "Compare apartment",
+                'Quick services',
+                'Rent affordability calculator',
+                'RentSaver account',
+                'WiseReport',
+                'search',
               ])
             }
           />
 
           <DropdownMenu
             name="Landlords"
-            dropdown={(options = ["Rental Management", "Quick Services"])}
+            dropdown={(options = ['Rental Management', 'Quick Services'])}
           />
 
           <a href="#q" className="py-2 px-4 text-lg hover:text-customyellow">
@@ -57,11 +57,11 @@ const Header = ({ className, newclassName }) => {
             name="Company"
             dropdown={
               (options = [
-                "About us",
-                "Our Services",
-                "Products",
-                "Leadership",
-                "Partners",
+                'About us',
+                'Our Services',
+                'Products',
+                'Leadership',
+                'Partners',
               ])
             }
           />
@@ -71,7 +71,7 @@ const Header = ({ className, newclassName }) => {
             className="block py-2 px-4 text-lg
             hover:text-customyellow"
           >
-            {" "}
+            {' '}
             Sign In
           </Link>
           <Link
