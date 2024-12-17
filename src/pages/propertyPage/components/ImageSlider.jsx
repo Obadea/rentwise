@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import image1 from "../../../assets/palor6.jpg";
 import image2 from "../../../assets/palor2.jpg";
@@ -7,21 +7,40 @@ import image4 from "../../../assets/palor4.jpg";
 import image5 from "../../../assets/palor5.jpg";
 import image6 from "../../../assets/palor6.jpg";
 import image7 from "../../../assets/palor7.jpg";
+import { Button, Image, Skeleton } from "@nextui-org/react";
+import {
+  Svg360DegIcon,
+  SvgImgcon,
+  SvgLeftIcon,
+  SvgMapIcon,
+  SvgRightIcon,
+} from "../../../utils/SvgIcons";
 // import ImageMapChanger from "./ImageMapChanger";
 
-const images = [
-  image1,
-  image2,
-  image3, // Add more image paths as needed
-  image4,
-  image5,
-  image6,
-  image7,
-  image6,
-  image7,
-];
+// const images = [
+//   image1,
+//   image2,
+//   image3, // Add more image paths as needed
+//   image4,
+//   image5,
+//   image6,
+//   image7,
+//   image6,
+//   image7,
+// ];
 
-const ImageSlider = () => {
+const ImageSlider = ({ propertyData, isLoading }) => {
+  const [images, setImages] = useState([]);
+
+  const [render, setRender] = useState("image");
+
+  useEffect(() => {
+    if (!isLoading) {
+      console.log(propertyData);
+      setImages(propertyData?.property?.property?.propertyImages?.slice(1, 9));
+    }
+  }, [isLoading]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const updateSliderImage = (index) => {
@@ -38,47 +57,108 @@ const ImageSlider = () => {
     );
   };
 
-  return (
-    <div className="max-w-3xl mx-auto px-2">
-      <div className="relative ">
-        <div className=" relative w-[180px] top-20 left-[75%]">
-          {/* <ImageMapChanger
-            className="text-white bg-[#333333] hidden"
-            newClassName="hidden lg:flex"
-          /> */}
-        </div>
+  const handelRenderChange = (show) => {
+    setRender(show);
+  };
 
-        <img
-          className="w-full h-auto rounded-lg"
-          src={images[currentIndex]}
-          alt="Slider"
-        />
-        <button
-          onClick={handlePrev}
-          className="absolute text-2xl top-1/2 left-2 transform -translate-y-1/2 bg-white opacity-75 rounded-full px-3 py-1 lg:px-4 lg:py-2  shadow-lg"
+  if (isLoading && !images) {
+    return <Skeleton className="w-[97%] h-[400px] rounded-md mb-10" />;
+  }
+
+  return (
+    <div className="max-w-[96%] relative ">
+      {/* 3 top right icons */}
+      <div className="absolute right-14 top-12 z-[14] space-x-2">
+        <Button
+          isIconOnly
+          size="lg"
+          radius="sm"
+          className={`${
+            render === "image" ? "bg-[#3B68F9]" : "bg-customdark"
+          } opacity-55`}
+          onPress={() => handelRenderChange("image")}
         >
-          ❮
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute text-2xl top-1/2 right-2 transform -translate-y-1/2  bg-white opacity-75 rounded-full px-3 py-1 lg:px-4 lg:py-2  shadow-lg"
+          <SvgImgcon />
+        </Button>
+
+        <Button
+          isIconOnly
+          size="lg"
+          radius="sm"
+          className={`${
+            render === "map" ? "bg-[#3B68F9]" : "bg-customdark"
+          } opacity-55`}
+          onPress={() => handelRenderChange("map")}
         >
-          ❯
-        </button>
+          <SvgMapIcon />
+        </Button>
+
+        <Button
+          isIconOnly
+          size="lg"
+          radius="sm"
+          className={`${
+            render === "360deg" ? "bg-[#3B68F9]" : "bg-customdark"
+          } opacity-55`}
+          onPress={() => handelRenderChange("360deg")}
+        >
+          <Svg360DegIcon />
+        </Button>
       </div>
-      <div className="flex overflow-x-auto whitespace-nowrap mt-4 px-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 ">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            className={`w-20 h-auto  cursor-pointer transition-opacity duration-300 ${
-              currentIndex === index ? "opacity-100" : "opacity-60"
-            }`}
-            src={image}
-            alt="Thumbnail"
-            onClick={() => updateSliderImage(index)}
-          />
-        ))}
-      </div>
+      {render === "image" ? (
+        <>
+          <div className="relative ">
+            <div className=" relative w-[180px] top-20 left-[75%]"></div>
+
+            <Image
+              src={images?.length >= 1 ? images[currentIndex] : ""}
+              alt="Slider"
+              width="100%"
+              // height={330}
+              radius="none"
+              className="h-[440px]"
+            />
+            <Button
+              onPress={handlePrev}
+              isIconOnly
+              className="absolute top-1/2 left-10 transform -translate-y-1/2 bg-[#3B68F9] z-10 "
+              size="lg"
+              radius="sm"
+            >
+              <SvgLeftIcon />
+            </Button>
+            <Button
+              onPress={handleNext}
+              isIconOnly
+              className="absolute top-1/2 right-10 transform -translate-y-1/2 bg-[#3B68F9] z-10 "
+              size="lg"
+              radius="sm"
+            >
+              <SvgRightIcon />
+            </Button>
+          </div>
+          <div className="flex overflow-x-auto whitespace-nowrap mt-2 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 gap-1 ">
+            {images?.map((image, index) => (
+              <Image
+                key={index}
+                className={`w-56 h-20  cursor-pointer transition-opacity duration-300 ${
+                  currentIndex === index
+                    ? "border-2 border-blue-700"
+                    : "opacity-60"
+                }`}
+                src={image}
+                alt="Thumbnail"
+                radius="none"
+                onClick={() => updateSliderImage(index)}
+              />
+            ))}
+          </div>
+        </>
+      ) : render === "map" ? (
+        <Skeleton className="w-[97%] h-[400px] rounded-md mb-10" />
+      ) : (
+        <Skeleton className="w-[97%] h-[400px] rounded-md mb-10" />
+      )}
     </div>
   );
 };

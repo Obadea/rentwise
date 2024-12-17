@@ -1,8 +1,9 @@
-import React from 'react';
-import Header from '../../components/Header';
-import Breadcrumb from '../../components/BreadCrumb';
-import { useLocation } from 'react-router-dom';
-import CompareProperties from './component/CompareProperties';
+import React from "react";
+import Header from "../../components/Header";
+import Breadcrumb from "../../components/BreadCrumb";
+import { useLocation } from "react-router-dom";
+import CompareProperties from "./component/CompareProperties";
+import { propertyTitles } from "../../utils/constants";
 
 function ComparePage() {
   // Comparing Data
@@ -20,13 +21,16 @@ function ComparePage() {
         {/* Compare Component */}
         <div className="flex mt-14 ">
           <div className="w-fit mt-36 text-right font-semibold capitalize">
-            <p> </p>
-            <p className="bg-addpropertybg pl-3 pr-4 py-1">Title</p>
-            <p className="pl-3 pr-4 py-1">Address</p>
-            <p className="bg-addpropertybg pl-3 pr-4 py-1">Bedroom</p>
-            <p className="pl-3 pr-4 py-1">Bathroom</p>
-            <p className="bg-addpropertybg pl-3 pr-4 py-1">sittingroom</p>
-            <p className="pl-3 pr-4 py-1">Amount</p>
+            {propertyTitles.map((title, index) => (
+              <p
+                key={index}
+                className={`${
+                  index % 2 == 0 ? "bg-addpropertybg" : ""
+                } pl-3 pr-4 py-1 text-nowrap`}
+              >
+                {title}
+              </p>
+            ))}
           </div>
           <CompareProperties compareData={state} />
         </div>

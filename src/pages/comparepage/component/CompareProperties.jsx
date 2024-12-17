@@ -1,23 +1,55 @@
-import { Image } from '@nextui-org/react';
-import React from 'react';
-import { toNaira } from '../../../utils/helperFunction';
+import { Image } from "@nextui-org/react";
+import React from "react";
+import { toNaira } from "../../../utils/helperFunction";
+import { SvgCheckIcon } from "../../../utils/SvgIcons";
 
 const CompareProperties = ({ compareData }) => {
+  const dummyArray = Array.from({ length: 15 }, (_, index) => index + 1);
+
   return (
     <div className={`overflow-x-scroll w-full flex`}>
       {compareData?.map((property) => (
         <div className="w-full box-content  whitespace-nowrap items-center justify-center min-w-56 ">
-          <Image src={property?.img} className="h-32 ml-3" isZoomed />
+          <div className="px-2">
+            <Image
+              src={property?.propertyImages[6]}
+              className="h-32 "
+              isZoomed
+            />
+          </div>
           <p className="py-1 pl-3 pr-5 mt-4 bg-addpropertybg">
-            {property?.title}
+            {property?.name}
           </p>
-          <p className="py-1 pl-3 pr-5 ">{property?.address}</p>
-          <p className="py-1 pl-3 pr-5 bg-addpropertybg">{property?.bedroom}</p>
-          <p className="py-1 pl-3 pr-5">{property?.bathroom}</p>
+          <p className="py-1 pl-3 pr-5 ">{toNaira(property?.price)}</p>
           <p className="py-1 pl-3 pr-5 bg-addpropertybg">
-            {property?.sittingroom}
+            {property?.propertyType}
           </p>
-          <p className="py-1 pl-3 pr-5">{toNaira(property?.amount)}</p>
+          <p className="py-1 pl-3 pr-5">{property?.address}</p>
+          <p className="py-1 pl-3 pr-5 bg-addpropertybg">{property?.city}</p>
+          <p className="py-1 pl-3 pr-5">{property?.state}</p>
+          <p className="py-1 pl-3 pr-5 bg-addpropertybg">{property?.zipCode}</p>
+          <p className="py-1 pl-3 pr-5">{property?.country}</p>
+          <p className="py-1 pl-3 pr-5 bg-addpropertybg">
+            {`${property?.poolSize}Sq Ft`}
+          </p>
+          <p className="py-1 pl-3 pr-5">{property?.propertyId}</p>
+          <p className="py-1 pl-3 pr-5 bg-addpropertybg">
+            {`${property?.bedrooms}`}
+          </p>
+          <p className="py-1 pl-3 pr-5">{property?.bathrooms}</p>
+          <p className="py-1 pl-3 pr-5 bg-addpropertybg">
+            {`${property?.garage}`}
+          </p>
+          {dummyArray.map((item, index) => (
+            <div
+              key={index}
+              className={`${
+                index % 2 !== 0 ? "bg-addpropertybg" : ""
+              } pl-3 pr-4 py-2 `}
+            >
+              <SvgCheckIcon />
+            </div>
+          ))}
         </div>
       ))}
     </div>

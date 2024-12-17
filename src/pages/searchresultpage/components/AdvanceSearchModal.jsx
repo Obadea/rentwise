@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Modal,
   ModalContent,
@@ -9,10 +9,16 @@ import {
   useDisclosure,
   Image,
   Input,
-} from '@nextui-org/react';
+  Skeleton,
+} from "@nextui-org/react";
 
-import binoculars from '../../../assets/binoculars.png';
-import AddIcon from '@mui/icons-material/Add';
+import binoculars from "../../../assets/binoculars.png";
+import AddIcon from "@mui/icons-material/Add";
+import { useFormik } from "formik";
+import { useMutation } from "@tanstack/react-query";
+import { houseHoldIncome } from "../../../utils/endpoint";
+import { toNaira } from "../../../utils/helperFunction";
+import { toast } from "react-toastify";
 
 const ModalContent1 = ({ onClose, handleContentChange }) => {
   return (
@@ -45,7 +51,7 @@ const ModalContent1 = ({ onClose, handleContentChange }) => {
           color="primary"
           className="lg:w-[200px]"
           onPress={() => {
-            handleContentChange?.('content2');
+            handleContentChange?.("content2");
           }}
         >
           Continue Search
@@ -64,7 +70,10 @@ const ModalContent1 = ({ onClose, handleContentChange }) => {
   );
 };
 
-const ModalContent2 = ({ onClose, handleContentChange }) => {
+const ModalContent2 = ({ onClose, handleContentChange, formik, amount }) => {
+  const handleInomeSubmit = () => {
+    formik?.handleSubmit();
+  };
   return (
     <div>
       <h3 className="font-bold text-2xl mb-4 mt-14">Improve search</h3>
@@ -85,6 +94,9 @@ const ModalContent2 = ({ onClose, handleContentChange }) => {
           className="placeholder:text-customgray2 "
           placeholder="Enter in NGN"
           type="number"
+          name="monthly_income_I"
+          onChange={formik.handleChange}
+          value={formik.values.monthly_income_I}
         />
         <AddIcon className="text-customgray2" />
         <Input
@@ -99,6 +111,9 @@ const ModalContent2 = ({ onClose, handleContentChange }) => {
           className="placeholder:text-customgray2"
           placeholder="Enter in NGN"
           type="number"
+          name="monthly_income_II"
+          onChange={formik.handleChange}
+          value={formik.values.monthly_income_II}
         />
         <AddIcon className="text-customgray2" />
         <Input
@@ -113,6 +128,9 @@ const ModalContent2 = ({ onClose, handleContentChange }) => {
           className="placeholder:text-customgray2 placeholder:text-[15px]"
           placeholder="Enter in NGN"
           type="number"
+          name="other_income"
+          onChange={formik.handleChange}
+          value={formik.values.other_income}
         />
       </div>
       <div className="flex gap-2 my-9 items-center justify-center">
@@ -121,7 +139,10 @@ const ModalContent2 = ({ onClose, handleContentChange }) => {
           color="primary"
           className="lg:w-[200px]"
           onPress={() => {
-            handleContentChange?.('content3');
+            // if (amount?.max_annual_rent) {
+            handleContentChange?.("content3");
+            // }
+            handleInomeSubmit();
           }}
         >
           Next
@@ -140,19 +161,30 @@ const ModalContent2 = ({ onClose, handleContentChange }) => {
   );
 };
 
-const ModalContent3 = ({ onClose, handleContentChange }) => {
+const ModalContent3 = ({ onClose, handleContentChange, amount }) => {
   return (
     <div>
       <h3 className="font-bold text-2xl mb-4 mt-14">Improve search</h3>
       <p className="text-customgray2 text-[13px] mb-6 pr-8">
         Total monthly household income
       </p>
-      <h1 className="text-customaccent text-3xl font-bold text-center mb-6">
-        NGN 3,000,000
-      </h1>
+      {amount?.max_annual_rent ? (
+        <h1 className="text-customaccent text-3xl font-bold text-center mb-6">
+          {/* {`NGN${
+          amount?.max_annual_rent ? (
+            toNaira(Number(amount?.max_annual_rent))
+          ) : (
+            <Skeleton className="h-10 w-16" />
+          )
+        }`} */}
+          {`NGN${toNaira(Number(amount?.max_annual_rent))}`}
+        </h1>
+      ) : (
+        <Skeleton className="h-10 w-[60%] m-auto my-6 rounded-lg" />
+      )}
       <p className="text-customgray2 text-[13px] pr-8">
         Continued search based on calculated household income. Would you love to
-        continue?{' '}
+        continue?{" "}
       </p>
       <div className="flex gap-2 my-9 items-center justify-center">
         <Button
@@ -182,6 +214,7 @@ const ModalContent3 = ({ onClose, handleContentChange }) => {
 
 const AdvanceSearchModal = () => {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
+  const [amount, setAmount] = useState();
   const handleContentChange = (content) => {
     setCurrentContent(content);
   };
@@ -193,7 +226,32 @@ const AdvanceSearchModal = () => {
     />
   ); // State to track current content
 
-  // Functions to change content
+  const mutation = useMutation({
+    mutationFn: houseHoldIncome,
+    onSuccess: async (data) => {
+      console.log(data, amount);
+      setAmount(data);
+    },
+    onError: async (err) => {
+      console.log("error getting calulation");
+      toast("Error Calulating Income");
+    },
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      monthly_income_I: null,
+      monthly_income_II: null,
+      other_income: null,
+    },
+    onSubmit: (values, { resetForm }) => {
+      if (values) {
+        // console.log(values);
+        mutation.mutate(values);
+      }
+      resetForm();
+    },
+  });
 
   return (
     <>
@@ -202,6 +260,7 @@ const AdvanceSearchModal = () => {
           onOpen();
         }}
         color="primary"
+        className="py-[27px]"
       >
         Advance Search
       </Button>
@@ -211,15 +270,18 @@ const AdvanceSearchModal = () => {
           {(onClose) => (
             <>
               <ModalBody>
-                {currentContent === 'content2' ? (
+                {currentContent === "content2" ? (
                   <ModalContent2
                     onClose={onClose}
                     handleContentChange={handleContentChange}
+                    formik={formik}
+                    amount={amount}
                   />
-                ) : currentContent === 'content3' ? (
+                ) : currentContent === "content3" ? (
                   <ModalContent3
                     onClose={onClose}
                     handleContentChange={handleContentChange}
+                    amount={amount}
                   />
                 ) : (
                   currentContent

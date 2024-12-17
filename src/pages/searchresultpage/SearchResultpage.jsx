@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header';
-import Breadcrumb from '../../components/BreadCrumb';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import Header from "../../components/Header";
+import Breadcrumb from "../../components/BreadCrumb";
+import { useNavigate } from "react-router-dom";
 import {
   Button,
   Card,
@@ -16,15 +16,15 @@ import {
   Select,
   SelectItem,
   useDisclosure,
-} from '@nextui-org/react';
-import { propertyData, searchPageDropDown } from '../../utils/constants';
-import PropertiesCard from '../../components/PropertiesCard';
-import { toNaira } from '../../utils/helperFunction';
-import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
-import AdvanceSearchModal from './components/AdvanceSearchModal';
-import Footer from '../../components/Footer';
+} from "@nextui-org/react";
+import { propertyData, searchPageDropDown } from "../../utils/constants";
+import PropertiesCard from "../../components/PropertiesCard";
+import { toNaira } from "../../utils/helperFunction";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import AdvanceSearchModal from "./components/AdvanceSearchModal";
+import Footer from "../../components/Footer";
 
-function SearchResultpage() {
+function SearchResultpage({ forShortlet }) {
   const [compareProperty, setCompareProperty] = useState([]);
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
   const navigate = useNavigate();
@@ -57,14 +57,16 @@ function SearchResultpage() {
         <div>
           <h3 className="font-bold text-2xl text-customdark mb-4">Search</h3>
           <p className="font-normal text-base text-customgray4">
-            Search properties and places around you
+            {forShortlet
+              ? "Searh shortlets around you"
+              : "Search properties and places around you"}
           </p>
           {/* Search Input */}
           <div className="mt-6 w-full max-w-[783px]">
             <Input
               placeholder="Search..."
               variant="bordered"
-              classNames={{ inputWrapper: 'py-[26px] pr-[7px]' }}
+              classNames={{ inputWrapper: "py-[26px] pr-[7px]" }}
               endContent={
                 <Button
                   className="w-[120px] lg:w-[200px] text-sm text-white"
@@ -90,7 +92,7 @@ function SearchResultpage() {
                 ))}
               </Select>
             ))}
-            <AdvanceSearchModal />
+            {forShortlet ? "" : <AdvanceSearchModal />}
           </div>
 
           {/* Properties */}
@@ -176,7 +178,7 @@ function SearchResultpage() {
                   color="primary"
                   onPress={() => {
                     onClose();
-                    navigate('/compare', { state: compareProperty });
+                    navigate("/compare", { state: compareProperty });
                   }}
                 >
                   Compare

@@ -6,32 +6,28 @@ import palor4 from "../../../assets/palor4.jpg";
 import palor5 from "../../../assets/palor5.jpg";
 import palor6 from "../../../assets/palor6.jpg";
 import palor7 from "../../../assets/palor7.jpg";
-function PhotoGrid() {
+import { Image, Skeleton } from "@nextui-org/react";
+function PhotoGrid({ propertyData }) {
+  if (!propertyData?.property?.property?.propertyImages) {
+    return <Skeleton className="w-[92%] m-auto h-52 rounded-md" />;
+  }
+
   return (
     <div className=" flex justify-center px-6  lg:px-10">
       <div>
-        <div className="flex flex-wrap ">
-          <div className="w-[33.3%] h-28 lg:h-60  ">
-            <img src={palor1} alt="" className="w-full h-full" />
-          </div>
-          <div className=" h-28 w-[33.3%] lg:h-60">
-            <img src={palor2} alt="" className="w-full h-full" />
-          </div>
-          <div className=" h-28 w-[33.3%] lg:h-60">
-            <img src={palor3} alt="" className="w-full h-full " />
-          </div>
-          <div className="h-28 w-[33.3%] lg:h-60">
-            <img src={palor4} alt="" className="w-full  h-full" />
-          </div>
-          <div className="h-28 w-[33.3%] lg:h-60">
-            <img src={palor5} alt="" className="w-full  h-full " />
-          </div>
-          <div className="h-28 w-[33.3%] lg:h-60">
-            <img src={palor6} alt="" className="w-full  h-full " />
-          </div>
-          <div className="h-28 w-[33.3%] lg:h-60">
-            <img src={palor7} alt="" className="w-full  h-full " />
-          </div>
+        <div className="grid lg:grid-cols-3">
+          {propertyData?.property?.property?.propertyImages
+            ?.slice(1, 10)
+            ?.map((item) => (
+              // <div className="w-[220px]  h-[220px] lg:h-60 ">
+              <Image
+                src={item}
+                alt="Property Image"
+                className="w-[501px]  h-[213px]"
+                radius="none"
+              />
+              // </div>
+            ))}
         </div>
       </div>
     </div>

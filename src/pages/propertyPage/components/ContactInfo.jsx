@@ -7,6 +7,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import MUISelect from "../../../components/MUISelect";
+import { Avatar, Link } from "@nextui-org/react";
 
 const options = [
   { value: "one", label: "I am a tenant" },
@@ -14,7 +15,7 @@ const options = [
   { value: "four", label: "I am a buyer" },
   { value: "five", label: "other" },
 ];
-function ContactInfo({ id }) {
+function ContactInfo({ id, propertyData }) {
   return (
     <div
       id={id}
@@ -30,29 +31,62 @@ function ContactInfo({ id }) {
       </div>
       <div className="flex gap-4">
         <div>
-          <img src={contactPhoto} alt="" />
+          {/* <img src={contactPhoto} alt="" /> */}
+          <Avatar
+            src={propertyData?.property?.property?.wiseman?.photo}
+            size="lg"
+            className="w-20 h-20 text-large"
+            radius="sm"
+          />
         </div>
         <div className="flex flex-col gap-1 text-sm font-normal text-customStreetcolor">
-          <h3 className="flex  items-center">
-            <PermIdentityIcon /> Ayomide Jamiu
+          <h3 className="flex  gap-2 items-center">
+            <PermIdentityIcon />{" "}
+            {propertyData?.property?.property?.wiseman?.fullName
+              ? propertyData?.property?.property?.wiseman?.fullName
+              : "Loading..."}
           </h3>
           <div className="flex gap-4 flex-wrap">
-            <p className="flex  items-center">
-              <PhoneIcon /> 08113828282
+            <p className="flex gap-1  items-center">
+              <PhoneIcon />{" "}
+              {propertyData?.property?.property?.wiseman?.phoneNumber
+                ? propertyData?.property?.property?.wiseman?.phoneNumber
+                : "Loading..."}
             </p>
-            <p className="flex  items-center">
+            <p className="flex gap-1 items-center">
               <PhoneAndroidIcon />
-              08113828282
+              {propertyData?.property?.property?.wiseman?.phoneNumber
+                ? propertyData?.property?.property?.wiseman?.phoneNumber
+                : "Loading..."}
             </p>
-            <p className="flex  items-center">
+            <p className="flex gap-1 items-center">
               {" "}
               <WhatsAppIcon />
-              Whatsapp
+              <Link
+                className="text-customStreetcolor"
+                href={propertyData?.property?.property?.wiseman?.whatsApp}
+                isExternal
+                showAnchorIcon
+              >
+                Whatsapp
+              </Link>
             </p>
           </div>
-          <div className="flex gap-4">
-            <FacebookIcon />
-            <XIcon />
+          <div className="flex  items-center gap-4">
+            <Link
+              href={propertyData?.property?.property?.wiseman?.facebook}
+              isExternal
+            >
+              <FacebookIcon style={{ fontSize: "30px" }} />
+            </Link>
+
+            <Link
+              className="text-black"
+              href={propertyData?.property?.property?.wiseman?.twitter}
+              isExternal
+            >
+              <XIcon />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
+import { Skeleton } from "@nextui-org/react";
 import React from "react";
 
-function Description({ id }) {
+function Description({ id, propertyData }) {
   return (
     <div
       id={id}
@@ -9,7 +10,15 @@ function Description({ id }) {
       <div className=" border-b-2 pb-8 border-[#DCE0E0] font-medium text-lg text-customNameBlack ">
         Description
       </div>
-      <div className="font-normal text-sm text-customStreetcolor">
+
+      {propertyData?.property?.property?.description ? (
+        <div className="font-normal text-sm text-customStreetcolor">
+          {propertyData?.property?.property?.description}
+        </div>
+      ) : (
+        <Skeleton className="w-full h-60 rounded-md" />
+      )}
+      {/* <div className="font-normal text-sm text-customStreetcolor">
         About Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
         nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam mattis.
         Consequat est phasellus velit nisl justo dui. Faucibus dictum habitasse
@@ -22,21 +31,7 @@ function Description({ id }) {
         purus sed varius euismod. Risus etiam purus donec neque. Non id mi
         maecenas quam convallis ut varius feugiat iaculis. Quis porttitor urna
         malesuada
-      </div>
-      <div className="font-normal text-sm text-customStreetcolor">
-        About Lorem ipsum dolor sit amet consectetur. Gravida id ut praesent
-        nunc. Sed aliquam mi at urna. Condimentum mi lorem aliquam mattis.
-        Consequat est phasellus velit nisl justo dui. Faucibus dictum habitasse
-        sed vel at nisl non. Nisi placerat purus sed varius euismod. Risus etiam
-        purus donec neque. Non id mi maecenas quam convallis ut varius feugiat
-        iaculis. Quis porttitor urna malesuada Lorem ipsum dolor sit amet
-        consectetur. Gravida id ut praesent nunc. Sed aliquam mi at urna.
-        Condimentum mi lorem aliquam mattis. Consequat est phasellus velit nisl
-        justo dui. Faucibus dictum habitasse sed vel at nisl non. Nisi placerat
-        purus sed varius euismod. Risus etiam purus donec neque. Non id mi
-        maecenas quam convallis ut varius feugiat iaculis. Quis porttitor urna
-        malesuada
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -9,7 +9,7 @@ function ScheduleATour({ className, newClassName }) {
   console.log(selectedDate);
   return (
     <div
-      className={` lg:flex -top-1 bottom-0 z-10 bg-white flex-col w-full gap-4  mb-6 ${className}`}
+      className={` lg:flex -top-1 bottom-0 z-10 bg-white py-5 rounded-lg pt-7 flex-col w-full gap-4  px-4 mb-6 ${className}`}
     >
       <div className="flex ">
         <h4 className="text-customSearchblue text-base font-bold text-center py-3 flex-1">

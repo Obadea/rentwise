@@ -1,5 +1,12 @@
-import { Button, Card, CardBody, CardFooter, Image } from '@nextui-org/react';
-import React from 'react';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  Image,
+  Tooltip,
+} from "@nextui-org/react";
+import React from "react";
 import {
   SvgAddIcon,
   SvgBathIcon,
@@ -8,9 +15,11 @@ import {
   SvgFullViewIcon,
   SvgLikeIcon,
   SvgLocationIcon,
-} from '../utils/SvgIcons';
-import { toNaira } from '../utils/helperFunction';
-import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+} from "../utils/SvgIcons";
+import { toNaira } from "../utils/helperFunction";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import ViewFullImg from "./ViewFullImg";
+import { useNavigate } from "react-router-dom";
 
 const PropertiesCard = ({
   key,
@@ -21,23 +30,29 @@ const PropertiesCard = ({
   bathroom,
   sittingroom,
   amount,
-  amountDate = 'annunal',
+  amountDate = "annunal",
   isPressable = true,
   onPress,
   addProperty,
   propertyData,
   compareData,
   removeProperty,
+  className,
+  containerClassName,
 }) => {
+  const navigate = useNavigate();
+
   return (
     <Card
       key={key}
       isPressable={isPressable}
       shadow="md"
-      onPress={onPress}
-      className="mb-6"
+      onPress={() => {
+        navigate(`/property?id=${propertyData?.id}`);
+      }}
+      className={`mb-6 mt-2 ml-2 ${containerClassName}`}
     >
-      <CardBody className="overflow-visible p-0">
+      <CardBody className={`overflow-visible p-0 ${className}`}>
         <Image
           alt={title}
           className="w-full object-cover h-[226.5px]"
@@ -51,50 +66,49 @@ const PropertiesCard = ({
         <div className="flex items-center justify-between mt-3">
           <b className="truncate">{title}</b>
           <div className="flex items-center gap-1">
-            <Button
-              isIconOnly
-              size="sm"
-              radius="full"
-              className=" bg-transparent hover:bg-default"
-            >
-              <SvgFullViewIcon />
-            </Button>
+            <ViewFullImg img={img} />
             {compareData.some((item) => item.id === propertyData.id) ? (
-              <Button
-                isIconOnly
-                size="sm"
-                radius="full"
-                className=" bg-transparent hover:bg-default"
-                onPress={() => {
-                  removeProperty(propertyData.id);
-                }}
-              >
-                <RemoveCircleOutlineIcon
-                  className="text-[17px]"
-                  fontSize="17px"
-                />
-              </Button>
+              <Tooltip content="Remove from compare" showArrow={true}>
+                <Button
+                  isIconOnly
+                  size="sm"
+                  radius="full"
+                  className=" bg-transparent hover:bg-default"
+                  onPress={() => {
+                    removeProperty(propertyData.id);
+                  }}
+                >
+                  <RemoveCircleOutlineIcon
+                    className="text-[17px]"
+                    fontSize="17px"
+                  />
+                </Button>
+              </Tooltip>
             ) : (
+              <Tooltip content="Add to compare" showArrow={true}>
+                <Button
+                  isIconOnly
+                  size="sm"
+                  radius="full"
+                  className=" bg-transparent hover:bg-default"
+                  onPress={() => {
+                    addProperty(propertyData);
+                  }}
+                >
+                  <SvgAddIcon />
+                </Button>
+              </Tooltip>
+            )}
+            <Tooltip content="Like" showArrow={true}>
               <Button
                 isIconOnly
                 size="sm"
                 radius="full"
                 className=" bg-transparent hover:bg-default"
-                onPress={() => {
-                  addProperty(propertyData);
-                }}
               >
-                <SvgAddIcon />
+                <SvgLikeIcon />
               </Button>
-            )}
-            <Button
-              isIconOnly
-              size="sm"
-              radius="full"
-              className=" bg-transparent hover:bg-default"
-            >
-              <SvgLikeIcon />
-            </Button>
+            </Tooltip>
           </div>
         </div>
         <div className="flex items-center mt-3">
