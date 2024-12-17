@@ -74,3 +74,7 @@
 - Log In Page
 - Statesmen Page
 - Wisemen Page
+
+## Pushing to main branch
+
+When pushing or pulling, use `origin2`
