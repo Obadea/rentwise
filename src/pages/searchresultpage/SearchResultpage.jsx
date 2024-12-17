@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
+import { useNavigate } from "react-router-dom";
 import {
   Button,
   Card,
@@ -10,7 +11,6 @@ import {
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
-  Dropdown,
   Image,
   Input,
   Select,
@@ -21,10 +21,13 @@ import { propertyData, searchPageDropDown } from "../../utils/constants";
 import PropertiesCard from "../../components/PropertiesCard";
 import { toNaira } from "../../utils/helperFunction";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import AdvanceSearchModal from "./components/AdvanceSearchModal";
+import Footer from "../../components/Footer";
 
-function SearchResultpage() {
+function SearchResultpage({ forShortlet }) {
   const [compareProperty, setCompareProperty] = useState([]);
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
+  const navigate = useNavigate();
 
   const addItem = (newItem) => {
     if (newItem) {
@@ -47,21 +50,23 @@ function SearchResultpage() {
   return (
     <div>
       <Header />
-      <div className="px-4 md:px-10 lg:px-20">
+      <div className="px-4 md:px-10 lg:px-20  ">
         <div className="mb-8 mt-4">
           <Breadcrumb />
         </div>
         <div>
           <h3 className="font-bold text-2xl text-customdark mb-4">Search</h3>
           <p className="font-normal text-base text-customgray4">
-            Search properties and places around you
+            {forShortlet
+              ? "Searh shortlets around you"
+              : "Search properties and places around you"}
           </p>
           {/* Search Input */}
           <div className="mt-6 w-full max-w-[783px]">
             <Input
               placeholder="Search..."
               variant="bordered"
-              classNames={{ inputWrapper: "py-[29px] pr-2" }}
+              classNames={{ inputWrapper: "py-[26px] pr-[7px]" }}
               endContent={
                 <Button
                   className="w-[120px] lg:w-[200px] text-sm text-white"
@@ -74,23 +79,24 @@ function SearchResultpage() {
           </div>
 
           {/* Dropdowns */}
-          <div className="flex flex-wrap gap-4 mt-6">
+          <div className="flex flex-wrap gap-4 mt-6 items-end">
             {searchPageDropDown.map((item, idx) => (
               <Select
                 key={idx}
                 label={item.title}
                 variant="bordered"
-                className="w-full md:w-[200px] lg:w-[180px]"
+                className="w-full md:w-[180px] lg:w-[150px]"
               >
                 {item.select.map((option) => (
                   <SelectItem key={option}>{option}</SelectItem>
                 ))}
               </Select>
             ))}
+            {forShortlet ? "" : <AdvanceSearchModal />}
           </div>
 
           {/* Properties */}
-          <div className="mt-10 gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-10 gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {propertyData.map((item) => (
               <PropertiesCard
                 key={item.id}
@@ -116,6 +122,7 @@ function SearchResultpage() {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         backdrop="transparent"
+        shouldBlockScroll={false}
       >
         <DrawerContent>
           {(onClose) => (
@@ -151,11 +158,11 @@ function SearchResultpage() {
                         className="object-cover"
                         src={image.img}
                       />
-                      <CardFooter className="flex gap-1 justify-between items-center bg-white/90 border-t py-2">
+                      <CardFooter className="flex gap-1  bg-white/20  border-white/20 border-1 overflow-hidden absolute before:rounded-xl rounded-large bottom-1 shadow-small z-10 w-[calc(100%_-_8px)] ml-1 py-2">
                         <p className="text-xs text-black truncate">
                           {image.title}
                         </p>
-                        <p className="text-black text-tiny">
+                        <p className="text-black text-tiny ml-auto">
                           {toNaira(image.amount)}
                         </p>
                       </CardFooter>
@@ -164,10 +171,16 @@ function SearchResultpage() {
                 </div>
               </DrawerBody>
               <DrawerFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button color=".danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={onClose}>
+                <Button
+                  color="primary"
+                  onPress={() => {
+                    onClose();
+                    navigate("/compare", { state: compareProperty });
+                  }}
+                >
                   Compare
                 </Button>
               </DrawerFooter>
@@ -175,6 +188,8 @@ function SearchResultpage() {
           )}
         </DrawerContent>
       </Drawer>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

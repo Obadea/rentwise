@@ -6,6 +6,39 @@ import palor5 from "../assets/palor5.jpg";
 import palor6 from "../assets/palor6.jpg";
 import palor7 from "../assets/palor7.jpg";
 
+export const searchPageDropDown = [
+  {
+    title: "Price",
+    select: ["100,000", "300,000", "500,00", "1,000,000"],
+  },
+  {
+    title: "Bathrooms",
+    select: ["2", "3", "4+"],
+  },
+  {
+    title: "Bedrooms",
+    select: ["2", "3", "4", "5+"],
+  },
+  {
+    title: "Type",
+    select: ["Apartment", "Duplex", "Bungalow", "Townhouse", "Penthouse"],
+  },
+  {
+    title: "Lifestyle",
+    select: [
+      "Urban Living",
+      "Suburban Living",
+      "Rural Living",
+      "Luxury Living",
+      "Eco-Friendly Living",
+    ],
+  },
+  {
+    title: "More",
+    select: ["Property Size", "Packing Availability", "Furnising Level"],
+  },
+];
+
 export const propertyData = [
   {
     id: 1,
@@ -129,31 +162,49 @@ export const propertyData = [
   },
 ];
 
-export const searchPageDropDown = [
-  {
-    title: "Price",
-    select: ["100000", "500000", "1000000", "10000000"],
-  },
-  {
-    title: "Bathroom",
-    select: ["1", "2", "3", "4+"],
-  },
-  {
-    title: "Bed",
-    select: ["1", "2", "3", "4", "5"],
-  },
-  {
-    title: "Type",
-    select: ["Apartment", "Duplex", "Bungalow", "Townhouse", "Penthouse"],
-  },
-  {
-    title: "Lifestyle",
-    select: [
-      "Rural Living",
-      "Urban Living",
-      "Suburban Living",
-      "Luxury Living",
-      "Eco-Friendly Living",
-    ],
-  },
+export const sortMethods = [
+  { key: "alphabetical", label: "Alphabetical Order (A-Z)" },
+  { key: "reverseAlphabetical", label: "Reverse Alphabetical Order (Z-A)" },
+  { key: "numericalAsc", label: "Numerical Order (Low to High)" },
+  { key: "numericalDesc", label: "Numerical Order (High to Low)" },
+  { key: "dateAsc", label: "Date (Oldest to Newest)" },
+  { key: "dateDesc", label: "Date (Newest to Oldest)" },
+  { key: "custom", label: "Custom Order" },
+  { key: "lengthAsc", label: "By Length (Short to Long)" },
+  { key: "lengthDesc", label: "By Length (Long to Short)" },
+  { key: "random", label: "Random Order" },
+  { key: "priority", label: "By Priority" },
+  { key: "boolean", label: "Boolean Value (True/False)" },
+  { key: "frequency", label: "By Frequency of Occurrence" },
+];
+
+export const propertyTitles = [
+  "Title",
+  "Price",
+  "Property Type",
+  "Address",
+  "City",
+  "State/county",
+  "Zip/Postal Code",
+  "Country",
+  "Property Size",
+  "Property ID",
+  "Bedrooms",
+  "Bathroom",
+  "Garage",
+  "Air Conditioning",
+  "Barbeque",
+  "Dryer",
+  "Gym",
+  "Laundry",
+  "Lawn",
+  "Microwave",
+  "Outdoor Shower",
+  "Refrigerator",
+  "TV Cable",
+  "Swimming Pool",
+  "WiFi",
+  "Washer",
+  "Window Covering",
+  "System rating",
 ];

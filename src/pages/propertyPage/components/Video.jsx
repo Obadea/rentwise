@@ -1,6 +1,6 @@
 import React from "react";
 
-function Video({ id }) {
+function Video({ id, propertyData }) {
   return (
     <div
       id={id}
@@ -13,7 +13,8 @@ function Video({ id }) {
         <iframe
           width="100%"
           height="400"
-          src="https://www.youtube.com/embed/y9j-BL5ocW8?si=Xx4jbXA5YF-271fb&amp;start=28"
+          // src="https://www.youtube.com/embed/y9j-BL5ocW8?si=Xx4jbXA5YF-271fb&amp;start=28"
+          src={propertyData?.property?.property?.video}
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -21,14 +21,16 @@ import SignInPage from "./pages/signinpage/SignInPage.jsx";
 import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
 import SearchResultpage from "./pages/searchresultpage/SearchResultpage.jsx";
+import ComparePage from "./pages/comparepage/ComparePage.jsx";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<ComingSoon />} />
-      <Route path="/signin" element={<ComingSoon />} />
+      {/* <Route path="/" element={<ComingSoon />} /> */}
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/signin" element={<SignInPage />} />
       <Route path="/signup" element={<ComingSoon />} />
-      <Route path="/apartment/properties" element={<ComingSoon />} />
+      <Route path="/property" element={<PropertyPage />} />
       <Route
         path="/Rent affordability calculator"
         element={<AffordabilityCalculator />}
@@ -41,6 +43,15 @@ function App() {
       <Route path="/contact" element={<ContactUsPage />} />
       <Route path="/accessId" element={<AccessCodePage />} />
       <Route path="/landlord/manage rentals" element={<ManageRentals />} />
+      <Route
+        path="/search"
+        element={<SearchResultpage forShortlet={false} />}
+      />
+      <Route
+        path="/shortlet"
+        element={<SearchResultpage forShortlet={true} />}
+      />
+      <Route path="/compare" element={<ComparePage />} />
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/search" element={<SearchResultpage />} />
 

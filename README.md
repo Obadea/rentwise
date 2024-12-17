@@ -1,5 +1,3 @@
-
-
 # Comprehensive Project Documentation
 
 ## Overview
@@ -15,11 +13,13 @@
 ## Setup and Installation
 
 ### Prerequisites
+
 - Node.js
 - NPM (latest version)
 - Git Bash
 
 ### Installation Steps
+
 1. Clone the GitHub repository:
    ```bash
    git clone https://github.com/yourusername/rentwise.git
@@ -39,6 +39,7 @@
 5. Access the application by visiting `http://localhost:3000/`.
 
 ## Third-Party Libraries Used
+
 - `emotion/styled`: "^11.13.0"
 - `mui/icons-material`: "^5.16.7"
 - `mui/material`: "^5.16.7"
@@ -49,8 +50,11 @@
 - `dayjs`: "^1.11.13"
 - `formik`: "^2.4.6"
 - `slick-carousel`: "^1.8.1"
+- `@nextui-org/react`: "^2.6.8",
+- `react-zoom-pan-pinch`:"^3.6.1"
 
 ## Pages Built
+
 - Landing Page
 - About Us Page
 - Access Code Page
@@ -71,3 +75,6 @@
 - Statesmen Page
 - Wisemen Page
 
+## Pushing to main branch
+
+When pushing or pulling, use `origin2`
