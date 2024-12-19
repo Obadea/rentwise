@@ -1,25 +1,39 @@
 import React, { useState } from "react";
 import Logo from "../../components/Logo";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
+import { forgotPassWordVerifyOtp } from "../../utils/endpoint";
+import { toast } from "react-toastify";
+import { useAuth } from "../../utils/AuthContext";
+import { InputOtp } from "@nextui-org/react";
 
 function OtpReset() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [value, setValue] = React.useState("");
+  const [isLoading, setIsLoading] = React.useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Call API to submit form data
-    console.log("Form submitted:", { email, password });
-    // Replace with your API call
-    // fetch('/api/signin', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ email, password }),
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.error(error));
-  };
+  const location = useLocation();
+  const email = location.state;
+  const { token, login } = useAuth();
+
+  const mutation = useMutation({
+    mutationFn: forgotPassWordVerifyOtp,
+    onSuccess: async (data) => {
+      toast(data?.message, { type: "success", draggable: true });
+      setIsLoading(false);
+      login(data);
+      setValue("");
+      // Todo: NAvigate to input new password
+      navigate("/");
+      // console.log(data);
+    },
+
+    onError: async (err) => {
+      toast(err?.message, { type: "error", draggable: true });
+      // console.log(err);
+      setIsLoading(false);
+    },
+  });
 
   return (
     <div className="flex flex-col lg:flex-row h-screen  min-h-[500px]  ">
@@ -37,36 +51,23 @@ function OtpReset() {
           </h2>
           <p className="text-base font-normal text-customBlackShade">
             OTP has been sent to{" "}
-            <span className="text-customaccent">akomolafe123@icloud.com</span>{" "}
-            If you don’t get the email soon, check your spam folder
+            <span className="text-customaccent">{email}</span> If you don’t get
+            the email soon, check your spam folder
           </p>
         </div>
         <div className="mt-8">
-          <form action="#" className="flex flex-col gap-32">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                id="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder="akomolafe1234@yahoo.com"
-                className="border border-customBlackShade pl-2 py-1"
-              />
-            </div>
-
-            <div className="mt-4 mb-2 flex flex-col gap-6">
-              <Link
-                to="/otpreset"
-                className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold "
-              >
-                Reset Password
-              </Link>
-              <button className="font-medium text-base text-customSearchblue text-center">
-                Resend OTP
-              </button>
-            </div>
-          </form>
+          <InputOtp
+            variant="bordered"
+            length={6}
+            value={value}
+            onValueChange={setValue}
+            className="m-auto"
+            onComplete={() => {
+              setIsLoading(true);
+              mutation.mutate({ otp: value, token: token });
+            }}
+            isDisabled={isLoading}
+          />
         </div>
       </div>
       <div

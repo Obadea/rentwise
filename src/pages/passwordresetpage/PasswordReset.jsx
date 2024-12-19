@@ -1,25 +1,33 @@
 import React, { useState } from "react";
 import Logo from "../../components/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button, Form, Input } from "@nextui-org/react";
+import { useMutation } from "@tanstack/react-query";
+import { passWordResetOtp } from "../../utils/endpoint";
+import { toast } from "react-toastify";
 
 function Passwordreset() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [action, setAction] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const navigate = useNavigate();
+  const [email, setEmail] = useState();
+  const mutation = useMutation({
+    mutationFn: passWordResetOtp,
+    onSuccess: async (data) => {
+      setIsLoading(false);
+      toast(data?.message, { type: "success", draggable: true });
+      navigate("/otpreset", { state: email });
+    },
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Call API to submit form data
-    console.log("Form submitted:", { email, password });
-    // Replace with your API call
-    // fetch('/api/signin', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ email, password }),
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.error(error));
-  };
+    onError: async (err) => {
+      setIsLoading(false);
+      toast(err?.response?.data.error.message, {
+        type: "error",
+        draggable: true,
+      });
+      console.log(err);
+    },
+  });
 
   return (
     <div className="flex flex-col lg:flex-row h-screen  min-h-[500px]  ">
@@ -36,33 +44,44 @@ function Passwordreset() {
             Password Reset
           </h2>
           <p className="text-base font-normal text-customBlackShade">
-            Enter email address and password you registered with and we’ll send
-            you an OTP to reset your password.
+            Enter email address you registered with and we’ll send you an OTP to
+            reset your password.
           </p>
         </div>
         <div className="mt-8">
-          <form action="#" className="flex flex-col gap-32">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                id="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder="akomolafe1234@yahoo.com"
-                className="border border-customBlackShade pl-2 py-1"
-              />
-            </div>
-
-            <div className="mt-4 mb-2 flex flex-col gap-6">
-              <Link
-                to="/otpreset"
-                className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-base flex justify-center items-center  font-bold "
-              >
-                Send Password Reset Code
-              </Link>
-            </div>
-          </form>
+          <Form
+            className="w-full  flex flex-col gap-4"
+            validationBehavior="native"
+            onReset={() => setAction("reset")}
+            onSubmit={(e) => {
+              e.preventDefault();
+              let data = Object.fromEntries(new FormData(e.currentTarget));
+              setAction(`submit ${JSON.stringify(data)}`);
+              setIsLoading(true);
+              setEmail(data?.email);
+              mutation.mutate(data);
+              // console.log(JSON.stringify(data));
+            }}
+          >
+            <Input
+              isRequired
+              errorMessage="Please enter a valid email"
+              label="Email"
+              labelPlacement="outside"
+              name="email"
+              placeholder="Enter your email"
+              type="email"
+              isDisabled={isLoading}
+            />
+            <Button
+              color="primary"
+              type="submit"
+              className="w-full"
+              isLoading={isLoading}
+            >
+              Send OTP
+            </Button>
+          </Form>
         </div>
       </div>
       <div

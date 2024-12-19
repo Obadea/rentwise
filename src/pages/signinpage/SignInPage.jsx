@@ -1,32 +1,61 @@
 import React, { useState } from "react";
 import Logo from "../../components/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import swimming from "../../assets/swimmingpool.jpg";
 import GoogleOauth from "./components/GoogleOauth";
 import { googleLogout } from "@react-oauth/google";
 
 import Profile from "./Profile";
+import { Button, Form, Input } from "@nextui-org/react";
+import { SvgFacebookIcon, SvgGoogleIcon } from "../../utils/SvgIcons";
+import { useMutation } from "@tanstack/react-query";
+import { signInApi } from "../../utils/endpoint";
+import { toast } from "react-toastify";
+import { useAuth } from "../../utils/AuthContext";
+// import { Form } from "formik";
 function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [action, setAction] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
-  const [user, setUser] = useState(null);
-  const [profiler, setProfiler] = useState(null);
+  const mutation = useMutation({
+    mutationFn: signInApi,
+    onSuccess: async (data) => {
+      setIsLoading(false);
+      console.log(data);
+      toast(data?.message, { type: "success", draggable: true });
+      login(data);
+      navigate("/");
+    },
 
-  const logOut = () => {
-    googleLogout();
-    setProfiler(null);
-  };
+    onError: async (err) => {
+      setIsLoading(false);
+      toast(err?.response?.data.error.message, {
+        type: "error",
+        draggable: true,
+      });
+      console.log(err);
+    },
+  });
+
+  // const [user, setUser] = useState(null);
+  // const [profiler, setProfiler] = useState(null);
+
+  // const logOut = () => {
+  //   googleLogout();
+  //   setProfiler(null);
+  // };
   // More on testing the facebook Api
-  const responseFacebook = (response) => {
-    if (response.accessToken) {
-      // You can handle the login response here
-      console.log("Login Success", response);
-      setUser(response);
-    } else {
-      console.log("Login Failed", response);
-    }
-  };
+  // const responseFacebook = (response) => {
+  //   if (response.accessToken) {
+  //     // You can handle the login response here
+  //     console.log("Login Success", response);
+  //     setUser(response);
+  //   } else {
+  //     console.log("Login Failed", response);
+  //   }
+  // };
 
   // const handleSubmit = (event) => {
   //   event.preventDefault();
@@ -42,12 +71,12 @@ function SignInPage() {
   // .then(data => console.log(data))
   // .catch(error => console.error(error));
   // };
-  if (profiler) {
-    return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
-  }
+  // if (profiler) {
+  //   return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
+  // }
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
-      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
+      <div className=" my-4 mx-auto px-3 lg:px-16 mt-8  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -62,7 +91,7 @@ function SignInPage() {
           </p>
         </div>
         <div className="mt-8">
-          <form action="#" className="flex flex-col gap-4">
+          {/* <form action="#" className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input
@@ -103,9 +132,75 @@ function SignInPage() {
                 </Link>
               </p>
             </div>
-          </form>
+          </form> */}
+          <Form
+            className="w-full  flex flex-col gap-4"
+            validationBehavior="native"
+            onReset={() => setAction("reset")}
+            onSubmit={(e) => {
+              e.preventDefault();
+              let data = Object.fromEntries(new FormData(e.currentTarget));
+              setAction(`submit ${JSON.stringify(data)}`);
+              setIsLoading(true);
+              mutation.mutate(data);
+              // console.log(JSON.stringify(data));
+            }}
+          >
+            <Input
+              isRequired
+              errorMessage="Please enter a valid email"
+              label="Email"
+              labelPlacement="outside"
+              name="email"
+              placeholder="Enter your email"
+              type="email"
+              isDisabled={isLoading}
+            />
+
+            <Input
+              isRequired
+              errorMessage="Password must be up to 8 characters"
+              label="Password"
+              labelPlacement="outside"
+              name="password"
+              placeholder="Enter your password"
+              type="password"
+              isDisabled={isLoading}
+              minLength={7}
+            />
+            <Link
+              to="/passwordreset"
+              className=" font-bold text-customSearchblue"
+            >
+              Forgot passsword?
+            </Link>
+            <Button
+              color="primary"
+              type="submit"
+              className="w-full"
+              isLoading={isLoading}
+            >
+              Sign In
+            </Button>
+          </Form>
+          <Link to="/accessId">
+            <Button
+              color="default"
+              className="w-full mt-7"
+              variant="bordered"
+              isLoading={isLoading}
+            >
+              Sign In as a Landlord/Wisemen here
+            </Button>
+          </Link>
+          <p className="text-base font-normal mt-8 text-customBlackShade text-center">
+            Dont have an account?{" "}
+            <Link to="/signup" className="text-customaccent">
+              Create an account
+            </Link>
+          </p>
           <div className="container mx-auto text-center my-6">
-            <div className="or-tag relative inline-block mx-4 flex justify-center items-center">
+            <div className="or-tag relative  mx-4 flex justify-center items-center">
               <div className="w-1/2 h-1 bg-gray-300"></div>
               <span className="mx-4 font-normal text-customStreetcolor text-[18px]">
                 or
@@ -113,7 +208,15 @@ function SignInPage() {
               <div className="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex gap-2 justify-between mb-3">
+          <div className="flex gap-2 justify-between w-[80%] mb-3 items-center m-auto">
+            <Button variant="bordered" startContent={<SvgGoogleIcon />}>
+              Sign In Using Google
+            </Button>
+            <Button startContent={<SvgFacebookIcon />} variant="bordered">
+              Sign In Using Facebook
+            </Button>
+          </div>
+          {/* <div className="flex gap-2 justify-between mb-3">
             <GoogleOauth
               user={user}
               setUser={setUser}
@@ -128,20 +231,20 @@ function SignInPage() {
                 alt="img"
               />
               Sign in Using Facebook
-            </h4>
+            </h4> */}
 
-            {/* Testing the facebook API */}
-            <div>
-              {/* <ReactFacebookLogin
+          {/* Testing the facebook API */}
+          {/* <div>
+              <ReactFacebookLogin
                 appId="" // Replace with your Facebook App ID
                 autoLoad={false}
                 fields="name,email,picture"
                 callback={responseFacebook}
                 icon="fa-facebook"
                 className="bg-white"
-              /> */}
+              />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

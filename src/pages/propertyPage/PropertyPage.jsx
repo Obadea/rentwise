@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 
 import PropertyOverview from "./components/PropertyOverview";
@@ -28,22 +28,44 @@ import { getSingleProperty } from "../../utils/endpoint";
 import { useQuery } from "@tanstack/react-query";
 
 function PropertyPage() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const propertyID = urlParams.get("id");
+  // const urlParams = new URLSearchParams(window.location.search);
+  // const [propertyID, setPropertyID] = useState(urlParams.get("id"));
 
-  const { status, data, error, isLoading } = useQuery({
-    queryKey: ["singleProperty"],
-    queryFn: () => {
-      return getSingleProperty(propertyID);
-    },
-    // enabled: propertyID === String,
+  const [propertyID, setPropertyID] = useState(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("id");
   });
 
+  const { status, data, error, isLoading, refetch } = useQuery({
+    queryKey: ["singleProperty", propertyID],
+    queryFn: () => getSingleProperty(propertyID),
+    enabled: !!propertyID, // Only fetch if propertyID is defined
+  });
+
+  // Update `propertyID` when URL changes
+  useEffect(() => {
+    const handleUrlChange = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const newID = urlParams.get("id");
+      if (newID !== propertyID) {
+        setPropertyID(newID);
+      }
+    };
+
+    // // Listen for URL changes (e.g., history.pushState/popstate)
+    // window.addEventListener("popstate", handleUrlChange);
+
+    // return () => {
+    //   window.removeEventListener("popstate", handleUrlChange);
+    // };
+  }, [propertyID]);
+
+  // Log data when loading completes
   useEffect(() => {
     if (!isLoading) {
       console.log(data);
     }
-  }, [isLoading]);
+  }, [isLoading, data]);
 
   return (
     <div className="bg-[#FAFBFF]">
@@ -93,7 +115,7 @@ function PropertyPage() {
         </nav>
       </div>
       <PropertyName propertyData={data} className="hidden lg:flex" />
-      <div className=" px-3 flex gap-3 lg:px-12">
+      <div className=" px-2 flex gap-3 lg:px-10">
         <div className="flex-[3] ">
           {/* <ImageMapChanger className="flex lg:hidden" /> */}
           <ImageSlider propertyData={data} isLoading={isLoading} />
@@ -127,7 +149,7 @@ function PropertyPage() {
             <WalkScore id="workscore" propertyData={data} />
             <ContactInfo id="contact" propertyData={data} />
             <Review id="review" propertyData={data} />
-            <PostReview />
+            <PostReview propertyID={data?.property?.property?.id} />
             <SimilarListing id="imilar" />
           </ScrollSpy>
         </div>

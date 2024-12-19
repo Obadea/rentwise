@@ -20,8 +20,12 @@ function Review({ id, propertyData }) {
               ? `${propertyData?.property?.property?.reviews?.length} Reviews`
               : "Loading..."}
           </h3>
-          <Rating name="read-only" value={3} readOnly />
-          <h3>(3.33 of 5)</h3>
+          <Rating
+            name="read-only"
+            value={Number(propertyData?.property?.property?.ratingsAverage)}
+            readOnly
+          />
+          <h3>({propertyData?.property?.property?.ratingsAverage} of 5)</h3>
         </div>
         <div className="flex flex-col lg:flex-row gap-6  lg:items-center">
           {/* Sort by:<span>Default order</span> */}
@@ -38,7 +42,10 @@ function Review({ id, propertyData }) {
             ))}
           </Select>
           <div>
-            <Button className="px-4 text-white py-2 bg-customSearchblue rounded-lg">
+            <Button
+              href="#review"
+              className="px-4 text-white py-2 bg-customSearchblue rounded-lg"
+            >
               Leave a Review
             </Button>
           </div>
@@ -55,7 +62,9 @@ function Review({ id, propertyData }) {
               </div>
               <div className="flex flex-col w-full">
                 <div className="flex gap-3">
-                  <h3>Ayodeji</h3>
+                  <h3>
+                    {item?.user?.firstName} {item?.user?.lastName}
+                  </h3>
                   <Rating name="read-only" value={item?.rating} readOnly />
                 </div>
                 <p>{timeAgo(item?.updatedAt)}</p>

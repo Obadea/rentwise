@@ -1,71 +1,82 @@
 import React from "react";
 import RatingControl from "./RatingControl";
+import { Button, Form, Textarea } from "@nextui-org/react";
+import { useMutation } from "@tanstack/react-query";
+import { postReview } from "../../../utils/endpoint";
+import { toast } from "react-toastify";
+import { useAuth } from "../../../utils/AuthContext";
 
-function PostReview() {
+function PostReview({ propertyID }) {
+  const [action, setAction] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const { token } = useAuth();
+  const [review, setReview] = React.useState("");
+
+  const mutation = useMutation({
+    mutationFn: postReview,
+    onSuccess: async (data) => {
+      setIsLoading(false);
+      setReview("");
+      toast(data?.message, { type: "success", draggable: true });
+    },
+
+    onError: async (err) => {
+      setIsLoading(false);
+      toast(err?.message, {
+        type: "error",
+        draggable: true,
+      });
+      console.log(err);
+    },
+  });
+
+  const handleTextChange = (e) => {
+    setReview(e.target.value);
+  };
+
   return (
     <div className="px-4 py-6 lg:p-10 flex flex-col bg-white gap-4 mt-16 ">
-      <form action="#" className="flex flex-col gap-8">
-        <div className="flex justify-between py-6 pb-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
-          <h4 className=" font-medium text-lg text-customdark">
-            Leave a Review
-          </h4>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-between gap-6">
-          <div className="flex flex-col gap-2 flex-1">
-            <label
-              htmlFor="email"
-              className="font-bold text-base text-customNameBlack"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              className="pl-2 py-1 border-2 border-customBlackShade w-[100%]  text-lg rounded-md focus:outline-none focus:border-gray-500"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6">
-          <div className="flex flex-col flex-1 gap-2 ">
-            <label
-              htmlFor="email"
-              className="font-bold text-base text-customNameBlack"
-            >
-              Title
-            </label>
-            <input
-              type="text"
-              id="title"
-              placeholder="Enter your email"
-              className="pl-2 py-1 border-2 border-customBlackShade  text-lg rounded-md focus:outline-none focus:border-gray-500"
-            />
-          </div>
-          <div className="flex-1 font-bold text-base text-customNameBlack">
-            Rating:
+      <Form
+        validationBehavior="native"
+        onReset={() => setAction("reset")}
+        onSubmit={(e) => {
+          e.preventDefault();
+          let data = Object.fromEntries(new FormData(e.currentTarget));
+          setAction(`submit ${JSON.stringify(data)}`);
+          setIsLoading(true);
+          mutation.mutate({
+            propertyID: propertyID,
+            userData: data,
+            token: token,
+          });
+
+          console.log(data);
+        }}
+      >
+        <Textarea
+          name="review"
+          value={review}
+          minRows={5}
+          label="Description"
+          placeholder="Enter your review..."
+          onChange={handleTextChange}
+          isDisabled={isLoading}
+        />
+
+        <div className="flex justify-between w-full mt-8 items-center">
+          <Button
+            color="primary"
+            type="submit"
+            isDisabled={!token}
+            isLoading={isLoading}
+          >
+            {token ? "Submit Review" : "Please login to post"}
+          </Button>
+          <div>
             <RatingControl />
           </div>
         </div>
-        <div>
-          <div className="flex flex-col ">
-            <label htmlFor="" className="font-bold text-base text-[#222222]">
-              Message
-            </label>
-            <textarea
-              placeholder="Type your text here..."
-              rows="5"
-              cols="30"
-              className="border-2 border-customgray3 p-2"
-            ></textarea>
-          </div>
-        </div>
-
-        <div>
-          <button className="text-white bg-customSearchblue px-4 py-3 rounded-lg">
-            Submit Review
-          </button>
-        </div>
-      </form>
+      </Form>
     </div>
   );
 }

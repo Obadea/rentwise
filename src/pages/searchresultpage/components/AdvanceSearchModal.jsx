@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Modal,
   ModalContent,
@@ -10,15 +10,20 @@ import {
   Image,
   Input,
   Skeleton,
+  Chip,
 } from "@nextui-org/react";
 
 import binoculars from "../../../assets/binoculars.png";
 import AddIcon from "@mui/icons-material/Add";
 import { useFormik } from "formik";
 import { useMutation } from "@tanstack/react-query";
-import { houseHoldIncome } from "../../../utils/endpoint";
+import {
+  houseHoldIncome,
+  propertyRecommendation,
+} from "../../../utils/endpoint";
 import { toNaira } from "../../../utils/helperFunction";
 import { toast } from "react-toastify";
+import { SvgActiveIcon } from "../../../utils/SvgIcons";
 
 const ModalContent1 = ({ onClose, handleContentChange }) => {
   return (
@@ -177,7 +182,7 @@ const ModalContent3 = ({ onClose, handleContentChange, amount }) => {
             <Skeleton className="h-10 w-16" />
           )
         }`} */}
-          {`NGN${toNaira(Number(amount?.max_annual_rent))}`}
+          {`${toNaira(Number(amount?.max_annual_rent))}`}
         </h1>
       ) : (
         <Skeleton className="h-10 w-[60%] m-auto my-6 rounded-lg" />
@@ -212,9 +217,14 @@ const ModalContent3 = ({ onClose, handleContentChange, amount }) => {
   );
 };
 
-const AdvanceSearchModal = () => {
+const AdvanceSearchModal = ({
+  initialData,
+  setRenderProperty,
+  refetchInitalData,
+}) => {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(null);
+  // const [recommededValue, setRecommendedValue] = useState(null);
   const handleContentChange = (content) => {
     setCurrentContent(content);
   };
@@ -229,14 +239,40 @@ const AdvanceSearchModal = () => {
   const mutation = useMutation({
     mutationFn: houseHoldIncome,
     onSuccess: async (data) => {
-      console.log(data, amount);
+      // console.log(data, amount);
       setAmount(data);
+      mutationValue.mutate(amount?.max_annual_rent);
+    },
+    onError: async (err) => {
+      toast("Error Calulating Income");
+    },
+  });
+
+  const mutationValue = useMutation({
+    mutationFn: propertyRecommendation,
+    onSuccess: async (data) => {
+      // console.log(data, amount);
+      // setAmount(data);
+      setRenderProperty(data?.recommendations);
     },
     onError: async (err) => {
       console.log("error getting calulation");
       toast("Error Calulating Income");
     },
   });
+
+  useEffect(() => {
+    if (amount) {
+      mutationValue.mutate(amount?.max_annual_rent);
+    } else {
+      handleContentChange(
+        <ModalContent1
+          onClose={onClose}
+          handleContentChange={handleContentChange}
+        />
+      );
+    }
+  }, [amount]);
 
   const formik = useFormik({
     initialValues: {
@@ -255,15 +291,39 @@ const AdvanceSearchModal = () => {
 
   return (
     <>
-      <Button
-        onPress={() => {
-          onOpen();
-        }}
-        color="primary"
-        className="py-[27px]"
-      >
-        Advance Search
-      </Button>
+      <div className="flex items-end gap-3">
+        <Button
+          onPress={() => {
+            onOpen();
+          }}
+          color="primary"
+          className="py-[27px]"
+        >
+          Advance Search
+        </Button>
+        {amount ? (
+          <Chip
+            color="success"
+            startContent={<SvgActiveIcon />}
+            variant="faded"
+            onClose={() => {
+              setRenderProperty(initialData?.properties);
+              refetchInitalData?.();
+              setAmount(null);
+              handleContentChange(
+                <ModalContent1
+                  onClose={onClose}
+                  handleContentChange={handleContentChange}
+                />
+              );
+            }}
+          >
+            Active
+          </Chip>
+        ) : (
+          ""
+        )}
+      </div>
 
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg">
         <ModalContent>

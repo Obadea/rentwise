@@ -66,21 +66,21 @@ function EnquiryForm() {
             id="inquiry"
             name="inquiryType"
             onChange={formik.handleChange}
-            value={formik.values.inquiryType.toUpperCase()}
+            // value={formik.values.inquiryType.toUpperCase()}
           >
-            <option
+            {/* <option
               value=""
               className="hidden  text-customBlackShade font-normal w-full"
             >
               Property Type
-            </option>
+            </option> */}
             <option value="purchase" className="w-24">
               Purchase
             </option>
-            <option value="rent">Rent</option>
-            <option value="sell">Sell</option>
-            <option value="mortage">Mortage</option>
-            <option value="evaluation">Evaluation</option>
+            <option value="Rent">Rent</option>
+            <option value="Sell">Sell</option>
+            <option value="Mortage">Mortage</option>
+            <option value="Evaluation">Evaluation</option>
           </select>
         </div>
 
@@ -96,12 +96,12 @@ function EnquiryForm() {
             id="infoTitle"
             name="infoTitle"
             onChange={formik.handleChange}
-            value={formik.values.infoTitle.toUpperCase()}
+            // value={formik.values.infoTitle.toUpperCase()}
           >
             <option value="" className="hidden w-full text-red-500 font-normal">
               I am a
             </option>
-            <option value="propertyOwner">Property Owner</option>
+            <option value="PropertyOwner">Property Owner</option>
             <option value="RealEstateAgent">Real Estate Agent</option>
           </select>
         </div>
@@ -113,7 +113,7 @@ function EnquiryForm() {
             className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
             name="firstName"
             onChange={formik.handleChange}
-            value={formik.values.firstName.toUpperCase()}
+            // value={formik.values.firstName.toUpperCase()}
           />
 
           <input
@@ -146,7 +146,7 @@ function EnquiryForm() {
             className="h-[38px] w-full md:h-[42px] pl-2 font-normal border rounded-lg  border-customBlackShade"
             name="Location"
             id="location"
-            value={formik.values.Location.toUpperCase()}
+            // value={formik.values.Location.toUpperCase()}
             onChange={formik.handleChange}
           >
             <option
@@ -174,7 +174,7 @@ function EnquiryForm() {
             className="font-normal h-[38px] pl-2 lg:h-[42px] border rounded-lg w-full  border-customBlackShade"
             name="propertyType"
             id="property"
-            value={formik.values.propertyType.toUpperCase()}
+            // value={formik.values.propertyType.toUpperCase()}
             onChange={formik.handleChange}
           >
             <option

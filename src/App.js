@@ -22,6 +22,7 @@ import PasswordReset from "./pages/passwordresetpage/PasswordReset.jsx";
 import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
 import SearchResultpage from "./pages/searchresultpage/SearchResultpage.jsx";
 import ComparePage from "./pages/comparepage/ComparePage.jsx";
+import OtpConfirm from "./pages/otpConfirm/OtpConfirm.jsx";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
       {/* <Route path="/" element={<ComingSoon />} /> */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/signin" element={<SignInPage />} />
-      <Route path="/signup" element={<ComingSoon />} />
+      <Route path="/signup" element={<SignUpPage />} />
       <Route path="/property" element={<PropertyPage />} />
       <Route
         path="/Rent affordability calculator"
@@ -52,6 +53,7 @@ function App() {
         element={<SearchResultpage forShortlet={true} />}
       />
       <Route path="/compare" element={<ComparePage />} />
+      <Route path="/confirmOTP" element={<OtpConfirm />} />
       <Route path="*" element={<NotFoundPage />} />
 
       <Route path="/passwordreset" element={<PasswordReset />} />
