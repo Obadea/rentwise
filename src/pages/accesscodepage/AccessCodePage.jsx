@@ -23,7 +23,8 @@ function AccessCodePage() {
   const navigate = useNavigate();
 
   const mutation = useMutation({
-    mutationFn: role === "landlord" ? signInForLandLord : signInForWisemen,
+    // mutationFn: role === "landlord" ? signInForLandLord : signInForWisemen,
+    mutationFn: signInForLandLord,
     onSuccess: async (data) => {
       setIsLoading(false);
       toast(data?.message, { type: "success", draggable: true });
@@ -62,32 +63,13 @@ function AccessCodePage() {
 
         <div className="flex flex-col gap-3 my-10">
           <h2 className="text-customblue text-2xl font-bold capitalize ">
-            Enter Access ID ({role})
+            Enter Access ID
           </h2>
           <p className="text-base font-normal text-customBlackShade">
             Enter required access ID
           </p>
         </div>
         <div className="lg:gap-6 mt-8">
-          {/* <form action="#" className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email">Access ID</label>
-              <input
-                type="text"
-                id="accessCode"
-                // value={text}
-                // onChange={(event) => setAccessCode(event.target.value)}
-                placeholder="Enter access ID"
-                className="border border-customBlackShade text-[#333333] text-2xl pl-2 py-2  "
-              />
-            </div>
-
-            <div className="lg:m-4 flex flex-col ">
-              <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-xl flex justify-center items-center  font-bold ">
-                Continue
-              </button>
-            </div>
-          </form> */}
           <Form
             className="w-full  flex flex-col gap-4"
             validationBehavior="native"
@@ -116,7 +98,7 @@ function AccessCodePage() {
               variant="bordered"
             />
 
-            <Select
+            {/* <Select
               isRequired
               errorMessage="Please Select a role"
               defaultSelectedKeys={[role]}
@@ -129,7 +111,7 @@ function AccessCodePage() {
             >
               <SelectItem key="landlord">Landlord</SelectItem>
               <SelectItem key="wisemen">Wisemen</SelectItem>
-            </Select>
+            </Select> */}
 
             <Button
               color="primary"

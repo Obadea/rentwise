@@ -50,7 +50,7 @@ const PropertiesCard = ({
     <Card
       key={key}
       isPressable={isPressable}
-      shadow="md"
+      shadow="none"
       onPress={() => {
         navigate(`/property?id=${propertyData?.id}`);
       }}

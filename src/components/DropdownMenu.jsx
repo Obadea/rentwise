@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { Link } from "react-router-dom";
 
 function DropdownMenu(props) {
   const [hover, setHover] = useState(false);
@@ -26,7 +26,7 @@ function DropdownMenu(props) {
 
       {hover && (
         <div
-          className="origin-top-right absolute left-0  w-auto  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute -left-8  w-auto  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"

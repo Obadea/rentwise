@@ -23,6 +23,7 @@ import OtpReset from "./pages/otpresetpage/OtpReset.jsx";
 import SearchResultpage from "./pages/searchresultpage/SearchResultpage.jsx";
 import ComparePage from "./pages/comparepage/ComparePage.jsx";
 import OtpConfirm from "./pages/otpConfirm/OtpConfirm.jsx";
+import ResetPasswordOtp from "./pages/resetPasswordOtp/ResetPasswordOtp.jsx";
 
 function App() {
   return (
@@ -55,9 +56,9 @@ function App() {
       <Route path="/compare" element={<ComparePage />} />
       <Route path="/confirmOTP" element={<OtpConfirm />} />
       <Route path="*" element={<NotFoundPage />} />
-
       <Route path="/passwordreset" element={<PasswordReset />} />
       <Route path="/otpreset" element={<OtpReset />} />
+      <Route path="/reset_password_otp" element={<ResetPasswordOtp />} />
     </Routes>
   );
 }

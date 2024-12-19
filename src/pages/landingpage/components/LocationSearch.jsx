@@ -7,7 +7,19 @@ import SearchBetter from "./SearchBetter";
 
 import ReusableSelect from "../../../components/ReuseableSelect";
 import { Link } from "react-router-dom";
-import { Button } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  Form,
+  Select,
+  SelectItem,
+  SelectSection,
+} from "@nextui-org/react";
+import {
+  commercialArray,
+  majorCitiesInNigeria,
+  residentArray,
+} from "../../../utils/constants";
 // import SelectDropdown from "./SelectDropdown";
 
 const propertyOptions = [
@@ -45,14 +57,21 @@ const sizeOptions = [
   { value: "four", label: "4" },
   { value: "five", label: "5" },
   { value: "six", label: "6" },
+  { value: "seven", label: "7" },
+  { value: "eight", label: "8" },
+  { value: "nine", label: "9" },
+  { value: "ten", label: "10" },
+  { value: "any", label: "Any" },
 ];
 
 const incomeOptions = [
-  { value: "30000", label: "Less than ₦30,000" },
-  { value: "50000", label: "₦30,000 - ₦50,000" },
-  { value: "100000", label: "₦50,000 - ₦100,000" },
-  { value: "500000", label: "₦100,000 - ₦500,000" },
-  { value: "max", label: "Max. Price" },
+  { value: "500000", label: "500k -1M" },
+  { value: "2000000", label: "2M-3M" },
+  { value: "4000000", label: "4M-5M" },
+  { value: "6000000", label: "6M-7M" },
+  { value: "8000000", label: "8M-9M" },
+  { value: "10000000", label: "10M-15M" },
+  { value: "16000000", label: "16M Above" },
 ];
 
 function LocationSearch() {
@@ -86,6 +105,10 @@ function LocationSearch() {
   const handleClick = () => {
     setFilter(!filter);
   };
+
+  const headingClasses =
+    "w-full sticky top-1 z-20 py-1.5 px-2 bg-default-100 shadow-small rounded-small";
+
   return (
     <div>
       <div className=" flex  lg:flex justify-center lg:overflow-hidden  ">
@@ -127,11 +150,17 @@ function LocationSearch() {
             onChange={(value) => console.log(value)}
           />
           <ReusableSelect
-            options={locationOptions}
+            options={majorCitiesInNigeria}
             placeholder={"All Cities in Lagos"}
             label={"LOCATION"}
             onChange={(value) => console.log(value)}
           />
+          {/* <ReusableSelect
+            options={locationOptions}
+            placeholder={"All Cities in Lagos"}
+            label={"LOCATION"}
+            onChange={(value) => console.log(value)}
+          /> */}
           <ReusableSelect
             options={sizeOptions}
             placeholder={"Bedroom"}
@@ -154,6 +183,43 @@ function LocationSearch() {
             </Button>
           </Link>
         </form>
+        {/* <Form className="flex w-[80%]  ">
+          <div className="flex  w-full">
+            <Select
+              className="w-full"
+              label="LOOKING FOR"
+              placeholder="Property Type"
+              labelPlacement="outside"
+              classNames={{}}
+            >
+              <SelectSection
+                // classNames={{
+                //   heading: headingClasses,
+                // }}
+                title="Commercial"
+              >
+                {commercialArray.map((item) => (
+                  <SelectItem key={item?.key}>{item?.label}</SelectItem>
+                ))}
+              </SelectSection>
+              <SelectSection
+                // classNames={{
+                //   heading: headingClasses,
+                // }}
+                title="Residential"
+              >
+                {residentArray?.map((item) => (
+                  <SelectItem key={item.key}>{item.label}</SelectItem>
+                ))}
+              </SelectSection>
+            </Select>
+            <Select className="w-full">
+              {majorCitiesInNigeria.map((item) => (
+                <SelectItem key={item}>{item}</SelectItem>
+              ))}
+            </Select>
+          </div>
+        </Form> */}
       </div>
       {activePopup === "pop1" ? (
         <SearchBetter

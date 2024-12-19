@@ -24,7 +24,7 @@ function OtpReset() {
       login(data);
       setValue("");
       // Todo: NAvigate to input new password
-      navigate("/");
+      navigate("/reset_password_otp");
       // console.log(data);
     },
 

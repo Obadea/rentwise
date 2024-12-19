@@ -61,6 +61,7 @@ function PostReview({ propertyID }) {
           placeholder="Enter your review..."
           onChange={handleTextChange}
           isDisabled={isLoading}
+          variant="bordered"
         />
 
         <div className="flex justify-between w-full mt-8 items-center">

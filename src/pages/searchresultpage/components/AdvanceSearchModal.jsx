@@ -208,9 +208,11 @@ const ModalContent3 = ({ onClose, handleContentChange, amount }) => {
           variant="bordered"
           color="primary"
           className="lg:w-[200px] "
-          onPress={onClose}
+          onPress={() => {
+            handleContentChange?.("content2");
+          }}
         >
-          Ignore Household Income
+          Back
         </Button>
       </div>
     </div>
@@ -276,9 +278,9 @@ const AdvanceSearchModal = ({
 
   const formik = useFormik({
     initialValues: {
-      monthly_income_I: null,
-      monthly_income_II: null,
-      other_income: null,
+      monthly_income_I: undefined,
+      monthly_income_II: undefined,
+      other_income: undefined,
     },
     onSubmit: (values, { resetForm }) => {
       if (values) {
