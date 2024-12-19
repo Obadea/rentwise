@@ -1,16 +1,32 @@
 // src/components/Navbar.js
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 import Hamburger from "./Hamburger";
 import Logo from "./Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuthData } from "../utils/helperFunction";
+import { useAuth } from "../utils/AuthContext";
+import { useMutation } from "@tanstack/react-query";
+import { logOut } from "../utils/endpoint";
+import { toast } from "react-toastify";
+import { Button } from "@nextui-org/react";
 
 const Header = ({ className, newclassName }) => {
-  // const [isOpen, setIsOpen] = useState(false);
+  const { token, logout } = useAuth();
+  const navigate = useNavigate();
 
-  // const toggleMenu = () => {
-  //   setIsOpen(!isOpen);
-  // };
+  const mutation = useMutation({
+    mutationFn: logOut,
+    onSuccess: async (data) => {
+      logout();
+      navigate("/");
+      toast(data.message, { type: "success", draggable: true });
+    },
+    onError: async (err) => {
+      toast(err.message, { type: "error", draggable: true });
+      console.log(err);
+    },
+  });
 
   let options;
   return (
@@ -24,12 +40,12 @@ const Header = ({ className, newclassName }) => {
         <div className=" hidden lg:flex items-center gap-3 justify-between ">
           {/* location will be automated */}
 
-          <a
-            href="#q"
+          <Link
+            to="/"
             className="py-2 px-4 text-lg text-customNameBlack hover:text-customyellow"
           >
             Home
-          </a>
+          </Link>
 
           <DropdownMenu
             name="Residents"
@@ -69,20 +85,39 @@ const Header = ({ className, newclassName }) => {
             }
           />
 
-          <Link
-            to="/signin"
-            className="block py-2 px-4 text-lg
-            hover:text-customyellow"
-          >
-            {" "}
-            Sign In
-          </Link>
-          <Link
+          {token ? (
+            <Button
+              radius="none"
+              className="block h-16 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
+              onPress={() => {
+                mutation.mutate(token);
+              }}
+            >
+              Log Out
+            </Button>
+          ) : (
+            <>
+              <Link
+                to="/signin"
+                className="block py-2 px-4 text-lg
+          hover:text-customyellow"
+              >
+                Sign In
+              </Link>
+              <Link
+                to="signup"
+                className="block py-5 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
+              >
+                Sign Up
+              </Link>
+            </>
+          )}
+          {/* <Link
             to="accessId"
             className="block py-5 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
           >
             Add property
-          </Link>
+          </Link> */}
         </div>
       </nav>
       <Hamburger />

@@ -1,3 +1,5 @@
+export const STORAGE_KEY = "authData";
+
 export function toNaira(amount) {
   // Check if amount is a valid number
   if (isNaN(amount)) {
@@ -41,3 +43,29 @@ export function timeAgo(dateString) {
 
   return "Just now";
 }
+
+export const setAuthData = (data) => {
+  const expiryDate = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+  const value = { ...data, expiry: expiryDate };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+};
+
+export const getAuthData = () => {
+  const storedData = localStorage.getItem(STORAGE_KEY);
+  if (!storedData) return null;
+
+  const parsedData = JSON.parse(storedData);
+  const currentTime = new Date().getTime();
+
+  // Check if the data has expired
+  if (currentTime > parsedData.expiry) {
+    localStorage.removeItem(STORAGE_KEY); // Remove expired data
+    return null;
+  }
+
+  return { token: parsedData?.token, user: parsedData?.data?.user };
+};
+
+export const clearAuthData = () => {
+  localStorage.removeItem(STORAGE_KEY);
+};

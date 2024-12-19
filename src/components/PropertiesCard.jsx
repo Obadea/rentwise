@@ -19,7 +19,7 @@ import {
 import { toNaira } from "../utils/helperFunction";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import ViewFullImg from "./ViewFullImg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const PropertiesCard = ({
   key,
@@ -43,6 +43,10 @@ const PropertiesCard = ({
   const navigate = useNavigate();
 
   return (
+    // <Link
+    //   to={`/property?id=${propertyData?.id}`}
+    //   className={`flex mb-6 mt-2 ml-2 ${containerClassName}`}
+    // >
     <Card
       key={key}
       isPressable={isPressable}
@@ -67,7 +71,7 @@ const PropertiesCard = ({
           <b className="truncate">{title}</b>
           <div className="flex items-center gap-1">
             <ViewFullImg img={img} />
-            {compareData.some((item) => item.id === propertyData.id) ? (
+            {compareData?.some((item) => item?.id === propertyData?.id) ? (
               <Tooltip content="Remove from compare" showArrow={true}>
                 <Button
                   isIconOnly
@@ -134,6 +138,7 @@ const PropertiesCard = ({
         </div>
       </CardFooter>
     </Card>
+    // </Link>
   );
 };
 

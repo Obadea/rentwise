@@ -1,29 +1,48 @@
 import React, { useState } from "react";
 import Logo from "../../components/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button, Form, Input } from "@nextui-org/react";
+import { useMutation } from "@tanstack/react-query";
+import { userSignUp } from "../../utils/endpoint";
+// import { setAuthData } from "../../utils/helperFunction";
+import { toast } from "react-toastify";
+import { useAuth } from "../../utils/AuthContext";
+import { SvgFacebookIcon, SvgGoogleIcon } from "../../utils/SvgIcons";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Call API to submit form data
-    console.log("Form submitted:", { email, password });
-    // Replace with your API call
-    // fetch('/api/signin', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ email, password }),
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.error(error));
-  };
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const [action, setAction] = React.useState(null);
+
+  const { login } = useAuth();
+
+  const mutation = useMutation({
+    mutationFn: userSignUp,
+    onSuccess: async (data) => {
+      setIsLoading(false);
+      toast(data?.message, { type: "success", draggable: true });
+      // setAuthData(data);
+      login(data);
+      navigate("/confirmOTP", { state: data?.data?.user?.email });
+    },
+
+    onError: async (err) => {
+      setIsLoading(false);
+      toast(err?.message, {
+        type: "error",
+        draggable: true,
+      });
+      console.log(err);
+    },
+  });
 
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
-      <div className=" my-4 mx-auto px-3 lg:pl-24 lg:pr-16  lg:w-[50%] ">
+      <div className=" my-4 mx-auto px-3 lg:px-16 lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -40,10 +59,10 @@ function SignInPage() {
           </p>
         </div>
         <div className="mt-8">
-          <form action="#" className="flex flex-col gap-4">
+          {/* <form action="#" className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
-              <input
+              <Input
                 type="text"
                 id="email"
                 value={email}
@@ -62,9 +81,6 @@ function SignInPage() {
                 placeholder="****"
                 className="border border-customBlackShade pl-2 py-1"
               />
-              {/* <a href="#" className="text-xs font-bold text-customSearchblue">
-                Forgot passsword?
-              </a> */}
             </div>
 
             <div className="mt-4 flex flex-col gap-6">
@@ -78,9 +94,59 @@ function SignInPage() {
                 </Link>
               </p>
             </div>
-          </form>
+          </form> */}
+          <Form
+            className="w-full  flex flex-col gap-4"
+            validationBehavior="native"
+            onReset={() => setAction("reset")}
+            onSubmit={(e) => {
+              e.preventDefault();
+              let data = Object.fromEntries(new FormData(e.currentTarget));
+
+              setAction(`submit ${JSON.stringify(data)}`);
+              setIsLoading(true);
+              mutation.mutate(data);
+            }}
+          >
+            <Input
+              isRequired
+              errorMessage="Please enter a valid email"
+              label="Email"
+              labelPlacement="outside"
+              name="email"
+              placeholder="Enter your email"
+              type="email"
+              isDisabled={isLoading}
+            />
+
+            <Input
+              isRequired
+              errorMessage="Password must be up to 8 characters"
+              label="Password"
+              labelPlacement="outside"
+              name="password"
+              placeholder="Enter your password"
+              type="password"
+              isDisabled={isLoading}
+              minLength={7}
+            />
+            <Button
+              color="primary"
+              type="submit"
+              className="w-full"
+              isLoading={isLoading}
+            >
+              Create an Account
+            </Button>
+          </Form>
+          <p className="text-base font-normal mt-8 text-customBlackShade text-center">
+            Already have an account?{" "}
+            <Link to="/signin" className="text-customaccent">
+              Sign In
+            </Link>
+          </p>
           <div class="container mx-auto text-center my-6">
-            <div class="or-tag relative inline-block mx-4 flex justify-center items-center">
+            <div class="or-tag relative mx-4 flex justify-center items-center">
               <div class="w-1/2 h-1 bg-gray-300"></div>
               <span class="mx-4 font-normal text-customStreetcolor text-[18px]">
                 or
@@ -88,22 +154,13 @@ function SignInPage() {
               <div class="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex gap-2 justify-around mb-3">
-            <h4 className="flex border gap-3 justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/g/35/google-icon.svg"
-                className="w-5"
-              />
+          <div className="flex gap-2 justify-between w-[80%] mb-3 items-center m-auto">
+            <Button variant="bordered" startContent={<SvgGoogleIcon />}>
               Sign up Using Google
-            </h4>
-
-            <h4 className="flex border items-center gap-2 border-customBlackShade p-2 text-customStreetcolor font-normal text-base">
-              <img
-                src="https://www.cdnlogo.com/logos/f/74/facebook.svg"
-                className="w-6"
-              />
+            </Button>
+            <Button startContent={<SvgFacebookIcon />} variant="bordered">
               Sign up Using Facebook
-            </h4>
+            </Button>
           </div>
         </div>
       </div>

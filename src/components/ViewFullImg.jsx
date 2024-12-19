@@ -32,6 +32,7 @@ const ViewFullImg = ({ img }) => {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         backdrop="blur"
+        radius="none"
         size="4xl"
         classNames={{
           closeButton: " text-black bg-black-200 z-[40] backdrop-blur-md",
@@ -41,7 +42,12 @@ const ViewFullImg = ({ img }) => {
           {(onClose) => (
             <>
               <ModalBody className="p-0 bg-transparent flex items-center justify-center">
-                <Image src={img} width="100%" />
+                <Image
+                  src={img}
+                  width="100%"
+                  radius="none"
+                  className="w-[90vw]"
+                />
               </ModalBody>
             </>
           )}

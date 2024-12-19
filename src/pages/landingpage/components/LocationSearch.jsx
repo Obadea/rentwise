@@ -6,6 +6,8 @@ import TotalIncome from "./TotalIncome";
 import SearchBetter from "./SearchBetter";
 
 import ReusableSelect from "../../../components/ReuseableSelect";
+import { Link } from "react-router-dom";
+import { Button } from "@nextui-org/react";
 // import SelectDropdown from "./SelectDropdown";
 
 const propertyOptions = [
@@ -142,14 +144,15 @@ function LocationSearch() {
             label={"HOUSEHOLD INCOME"}
             onChange={(value) => console.log(value)}
           />
-
-          <button
-            type="submit"
-            className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
-            onClick={() => setActivePopup("pop1")}
-          >
-            Search
-          </button>
+          <Link to="/search">
+            <Button
+              // type="submit"
+              className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
+              // onClick={() => setActivePopup("pop1")}
+            >
+              Search
+            </Button>
+          </Link>
         </form>
       </div>
       {activePopup === "pop1" ? (

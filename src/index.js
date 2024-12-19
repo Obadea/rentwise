@@ -8,6 +8,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { AuthProvider } from "./utils/AuthContext";
 const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,12 +16,14 @@ root.render(
   <GoogleOAuthProvider clientId="690059917144-uch23k85c1ksgbf1oihkf57hktain6qr.apps.googleusercontent.com">
     <React.StrictMode>
       <BrowserRouter>
-        <QueryClientProvider client={queryClient}>
-          <NextUIProvider>
-            <ToastContainer />
-            <App />
-          </NextUIProvider>
-        </QueryClientProvider>
+        <AuthProvider>
+          <QueryClientProvider client={queryClient}>
+            <NextUIProvider>
+              <ToastContainer />
+              <App />
+            </NextUIProvider>
+          </QueryClientProvider>
+        </AuthProvider>
       </BrowserRouter>
     </React.StrictMode>
   </GoogleOAuthProvider>

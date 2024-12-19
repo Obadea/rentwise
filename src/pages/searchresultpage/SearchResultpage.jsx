@@ -15,6 +15,7 @@ import {
   Input,
   Select,
   SelectItem,
+  Skeleton,
   useDisclosure,
 } from "@nextui-org/react";
 import { propertyData, searchPageDropDown } from "../../utils/constants";
@@ -23,10 +24,13 @@ import { toNaira } from "../../utils/helperFunction";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import AdvanceSearchModal from "./components/AdvanceSearchModal";
 import Footer from "../../components/Footer";
+import { useQuery } from "@tanstack/react-query";
+import { getAllProperties } from "../../utils/endpoint";
 
 function SearchResultpage({ forShortlet }) {
   const [compareProperty, setCompareProperty] = useState([]);
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
+
   const navigate = useNavigate();
 
   const addItem = (newItem) => {
@@ -34,6 +38,21 @@ function SearchResultpage({ forShortlet }) {
       setCompareProperty([...compareProperty, newItem]);
     }
   };
+
+  const { status, data, error, isLoading, refetch } = useQuery({
+    queryKey: ["properties"],
+    queryFn: () => {
+      return getAllProperties(20);
+    },
+  });
+
+  const [renderProperty, setRenderProperty] = useState(data?.properties);
+
+  useEffect(() => {
+    if (!isLoading) {
+      setRenderProperty(data?.properties);
+    }
+  }, [isLoading]);
 
   useEffect(() => {
     if (compareProperty.length >= 2) {
@@ -92,27 +111,48 @@ function SearchResultpage({ forShortlet }) {
                 ))}
               </Select>
             ))}
-            {forShortlet ? "" : <AdvanceSearchModal />}
+            {forShortlet ? (
+              ""
+            ) : (
+              <AdvanceSearchModal
+                initialData={data}
+                setRenderProperty={setRenderProperty}
+                refetchInitalData={refetch}
+              />
+            )}
           </div>
 
           {/* Properties */}
-          <div className="mt-10 gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-            {propertyData.map((item) => (
-              <PropertiesCard
-                key={item.id}
-                img={item?.img}
-                title={item?.title}
-                address={item?.address}
-                bedroom={item.bedroom}
-                bathroom={item?.bathroom}
-                sittingroom={item?.sittingroom}
-                amount={item?.amount}
-                addProperty={addItem}
-                propertyData={item}
-                compareData={compareProperty}
-                removeProperty={removeImage}
-              />
-            ))}
+          <div className="mt-10 gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mb-6">
+            {renderProperty ? (
+              renderProperty?.map((item) => (
+                <PropertiesCard
+                  key={item?.id}
+                  img={item?.propertyImages[6]}
+                  title={item?.name}
+                  address={item?.address}
+                  bedroom={item?.bedrooms}
+                  bathroom={item?.bathrooms}
+                  sittingroom={4}
+                  amount={Number(item?.price)}
+                  addProperty={addItem}
+                  propertyData={item}
+                  compareData={compareProperty}
+                  removeProperty={removeImage}
+                />
+              ))
+            ) : (
+              <>
+                <Skeleton className="w-full h-80 rounded-lg" />
+                <Skeleton className="w-full h-80 rounded-lg" />
+                <Skeleton className="w-full h-80 rounded-lg" />
+                <Skeleton className="w-full h-80 rounded-lg" />
+                <Skeleton className="w-full h-80 rounded-lg" />
+                <Skeleton className="w-full h-80 rounded-lg" />
+                <Skeleton className="w-full h-80 rounded-lg" />
+                <Skeleton className="w-full h-80 rounded-lg" />
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -132,7 +172,7 @@ function SearchResultpage({ forShortlet }) {
               </DrawerHeader>
               <DrawerBody>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {compareProperty.map((image) => (
+                  {compareProperty?.map((image) => (
                     <Card
                       key={image.id}
                       isFooterBlurred
@@ -156,14 +196,14 @@ function SearchResultpage({ forShortlet }) {
                         objectFit="cover"
                         borderRadius="8px"
                         className="object-cover"
-                        src={image.img}
+                        src={image.propertyImages[6]}
                       />
                       <CardFooter className="flex gap-1  bg-white/20  border-white/20 border-1 overflow-hidden absolute before:rounded-xl rounded-large bottom-1 shadow-small z-10 w-[calc(100%_-_8px)] ml-1 py-2">
                         <p className="text-xs text-black truncate">
-                          {image.title}
+                          {image.name}
                         </p>
                         <p className="text-black text-tiny ml-auto">
-                          {toNaira(image.amount)}
+                          {toNaira(image.price)}
                         </p>
                       </CardFooter>
                     </Card>
