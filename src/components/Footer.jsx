@@ -34,7 +34,7 @@ function Footer() {
       <div className="flex flex-col lg:flex-row text-white gap-12  ">
         <div className="flex-1 ">
           <h2 className="text-3xl font-bold mb-8">About Us</h2>
-          <p className="text-base font-medium lg:max-w-[67%]">
+          <p className="text-base text-customStreetcolor lg:max-w-[60%]">
             rentwise AI is an artificial intelligence platform designed to make
             finding and renting a home in Nigeria easy and stress-free. It's a
             trusted guide through the rental process, ensuring you find a place
@@ -53,7 +53,7 @@ function Footer() {
           <span className="text-yellow-500">.</span>
         </h2>
         <div>
-          <h4 className="font-sm text-white mb-2">Follow us</h4>
+          <h4 className="font-thin text-white mb-2">Follow Us</h4>
           <div className="flex gap-1 lg:gap-4 text-white">
             <YouTubeIcon sx={{ fontSize: 20 }} />
             <FacebookIcon sx={{ fontSize: 20 }} />

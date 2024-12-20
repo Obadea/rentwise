@@ -138,11 +138,11 @@ function TopProperties() {
   return (
     <div className=" py-24  bg-gray-100 bg-opacity-25">
       <div>
-        <h2 className="text-center text-2xl font-bold ">
+        <h2 className="text-center text-4xl font-bold mb-2">
           Explore Top Properties
           <span className="text-customaccent "> Around You!</span>
         </h2>
-        <p className="text-center text-base font-normal ">
+        <p className="text-center text-base font-normal text-customStreetcolor">
           There’s a home for everyone. Find the home that suits you best
         </p>
         <div className="slider-container md:max-w-[800px] mt-8 mx-auto lg:max-w-[1300px] px-6 pb-12">

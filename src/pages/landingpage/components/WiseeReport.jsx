@@ -7,6 +7,7 @@ import manteach from "../../../assets/man-teach.png";
 import mandive from "../../../assets/man-dive.png";
 import manthink from "../../../assets/man-think.png";
 import WisePopup from "./WisePopup";
+import { Button } from "@nextui-org/react";
 
 function WiseeReport() {
   const [wisePopup, setwisePopup] = useState("");
@@ -95,8 +96,8 @@ function WiseeReport() {
     <div className=" bg-[linear-gradient(180deg,_rgba(217,217,217,0.62)_9%,_#D9D9D9_41.5%,_rgba(115,115,115,0.31)_100%)] py-7">
       <div className="max-w-[630px] mx-auto  flex flex-col gap-14 px-2  lg:px-0">
         <div className="text-center flex flex-col gap-1 ">
-          <h2 className=" text-xl font-bold lg:text-3xl text-customBlackShade1 ">
-            Just Before you Make that Payment Get a copy of the WiseReport
+          <h2 className=" text-xl font-bold lg:text-3xl m-auto lg:max-w-[500px] text-center text-customBlackShade1 ">
+            Get a copy of the WiseReport
           </h2>
           <p className="text-xs font-normal text-customBlackShade1">
             A comprehensive report and data-driven guide that provides
@@ -108,19 +109,24 @@ function WiseeReport() {
         <div className="flex flex-col gap-3 px-2 ">
           {/* First component */}
           <div className="flex flex-col items-center lg:flex-row gap-2 flex-wrap   ">
-            <div className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor lg:h-[195px] py-2 px-4 h-[195px] lg:max-w-[420px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
+            <div
+              className="flex flex-row items-center gap-12 rounded-lg  bg-textcolor lg:h-[195px] py-2 px-4 h-[195px] lg:max-w-[420px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg cursor-pointer"
+              onClick={() => {
+                handleClick("pop1");
+              }}
+            >
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Comprehensive report
                 </h4>
                 <div>
-                  <h3 className="font-normal text-sm text-customblack">
+                  <h3 className="font-semibold text-sm text-customblack ">
                     Informed Decisions
                   </h3>
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Access Comprehensive reports on properties, .....
                   </h4>
-                  <button
+                  {/* <button
                     className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
                     onClick={() => {
                       handleClick("pop1");
@@ -128,7 +134,7 @@ function WiseeReport() {
                   >
                     More about informed decision{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div className="flex-1">
@@ -137,7 +143,12 @@ function WiseeReport() {
             </div>
             {/* Real tenant in review in first comp */}
             <div className="flex flex-row w-full lg:w-auto items-center lg:flex-row gap-2  ">
-              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-1 flex-col gap-7 h-[195px] lg:w-[180px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
+              <div
+                className="rounded-lg bg-textcolor py-2 px-4 flex flex-1 flex-col gap-7 h-[195px] lg:w-[180px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg cursor-pointer"
+                onClick={() => {
+                  handleClick("pop2");
+                }}
+              >
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Real tenant reviews
                 </h4>
@@ -146,13 +157,13 @@ function WiseeReport() {
                     <img src={searchDoc} alt="" />
                   </div>
 
-                  <h3 className="font-normal text-sm text-customblack">
+                  <h3 className=" text-sm text-customblack  font-semibold">
                     Transparency
                   </h3>
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Real tenant reviews......
                   </h4>
-                  <button
+                  {/* <button
                     className="font-bold text-customResultqueryGrey text-[10px]  flex items-center hover:text-customSearchblue"
                     onClick={() => {
                       handleClick("pop2");
@@ -160,12 +171,17 @@ function WiseeReport() {
                   >
                     More about transparency{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
 
               {/* Second component */}
-              <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-col flex-1 gap-7 lg:w-[200px] h-[195px] lg:hidden">
+              <div
+                className="rounded-lg bg-textcolor py-2 px-4 flex flex-col flex-1 gap-7 lg:w-[200px] h-[195px] lg:hidden"
+                onClick={() => {
+                  handleClick("pop3");
+                }}
+              >
                 {/* Explore properties */}
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Explore Properties
@@ -175,13 +191,13 @@ function WiseeReport() {
                     <img src={mandive} alt="" />
                   </div>
 
-                  <h3 className="font-normal text-sm text-customblack">
+                  <h3 className=" text-sm text-customblack font-semibold">
                     Virtual Tours
                   </h3>
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Explore homes from the .....
                   </h4>
-                  <button
+                  {/* <button
                     className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
                     onClick={() => {
                       handleClick("pop3");
@@ -189,12 +205,17 @@ function WiseeReport() {
                   >
                     More about virtual tours{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
             {/* Explore properties 2 */}
-            <div className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[180px] hidden lg:flex transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
+            <div
+              className="rounded-lg bg-textcolor py-2 px-4  flex-col gap-7 h-[195px] w-[180px] hidden lg:flex transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg cursor-pointer"
+              onClick={() => {
+                handleClick("pop3");
+              }}
+            >
               <h4 className="font-normal text-xs text-customStreetcolor">
                 Explore Properties
               </h4>
@@ -209,7 +230,7 @@ function WiseeReport() {
                 <h4 className="font-medium text-xs text-customResultqueryGrey">
                   Explore homes from the .....
                 </h4>
-                <button
+                {/* <button
                   className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
                   onClick={() => {
                     handleClick("pop3");
@@ -217,24 +238,29 @@ function WiseeReport() {
                 >
                   More about virtual tours{" "}
                   <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                </button>
+                </button> */}
               </div>
             </div>
 
             {/* Property suggestion property */}
-            <div className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 lg:max-w-[420px] h-[195px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg ">
+            <div
+              className="flex flex-row items-center gap-12 rounded-lg bg-textcolor py-2 px-4 lg:max-w-[420px] h-[195px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg cursor-pointer"
+              onClick={() => {
+                handleClick("pop4");
+              }}
+            >
               <div className="flex flex-col justify-between h-full flex-1">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Property Suggestions{" "}
                 </h4>
                 <div>
-                  <h3 className="font-normal text-sm text-customblack">
+                  <h3 className=" text-sm text-customblack font-semibold">
                     Smart Recommendations
                   </h3>
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Tailored property suggestions based on your household......
                   </h4>
-                  <button
+                  {/* <button
                     className="font-bold text-customResultqueryGrey text-[10px] flex items-center text-nowrap hover:text-customSearchblue"
                     onClick={() => {
                       handleClick("pop4");
@@ -242,7 +268,7 @@ function WiseeReport() {
                   >
                     More about smart recommendations{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div>
@@ -255,20 +281,25 @@ function WiseeReport() {
           {/* <div className="flex gap-2 "></div> */}
           {/* third Component */}
           <div className="flex flex-col items-center lg:flex-row gap-2  ">
-            <div className="flex flex-row w-full lg:max-w-[420px]  gap-12 rounded-lg bg-textcolor py-2 px-4  h-[195px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
+            <div
+              className="flex flex-row w-full lg:max-w-[420px]  gap-12 rounded-lg bg-textcolor py-2 px-4  h-[195px] transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg cursor-pointer"
+              onClick={() => {
+                handleClick("pop5");
+              }}
+            >
               <div className="flex flex-col justify-between ">
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Landlord’s Record
                 </h4>
                 <div>
-                  <h3 className="font-normal text-sm text-customblack">
+                  <h3 className=" text-sm text-customblack font-semibold">
                     Landlord Reliability
                   </h3>
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Know your landlord's track record and legal compliance
                     before .....
                   </h4>
-                  <button
+                  {/* <button
                     className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
                     onClick={() => {
                       handleClick("pop5");
@@ -276,7 +307,7 @@ function WiseeReport() {
                   >
                     More about landlord reliability{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div className="flex items-center">
@@ -285,8 +316,13 @@ function WiseeReport() {
             </div>
 
             {/* Detailed Insight comp */}
-            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-row lg:flex-col h-[195px] justify-between lg:w-auto w-full  transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg">
-              <div className="flex flex-col lg:justify-normal lg:h-full gap-7 justify-between">
+            <div className="rounded-lg bg-textcolor py-2 px-4 flex flex-row lg:flex-col h-[195px] justify-between lg:w-auto w-full  transition-transform duration-300 lg:hover:scale-[102%] hover:shadow-lg cursor-pointer">
+              <div
+                className="flex flex-col lg:justify-normal lg:h-full gap-7 justify-between"
+                onClick={() => {
+                  handleClick("pop6");
+                }}
+              >
                 <h4 className="font-normal text-xs text-customStreetcolor">
                   Detailed Insights
                 </h4>
@@ -295,13 +331,13 @@ function WiseeReport() {
                     <img src={manteach} alt="" />
                   </div>
 
-                  <h3 className="font-normal text-sm text-customblack">
+                  <h3 className=" text-sm text-customblack font-semibold">
                     Neigbourhood Safety
                   </h3>
                   <h4 className="font-medium text-xs text-customResultqueryGrey">
                     Get detailed insights into ....
                   </h4>
-                  <button
+                  {/* <button
                     className="font-bold text-customResultqueryGrey text-[10px] flex items-center hover:text-customSearchblue"
                     onClick={() => {
                       handleClick("pop6");
@@ -309,7 +345,7 @@ function WiseeReport() {
                   >
                     More about neigbourhood{" "}
                     <ArrowForwardIcon sx={{ fontSize: 20 }} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
 
@@ -321,9 +357,9 @@ function WiseeReport() {
           </div>
         </div>
         <div className="hidden lg:flex justify-center">
-          <button className="text-textcolor bg-customSearchblue p-4 font-bold text-base rounded-2xl ">
+          <Button className="text-textcolor bg-customSearchblue p-4 h-12  font-bold text-base rounded-2xl ">
             Download 21 Abraham Niyi, Street Orchid Wise Report (SAMPLE)
-          </button>
+          </Button>
         </div>
         {renderPopup()}
       </div>

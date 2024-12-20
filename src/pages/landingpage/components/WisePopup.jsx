@@ -14,12 +14,12 @@ function WisePopup({ wisePopup, header1, header2, info, details, onClose }) {
   }, []);
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-20 flex justify-center items-center z-40 transition-all duration-300 ${
+      className={`fixed inset-0 bg-black bg-opacity-20 flex justify-center items-center z-40 transition-all duration-100 backdrop-blur-md ${
         wisePopup ? " block" : " hidden"
       }`}
-      onClick={() => {
-        onClose();
-      }}
+      // onClick={() => {
+      //   onClose();
+      // }}
     >
       <div
         className={`w-[80%] lg:w-[720px] bg-white rounded-md shadow-md ${

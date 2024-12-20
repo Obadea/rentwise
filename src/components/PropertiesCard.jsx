@@ -66,8 +66,8 @@ const PropertiesCard = ({
           width="100%"
         />
       </CardBody>
-      <CardFooter className="block mb-4 px-3">
-        <div className="flex items-center justify-between mt-3">
+      <CardFooter className="block mb-4 px-0 pb-1">
+        <div className="flex items-center justify-between mt-3 px-3">
           <b className="truncate">{title}</b>
           <div className="flex items-center gap-1">
             <ViewFullImg img={img} />
@@ -115,11 +115,11 @@ const PropertiesCard = ({
             </Tooltip>
           </div>
         </div>
-        <div className="flex items-center mt-3">
+        <div className="flex items-center mt-3 px-3">
           <SvgLocationIcon />
           <p>{address}</p>
         </div>
-        <div className="flex items-center mt-5 gap-2">
+        <div className="flex items-center mt-5 gap-2 px-3">
           <SvgBedIcon className="stroke-3 w-4 h-4" />
           <p className="text-[13px]">{bedroom} Bed</p>
           <SvgBathIcon />
@@ -127,12 +127,12 @@ const PropertiesCard = ({
           <SvgChairIcon />
           <p className="text-[13px]">{sittingroom} Sitting Room</p>
         </div>
-        <div className="flex mt-5 items-center justify-between">
-          <p className="font-medium text-xl">
+        <div className="flex mt-5 items-center justify-between border-t-1 pt-2">
+          <p className="font-medium text-xl pl-3">
             {toNaira(amount)}
             <span className="text-sm font-light">/{amountDate}</span>
           </p>
-          <p className="text-[12px] font-bold text-customProfileblue">
+          <p className="text-[12px] font-bold text-customProfileblue pr-3">
             DETAILS
           </p>
         </div>

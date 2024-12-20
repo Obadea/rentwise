@@ -60,20 +60,20 @@ function StatemenComponent() {
     ],
   };
   return (
-    <div className=" flex flex-col justify-center pt-12 bg-customaccent100">
+    <div className=" flex flex-col justify-center pt-14 bg-customaccent100 pb-10">
       <div>
         <h2 className="text-center font-bold text-xl lg:text-3xl  ">
-          Meet Our State-men
+          Meet Our Wise-men
         </h2>
-        <p className="text-center text-small lg:text-base font-normal">
+        <p className="text-center text-small lg:text-base font-thin text-customStreetcolor">
           Our expert agents are here to guide you in finding the perfect
           property with personalized, professional service.
         </p>
 
         {/* Slider for mobile view */}
-        <div className=" pb-24 lg:hidden">
+        <div className="  lg:hidden ">
           <div>
-            <div className="slider-container px-10 mt-8 ">
+            <div className="slider-container bg-customaccent100 px-10 mt-8 ">
               <Slider {...settings} className="">
                 <StatemenCard
                   bayo={bayo}

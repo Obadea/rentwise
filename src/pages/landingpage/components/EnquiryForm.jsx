@@ -106,11 +106,11 @@ function EnquiryForm() {
           </select>
         </div>
 
-        <div className="flex justify-between gap-2 lg:gap-6">
+        <div className="flex justify-between gap-2 lg:gap-6 w-full">
           <input
             type="text"
             placeholder="First Name"
-            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-full flex-grow md:h-[42px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
             name="firstName"
             onChange={formik.handleChange}
             // value={formik.values.firstName.toUpperCase()}
@@ -119,7 +119,7 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="Last Name"
-            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
+            className="h-[38px] w-full  flex-grow md:h-[42px] pl-4 border rounded-lg text-sm lg:text-base border-customBlackShade"
             name="lastName"
             onChange={formik.handleChange}
             value={formik.values.lastName.toUpperCase()}
@@ -200,11 +200,11 @@ function EnquiryForm() {
           </select>
         </div>
 
-        <div className="flex justify-between gap-2 lg:gap-6">
+        <div className="flex justify-between gap-2 lg:gap-6 w-full">
           <input
             type="text"
             placeholder="Max Price"
-            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
+            className="h-[38px]  flex-grow md:h-[42px]  pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade w-full"
             name="maxPrice"
             onChange={formik.handleChange}
             value={formik.values.maxPrice}
@@ -212,17 +212,17 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="Minimum size (Sq Ft)"
-            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
+            className="h-[38px] flex-grow md:h-[42px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade w-full"
             name="MinSize"
             onChange={formik.handleChange}
             value={formik.values.MinSize}
           />
         </div>
-        <div className="flex justify-between gap-2 lg:gap-6">
+        <div className="flex justify-between gap-2 lg:gap-6 w-full">
           <input
             type="text"
             placeholder="Number of beds"
-            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
+            className="h-[38px]  flex-grow md:h-[42px]  pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade w-full"
             name="numberOfBeds"
             onChange={formik.handleChange}
             value={formik.values.numberOfBeds}
@@ -230,7 +230,7 @@ function EnquiryForm() {
           <input
             type="text"
             placeholder="Number of baths"
-            className="h-[38px] w-[127px] flex-grow md:h-[42px] md:w-[217.5px] pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade"
+            className="h-[38px] flex-grow md:h-[42px]  pl-4 border rounded-lg text-sm lg:text-bases border-customBlackShade w-full"
             name="numberOfBaths"
             onChange={formik.handleChange}
             value={formik.values.numberOfBaths}
