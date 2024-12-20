@@ -111,7 +111,7 @@ function LocationSearch() {
 
   return (
     <div>
-      <div className=" flex  lg:flex justify-center lg:overflow-hidden  ">
+      <div className=" flex  lg:flex justify-center lg:overflow-hidden h-28 ">
         <div className="max-w-[600px] flex lg:hidden justify-between items-center   gap-2 absolute -bottom-5 ">
           <div className="bg-customsearchinput min-w-[294px] h-[52px] flex flex-grow justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
             <input
