@@ -69,9 +69,10 @@ function PropertyPage() {
 
   return (
     <div className="bg-[#FAFBFF]">
-      <Header className="relative x" />
+      <Header className="fixed lg:relative x bg-white " />
+      {/* <Header className="relative x" /> */}
       <div>
-        <nav className=" hidden lg:flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold ">
+        <nav className=" hidden lg:flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold">
           <a href="#overview" data-to-scrollspy-id="overview">
             Overview
           </a>
@@ -114,12 +115,15 @@ function PropertyPage() {
           </a>
         </nav>
       </div>
-      <PropertyName propertyData={data} className="hidden lg:flex" />
-      <div className=" px-2 flex gap-3 lg:px-10">
-        <div className="flex-[3] ">
+      <PropertyName
+        propertyData={data}
+        className="hidden lg:flex lg:px-[100px]"
+      />
+      <div className=" px-2 flex gap-3 lg:px-[110px]">
+        <div className="flex-[3] w-full">
           {/* <ImageMapChanger className="flex lg:hidden" /> */}
           <ImageSlider propertyData={data} isLoading={isLoading} />
-          <PropertyName className="flex lg:hidden" />
+          <PropertyName propertyData={data} className="flex lg:hidden" />
           {/* <Schedule Tour /> */}
           {/* Overview component */}
 

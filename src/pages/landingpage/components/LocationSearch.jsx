@@ -111,8 +111,8 @@ function LocationSearch() {
 
   return (
     <div>
-      <div className=" flex  lg:flex justify-center lg:overflow-hidden h-28 ">
-        <div className="max-w-[600px] flex lg:hidden justify-between items-center   gap-2 absolute -bottom-5 ">
+      <div className=" flex  lg:flex justify-center lg:overflow-hidden ">
+        <div className="max-w-[600px] flex lg:hidden justify-between items-center   gap-2 absolute -bottom-5  ">
           <div className="bg-customsearchinput min-w-[294px] h-[52px] flex flex-grow justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
             <input
               type="text"
@@ -135,9 +135,9 @@ function LocationSearch() {
         <form
           className={`${
             filter
-              ? "flex flex-col items-center  relative top-32 w-[80%] z-10 lg:hidden"
+              ? "flex flex-col items-center  relative top-32 w-[80%] lg:hidden"
               : "hidden"
-          }  text-black lg:flex flex-shrink justify-evenly bg-gray-100 px-6 py-4 gap-6 rounded-lg`}
+          }  text-black lg:flex flex-shrink justify-evenly bg-gray-100 px-6 py-4 gap-6 rounded-lg z-[1]`}
           onSubmit={(e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -174,13 +174,15 @@ function LocationSearch() {
             onChange={(value) => console.log(value)}
           />
           <Link to="/search">
-            <Button
+            <button
               // type="submit"
               className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
               // onClick={() => setActivePopup("pop1")}
+              // onPress={}
+              href="/search"
             >
               Search
-            </Button>
+            </button>
           </Link>
         </form>
         {/* <Form className="flex w-[80%]  ">

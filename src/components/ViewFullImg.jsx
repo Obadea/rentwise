@@ -34,6 +34,7 @@ const ViewFullImg = ({ img }) => {
         backdrop="blur"
         radius="none"
         size="4xl"
+        placement="center"
         classNames={{
           closeButton: " text-black bg-black-200 z-[40] backdrop-blur-md",
         }}

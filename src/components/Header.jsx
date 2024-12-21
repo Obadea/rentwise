@@ -90,6 +90,7 @@ const Header = ({ className, newclassName }) => {
             <Button
               radius="none"
               className="block h-16 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
+              // logout
               onPress={() => {
                 // mutation.mutate(token);
               }}

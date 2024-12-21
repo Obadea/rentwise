@@ -75,8 +75,8 @@ function SignInPage() {
   //   return <Profile profile={profiler} logOut={logOut} />; // Render Profile component if user is logged in
   // }
   return (
-    <div className="flex flex-col lg:flex-row  min-h-screen  ">
-      <div className=" my-4 mx-auto px-3 lg:px-16 mt-8  lg:w-[50%] ">
+    <div className="flex flex-col lg:flex-row  min-h-screen w-full ">
+      <div className=" my-4 mx-auto px-3 lg:px-16 mt-8  lg:w-[50%] w-[80%]">
         <div className="flex justify-between ">
           <Logo />
           <button className="font-bold text-sm text-customSearchblue lg:hidden">
@@ -86,7 +86,7 @@ function SignInPage() {
 
         <div className="flex flex-col gap-3 mt-8">
           <h2 className="text-customblue text-2xl font-bold ">Sign In</h2>
-          <p className="text-base font-normal text-customBlackShade">
+          <p className="text-base font-normal text-customBlackShade max-w-[80%]">
             Enter email address and password you registered with.
           </p>
         </div>
@@ -155,6 +155,7 @@ function SignInPage() {
               placeholder="Enter your email"
               type="email"
               isDisabled={isLoading}
+              className=""
             />
 
             <Input
@@ -167,6 +168,7 @@ function SignInPage() {
               type="password"
               isDisabled={isLoading}
               minLength={7}
+              className="w-full"
             />
             <Link
               to="/passwordreset"
@@ -177,7 +179,7 @@ function SignInPage() {
             <Button
               color="primary"
               type="submit"
-              className="w-full"
+              className="w-full m-auto"
               isLoading={isLoading}
             >
               Sign In
@@ -189,6 +191,7 @@ function SignInPage() {
               className="w-full mt-7"
               variant="bordered"
               isLoading={isLoading}
+              onPress={() => navigate("/accessId")}
             >
               Sign In as a Landlord/Wisemen here
             </Button>
@@ -208,11 +211,19 @@ function SignInPage() {
               <div className="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex gap-2 justify-between w-[80%] mb-3 items-center m-auto">
-            <Button variant="bordered" startContent={<SvgGoogleIcon />}>
+          <div className="flex gap-3 justify-between mb-3 items-center m-auto xl:flex-row flex-col">
+            <Button
+              variant="bordered"
+              className="w-full"
+              startContent={<SvgGoogleIcon />}
+            >
               Sign In Using Google
             </Button>
-            <Button startContent={<SvgFacebookIcon />} variant="bordered">
+            <Button
+              startContent={<SvgFacebookIcon />}
+              className="w-full"
+              variant="bordered"
+            >
               Sign In Using Facebook
             </Button>
           </div>

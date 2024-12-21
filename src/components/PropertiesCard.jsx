@@ -61,14 +61,14 @@ const PropertiesCard = ({
           alt={title}
           className="w-full object-cover h-[226.5px]"
           radius="none"
-          shadow="sm"
+          shadow="none"
           src={img}
           width="100%"
         />
       </CardBody>
       <CardFooter className="block mb-4 px-0 pb-1">
-        <div className="flex items-center justify-between mt-3 px-3">
-          <b className="truncate">{title}</b>
+        <div className="flex items-center justify-between mt-3 px-3 gap-8">
+          <b className="truncate">{title} </b>
           <div className="flex items-center gap-1">
             <ViewFullImg img={img} />
             {compareData?.some((item) => item?.id === propertyData?.id) ? (

@@ -15,7 +15,7 @@ function PropertyName({ className, propertyData }) {
     <div
       className={`flex-col-reverse lg:flex-row justify-between lg:px-8 mt-4 ${className}`}
     >
-      <div className=" ml-4 flex flex-col gap-4 ">
+      <div className=" ml-4 flex flex-col gap-4  ">
         <Breadcrumb />
         {propertyData?.property?.property?.name ? (
           <h3 className="font-bold text-3xl text-customblack1">

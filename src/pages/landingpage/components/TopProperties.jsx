@@ -174,7 +174,8 @@ function TopProperties() {
                   propertyData={item}
                   compareData={compareProperty}
                   removeProperty={removeImage}
-                  className="max-w-96 lg:min-w-[320px]"
+                  className=" lg:min-w-[320px]"
+                  containerClassName="max-w-96"
                 />
               ))}
             </Slider>

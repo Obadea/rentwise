@@ -9,11 +9,12 @@ const CompareProperties = ({ compareData }) => {
   return (
     <div className={`overflow-x-scroll w-full flex`}>
       {compareData?.map((property) => (
-        <div className="w-full box-content  whitespace-nowrap items-center justify-center min-w-56 ">
+        <div className="w-full box-content bg-white whitespace-nowrap items-center justify-center min-w-56 ">
           <div className="px-2">
             <Image
               src={property?.propertyImages[6]}
-              className="h-32 "
+              className="h-32"
+              width="100%"
               isZoomed
             />
           </div>
@@ -24,7 +25,7 @@ const CompareProperties = ({ compareData }) => {
           <p className="py-1 pl-3 pr-5 bg-addpropertybg">
             {property?.propertyType}
           </p>
-          <p className="py-1 pl-3 pr-5">{property?.address}</p>
+          <p className="py-1 pl-3 pr-5 w-fit truncate">{property?.address}</p>
           <p className="py-1 pl-3 pr-5 bg-addpropertybg">{property?.city}</p>
           <p className="py-1 pl-3 pr-5">{property?.state}</p>
           <p className="py-1 pl-3 pr-5 bg-addpropertybg">{property?.zipCode}</p>

@@ -20,11 +20,11 @@ const ReusableSelect = ({
     <div className={`${className} relative`}>
       <label htmlFor={label}>{label}</label>
       <Select
-        className={`${className} relative w-52`}
+        className={`${className} relative w-52 `}
         styles={{
           menu: (provided) => ({
             ...provided,
-            zIndex: 9999, // Set a high z-index
+            zIndex: 99, // Set a high z-index
           }),
         }}
         placeholder={placeholder}
