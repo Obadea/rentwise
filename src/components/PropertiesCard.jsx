@@ -20,6 +20,7 @@ import { toNaira } from "../utils/helperFunction";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import ViewFullImg from "./ViewFullImg";
 import { Link, useNavigate } from "react-router-dom";
+import TungstenOutlinedIcon from "@mui/icons-material/TungstenOutlined";
 
 const PropertiesCard = ({
   key,
@@ -124,8 +125,10 @@ const PropertiesCard = ({
           <p className="text-[13px]">{bedroom} Bed</p>
           <SvgBathIcon />
           <p className="text-[13px]">{bathroom} Bath</p>
-          <SvgChairIcon />
-          <p className="text-[13px]">{sittingroom} Sitting Room</p>
+          {/* <SvgChairIcon />
+          <p className="text-[13px]">{sittingroom} Sitting Room</p> */}
+          <TungstenOutlinedIcon style={{ fontSize: "16px", fill: "#FC97AF" }} />
+          <p className="text-[13px]">10am-8pm Light</p>
         </div>
         <div className="flex mt-5 items-center justify-between border-t-1 pt-2">
           <p className="font-medium text-xl pl-3">
