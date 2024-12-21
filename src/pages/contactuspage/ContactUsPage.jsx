@@ -2,19 +2,19 @@ import React from "react";
 import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
 import Footer from "../../components/Footer";
-import imageInbackground from "../../assets/contactUsbackgroundImg.png";
+import imageInbackground from "../../assets/interior-workspace_inspired_by_technology.jpg";
 
 function ContactUsPage() {
   return (
     <div className="bg-textcolor">
       <Header newclassName="sticky" className="bg-textcolor" />
       <div
-        className={` px-4 bg-cover bg-center h-[200px] flex items-end pb-12 lg:px-24`}
+        className={` px-4 bg-cover bg-center h-[240px] flex items-end pb-12 lg:px-24`}
         style={{
           backgroundImage: `url(${imageInbackground})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "200px",
+          height: "240px",
         }}
       >
         <h3 className="font-bold text-white text-3xl">Contact Us</h3>

@@ -6,19 +6,25 @@ import AboutServicePhotoCard from "./components/AboutServicePhotoCard";
 import AboutBlogPost from "./components/AboutBlogPost";
 import AboutTestimonials from "./components/AboutTestimonials";
 import Footer from "../../components/Footer";
-import imageInbackground from "../../assets/aboutUsbackgroundImg.png";
+import imageInbackground from "../../assets/interior-workspace_inspired_by_technology.jpg";
+
+import minstrel from "../../assets/minstrel_lg.jpeg";
+import longCard1 from "../../assets/max-room.jpg";
+import card2 from "../../assets/palor5.jpg";
+import card3 from "../../assets/palor7.jpg";
+import card4 from "../../assets/palor6.jpg";
 
 function AboutUsPage() {
   return (
     <div className="bg-textcolor">
       <Header newclassName="sticky" className="bg-textcolor" />
       <div
-        className={` px-4 bg-cover bg-center h-[200px] flex items-end pb-12 lg:px-24`}
+        className={` px-4 bg-cover bg-center h-[240px] flex items-end pb-12 lg:px-24`}
         style={{
           backgroundImage: `url(${imageInbackground})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "200px",
+          height: "240px",
         }}
       >
         <h3 className="font-bold text-white text-3xl">About Us</h3>
@@ -54,14 +60,14 @@ function AboutUsPage() {
               Meet our Team
             </h3>
             <p className="font-normal text-base text-customStreetcolor">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              Discover the passionate individuals behind our success.
             </p>
           </div>
           <div className="flex  justify-evenly flex-wrap gap-4 lg:gap-6 md:flex-row  lg:flex-nowrap">
-            <AboutPhotoCard />
-            <AboutPhotoCard />
-            <AboutPhotoCard />
-            <AboutPhotoCard />
+            <AboutPhotoCard teamImg={minstrel} teamName="Minstrel Nwachukwu" />
+            <AboutPhotoCard teamImg={minstrel} />
+            <AboutPhotoCard teamImg={minstrel} />
+            <AboutPhotoCard teamImg={minstrel} />
           </div>
         </div>
       </div>
@@ -74,34 +80,38 @@ function AboutUsPage() {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </p>
           </div>
-          <div className="flex flex-col lg:flex-row  gap-8">
+          <div className="flex flex-col lg:flex-row  gap-5">
             {/* small squares */}
-            <div className="flex flex-col lg:flex-row lg:flex-wrap gap-6 lg:gap-10 lg:flex-1 ">
+            <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 lg:gap-5 lg:flex-1 ">
               <AboutServicePhotoCard
-                className="  w-full h-[40vw] lg:min-w-[45%] lg:h-[45%] lg:max-h-[45%]"
+                className="  w-full h-[40vw] lg:min-w-[45%] lg:h-[260px] rounded-lg"
                 paragraph="Rentwise Report"
               />
               <AboutServicePhotoCard
-                className="  w-full h-[40vw] lg:min-w-[45%] lg:h-[45%] lg:max-h-[45%]"
+                className="  w-full h-[40vw] lg:min-w-[45%] lg:h-[260px] rounded-lg"
                 paragraph="3D Virtual Tour"
+                img={card2}
               />
               <AboutServicePhotoCard
-                className=" w-full h-[50vw] lg:min-w-[45%] lg:h-[45%] lg:max-h-[45%]"
+                className=" w-full h-[50vw] lg:min-w-[45%] lg:h-[260px] rounded-lg"
                 paragraph="Rent Saver"
+                img={card3}
               />
               <AboutServicePhotoCard
-                className=" w-full h-[50vw] lg:min-w-[45%] lg:h-[45%] lg:max-h-[45%]"
+                className=" w-full h-[50vw] lg:min-w-[45%] lg:h-[260px] rounded-lg"
                 paragraph="Quick Services"
+                img={card4}
               />
             </div>
             {/* big rectangless */}
-            <div className="flex flex-col lg:flex-row lg:justify-between  gap-12 flex-1">
+            <div className="flex flex-col lg:flex-row lg:justify-between  gap-5 flex-1">
               <AboutServicePhotoCard
-                className=" w-full h-[80vw] lg:max-w-[280px] lg:w-[45%] lg:h-[30vw]"
+                className=" w-full h-[80vw] lg:max-w-full  lg:w-full lg:h-[540px]"
                 paragraph="Rent Calculator"
+                img={longCard1}
               />
               <AboutServicePhotoCard
-                className=" w-full h-[80vw] lg:max-w-[280px] lg:w-[45%] lg:h-[30vw]"
+                className=" w-full h-[80vw] lg:max-w-full  lg:w-full lg:h-[540px]"
                 paragraph="Recover Asset Value"
               />
             </div>

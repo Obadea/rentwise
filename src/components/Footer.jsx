@@ -11,8 +11,8 @@ const links1 = [
   { text: "Browse properties", path: "/" },
   { text: "WiseReport", path: "/" },
   { text: "Virtual tours", path: "/" },
-  { text: "Rent calculator", path: "/" },
-  { text: "Blog", path: "/" },
+  { text: "Rent calculator", path: "/Rent affordability calculator" },
+  { text: "Blog", path: "/blog" },
 ];
 
 const links2 = [
@@ -26,6 +26,7 @@ const links3 = [
   { text: "FAQ", path: "/" },
   { text: "Live chat", path: "/" },
   { text: "Feedback", path: "/" },
+  { text: "Contact Us", path: "/contact" },
 ];
 
 function Footer() {

@@ -9,7 +9,7 @@ function QuickServicesPage() {
       <Header />
       <div className="flex flex-col gap-3 px-20">
         <Breadcrumb />
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 mt-2">
           <h4 className="font-medium text-base text-customStreetcolor">
             Victoria Island, Lagos
           </h4>

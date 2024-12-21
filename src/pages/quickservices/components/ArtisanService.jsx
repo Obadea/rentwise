@@ -13,6 +13,14 @@ import image10 from "../../../assets/Image(10).png";
 import image11 from "../../../assets/Image(11).png";
 import image12 from "../../../assets/Image(12).png";
 import { Form, Formik } from "formik";
+import {
+  Button,
+  Checkbox,
+  CheckboxGroup,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@nextui-org/react";
 
 const categories = [
   {
@@ -155,9 +163,9 @@ function ArtisanService() {
       {categories.map((category) => (
         <div
           key={category.id}
-          className=" relative flex flex-col w-[350px] md:w-[40%] lg:w-[23%] p-2 bg-addpropertybg"
+          className=" relative flex flex-col w-[350px] md:w-[40%] lg:w-[24%] p-3  bg-addpropertybg rounded-lg"
         >
-          <div className="flex flex-row gap-4 justify-between items-center">
+          <div className="flex flex-row gap-4 justify-between lg:justify-normal items-center">
             <img src={category.image} alt={category.name} />{" "}
             {/* Add the correct src here */}
             <h4 className="font-bold text-base text-customdark">
@@ -165,17 +173,38 @@ function ArtisanService() {
             </h4>
           </div>
           <div className="flex justify-end">
-            <button
+            {/* <button
               onClick={() => handlePopup(category.id)}
-              className="text-customSearchblue font-bold text-sm"
+              className="text-customSearchblue font-medium text-sm mb-1"
             >
               Select
-            </button>
+            </button> */}
+            <Popover showArrow={true}>
+              <PopoverTrigger>
+                <p className="text-customSearchblue font-medium text-sm mb-1 mr-3 cursor-pointer">
+                  Select
+                </p>
+              </PopoverTrigger>
+              <PopoverContent>
+                <CheckboxGroup
+                  defaultValue={["buenos-aires", "london"]}
+                  label={category.name}
+                  radius="sm"
+                >
+                  {category.options.map((option) => (
+                    <Checkbox value={option}>{option}</Checkbox>
+                  ))}
+                  <Button radius="sm" color="primary" className="mb-3">
+                    Go
+                  </Button>
+                </CheckboxGroup>
+              </PopoverContent>
+            </Popover>
           </div>
 
           {/* //Pop up div */}
           {activePopup === category.id && (
-            <div className="absolute min-w-full  flex z-10 flex-col bg-white p-2 gap-2">
+            <div className="absolute min-w-full top-20 flex z-10 flex-col bg-white p-2 gap-2">
               <div className="flex text-end justify-end">
                 <HighlightOffIcon
                   onClick={() => handleClose()}

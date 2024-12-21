@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./TopProperties.css";
 // import Slidercard from "./Slidercard";
 import bayo from "../../../assets/bayo.png";
+import minstreln from "../../../assets/minstrel.png";
 import chioma from "../../../assets/chioma.png";
 import funke from "../../../assets/funke.png";
 import StatemenCard from "./StatemenCard";
@@ -77,7 +78,7 @@ function StatemenComponent() {
               <Slider {...settings} className="">
                 <StatemenCard
                   bayo={bayo}
-                  name="Adebayo Adekunle"
+                  name="Minstrel Nwachukwu"
                   level="Senior Property Consultant"
                   about="With over 6 years of experience in the real estate industry, Adebayo
           brings a wealth of knowledge and a passion for helping clients achieve
@@ -99,6 +100,14 @@ function StatemenComponent() {
                 find the perfect location to thrive. With a strategic approach
                 and a deep understanding of the commercial market,"
                 />
+                <StatemenCard
+                  bayo={bayo}
+                  name="Funke Adeyemi"
+                  level="Commercial Property Advisor"
+                  about="Funke specializes in commercial real estate, helping businesses
+                find the perfect location to thrive. With a strategic approach
+                and a deep understanding of the commercial market,"
+                />
               </Slider>
             </div>
           </div>
@@ -106,8 +115,8 @@ function StatemenComponent() {
 
         <div className="hidden lg:flex flex-row justify-around px-24 gap-2 py-6  ">
           <StatemenCard
-            bayo={bayo}
-            name="Adebayo Adekunle"
+            bayo={minstreln}
+            name="Minstrel Nwachukwu"
             level="Senior Property Consultant"
             about="With over 6 years of experience in the real estate industry, Adebayo
           brings a wealth of knowledge and a passion for helping clients achieve
@@ -123,6 +132,14 @@ function StatemenComponent() {
           />
           <StatemenCard
             bayo={funke}
+            name="Funke Adeyemi"
+            level="Commercial Property Advisor"
+            about="Funke specializes in commercial real estate, helping businesses
+                find the perfect location to thrive. With a strategic approach
+                and a deep understanding of the commercial market,"
+          />
+          <StatemenCard
+            bayo={bayo}
             name="Funke Adeyemi"
             level="Commercial Property Advisor"
             about="Funke specializes in commercial real estate, helping businesses
