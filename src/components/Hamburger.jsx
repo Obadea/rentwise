@@ -26,7 +26,7 @@ const Hamburger = () => {
   });
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden fixed top-12 ">
       {/* Hamburger Button */}
       <Menu right>
         <a className="menu-item" href="/">
