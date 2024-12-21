@@ -82,6 +82,7 @@ const Header = ({ className, newclassName }) => {
                 "Leadership",
                 "Partners",
                 "blog",
+                "contact us",
               ])
             }
           />

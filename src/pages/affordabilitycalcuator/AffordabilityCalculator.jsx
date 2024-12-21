@@ -7,6 +7,7 @@ import exitImage from "../../assets/exit.png";
 import saver from "../../assets/openaccount.png";
 import talkstateman from "../../assets/talkstateman.png";
 import { formatValue } from "react-currency-input-field";
+import Footer from "../../components/Footer";
 
 function AffordabilityCalculator() {
   const [num, setNum] = useState(0);
@@ -35,7 +36,7 @@ function AffordabilityCalculator() {
 
   return (
     <div className=" bg-[#F2F2F2]  min-h-screen ">
-      <Header />
+      <Header className="fixed bg-white" />
       <div className="flex flex-col lg:gap-12 py-6 px-4 lg:px-24">
         <div className="mb-2">
           <Breadcrumb />
@@ -56,10 +57,10 @@ function AffordabilityCalculator() {
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex flex-col lg:w-[475px]">
               <div className="flex flex-col gap-2">
-                <h3 className="font-bold text-3xl text-customNameBlack">
+                <h3 className="font-bold text-3xl text-customNameBlack mt-7">
                   How much Rent can I afford?
                 </h3>
-                <p className="font-medium text-sm text-customaccent">
+                <p className="font-medium text-sm text-customStreetcolor">
                   The platform follows a simple rule, Your Annual rent should
                   not be more than 3 times your total{" "}
                   <span className="font-bold">monthly household income</span>
@@ -222,6 +223,7 @@ function AffordabilityCalculator() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

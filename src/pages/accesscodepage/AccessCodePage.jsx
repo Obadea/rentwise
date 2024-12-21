@@ -156,13 +156,13 @@ function AccessCodePage() {
       </div>
       <div
         style={{
-          backgroundImage: `url(${require("../../../src/assets/accessImage.jpg")})`,
+          backgroundImage: `url(${require("../../../src/assets/modern-styled-entryway.jpg")})`,
           objectFit: "contain",
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="hidden lg:block flex-1 relative  w-full bg-red-600 "
+        className="hidden lg:block flex-1 relative  w-full "
       >
         <Button
           className="absolute right-14 top-9 text-white border-white border-1"

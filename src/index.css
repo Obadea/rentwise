@@ -45,3 +45,23 @@ code {
     width: 90%; /* Adjust for smaller screens */
   }
 }
+
+/* NewHeader.css */
+
+/* Remove the yellow background from menu items */
+.menu-item {
+  background-color: transparent !important; /* Ensures no background is applied */
+  color: #000; /* Adjust the text color as needed */
+  text-decoration: none; /* Optional: Removes underline from links */
+  padding: 10px; /* Optional: Adds spacing */
+}
+
+.menu-item:hover {
+  background-color: #d3cfcf; /* Optional: Adds a hover effect */
+  color: #333; /* Adjust the hover text color */
+}
+
+/* Override any default styles from react-burger-menu */
+.bm-item {
+  background-color: transparent !important;
+}

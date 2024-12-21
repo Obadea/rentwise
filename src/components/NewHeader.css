@@ -7,16 +7,19 @@
 }
 
 .bm-burger-bars {
-  background: #373a47; /* Color of the hamburger bars */
+  background: #473737; /* Color of the hamburger bars */
   height: 4px; /* Height of the bars */
-  width: 100%; /* Full width */
+  width: 100%;
   margin: 6px 0; /* Space between the bars */
   transition: all 0.3s ease; /* Smooth transition */
 }
 
 .bm-menu {
+  overflow: scroll;
   background: white; /* Background color of the menu */
-  padding: 2.5em 1.5em 0; /* Padding for the menu */
+  padding: 4px 16px;
+  padding-bottom: 27px 30px;
+  /* padding: 2 1.5em 0; Padding for the menu */
   font-size: 1.15em; /* Font size for menu items */
 }
 
@@ -30,5 +33,4 @@
 
 .bm-item:hover {
   color: rgba(37, 32, 32, 0.877);
-  background-color: #f9cc3b; /* Color change on hover */
 }

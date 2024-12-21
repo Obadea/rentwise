@@ -118,7 +118,7 @@ const PropertiesCard = ({
         </div>
         <div className="flex items-center mt-3 px-3">
           <SvgLocationIcon />
-          <p>{address}</p>
+          <p className="truncate text-nowrap w-[80%]">{address}</p>
         </div>
         <div className="flex items-center mt-5 gap-2 px-3">
           <SvgBedIcon className="stroke-3 w-4 h-4" />

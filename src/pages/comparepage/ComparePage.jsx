@@ -20,7 +20,7 @@ function ComparePage() {
 
         {/* Compare Component */}
         <div className="flex mt-14 ">
-          <div className="w-fit mt-36 text-right font-semibold capitalize">
+          <div className="w-fit mt-36 lg:mt-48 text-right font-semibold capitalize text-nowrap">
             {propertyTitles.map((title, index) => (
               <p
                 key={index}

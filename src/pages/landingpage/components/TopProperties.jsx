@@ -138,24 +138,24 @@ function TopProperties() {
   return (
     <div className=" py-24  bg-gray-100 bg-opacity-25">
       <div>
-        <h2 className="text-center text-4xl font-bold mb-2">
+        <h2 className="text-center lg:text-4xl font-bold mb-2 text-xl">
           Explore Top Properties
           <span className="text-customaccent "> Around You!</span>
         </h2>
-        <p className="text-center text-base font-normal text-customStreetcolor">
+        <p className=" w-[80%] text-center m-auto text-base font-normal text-customStreetcolor">
           There’s a home for everyone. Find the home that suits you best
         </p>
         <div className="slider-container md:max-w-[800px] mt-8 mx-auto lg:max-w-[1300px] px-6 pb-12">
           {isLoading ? (
-            <Slider {...settings} className="space-x-3 ">
+            <Slider {...settings} className="space-x-4 flex gap-10">
               <div>
-                <Skeleton className=" rounded-md h-96 ml-12" />
+                <Skeleton className=" rounded-md h-96 lg:ml-12 m-0 w-[98%] lg:w-auto" />
               </div>
               <div>
-                <Skeleton className=" rounded-md h-96 mx-6" />
+                <Skeleton className=" rounded-md h-96 lg:mx-6 m-0 w-[98%] lg:w-auto" />
               </div>
               <div>
-                <Skeleton className=" rounded-md h-96 mr-12" />
+                <Skeleton className=" rounded-md h-96 lg:mr-12 m-0 w-[98%] lg:w-auto" />
               </div>
             </Slider>
           ) : (
@@ -174,8 +174,8 @@ function TopProperties() {
                   propertyData={item}
                   compareData={compareProperty}
                   removeProperty={removeImage}
-                  className=" lg:min-w-[320px]"
-                  containerClassName="max-w-96"
+                  className=" lg:min-w-[320px] "
+                  containerClassName="lg:max-w-96 max-w-[96%] m-auto"
                 />
               ))}
             </Slider>

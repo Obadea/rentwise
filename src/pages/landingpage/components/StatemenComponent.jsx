@@ -77,7 +77,7 @@ function StatemenComponent() {
             <div className="slider-container bg-customaccent100 px-10 mt-8 ">
               <Slider {...settings} className="">
                 <StatemenCard
-                  bayo={bayo}
+                  bayo={minstreln}
                   name="Minstrel Nwachukwu"
                   level="Senior Property Consultant"
                   about="With over 6 years of experience in the real estate industry, Adebayo

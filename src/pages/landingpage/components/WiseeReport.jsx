@@ -309,8 +309,8 @@ function WiseeReport() {
           </div>
         </div> */}
 
-        <div className="hidden lg:flex justify-center">
-          <Button className="text-textcolor bg-customSearchblue p-4 h-12  font-bold text-base rounded-2xl ">
+        <div className=" flex lg:flex justify-center">
+          <Button className="text-textcolor bg-customSearchblue p-4 h-12  lg:font-bold lg:text-base rounded-2xl font-medium text-xs ">
             Download 21 Abraham Niyi, Street Orchid Wise Report (SAMPLE)
           </Button>
         </div>

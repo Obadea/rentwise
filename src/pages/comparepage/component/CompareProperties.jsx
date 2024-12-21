@@ -13,19 +13,21 @@ const CompareProperties = ({ compareData }) => {
           <div className="px-2">
             <Image
               src={property?.propertyImages[6]}
-              className="h-32"
+              className="h-32 lg:h-44"
               width="100%"
               isZoomed
             />
           </div>
-          <p className="py-1 pl-3 pr-5 mt-4 bg-addpropertybg">
+          <p className="py-1 pl-3 pr-5 mt-4 bg-addpropertybg overflow-x-scroll">
             {property?.name}
           </p>
           <p className="py-1 pl-3 pr-5 ">{toNaira(property?.price)}</p>
           <p className="py-1 pl-3 pr-5 bg-addpropertybg">
             {property?.propertyType}
           </p>
-          <p className="py-1 pl-3 pr-5 w-fit truncate">{property?.address}</p>
+          <p className="py-1 pl-3 pr-5 text-clip overflow-x-scroll w-full">
+            {property?.address}
+          </p>
           <p className="py-1 pl-3 pr-5 bg-addpropertybg">{property?.city}</p>
           <p className="py-1 pl-3 pr-5">{property?.state}</p>
           <p className="py-1 pl-3 pr-5 bg-addpropertybg">{property?.zipCode}</p>
