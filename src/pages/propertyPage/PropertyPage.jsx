@@ -72,7 +72,7 @@ function PropertyPage() {
       <Header className="fixed lg:relative x bg-white " />
       {/* <Header className="relative x" /> */}
       <div>
-        <nav className=" hidden lg:flex fixed top-0 z-20 bg-white justify-between w-full py-5 px-6 font-bold">
+        <nav className=" hidden lg:flex fixed top-0 z-[25] bg-white justify-between w-full py-5 px-6 font-bold">
           <a href="#overview" data-to-scrollspy-id="overview">
             Overview
           </a>

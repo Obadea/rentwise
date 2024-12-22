@@ -31,7 +31,7 @@ const PropertiesCard = ({
   bathroom,
   sittingroom,
   amount,
-  amountDate = "annunal",
+  amountDate = "annual",
   isPressable = true,
   onPress,
   addProperty,
@@ -128,7 +128,7 @@ const PropertiesCard = ({
           {/* <SvgChairIcon />
           <p className="text-[13px]">{sittingroom} Sitting Room</p> */}
           <TungstenOutlinedIcon style={{ fontSize: "16px", fill: "#FC97AF" }} />
-          <p className="text-[13px]">10am-8pm Light</p>
+          <p className="text-[13px]">10hrs of Light Daily</p>
         </div>
         <div className="flex mt-5 items-center justify-between border-t-1 pt-2">
           <p className="font-medium text-xl pl-3">

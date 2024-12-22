@@ -61,10 +61,10 @@ function PostReview({ propertyID }) {
             token: token,
           });
 
-          console.log(data);
+          // console.log(data);
         }}
       >
-        <Input
+        {/* <Input
           errorMessage="Please enter a valid email"
           label="Email"
           labelPlacement="outside"
@@ -103,7 +103,13 @@ function PostReview({ propertyID }) {
             <SelectItem key="4">4</SelectItem>
             <SelectItem key="5">5</SelectItem>
           </Select>
+        </div> */}
+
+        <div className="flex w-full gap-4">
+          <p>Select Rating:</p>
+          <RatingControl />
         </div>
+
         <Textarea
           name="review"
           value={review}

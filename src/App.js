@@ -24,6 +24,8 @@ import SearchResultpage from "./pages/searchresultpage/SearchResultpage.jsx";
 import ComparePage from "./pages/comparepage/ComparePage.jsx";
 import OtpConfirm from "./pages/otpConfirm/OtpConfirm.jsx";
 import ResetPasswordOtp from "./pages/resetPasswordOtp/ResetPasswordOtp.jsx";
+import PropertiesPage from "./pages/propertiesPage/PropertiesPage.jsx";
+import ShortletPage from "./pages/shortletPage/ShortletPage.jsx";
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
       <Route path="/signin" element={<SignInPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/property" element={<PropertyPage />} />
+      <Route path="/properties" element={<PropertiesPage />} />
       <Route
         path="/Rent affordability calculator"
         element={<AffordabilityCalculator />}
@@ -49,10 +52,7 @@ function App() {
         path="/search"
         element={<SearchResultpage forShortlet={false} />}
       />
-      <Route
-        path="/shortlet"
-        element={<SearchResultpage forShortlet={true} />}
-      />
+      <Route path="/shortlet" element={<ShortletPage />} />
       <Route path="/compare" element={<ComparePage />} />
       <Route path="/confirmOTP" element={<OtpConfirm />} />
       <Route path="*" element={<NotFoundPage />} />

@@ -37,8 +37,8 @@ function AffordabilityCalculator() {
   return (
     <div className=" bg-[#F2F2F2]  min-h-screen ">
       <Header className="fixed bg-white" />
-      <div className="flex flex-col lg:gap-12 py-6 px-4 lg:px-24">
-        <div className="mb-2">
+      <div className="flex flex-col lg:gap-12 py-6 px-4 lg:px-24 ">
+        <div className="mb-2 lg:mt-24">
           <Breadcrumb />
         </div>
         {/* <div className="hidden">
@@ -55,7 +55,7 @@ function AffordabilityCalculator() {
         </div> */}
         <div className="flex flex-col lg:flex-row xl:justify-center">
           <div className="flex flex-col lg:flex-row gap-6">
-            <div className="flex flex-col lg:w-[475px]">
+            <div className="flex flex-col lg:w-[595px] w-full">
               <div className="flex flex-col gap-2">
                 <h3 className="font-bold text-3xl text-customNameBlack mt-7">
                   How much Rent can I afford?

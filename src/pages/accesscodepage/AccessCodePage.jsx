@@ -69,7 +69,7 @@ function AccessCodePage() {
             Enter required access ID
           </p>
         </div>
-        <div className="lg:gap-6 mt-8 lg:flex lg:flex-col lg:justify-between lg:h-[60vh]">
+        <div className="lg:gap-6 mt-8 lg:flex lg:flex-col lg:justify-center lg:h-[60vh]">
           <Form
             className="w-full  flex flex-col gap-4"
             validationBehavior="native"

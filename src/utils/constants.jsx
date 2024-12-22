@@ -262,3 +262,22 @@ export const majorCitiesInNigeria = [
   { label: "Gusau", value: "gusau" },
   { label: "Yenagoa", value: "yenagoa" },
 ];
+
+export const propertyPageDropDown = [
+  {
+    title: "Price",
+    select: ["100,000", "300,000", "500,00", "1,000,000"],
+  },
+  {
+    title: "Bathrooms",
+    select: ["2", "3", "4+"],
+  },
+  {
+    title: "Bedrooms",
+    select: ["2", "3", "4", "5+"],
+  },
+  {
+    title: "Type",
+    select: ["Apartment", "Duplex", "Bungalow", "Townhouse", "Penthouse"],
+  },
+];

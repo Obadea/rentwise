@@ -4,7 +4,7 @@ import ThumbsRating from "./ThumbsRating";
 import contactphoto from "../../../assets/contact-phto.png";
 import { sortMethods } from "../../../utils/constants";
 import { Avatar, Button, Select, SelectItem } from "@nextui-org/react";
-import { SvgSortIcon } from "../../../utils/SvgIcons";
+import { SvgLinkIcon, SvgSortIcon } from "../../../utils/SvgIcons";
 import { timeAgo } from "../../../utils/helperFunction";
 
 function Review({ id, propertyData }) {
@@ -67,10 +67,28 @@ function Review({ id, propertyData }) {
                   </h3>
                   <Rating name="read-only" value={item?.rating} readOnly />
                 </div>
-                <p>{timeAgo(item?.updatedAt)}</p>
+                <p className="text-xs text-[#A6A6A6] flex  gap-2 mt-2">
+                  <SvgLinkIcon />
+                  {timeAgo(item?.updatedAt)}
+                </p>
                 <div className="flex items-center w-full justify-between">
-                  <h4 className="text-xs max-w-[88%]">{item?.review}</h4>
-                  <ThumbsRating />
+                  <h4 className="text-xs max-w-[88%] text-customBlackShade">
+                    {item?.review} Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Eaque officia reprehenderit pariatur ipsa
+                    illum, cum quas asperiores vitae dolorem qui quae in?
+                    Quaerat numquam aliquam, quasi vel corporis saepe.
+                    Consequuntur. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Suscipit excepturi quas id, qui ipsa
+                    temporibus, aspernatur et, vero vel ducimus neque quod fuga
+                    assumenda sapiente! Vitae quidem modi atque provident. Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Dicta
+                    ipsam excepturi dolor id deserunt perspiciatis cupiditate
+                    omnis facere. Placeat vel doloremque error animi recusandae
+                    excepturi, cupiditate sed eaque? Culpa, iste!
+                  </h4>
+                  <div className="mt-10">
+                    <ThumbsRating />
+                  </div>
                 </div>
               </div>
             </div>

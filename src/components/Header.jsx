@@ -71,6 +71,12 @@ const Header = ({ className, newclassName }) => {
           >
             Shortlet
           </a>
+          <a
+            href="/properties"
+            className="py-2 px-4 text-lg hover:text-customyellow"
+          >
+            Properties
+          </a>
 
           <DropdownMenu
             name="Company"

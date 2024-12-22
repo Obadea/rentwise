@@ -112,8 +112,11 @@ const Hamburger = () => {
             </div>
           </AccordionItem>
         </Accordion>
-        <a className="menu-item" href="/search">
+        <a className="menu-item" href="/shortlet">
           Shortlet
+        </a>
+        <a className="menu-item" href="/properties">
+          Properties
         </a>
         {token ? (
           <>

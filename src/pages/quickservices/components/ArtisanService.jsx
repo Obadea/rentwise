@@ -163,7 +163,7 @@ function ArtisanService() {
       {categories.map((category) => (
         <div
           key={category.id}
-          className=" relative flex flex-col w-[350px] md:w-[40%] lg:w-[24%] p-3  bg-addpropertybg rounded-lg"
+          className=" relative flex flex-col w-[350px] md:w-[40%] lg:w-[30%] p-3  bg-addpropertybg rounded-lg"
         >
           <div className="flex flex-row gap-4 justify-between lg:justify-normal items-center">
             <img src={category.image} alt={category.name} />{" "}
