@@ -1,12 +1,12 @@
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "./NewHeader.css"; // Import your CSS file for custom styles
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../utils/AuthContext";
 import { useMutation } from "@tanstack/react-query";
 import { logOut } from "../utils/endpoint";
 import { toast } from "react-toastify";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem, Button, Link } from "@nextui-org/react";
 
 const Hamburger = () => {
   const { token, logout } = useAuth();
@@ -126,18 +126,27 @@ const Hamburger = () => {
             >
               Log out
             </a>{" "}
-            <a className="menu-item text-bold block mt-4" href="/search">
+            <Button
+              className="w-full"
+              color="primary"
+              onPress={() => navigate("/search")}
+            >
               Add property
-            </a>
+            </Button>
           </>
         ) : (
           <div className="relative right-2">
             <a href="/signin" className="menu-item block">
               <p>Sign in</p>
             </a>
-            <a className="menu-item block mb-12" href="/accessId">
-              <p>Add property</p>
-            </a>
+            {/* <p>Add property</p> */}
+            <Button
+              className="w-full"
+              color="primary"
+              onPress={() => navigate("/accessId")}
+            >
+              Add property
+            </Button>
           </div>
         )}
         {/* // <Link to="/signup" className="menu-item">

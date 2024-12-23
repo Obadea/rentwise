@@ -17,7 +17,14 @@ const ViewFullImg = ({ img }) => {
 
   return (
     <>
-      <Tooltip content="Full Image" showArrow={true}>
+      <Tooltip
+        content="Preview Image
+
+
+
+"
+        showArrow={true}
+      >
         <Button
           isIconOnly
           size="sm"

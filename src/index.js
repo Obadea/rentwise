@@ -20,7 +20,7 @@ root.render(
           <QueryClientProvider client={queryClient}>
             <NextUIProvider>
               <ToastContainer
-                className="custom-toast-container"
+                className="custom-toast-container "
                 toastClassName="custom-toast"
               />
               <App />

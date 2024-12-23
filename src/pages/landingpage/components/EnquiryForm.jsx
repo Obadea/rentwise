@@ -31,7 +31,10 @@ function EnquiryForm() {
     mutationFn: sendEnquiry,
     onSuccess: async () => {
       console.log("Enquiry sent!");
-      toast("Enquiry Sent", { type: "success", draggable: true });
+      toast("Enquiry Sent", {
+        type: "success",
+        draggable: true,
+      });
     },
     onError: async (err) => {
       toast("Enquiry Failed", { type: "error", draggable: true });

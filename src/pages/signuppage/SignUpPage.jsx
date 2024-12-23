@@ -8,6 +8,7 @@ import { userSignUp } from "../../utils/endpoint";
 import { toast } from "react-toastify";
 import { useAuth } from "../../utils/AuthContext";
 import { SvgFacebookIcon, SvgGoogleIcon } from "../../utils/SvgIcons";
+import { goBack } from "../../utils/helperFunction";
 
 function SignInPage() {
   const [email, setEmail] = useState("");
@@ -32,7 +33,7 @@ function SignInPage() {
 
     onError: async (err) => {
       setIsLoading(false);
-      toast(err?.message, {
+      toast(err?.response?.data.message, {
         type: "error",
         draggable: true,
       });
@@ -45,7 +46,10 @@ function SignInPage() {
       <div className=" my-4 mx-auto px-3 lg:px-16 lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
-          <button className="font-bold text-sm text-customSearchblue lg:hidden">
+          <button
+            className="font-bold text-sm text-customSearchblue lg:hidden"
+            onClick={goBack}
+          >
             Back
           </button>
         </div>

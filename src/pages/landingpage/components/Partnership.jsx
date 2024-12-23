@@ -8,24 +8,16 @@ function Partnership() {
       </h3>
       <div className="flex justify-around gap-6 lg:gap-0 text-3xl font-bold overflow-x-hidden  lg:overflow-hidden">
         <h2>
-          rent<span className="text-customyellow">w</span>ise
+          PrimeBank
           <span className="text-customyellow">.</span>
         </h2>
+        <h2>Aspiration Technology</h2>
+        <h2>TAD Building</h2>
+        <h2>Abigial Apartment</h2>
+        <h2>Novarick</h2>
+        <h2>Novarick</h2>
         <h2>
-          rent<span className="text-customyellow">w</span>ise
-          <span className="text-customyellow">.</span>
-        </h2>
-        <h2>
-          rent<span className="text-customyellow">w</span>ise
-          <span className="text-customyellow">.</span>
-        </h2>
-        <h2>
-          rent<span className="text-customyellow">w</span>ise
-          <span className="text-customyellow">.</span>
-        </h2>
-        <h2>
-          rent<span className="text-customyellow">w</span>ise
-          <span className="text-customyellow">.</span>
+          ServiceN<span className="text-green-600">o</span>w
         </h2>
       </div>
     </div>

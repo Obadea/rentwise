@@ -25,7 +25,8 @@ function PostReview({ propertyID }) {
     onSuccess: async (data) => {
       setIsLoading(false);
       setReview("");
-      toast(data?.message, { type: "success", draggable: true });
+      toast(data?.messsage, { type: "success", draggable: true });
+      console.log(data);
     },
 
     onError: async (err) => {

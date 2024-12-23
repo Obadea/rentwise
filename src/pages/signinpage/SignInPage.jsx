@@ -12,6 +12,7 @@ import { useMutation } from "@tanstack/react-query";
 import { signInApi } from "../../utils/endpoint";
 import { toast } from "react-toastify";
 import { useAuth } from "../../utils/AuthContext";
+import { goBack } from "../../utils/helperFunction";
 // import { Form } from "formik";
 function SignInPage() {
   const [action, setAction] = React.useState(null);
@@ -31,7 +32,7 @@ function SignInPage() {
 
     onError: async (err) => {
       setIsLoading(false);
-      toast(err?.response?.data.error.message, {
+      toast(err?.response?.data.message, {
         type: "error",
         draggable: true,
       });
@@ -79,7 +80,10 @@ function SignInPage() {
       <div className=" my-4 mx-auto px-3 lg:px-16 mt-8  lg:w-[50%] w-[80%]">
         <div className="flex justify-between ">
           <Logo />
-          <button className="font-bold text-sm text-customSearchblue lg:hidden">
+          <button
+            className="font-bold text-sm text-customSearchblue lg:hidden"
+            onClick={goBack}
+          >
             Back
           </button>
         </div>
@@ -190,7 +194,7 @@ function SignInPage() {
               color="default"
               className="w-full mt-7"
               variant="bordered"
-              isLoading={isLoading}
+              // isLoading={isLoading}
               onPress={() => navigate("/accessId")}
             >
               Sign In as a Landlord/Wisemen here

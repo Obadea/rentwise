@@ -15,18 +15,18 @@ const Header = ({ className, newclassName }) => {
   const { token, logout } = useAuth();
   const navigate = useNavigate();
 
-  // const mutation = useMutation({
-  //   mutationFn: logOut,
-  //   onSuccess: async (data) => {
-  //     logout();
-  //     navigate("/");
-  //     toast(data.message, { type: "success", draggable: true });
-  //   },
-  //   onError: async (err) => {
-  //     toast(err.message, { type: "error", draggable: true });
-  //     console.log(err);
-  //   },
-  // });
+  const mutation = useMutation({
+    mutationFn: logOut,
+    onSuccess: async (data) => {
+      logout();
+      navigate("/");
+      toast(data.message, { type: "success", draggable: true });
+    },
+    onError: async (err) => {
+      toast(err.message, { type: "error", draggable: true });
+      console.log(err);
+    },
+  });
 
   let options;
   return (
@@ -99,7 +99,7 @@ const Header = ({ className, newclassName }) => {
               className="block h-16 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
               // logout
               onPress={() => {
-                // mutation.mutate(token);
+                mutation.mutate(token);
               }}
             >
               Add Property

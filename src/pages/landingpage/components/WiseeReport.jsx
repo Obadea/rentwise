@@ -119,9 +119,10 @@ function WiseeReport() {
           ></iframe> */}
 
           <iframe
+            className="rounded-xl"
             width="100%"
             height="470"
-            src="https://www.youtube-nocookie.com/embed/EmDSCY8Zw-Y?si=VS3tQl99X-ep_G2l"
+            src="https://www.youtube.com/embed/qJcq7HYaSwE?si=nLeBr21DirmA3nxK"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

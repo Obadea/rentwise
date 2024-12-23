@@ -15,6 +15,7 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { useAuth } from "../../utils/AuthContext";
 import { signInForLandLord, signInForWisemen } from "../../utils/endpoint";
+import { goBack } from "../../utils/helperFunction";
 function AccessCodePage() {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -35,7 +36,7 @@ function AccessCodePage() {
 
     onError: async (err) => {
       setIsLoading(false);
-      toast(err?.message, {
+      toast(err?.response?.data.message, {
         type: "error",
         draggable: true,
       });
@@ -168,6 +169,7 @@ function AccessCodePage() {
           className="absolute right-14 top-9 text-white border-white border-1"
           variant="bordered"
           radius="sm"
+          onPress={goBack}
         >
           Back
         </Button>

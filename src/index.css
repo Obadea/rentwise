@@ -29,7 +29,7 @@ code {
 }
 
 .custom-toast {
-  width: 100%; /* Default full width */
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -37,12 +37,23 @@ code {
     width: 90%; /* Smaller width on tablets */
     max-width: 400px; /* Ensure it doesn’t exceed 400px */
     margin: 0 auto; /* Center it horizontally */
+    font-size: 12px;
+    height: 20px;
+    border-radius: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .custom-toast {
     width: 90%; /* Adjust for smaller screens */
+    font-size: 12px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-toast-container {
+    border-radius: 40px;
   }
 }
 
