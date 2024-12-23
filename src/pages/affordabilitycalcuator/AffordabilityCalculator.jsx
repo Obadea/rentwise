@@ -134,7 +134,7 @@ function AffordabilityCalculator() {
                   </p>
                 </div>
                 <Button
-                  className="w-full mt-6"
+                  className="w-full mt-14"
                   color="primary"
                   isDisabled={!total}
                 >
