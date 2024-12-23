@@ -102,7 +102,7 @@ function PropertyPage() {
             360° Virtual Tour
           </a>
           <a href="#workscore" data-to-scrollspy-id="workscore">
-            WorkScore
+            WalkScore
           </a>
           <a href="#contact" data-to-scrollspy-id="contact">
             Contact

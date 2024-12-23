@@ -74,7 +74,7 @@ const incomeOptions = [
   { value: "16000000", label: "16M Above" },
 ];
 
-function LocationSearch() {
+function LocationSearch({ forShortlet }) {
   const [filter, setFilter] = useState(false);
 
   const [num1, setNum1] = useState(null);
@@ -110,7 +110,7 @@ function LocationSearch() {
     "w-full sticky top-1 z-20 py-1.5 px-2 bg-default-100 shadow-small rounded-small";
 
   return (
-    <div>
+    <div className={`${forShortlet ? "mt-12" : ""} `}>
       <div className=" flex  lg:flex justify-center lg:overflow-hidden ">
         <div className="max-w-[600px] flex lg:hidden justify-between items-center   gap-2 absolute -bottom-5  ">
           <div className="bg-customsearchinput min-w-[294px] h-[52px] flex flex-grow justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
