@@ -238,6 +238,10 @@ const AdvanceSearchModal = ({
     />
   ); // State to track current content
 
+  useEffect(() => {
+    onOpen();
+  }, []);
+
   const mutation = useMutation({
     mutationFn: houseHoldIncome,
     onSuccess: async (data) => {
