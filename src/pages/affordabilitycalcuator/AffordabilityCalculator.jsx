@@ -75,6 +75,7 @@ function AffordabilityCalculator() {
                 placeholder="Enter the amount you earn as income monthly"
                 type="number"
                 onChange={(e) => setNum(parseInt(e.target.value) || 0)}
+                classNames={{ label: "font-bold text-lg" }}
               />
               <Input
                 variant="underlined"
@@ -82,6 +83,7 @@ function AffordabilityCalculator() {
                 placeholder="Enter the amount your spouse earn monthly"
                 type="number"
                 onChange={(e) => setNum1(parseInt(e.target.value) || 0)}
+                classNames={{ label: "font-bold text-lg" }}
               />
               <Input
                 variant="underlined"
@@ -89,13 +91,20 @@ function AffordabilityCalculator() {
                 placeholder="Enter income (if any) from other investments"
                 type="number"
                 onChange={(e) => setNum2(parseInt(e.target.value) || 0)}
+                classNames={{ label: "font-bold text-lg" }}
               />
               <Progress
                 className=""
-                color="primary"
+                color={
+                  total < 900000
+                    ? "danger"
+                    : total <= 7996660
+                    ? "warning"
+                    : "primary"
+                }
                 formatOptions={{ style: "currency", currency: "NGN" }}
-                label="Total monthly household income(TMHI)"
-                maxValue={rent}
+                label="Total monthly household income (TMHI)"
+                maxValue={19999999}
                 showValueLabel={true}
                 size="md"
                 value={total}
@@ -129,7 +138,7 @@ function AffordabilityCalculator() {
                   <p>
                     {formatValue({
                       prefix,
-                      value: String(monthlySavings - num),
+                      value: String(total - monthlySavings),
                     })}
                   </p>
                 </div>
