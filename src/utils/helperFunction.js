@@ -69,3 +69,7 @@ export const getAuthData = () => {
 export const clearAuthData = () => {
   localStorage.removeItem(STORAGE_KEY);
 };
+
+export const goBack = () => {
+  window.history.back(); // Go to the previous page
+};

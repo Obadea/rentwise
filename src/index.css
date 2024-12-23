@@ -23,3 +23,56 @@ code {
   color: #3b68f9;
   border-bottom: solid 2px #3b68f9;
 }
+
+.custom-toast-container {
+  min-width: 30% !important;
+}
+
+.custom-toast {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .custom-toast {
+    width: 90%; /* Smaller width on tablets */
+    max-width: 400px; /* Ensure it doesn’t exceed 400px */
+    margin: 0 auto; /* Center it horizontally */
+    font-size: 12px;
+    height: 20px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-toast {
+    width: 90%; /* Adjust for smaller screens */
+    font-size: 12px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-toast-container {
+    border-radius: 40px;
+  }
+}
+
+/* NewHeader.css */
+
+/* Remove the yellow background from menu items */
+.menu-item {
+  background-color: transparent !important; /* Ensures no background is applied */
+  color: #000; /* Adjust the text color as needed */
+  text-decoration: none; /* Optional: Removes underline from links */
+  padding: 10px; /* Optional: Adds spacing */
+}
+
+.menu-item:hover {
+  background-color: #d3cfcf; /* Optional: Adds a hover effect */
+  color: #333; /* Adjust the hover text color */
+}
+
+/* Override any default styles from react-burger-menu */
+.bm-item {
+  background-color: transparent !important;
+}

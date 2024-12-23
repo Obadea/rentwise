@@ -12,21 +12,21 @@ function ComparePage() {
   return (
     <div className="bg-textcolor">
       <Header className="bg-[#FAFBFF]" newclassName="sticky  " />
-      <div className="py-6 flex flex-col gap-3 px-20">
+      <div className="py-6 flex flex-col gap-3 lg:px-20 px-3">
         <Breadcrumb />
-        <h4 className="font-bold text-3xl text-customNameBlack">
+        <h4 className="font-bold lg:text-3xl text-customNameBlack text-xl">
           Compare Properties
         </h4>
 
         {/* Compare Component */}
         <div className="flex mt-14 ">
-          <div className="w-fit mt-36 text-right font-semibold capitalize">
+          <div className="w-full mt-36 lg:mt-48  font-semibold text-right capitalize text-nowrap">
             {propertyTitles.map((title, index) => (
               <p
                 key={index}
                 className={`${
                   index % 2 == 0 ? "bg-addpropertybg" : ""
-                } pl-3 pr-4 py-1 text-nowrap`}
+                } lg:pl-3 pl-0  pr-4 py-1 text-nowrap`}
               >
                 {title}
               </p>

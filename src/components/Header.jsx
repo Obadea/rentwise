@@ -71,6 +71,12 @@ const Header = ({ className, newclassName }) => {
           >
             Shortlet
           </a>
+          <a
+            href="/properties"
+            className="py-2 px-4 text-lg hover:text-customyellow"
+          >
+            Properties
+          </a>
 
           <DropdownMenu
             name="Company"
@@ -81,6 +87,8 @@ const Header = ({ className, newclassName }) => {
                 "Products",
                 "Leadership",
                 "Partners",
+                "blog",
+                "contact us",
               ])
             }
           />
@@ -89,11 +97,12 @@ const Header = ({ className, newclassName }) => {
             <Button
               radius="none"
               className="block h-16 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
+              // logout
               onPress={() => {
                 mutation.mutate(token);
               }}
             >
-              Log Out
+              Add Property
             </Button>
           ) : (
             <>
@@ -105,10 +114,10 @@ const Header = ({ className, newclassName }) => {
                 Sign In
               </Link>
               <Link
-                to="signup"
+                to="/accessId"
                 className="block py-5 px-5 text-lg font-medium text-textcolor bg-customNameBlack hover:text-customResultqueryGrey hover:bg-customaddproperty"
               >
-                Sign Up
+                Add Property
               </Link>
             </>
           )}

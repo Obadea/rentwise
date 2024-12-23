@@ -19,7 +19,10 @@ root.render(
         <AuthProvider>
           <QueryClientProvider client={queryClient}>
             <NextUIProvider>
-              <ToastContainer />
+              <ToastContainer
+                className="custom-toast-container "
+                toastClassName="custom-toast"
+              />
               <App />
             </NextUIProvider>
           </QueryClientProvider>

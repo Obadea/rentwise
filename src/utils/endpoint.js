@@ -220,3 +220,20 @@ export const forgotPassWordVerifyOtp = async (otp) => {
     return response.data;
   }
 };
+
+export const resetPassword = async (password) => {
+  if (password) {
+    const response = await apiClient.patch(
+      `${process.env.REACT_APP_API_URL}/api/v1/users/new-password`,
+      {
+        password: password.password,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${password.token}`,
+        },
+      }
+    );
+    return response.data;
+  }
+};

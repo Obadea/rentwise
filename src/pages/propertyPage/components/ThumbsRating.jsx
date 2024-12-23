@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { IconButton, Typography, Snackbar } from "@mui/material";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
+import { SvgTumbDownIcon, SvgTumbUpIcon } from "../../../utils/SvgIcons";
+import { useAuth } from "../../../utils/AuthContext";
 
 const ThumbsRating = ({ user }) => {
   const [upvotes, setUpvotes] = useState(0);
@@ -10,8 +12,10 @@ const ThumbsRating = ({ user }) => {
   const [voteType, setVoteType] = useState(null);
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
+  const { token } = useAuth();
+
   const handleVote = (type) => {
-    if (!user) {
+    if (!token) {
       setOpenSnackbar(true);
       return; // User must be logged in
     }
@@ -42,7 +46,8 @@ const ThumbsRating = ({ user }) => {
         color="primary"
         disabled={hasVoted && voteType === "up"}
       >
-        <ThumbUpIcon />
+        {/* <ThumbUpIcon /> */}
+        <SvgTumbUpIcon />
       </IconButton>
       <Typography variant="body1">{upvotes}</Typography>
 
@@ -51,7 +56,8 @@ const ThumbsRating = ({ user }) => {
         color="secondary"
         disabled={hasVoted && voteType === "down"}
       >
-        <ThumbDownIcon />
+        {/* <ThumbDownIcon /> */}
+        <SvgTumbDownIcon />
       </IconButton>
       <Typography variant="body1">{downvotes}</Typography>
 

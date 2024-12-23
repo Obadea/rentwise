@@ -68,13 +68,15 @@ function SearchResultpage({ forShortlet }) {
 
   return (
     <div>
-      <Header />
+      <Header className="fixed bg-white top-0" />
       <div className="px-4 md:px-10 lg:px-20  ">
         <div className="mb-8 mt-4">
           <Breadcrumb />
         </div>
         <div>
-          <h3 className="font-bold text-2xl text-customdark mb-4">Search</h3>
+          <h3 className="font-bold text-2xl text-customdark mb-4 mt-16">
+            Search
+          </h3>
           <p className="font-normal text-base text-customgray4">
             {forShortlet
               ? "Searh shortlets around you"

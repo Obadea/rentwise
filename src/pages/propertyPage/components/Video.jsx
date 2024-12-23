@@ -12,7 +12,7 @@ function Video({ id, propertyData }) {
       <div>
         <iframe
           width="100%"
-          height="400"
+          height="470"
           // src="https://www.youtube.com/embed/y9j-BL5ocW8?si=Xx4jbXA5YF-271fb&amp;start=28"
           src={propertyData?.property?.property?.video}
           title="YouTube video player"

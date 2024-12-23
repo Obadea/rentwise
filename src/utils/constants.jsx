@@ -208,3 +208,76 @@ export const propertyTitles = [
   "Window Covering",
   "System rating",
 ];
+
+export const commercialArray = [
+  { label: "Office", key: "office" },
+  { label: "Shop", key: "shop" },
+  { label: "Short let", key: "shortlet" },
+  { label: "Event centre", key: "eventcentre" },
+];
+
+export const residentArray = [
+  { label: "Apartment", key: "apartment" },
+  { label: "Single family home", key: "singlefamilyhome" },
+  { label: "Multi family home", key: "multifamilyhome" },
+];
+
+export const majorCitiesInNigeria = [
+  { label: "Lagos", value: "lagos" },
+  { label: "Abuja", value: "abuja" },
+  { label: "Port Harcourt", value: "portharcourt" },
+  { label: "Kano", value: "kano" },
+  { label: "Ibadan", value: "ibadan" },
+  { label: "Benin City", value: "benincity" },
+  { label: "Kaduna", value: "kaduna" },
+  { label: "Enugu", value: "enugu" },
+  { label: "Jos", value: "jos" },
+  { label: "Abeokuta", value: "abeokuta" },
+  { label: "Ilorin", value: "ilorin" },
+  { label: "Owerri", value: "owerri" },
+  { label: "Warri", value: "warri" },
+  { label: "Onitsha", value: "onitsha" },
+  { label: "Calabar", value: "calabar" },
+  { label: "Maiduguri", value: "maiduguri" },
+  { label: "Uyo", value: "uyo" },
+  { label: "Bauchi", value: "bauchi" },
+  { label: "Yola", value: "yola" },
+  { label: "Sokoto", value: "sokoto" },
+  { label: "Zaria", value: "zaria" },
+  { label: "Minna", value: "minna" },
+  { label: "Makurdi", value: "makurdi" },
+  { label: "Osogbo", value: "osogbo" },
+  { label: "Ekiti", value: "ekiti" },
+  { label: "Akure", value: "akure" },
+  { label: "Asaba", value: "asaba" },
+  { label: "Katsina", value: "katsina" },
+  { label: "Gombe", value: "gombe" },
+  { label: "Ado Ekiti", value: "adoekiti" },
+  { label: "Lokoja", value: "lokoja" },
+  { label: "Abakaliki", value: "abakaliki" },
+  { label: "Awka", value: "awka" },
+  { label: "Jalingo", value: "jalingo" },
+  { label: "Damaturu", value: "damaturu" },
+  { label: "Dutse", value: "dutse" },
+  { label: "Gusau", value: "gusau" },
+  { label: "Yenagoa", value: "yenagoa" },
+];
+
+export const propertyPageDropDown = [
+  {
+    title: "Price",
+    select: ["100,000", "300,000", "500,00", "1,000,000"],
+  },
+  {
+    title: "Bathrooms",
+    select: ["2", "3", "4+"],
+  },
+  {
+    title: "Bedrooms",
+    select: ["2", "3", "4", "5+"],
+  },
+  {
+    title: "Type",
+    select: ["Apartment", "Duplex", "Bungalow", "Townhouse", "Penthouse"],
+  },
+];

@@ -15,6 +15,7 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { useAuth } from "../../utils/AuthContext";
 import { signInForLandLord, signInForWisemen } from "../../utils/endpoint";
+import { goBack } from "../../utils/helperFunction";
 function AccessCodePage() {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -23,7 +24,8 @@ function AccessCodePage() {
   const navigate = useNavigate();
 
   const mutation = useMutation({
-    mutationFn: role === "landlord" ? signInForLandLord : signInForWisemen,
+    // mutationFn: role === "landlord" ? signInForLandLord : signInForWisemen,
+    mutationFn: signInForLandLord,
     onSuccess: async (data) => {
       setIsLoading(false);
       toast(data?.message, { type: "success", draggable: true });
@@ -34,7 +36,7 @@ function AccessCodePage() {
 
     onError: async (err) => {
       setIsLoading(false);
-      toast(err?.message, {
+      toast(err?.response?.data.message, {
         type: "error",
         draggable: true,
       });
@@ -62,32 +64,13 @@ function AccessCodePage() {
 
         <div className="flex flex-col gap-3 my-10">
           <h2 className="text-customblue text-2xl font-bold capitalize ">
-            Enter Access ID ({role})
+            Enter Access ID
           </h2>
-          <p className="text-base font-normal text-customBlackShade">
+          <p className="text-xs font-normal text-customBlackShade">
             Enter required access ID
           </p>
         </div>
-        <div className="lg:gap-6 mt-8">
-          {/* <form action="#" className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email">Access ID</label>
-              <input
-                type="text"
-                id="accessCode"
-                // value={text}
-                // onChange={(event) => setAccessCode(event.target.value)}
-                placeholder="Enter access ID"
-                className="border border-customBlackShade text-[#333333] text-2xl pl-2 py-2  "
-              />
-            </div>
-
-            <div className="lg:m-4 flex flex-col ">
-              <button className="w-full h-[52px] px-[10px] py-[20px] rounded-xl bg-customSearchblue text-white text-xl flex justify-center items-center  font-bold ">
-                Continue
-              </button>
-            </div>
-          </form> */}
+        <div className="lg:gap-6 mt-8 lg:flex lg:flex-col lg:justify-center lg:h-[60vh]">
           <Form
             className="w-full  flex flex-col gap-4"
             validationBehavior="native"
@@ -116,7 +99,7 @@ function AccessCodePage() {
               variant="bordered"
             />
 
-            <Select
+            {/* <Select
               isRequired
               errorMessage="Please Select a role"
               defaultSelectedKeys={[role]}
@@ -129,7 +112,7 @@ function AccessCodePage() {
             >
               <SelectItem key="landlord">Landlord</SelectItem>
               <SelectItem key="wisemen">Wisemen</SelectItem>
-            </Select>
+            </Select> */}
 
             <Button
               color="primary"
@@ -137,48 +120,60 @@ function AccessCodePage() {
               className="w-full"
               isLoading={isLoading}
             >
-              Sign In
+              Continue
             </Button>
           </Form>
-          <div className="container mx-auto text-center mt-16 mb-6">
-            <div className="or-tag relative  mx-4 flex justify-center items-center">
-              <div className="w-1/2 h-1 bg-gray-300"></div>
-              <span className=" mx-4 font-normal text-customBlackShade text-[18px] text-nowrap">
-                Don’t have access ID?
-              </span>
-              <div class="w-1/2 h-1 bg-gray-300"></div>
+          <div>
+            <div className="container mx-auto text-center mt-16 mb-6">
+              <div className="or-tag relative  mx-4 flex justify-center items-center">
+                <div className="w-1/2 h-0.5 bg-gray-300"></div>
+                <span className=" mx-4 font-normal text-customBlackShade text-[12px] text-nowrap">
+                  Don’t have access ID?
+                </span>
+                <div class="w-1/2 h-0.5 bg-gray-300"></div>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-3 flex-col lg:flex-row lg:gap-6 justify-evenly mb-3">
-            <Button
-              variant="bordered"
-              startContent={<WhatsAppIcon className="text-[#25D366]" />}
-              className=" px-5 flex-1 flex border gap-3 cursor-pointer justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base"
-            >
-              Contact through Whatsapp
-            </Button>
+            <div className="flex gap-3 flex-col lg:flex-row lg:gap-6 justify-evenly mb-3">
+              <Button
+                variant="bordered"
+                startContent={<WhatsAppIcon className="text-[#25D366]" />}
+                className=" px-5 flex-1 flex border gap-3 cursor-pointer justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base"
+              >
+                Contact through Whatsapp
+              </Button>
 
-            <Button
-              variant="bordered"
-              startContent={
-                <MailOutlineIcon className="text-customNameBlack" />
-              }
-              className=" flex-1 flex border justify-center px-5 items-center cursor-pointer gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base"
-            >
-              Send us a mail
-            </Button>
+              <Button
+                variant="bordered"
+                startContent={
+                  <MailOutlineIcon className="text-customNameBlack" />
+                }
+                className=" flex-1 flex border justify-center px-5 items-center cursor-pointer gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base"
+              >
+                Send us a mail
+              </Button>
+            </div>
           </div>
         </div>
       </div>
       <div
         style={{
-          backgroundImage: `url(${require("../../../src/assets/swimmingpool.jpg")})`,
+          backgroundImage: `url(${require("../../../src/assets/modern-styled-entryway.jpg")})`,
           objectFit: "contain",
-          backgroundPosition: "center",
+          backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
-        className="hidden lg:block flex-1 relative  "
-      ></div>
+        className="hidden lg:block flex-1 relative  w-full "
+      >
+        <Button
+          className="absolute right-14 top-9 text-white border-white border-1"
+          variant="bordered"
+          radius="sm"
+          onPress={goBack}
+        >
+          Back
+        </Button>
+      </div>
     </div>
   );
 }

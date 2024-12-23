@@ -17,7 +17,14 @@ const ViewFullImg = ({ img }) => {
 
   return (
     <>
-      <Tooltip content="Full Image" showArrow={true}>
+      <Tooltip
+        content="Preview Image
+
+
+
+"
+        showArrow={true}
+      >
         <Button
           isIconOnly
           size="sm"
@@ -34,6 +41,7 @@ const ViewFullImg = ({ img }) => {
         backdrop="blur"
         radius="none"
         size="4xl"
+        placement="center"
         classNames={{
           closeButton: " text-black bg-black-200 z-[40] backdrop-blur-md",
         }}

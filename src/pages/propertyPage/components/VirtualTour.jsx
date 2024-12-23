@@ -11,7 +11,7 @@ function VirtualTour({ id, propertyData }) {
       <div>
         <iframe
           width="100%"
-          height="400"
+          height="470"
           // src="https://www.youtube.com/embed/B4o8PvcqHC4?si=D4r69y3HGTRRZGz8"
           src={propertyData?.property?.property?.virtualTourLink}
           title="YouTube video player"

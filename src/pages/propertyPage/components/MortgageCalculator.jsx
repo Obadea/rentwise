@@ -98,7 +98,7 @@ function MortgageCalculator({ id, propertyData }) {
       </p>
       {propertyData ? (
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-3">
-          <div className="flex items-center justify-center lg:w-[87%] m-auto w-full ">
+          <div className="flex items-center justify-center w-[82%] m-auto ">
             <Doughnut
               data={data}
               options={options}

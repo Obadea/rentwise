@@ -1,10 +1,18 @@
 import React from "react";
 import RatingControl from "./RatingControl";
-import { Button, Form, Textarea } from "@nextui-org/react";
+import {
+  Button,
+  Form,
+  Input,
+  Select,
+  SelectItem,
+  Textarea,
+} from "@nextui-org/react";
 import { useMutation } from "@tanstack/react-query";
 import { postReview } from "../../../utils/endpoint";
 import { toast } from "react-toastify";
 import { useAuth } from "../../../utils/AuthContext";
+import { SvgSortIcon } from "../../../utils/SvgIcons";
 
 function PostReview({ propertyID }) {
   const [action, setAction] = React.useState(null);
@@ -17,7 +25,8 @@ function PostReview({ propertyID }) {
     onSuccess: async (data) => {
       setIsLoading(false);
       setReview("");
-      toast(data?.message, { type: "success", draggable: true });
+      toast(data?.messsage, { type: "success", draggable: true });
+      console.log(data);
     },
 
     onError: async (err) => {
@@ -36,6 +45,9 @@ function PostReview({ propertyID }) {
 
   return (
     <div className="px-4 py-6 lg:p-10 flex flex-col bg-white gap-4 mt-16 ">
+      <div className="flex justify-between py-6 pb-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+        <p className=" font-medium text-lg text-customdark">Leave a Review</p>
+      </div>
       <Form
         validationBehavior="native"
         onReset={() => setAction("reset")}
@@ -50,19 +62,66 @@ function PostReview({ propertyID }) {
             token: token,
           });
 
-          console.log(data);
+          // console.log(data);
         }}
       >
+        {/* <Input
+          errorMessage="Please enter a valid email"
+          label="Email"
+          labelPlacement="outside"
+          name="email"
+          placeholder="you@example.com"
+          type="email"
+          isDisabled={isLoading}
+          variant="bordered"
+          className=""
+        />{" "}
+        <div className="flex w-full gap-4">
+          <Input
+            errorMessage="Please enter a Title"
+            label="Title"
+            labelPlacement="outside"
+            name="title"
+            placeholder="Enter a title"
+            type="text"
+            isDisabled={isLoading}
+            variant="bordered"
+            className=""
+          />
+
+          <Select
+            disableSelectorIconRotation
+            label="Rating"
+            labelPlacement="outside"
+            placeholder="Select"
+            selectorIcon={<SvgSortIcon />}
+            name="rating"
+            variant="bordered"
+          >
+            <SelectItem key="1">1</SelectItem>
+            <SelectItem key="2">2</SelectItem>
+            <SelectItem key="3">3</SelectItem>
+            <SelectItem key="4">4</SelectItem>
+            <SelectItem key="5">5</SelectItem>
+          </Select>
+        </div> */}
+
+        <div className="flex w-full gap-4">
+          <p>Select Rating:</p>
+          <RatingControl />
+        </div>
+
         <Textarea
           name="review"
           value={review}
           minRows={5}
-          label="Description"
-          placeholder="Enter your review..."
+          label="Review"
+          labelPlacement="outside"
+          placeholder="Write a review..."
           onChange={handleTextChange}
           isDisabled={isLoading}
+          variant="bordered"
         />
-
         <div className="flex justify-between w-full mt-8 items-center">
           <Button
             color="primary"
@@ -72,9 +131,9 @@ function PostReview({ propertyID }) {
           >
             {token ? "Submit Review" : "Please login to post"}
           </Button>
-          <div>
+          {/* <div>
             <RatingControl />
-          </div>
+          </div> */}
         </div>
       </Form>
     </div>
