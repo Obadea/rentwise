@@ -40,6 +40,13 @@ export const getAllProperties = async (propertyNumber) => {
   return response.data;
 };
 
+export const getAllShortlet = async (shortletNumber) => {
+  const response = await apiClient.get(
+    `${process.env.REACT_APP_API_URL}/api/v1/shortlet?q=${shortletNumber}`
+  );
+  return response.data;
+};
+
 // Get a Sinle Properties
 export const getSingleProperty = async (propertyID) => {
   const response = await apiClient.get(
