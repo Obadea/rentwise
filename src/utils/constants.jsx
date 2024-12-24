@@ -6,6 +6,19 @@ import palor5 from "../assets/palor5.jpg";
 import palor6 from "../assets/palor6.jpg";
 import palor7 from "../assets/palor7.jpg";
 
+import rental1 from "../assets/rentalImg/image 21.png";
+import rental2 from "../assets/rentalImg/image 12.png";
+import rental3 from "../assets/rentalImg/image 14.png";
+import rental4 from "../assets/rentalImg/image 27.png";
+import rental5 from "../assets/rentalImg/image 25.png";
+import rental6 from "../assets/rentalImg/image 10.png";
+import rental7 from "../assets/rentalImg/image 11.png";
+import rental8 from "../assets/rentalImg/image 26.png";
+import rental9 from "../assets/rentalImg/image 19.png";
+import rental10 from "../assets/rentalImg/image 20.png";
+import rental11 from "../assets/rentalImg/image 22.png";
+import rental12 from "../assets/rentalImg/image 24.png";
+import rental9f from "../assets/rentalImg/image 17.png";
 export const searchPageDropDown = [
   {
     title: "Price",
@@ -279,5 +292,99 @@ export const propertyPageDropDown = [
   {
     title: "Type",
     select: ["Apartment", "Duplex", "Bungalow", "Townhouse", "Penthouse"],
+  },
+];
+
+export const manageRentalCardData = [
+  {
+    title: "Add property",
+    description:
+      "Add your property and have your property seen by millions of people",
+    image: rental1, // Add your image path here
+    buttonText: "Get Started",
+  },
+  {
+    title: "Seamless rent collection",
+    description:
+      "rentwise automates rent collection through a secure, integrated payment system",
+    image: rental2,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Easy eviction support",
+    description:
+      "Explore legal resources and expert advice for managing evictions when necessary",
+    image: rental3,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Fraud detection and identity verification",
+    description:
+      "rentwise uses AI and secure verification systems to ensure that tenants provide accurate information during the application process",
+    image: rental4,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Regular property inspection",
+    description:
+      "rentwise offers optional services for scheduling and conducting regular property inspections through vetted professionals",
+    image: rental5,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Utility bill management",
+    description:
+      "Reduces the risk of landlords being burdened with unpaid utility bills and helps ensure transparency in financial obligations",
+    image: rental6,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Caution fee management",
+    description:
+      "rentwise offers a secure way to manage and document security deposits, making it easy for landlords to log any deductions for damages",
+    image: rental7,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Unauthorized subletting",
+    description:
+      "Include specific clauses in digital rental agreements that prevent unauthorized subletting",
+    image: rental8,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Tenant Screening and Verification",
+    description:
+      "rentwise offers thorough tenant background checks, including employment verification, rental history, and credit score assessments",
+    image: rental9f,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Rental Agreement Customization",
+    description:
+      "Easily customize lease agreements with terms specific to their property, including rules about noise levels, property use, and more",
+    image: rental9,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Legal Compliance and Tenant Rights Awareness",
+    description:
+      "rentwise provides landlords with resources and updates on tenant rights and legal requirements in Lagos, ensuring that lease agreements comply with local laws",
+    image: rental10,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Real-Time Communication",
+    description:
+      "The platform provides a messaging system that facilitates direct communication between landlords and tenants for quick resolution of issues",
+    image: rental11,
+    buttonText: "Get Started",
+  },
+  {
+    title: "Fair Pricing and Rent Comparisons",
+    description:
+      "rentwise rent comparison feature, which allows landlords to price their properties competitively based on current market trends",
+    image: rental12,
+    buttonText: "Get Started",
   },
 ];

@@ -110,10 +110,10 @@ function LocationSearch({ forShortlet }) {
     "w-full sticky top-1 z-20 py-1.5 px-2 bg-default-100 shadow-small rounded-small";
 
   return (
-    <div className={`${forShortlet ? "mt-12" : ""} `}>
+    <div className={`${forShortlet ? "mt-12 " : ""} `}>
       <div className=" flex  lg:flex justify-center lg:overflow-hidden ">
         <div className="max-w-[600px] flex lg:hidden justify-between items-center   gap-2 absolute -bottom-5  ">
-          <div className="bg-customsearchinput min-w-[294px] h-[52px] flex flex-grow justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
+          <div className="bg-customsearchinput min-w-[294px] h-[52px] flex flex-grow justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] ">
             <input
               type="text"
               placeholder="Search"

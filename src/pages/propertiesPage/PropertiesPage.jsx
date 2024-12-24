@@ -27,6 +27,7 @@ import {
 import Footer from "../../components/Footer";
 import { toNaira } from "../../utils/helperFunction";
 import { useNavigate } from "react-router-dom";
+import { Skeleton } from "@mui/material";
 
 const PropertiesPage = () => {
   const [compareProperty, setCompareProperty] = useState([]);
@@ -50,8 +51,8 @@ const PropertiesPage = () => {
     setCompareProperty(compareProperty.filter((image) => image.id !== id));
   };
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  // if (isLoading) return <div>Loading...</div>;
+  // if (error) return <div>Error: {error.message}</div>;
 
   return (
     <>
@@ -91,25 +92,41 @@ const PropertiesPage = () => {
           </div>
         </div>
       </div>
-      <div className="properties-container flex justify-center flex-col items-center ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-7xl">
-          {data?.properties?.map((property) => (
-            <PropertiesCard
-              key={property.id}
-              img={property?.propertyImages[6]}
-              title={property?.name}
-              address={property?.address}
-              bedroom={property?.bedrooms}
-              bathroom={property?.bathrooms}
-              sittingroom={4}
-              amount={Number(property?.price)}
-              propertyData={property}
-              compareData={compareProperty}
-              removeProperty={removeImage}
-              addProperty={addItem}
-            />
-          ))}
-        </div>
+      {/* {error && } */}
+      <div className="">
+        {isLoading ? (
+          // <div className="properties-container flex">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-7xl mx-auto h-screen">
+            <Skeleton className="h-80 w-full rounded-lg" />
+            <Skeleton className="h-80 w-full rounded-lg" />
+            <Skeleton className="h-80 w-full rounded-lg" />
+            <Skeleton className="h-80 w-full rounded-lg" />
+            <Skeleton className="h-80 w-full rounded-lg" />
+            <Skeleton className="h-80 w-full rounded-lg" />
+            {/* </div> */}
+          </div>
+        ) : (
+          <div className="properties-container flex justify-center flex-col items-center ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-7xl">
+              {data?.properties?.map((property) => (
+                <PropertiesCard
+                  key={property.id}
+                  img={property?.propertyImages[6]}
+                  title={property?.name}
+                  address={property?.address}
+                  bedroom={property?.bedrooms}
+                  bathroom={property?.bathrooms}
+                  sittingroom={4}
+                  amount={Number(property?.price)}
+                  propertyData={property}
+                  compareData={compareProperty}
+                  removeProperty={removeImage}
+                  addProperty={addItem}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       {/* Compare Drawer */}
       <Drawer

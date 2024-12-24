@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../landingpage/components/TopProperties";
 
-function AboutBlogPost() {
+function AboutBlogPost({ forShortletPage }) {
   const settings = {
     lazyLoad: "ondemand",
     dots: true,
@@ -55,7 +55,7 @@ function AboutBlogPost() {
     ],
   };
   return (
-    <div className="px-4 lg:px-24 py-12">
+    <div className={`${forShortletPage ? "" : "px-4 lg:px-24 py-12"}`}>
       <div className="flex flex-col gap-6 ">
         <div className="flex flex-col gap-2">
           <h3 className="font-normal text-3xl text-[#000000] ">

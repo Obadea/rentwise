@@ -47,7 +47,7 @@ function App() {
       <Route path="/wisemen" element={<WiseMenPage />} />
       <Route path="/contact us" element={<ContactUsPage />} />
       <Route path="/accessId" element={<AccessCodePage />} />
-      <Route path="/landlord/manage rentals" element={<ManageRentals />} />
+      <Route path="/rental management" element={<ManageRentals />} />
       <Route
         path="/search"
         element={<SearchResultpage forShortlet={false} />}

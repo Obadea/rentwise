@@ -24,6 +24,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import { SvgLinkIcon } from "../../utils/SvgIcons";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
+import ShareButton from "./ShareButton";
 function AffordabilityCalculator() {
   const [num, setNum] = useState("");
   const [num1, setNum1] = useState("");
@@ -180,9 +181,10 @@ function AffordabilityCalculator() {
               />
               {/* Share Icon */}
               <div className="flex justify-end gap-2">
-                <Button isIconOnly isDisabled={!total}>
+                {/* <Button isIconOnly isDisabled={!total}>
                   <ShareIcon className="text-customStreetcolor" />
-                </Button>
+                </Button> */}
+                <ShareButton total={total} />
                 <Button isIconOnly isDisabled={!total}>
                   <DownloadRoundedIcon className="text-customStreetcolor" />
                 </Button>
@@ -219,7 +221,7 @@ function AffordabilityCalculator() {
                   color="primary"
                   isDisabled={!total}
                 >
-                  Continue Search
+                  View Apartment within this Range
                 </Button>
               </div>
             </div>
