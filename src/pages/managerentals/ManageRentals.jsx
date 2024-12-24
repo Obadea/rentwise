@@ -16,21 +16,26 @@ function ManageRentals() {
   return (
     <div>
       <Header newclassName="sticky" className="bg-textcolor" />
-      <div className="max-w-[1400px] m-auto">
-        <div className="mt-7">
+      <div className="xl:max-w-[1300px] lg:max-w-7xl m-auto">
+        <div className="mt-7 ">
           <Breadcrumb />
         </div>
-        <div className="grid grid-cols-2 ">
-          <p className="text-[40px] text-customNameBlack font-bold mt-48 w-[90%]">
+        <div className="grid lg:grid-cols-2 grid-rows-[0.4fr_1fr] ">
+          <p className="lg:text-[40px] text-customNameBlack font-bold lg:mt-48 w-[90%] mt-1  text-center text-[28px] m-auto">
             A fast and easy way to manage your rentals seamlessly
           </p>
-          <Image width="90%" src={rentalImage} draggable={false} />
+          <Image
+            width="90%"
+            src={rentalImage}
+            draggable={false}
+            className="m-auto"
+          />
         </div>
         <div>
-          <p className="text-[40px] text-customNameBlack font-bold mt-10 text-center">
+          <p className="lg:text-[40px] text-customNameBlack font-bold mt-10 text-center text-[28px]">
             Rent and Manage your Properties
           </p>
-          <p className="text-customNameBlack text-tiny text-center w-[36%] m-auto ">
+          <p className="text-customNameBlack text-tiny text-center lg:w-[36%] m-auto w-[90%]">
             Increase visibility for your listing, streamline maintenance
             requests, or manage rent collection seamlessly, we are here to
             assist you!
@@ -47,10 +52,10 @@ function ManageRentals() {
           ))}
         </div>
         <div className="bg-white p-12 w-full ">
-          <p className="text-[32px] text-center text-customNameBlack font-bold mt-48 w-[90%] m-auto">
+          <p className="lg:text-[32px] text-center text-customNameBlack font-bold mt-18 w-[90%] m-auto text-[22px]">
             How it works
           </p>
-          <div className="flex gap-4 items-center justify-center mt-10">
+          <div className="flex lg:gap-4 items-center justify-center mt-10 lg:flex-row flex-col gap-10">
             <div className="flex flex-col gap-2 items-center max-w-[220px]">
               <SvgUserIcon />
               <p className="text-center text-customResultqueryGrey font-semibold">
@@ -60,7 +65,7 @@ function ManageRentals() {
                 Create an account and enjoy rentwise services
               </p>
             </div>
-            <SvgArrowForwardIcon />
+            <SvgArrowForwardIcon className="hidden lg:block" />
             <div className="flex flex-col gap-2 items-center max-w-[220px]">
               <SvgPhoneIcon />
               <p className="text-center text-customResultqueryGrey font-semibold">
@@ -70,7 +75,7 @@ function ManageRentals() {
                 Speak with an agent and get verified{" "}
               </p>
             </div>
-            <SvgArrowForwardIcon />
+            <SvgArrowForwardIcon className="hidden lg:block" />
             <div className="flex flex-col gap-2 items-center max-w-[220px]">
               <SvgPhoneIcon />
               <p className="text-center text-customResultqueryGrey font-semibold">

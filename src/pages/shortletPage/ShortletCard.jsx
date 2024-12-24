@@ -81,8 +81,8 @@ const ShortletCard = () => {
           <Skeleton className="h-80 w-full rounded-lg" />
         </div>
       ) : (
-        data?.properties?.map((property) => (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-7xl mx-auto mt-7 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-7xl mx-auto mt-7 mb-6">
+          {data?.properties?.map((property) => (
             <PropertiesCard
               key={property.id}
               img={property?.propertyImages[6]}
@@ -97,8 +97,8 @@ const ShortletCard = () => {
               removeProperty={removeImage}
               addProperty={addItem}
             />
-          </div>
-        ))
+          ))}
+        </div>
       )}
     </div>
   );
