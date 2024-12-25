@@ -279,6 +279,14 @@ function SignInPage() {
             mattis in quam. Quam.
           </p>
         </div>
+        <Button
+          className="absolute right-14 top-9 text-white border-white border-1"
+          variant="bordered"
+          radius="sm"
+          onPress={goBack}
+        >
+          Back
+        </Button>
       </div>
     </div>
   );

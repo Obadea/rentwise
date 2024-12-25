@@ -25,15 +25,32 @@ import { SvgLinkIcon } from "../../utils/SvgIcons";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import ShareButton from "./ShareButton";
+import { useSearchParams } from "react-router-dom";
 function AffordabilityCalculator() {
-  const [num, setNum] = useState("");
-  const [num1, setNum1] = useState("");
-  const [num2, setNum2] = useState("");
+  // const [num, setNum] = useState("");
+  // const [num1, setNum1] = useState("");
+  // const [num2, setNum2] = useState("");
 
   const [total, setTotal] = useState(1000);
   const [rent, setRent] = useState(1000);
   const [monthlySavings, setMonthlySavings] = useState(1000);
   const [charges, setCharges] = useState(1000);
+  const [searchParams, setSearchParams] = useSearchParams(); // For managing query parameters
+
+  const [num, setNum] = useState(searchParams.get("num") || "");
+  const [num1, setNum1] = useState(searchParams.get("num1") || "");
+  const [num2, setNum2] = useState(searchParams.get("num2") || "");
+  // const [isCopied, setIsCopied] = useState(false);
+
+  // Function to update URL parameters
+  const updateURLParams = (key, value) => {
+    if (value) {
+      searchParams.set(key, value);
+    } else {
+      searchParams.delete(key);
+    }
+    setSearchParams(searchParams);
+  };
 
   useEffect(() => {
     const total =
@@ -48,10 +65,31 @@ function AffordabilityCalculator() {
     const charges = monthlySaving * 0.05;
     setCharges(charges);
 
+    // Update URL parameters
+    updateURLParams("num", num);
+    updateURLParams("num1", num1);
+    updateURLParams("num2", num2);
+
     console.log(total, rent, monthlySavings, charges);
   }, [num, num1, num2, monthlySavings]);
 
   const prefix = "₦";
+
+  // const handleCopy = () => {
+  //   // Get the current URL
+  //   const url = window.location.href;
+
+  //   // Copy the URL to the clipboard
+  //   navigator.clipboard.writeText(url).then(() => {
+  //     // Set the copied state to true
+  //     setIsCopied(true);
+
+  //     // Revert back to "Copy" after 3 seconds
+  //     setTimeout(() => {
+  //       setIsCopied(false);
+  //     }, 3000);
+  //   });
+  // };
 
   return (
     <div className=" bg-[#F2F2F2] ">

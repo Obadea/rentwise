@@ -57,20 +57,23 @@ function AccessCodePage() {
       <div className=" my-4 mx-auto px-4 w-full  lg:pl-24 lg:pr-16  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
-          <button className="font-bold text-sm text-customSearchblue lg:hidden">
+          <button
+            className="font-bold text-sm text-customSearchblue lg:hidden"
+            onClick={goBack}
+          >
             Back
           </button>
         </div>
 
         <div className="flex flex-col gap-3 my-10">
-          <h2 className="text-customblue text-2xl font-bold capitalize ">
+          <h2 className="text-customblue text-2xl font-bold capitalize mt-12 ">
             Enter Access ID
           </h2>
           <p className="text-xs font-normal text-customBlackShade">
             Enter required access ID
           </p>
         </div>
-        <div className="lg:gap-6 mt-8 lg:flex lg:flex-col lg:justify-center lg:h-[60vh]">
+        <div className="lg:gap-6 mt-8 lg:flex lg:flex-col  lg:h-[60vh]">
           <Form
             className="w-full  flex flex-col gap-4"
             validationBehavior="native"

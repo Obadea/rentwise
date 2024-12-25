@@ -21,7 +21,7 @@ function ManageRentals() {
           <Breadcrumb />
         </div>
         <div className="grid lg:grid-cols-2 grid-rows-[0.4fr_1fr] ">
-          <p className="lg:text-[40px] text-customNameBlack font-bold lg:mt-48 w-[90%] mt-1  text-center text-[28px] m-auto">
+          <p className="lg:text-[40px] text-customNameBlack font-bold lg:mt-48 w-[90%] mt-1  text-center lg:text-start text-[28px] m-auto">
             A fast and easy way to manage your rentals seamlessly
           </p>
           <Image

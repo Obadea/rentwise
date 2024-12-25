@@ -5,7 +5,7 @@ function ManageRentalsCard({ img, title, description, buttonText }) {
   return (
     <Card radius="sm" className="pt-8 pb-4">
       <CardBody className="flex flex-col items-center space-y-3">
-        <Image src={img} width="70%" className="m-auto" />
+        <Image src={img} width="70%" className="m-auto" disableSkeleton />
         <p className="font-bold text-customResultqueryGrey text-[18px] text-center">
           {title}
         </p>
