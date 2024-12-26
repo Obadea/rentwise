@@ -2,8 +2,8 @@ import React from "react";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import { Skeleton } from "@nextui-org/react";
 
-function Features({ id, propertyData }) {
-  if (!propertyData?.property?.property?.features) {
+function Features({ id, propertyData, forShortlet, isLoading }) {
+  if (isLoading) {
     return <Skeleton className="w-[92%] h-60 rounded-md mt-6 mx-auto" />;
   }
 
@@ -14,12 +14,19 @@ function Features({ id, propertyData }) {
           <h4 className=" font-medium text-xl text-customdark">Features</h4>
         </div>
         <div className="text-lg font-normal text-customNameBlack flex flex-col gap-3 md:flex-row md:flex-wrap text-nowrap">
-          {propertyData?.property?.property?.features?.map((item) => (
-            <h4 className="w-52 flex items-center">
-              <CheckCircleOutlineIcon />
-              {item}
-            </h4>
-          ))}
+          {forShortlet
+            ? propertyData?.shortlet?.features?.map((item) => (
+                <h4 className="w-52 flex items-center">
+                  <CheckCircleOutlineIcon />
+                  {item}
+                </h4>
+              ))
+            : propertyData?.property?.property?.features?.map((item) => (
+                <h4 className="w-52 flex items-center">
+                  <CheckCircleOutlineIcon />
+                  {item}
+                </h4>
+              ))}
           {/* <h4 className="w-52">
             <CheckCircleOutlineIcon />
             Air Conditioning

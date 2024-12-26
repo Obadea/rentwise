@@ -22,7 +22,7 @@ import { useMutation } from "@tanstack/react-query";
 import { enquiryPropertyForm } from "../../../utils/endpoint";
 import { toast } from "react-toastify";
 
-function ContactInfo({ id, propertyData }) {
+function ContactInfo({ id, propertyData, forShortlet }) {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -78,6 +78,8 @@ function ContactInfo({ id, propertyData }) {
             <PermIdentityIcon />{" "}
             {propertyData?.property?.property?.wiseman?.fullName
               ? propertyData?.property?.property?.wiseman?.fullName
+              : forShortlet
+              ? propertyData?.shortlet?.wiseman
               : "Loading..."}
           </h3>
           <div className="flex gap-4 flex-wrap">

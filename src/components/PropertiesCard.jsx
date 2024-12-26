@@ -40,6 +40,7 @@ const PropertiesCard = ({
   removeProperty,
   className,
   containerClassName,
+  isShortlet,
 }) => {
   const navigate = useNavigate();
 
@@ -53,7 +54,11 @@ const PropertiesCard = ({
       isPressable={isPressable}
       shadow="none"
       onPress={() => {
-        navigate(`/property?id=${propertyData?.id}`);
+        if (isShortlet) {
+          return navigate(`/shortlet/property?id=${propertyData?.id}`);
+        } else {
+          return navigate(`/property?id=${propertyData?.id}`);
+        }
       }}
       className={`mb-6 mt-2 ml-2 ${containerClassName}`}
     >
@@ -116,9 +121,9 @@ const PropertiesCard = ({
             </Tooltip>
           </div>
         </div>
-        <div className="flex items-center mt-3 px-3">
+        <div className="flex items-center gap-2 mt-3 px-3">
           <SvgLocationIcon />
-          <p className="truncate text-nowrap w-[80%]">{address}</p>
+          <p className="truncate text-nowrap text-start w-[80%]">{address}</p>
         </div>
         <div className="flex items-center mt-5 gap-2 px-3">
           <SvgBedIcon className="stroke-3 w-4 h-4" />

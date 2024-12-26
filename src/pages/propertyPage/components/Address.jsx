@@ -3,7 +3,7 @@ import MapIcon from "@mui/icons-material/Map";
 import { SvgMapIcon } from "../../../utils/SvgIcons";
 import { Button } from "@nextui-org/react";
 
-function Address({ id, propertyData }) {
+function Address({ id, propertyData, forShortlet }) {
   return (
     <div
       id={id}
@@ -25,6 +25,8 @@ function Address({ id, propertyData }) {
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
             {propertyData?.property?.property?.address
               ? propertyData?.property?.property?.address
+              : forShortlet
+              ? propertyData?.shortlet?.address
               : "Loading..."}
           </button>
         </div>
@@ -33,6 +35,8 @@ function Address({ id, propertyData }) {
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
             {propertyData?.property?.property?.city
               ? propertyData?.property?.property?.city
+              : forShortlet
+              ? propertyData?.shortlet?.city
               : "Loading..."}
           </button>
         </div>
@@ -41,6 +45,8 @@ function Address({ id, propertyData }) {
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
             {propertyData?.property?.property?.state
               ? propertyData?.property?.property?.state
+              : forShortlet
+              ? propertyData?.shortlet?.state
               : "Loading..."}
           </button>
         </div>
@@ -51,6 +57,8 @@ function Address({ id, propertyData }) {
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
             {propertyData?.property?.property?.zipCode
               ? propertyData?.property?.property?.zipCode
+              : forShortlet
+              ? propertyData?.shortlet?.zipCode
               : "Loading..."}
           </button>
         </div>
@@ -59,6 +67,8 @@ function Address({ id, propertyData }) {
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
             {propertyData?.property?.property?.Area
               ? propertyData?.property?.property?.Area
+              : forShortlet
+              ? propertyData?.shortlet?.Area
               : "Loading..."}
           </button>
         </div>
@@ -67,6 +77,8 @@ function Address({ id, propertyData }) {
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
             {propertyData?.property?.property?.country
               ? propertyData?.property?.property?.country
+              : forShortlet
+              ? propertyData?.shortlet?.country
               : "Loading..."}
           </button>
         </div>

@@ -56,6 +56,15 @@ export const getSingleProperty = async (propertyID) => {
   );
   return response.data;
 };
+// Get a Sinle Shortlet property
+export const getSingleShortlet = async (shortletID) => {
+  const response = await apiClient.get(
+    `${process.env.REACT_APP_API_URL}/api/v1/shortlet/${
+      shortletID ? shortletID : ""
+    }`
+  );
+  return response.data;
+};
 
 export const houseHoldIncome = async (incomeData) => {
   if (incomeData) {
@@ -160,6 +169,21 @@ export const postReview = async (data) => {
     return response.data;
   }
 };
+export const postReviewForShortlet = async (data) => {
+  if (data) {
+    const { propertyID, userData, token } = data;
+    const response = await apiClient.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/shortlet-review/${propertyID}/create`,
+      userData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
+  }
+};
 
 export const resendOtp = async (data) => {
   const { userEmail, token } = data;
@@ -240,6 +264,16 @@ export const resetPassword = async (password) => {
           Authorization: `Bearer ${password.token}`,
         },
       }
+    );
+    return response.data;
+  }
+};
+
+export const contactUs = async (formData) => {
+  if (formData) {
+    const response = await apiClient.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/contact-us`,
+      { ...formData, GDPRAgreement: true }
     );
     return response.data;
   }

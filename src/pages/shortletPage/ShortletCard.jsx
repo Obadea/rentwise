@@ -73,6 +73,7 @@ const ShortletCard = () => {
               addProperty={addItem}
               containerClassName="z-0"
               className="z-0"
+              isShortlet={true}
             />
           ))}
       </div>

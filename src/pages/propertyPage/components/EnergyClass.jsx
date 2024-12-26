@@ -1,7 +1,7 @@
 import { Tooltip } from "@nextui-org/react";
 import React from "react";
 
-function EnergyClass({ id, propertyData }) {
+function EnergyClass({ id, propertyData, forShortlet }) {
   return (
     <div id={id}>
       <div className="px-4 py-6 lg:p-10 flex flex-col mt-16 gap-4 bg-white">
@@ -15,7 +15,9 @@ function EnergyClass({ id, propertyData }) {
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
               {propertyData?.property?.property?.energeticClass
-                ? ` ${propertyData?.property?.property?.energeticClass}`
+                ? propertyData?.property?.property?.energeticClass
+                : forShortlet
+                ? propertyData?.shortlet?.energeticClass
                 : "Loading..."}
             </button>
           </div>
@@ -26,6 +28,8 @@ function EnergyClass({ id, propertyData }) {
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
               {propertyData?.property?.property?.globalEnergyPerformanceIndex
                 ? `${propertyData?.property?.property?.globalEnergyPerformanceIndex} kWh / m²a`
+                : forShortlet
+                ? `${propertyData?.shortlet?.globalEnergyPerformanceIndex} KWh / m²a`
                 : "Loading..."}
             </button>
           </div>
@@ -34,10 +38,10 @@ function EnergyClass({ id, propertyData }) {
               Renewable energy performance index:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {
-                propertyData?.property?.property
-                  ?.renewableEnergyPerformanceIndex
-              }
+              {forShortlet
+                ? propertyData?.shortlet?.renewableEnergyPerformanceIndex
+                : propertyData?.property?.property
+                    ?.renewableEnergyPerformanceIndex}
             </button>
           </div>
           <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] ">
@@ -47,6 +51,8 @@ function EnergyClass({ id, propertyData }) {
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
               {propertyData?.property?.property?.energyPerformanceOfBuilding
                 ? propertyData?.property?.property?.energyPerformanceOfBuilding
+                : forShortlet
+                ? propertyData?.shortlet?.energyPerformanceOfBuilding
                 : "Loading..."}
             </button>
           </div>
@@ -57,6 +63,8 @@ function EnergyClass({ id, propertyData }) {
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
               {propertyData?.property?.property?.epcCurrentRating
                 ? `${propertyData?.property?.property?.epcCurrentRating}`
+                : forShortlet
+                ? `${propertyData?.shortlet?.epcCurrentRating}`
                 : "Loading..."}
             </button>
           </div>
@@ -67,6 +75,8 @@ function EnergyClass({ id, propertyData }) {
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
               {propertyData?.property?.property?.epcPotentialRating
                 ? `${propertyData?.property?.property?.epcPotentialRating}`
+                : forShortlet
+                ? `${propertyData?.shortlet?.epcPotentialRating}`
                 : "Loading..."}
             </button>
           </div>
@@ -76,7 +86,11 @@ function EnergyClass({ id, propertyData }) {
       {/* Band distribution */}
       <div className="flex justify-center mt-12 w-full text-white">
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class A+`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class A+`}
           showArrow
         >
           <div className="px-1 md:px-8 py-2 min-w-10 flex items-center justify-center bg-[#33A357]">
@@ -84,7 +98,11 @@ function EnergyClass({ id, propertyData }) {
           </div>
         </Tooltip>
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class A`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class A`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#79B752]">
@@ -93,7 +111,11 @@ function EnergyClass({ id, propertyData }) {
         </Tooltip>
 
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class B`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class B`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#C3D545]">
@@ -102,7 +124,11 @@ function EnergyClass({ id, propertyData }) {
         </Tooltip>
 
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class C`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class C`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#FFF12C]">
@@ -111,7 +137,11 @@ function EnergyClass({ id, propertyData }) {
         </Tooltip>
 
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class D`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class D`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#EDB731]">
@@ -120,7 +150,11 @@ function EnergyClass({ id, propertyData }) {
         </Tooltip>
 
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class E`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class E`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#D66F2C]">
@@ -129,7 +163,11 @@ function EnergyClass({ id, propertyData }) {
         </Tooltip>
 
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class F`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class F`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#CC232A]">
@@ -138,7 +176,11 @@ function EnergyClass({ id, propertyData }) {
         </Tooltip>
 
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class G`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class G`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#CC232A]">
@@ -147,7 +189,11 @@ function EnergyClass({ id, propertyData }) {
         </Tooltip>
 
         <Tooltip
-          content={`${propertyData?.property?.property?.globalEnergyPerformanceIndex}kWh / m²a | Energy class H`}
+          content={`${
+            forShortlet
+              ? propertyData?.shortlet?.globalEnergyPerformanceIndex
+              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+          }kWh / m²a | Energy class H`}
           showArrow
         >
           <div className="px-1 cursor-pointer md:px-8 min-w-10 flex items-center justify-center py-2 bg-[#CC232A]">

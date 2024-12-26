@@ -24,7 +24,7 @@ function SignInPage() {
     mutationFn: signInApi,
     onSuccess: async (data) => {
       setIsLoading(false);
-      console.log(data);
+      // console.log(data);
       toast(data?.message, { type: "success", draggable: true });
       login(data);
       navigate("/");

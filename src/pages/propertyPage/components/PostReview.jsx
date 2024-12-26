@@ -9,24 +9,24 @@ import {
   Textarea,
 } from "@nextui-org/react";
 import { useMutation } from "@tanstack/react-query";
-import { postReview } from "../../../utils/endpoint";
+import { postReview, postReviewForShortlet } from "../../../utils/endpoint";
 import { toast } from "react-toastify";
 import { useAuth } from "../../../utils/AuthContext";
 import { SvgSortIcon } from "../../../utils/SvgIcons";
 
-function PostReview({ propertyID }) {
+function PostReview({ propertyID, forShortlet }) {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const { token } = useAuth();
   const [review, setReview] = React.useState("");
 
   const mutation = useMutation({
-    mutationFn: postReview,
+    mutationFn: forShortlet ? postReviewForShortlet : postReview,
     onSuccess: async (data) => {
       setIsLoading(false);
       setReview("");
       toast(data?.messsage, { type: "success", draggable: true });
-      console.log(data);
+      // console.log(data);
     },
 
     onError: async (err) => {

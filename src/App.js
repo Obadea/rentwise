@@ -26,6 +26,7 @@ import OtpConfirm from "./pages/otpConfirm/OtpConfirm.jsx";
 import ResetPasswordOtp from "./pages/resetPasswordOtp/ResetPasswordOtp.jsx";
 import PropertiesPage from "./pages/propertiesPage/PropertiesPage.jsx";
 import ShortletPage from "./pages/shortletPage/ShortletPage.jsx";
+import ShortletDetailsPage from "./pages/shortletDetailsPage/ShortletDetailsPage.jsx";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/property" element={<PropertyPage />} />
       <Route path="/properties" element={<PropertiesPage />} />
+      <Route path="/shortlet/property" element={<ShortletDetailsPage />} />
       <Route
         path="/Rent affordability calculator"
         element={<AffordabilityCalculator />}

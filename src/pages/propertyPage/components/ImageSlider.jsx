@@ -155,14 +155,20 @@ import {
   SvgRightIcon,
 } from "../../../utils/SvgIcons";
 
-const ImageSlider = ({ propertyData, isLoading }) => {
+const ImageSlider = ({ propertyData, isLoading, forShortlet }) => {
   const [images, setImages] = useState([]);
   const [render, setRender] = useState("image");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (!isLoading) {
-      setImages(propertyData?.property?.property?.propertyImages?.slice(1, 9));
+      if (!forShortlet) {
+        setImages(
+          propertyData?.property?.property?.propertyImages?.slice(1, 9)
+        );
+      } else {
+        setImages(propertyData?.shortlet?.shortletsImages?.slice(1, 9));
+      }
     }
   }, [isLoading]);
 

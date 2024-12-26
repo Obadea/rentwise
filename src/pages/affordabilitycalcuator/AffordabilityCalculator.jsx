@@ -26,6 +26,7 @@ import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRou
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import ShareButton from "./ShareButton";
 import { useSearchParams } from "react-router-dom";
+import phoneMockup from "../../assets/phoemokup.png";
 function AffordabilityCalculator() {
   // const [num, setNum] = useState("");
   // const [num1, setNum1] = useState("");
@@ -99,6 +100,7 @@ function AffordabilityCalculator() {
         <div className="mb-2 lg:mt-16">
           <Breadcrumb />
         </div>
+
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-3xl text-customNameBlack mt-7">
             How much Rent can I afford?
@@ -266,7 +268,7 @@ function AffordabilityCalculator() {
           </div>
         </div>
 
-        <h3 className="font-bold text-xl text-customNameBlack mt-7">
+        {/* <h3 className="font-bold text-xl text-customNameBlack mt-7">
           WHAT TO DO NEXT
         </h3>
         <div className="flex flex-col lg:flex-row gap-6 mt-8 w-full mx-auto">
@@ -277,7 +279,6 @@ function AffordabilityCalculator() {
                 height={40}
                 radius="sm"
                 src={saver}
-                // src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
                 width={40}
               />
               <div className="flex flex-col">
@@ -299,7 +300,6 @@ function AffordabilityCalculator() {
                 height={40}
                 radius="sm"
                 src={talkstateman}
-                // src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
                 width={40}
               />
               <div className="flex flex-col">
@@ -321,7 +321,6 @@ function AffordabilityCalculator() {
                 height={40}
                 radius="sm"
                 src={exitImage}
-                // src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
                 width={40}
               />
               <div className="flex flex-col">
@@ -336,6 +335,71 @@ function AffordabilityCalculator() {
               </div>
             </CardHeader>
           </Card>
+        </div> */}
+
+        {/* <div className="mt-5">
+          <div className="w-full h-72 bg-blue-700 rounded-3xl grid-cols-[1fr_2fr]">
+            <div>
+              <div />
+            </div>
+          </div>
+        </div> */}
+        <div className="bg-gray-100 py-16  flex justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_2fr] items-center gap-8 bg-violet-600 rounded-[40px] shadow-lg p-8 max-w-5xl">
+            {/* Phone Mockup */}
+            <div className="relative flex justify-center">
+              <div className="absolute w-[500px] -top-[247px]">
+                {/* <div className="w-[270px] h-[270px] bg-red-300  absolute rounded-full top-[124px] right-[114px]" /> */}
+                <div className="hidden lg:block w-[270px] h-[270px] bg-gradient-to-br from-violet-500 via-violet-700 to-violet-900 absolute rounded-full top-[124px] right-[114px]" />
+
+                <img
+                  src={phoneMockup} // Replace this with the phone mockup image URL
+                  alt="Phone Mockup"
+                  draggable={false}
+                  className="absolute w-full hidden lg:block"
+                />
+              </div>
+            </div>
+
+            {/* Text Section */}
+            <div className="text-center lg:text-left ">
+              <h2 className="text-2xl lg:text-3xl font-bold  leading-snug text-customwhite">
+                Ready? Get Started with Rent
+                <span className="text-customyellow">w</span>ise
+                <span className="text-customyellow">.</span> and Get Awesome
+                Experience
+              </h2>
+              <p className="mt-4 text-customwhite">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                explicabo dignissimos, at voluptatem deserunt id rem, atque,
+                consequatur maiores soluta ea enim! Blanditiis alias deleniti
+                veritatis cum veniam officia reiciendis.
+              </p>
+              {/* <button className="mt-6 px-6 py-3 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700">
+                Learn More →
+              </button> */}
+              <div className="flex flex-col lg:flex-row  w-full gap-4 justify-between mt-16">
+                <Button
+                  className="bg-pink-400 text-customwhite h-12"
+                  radius="full"
+                >
+                  Open rentwise saver account
+                </Button>
+                <Button
+                  className="bg-pink-400 text-customwhite h-12"
+                  radius="full"
+                >
+                  Talk to a wise-man
+                </Button>
+                <Button
+                  className="bg-pink-400 text-customwhite h-12"
+                  radius="full"
+                >
+                  Exit rent affordability calculator
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
