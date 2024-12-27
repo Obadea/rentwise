@@ -17,18 +17,19 @@ function ManageRentals() {
     <div>
       <Header newclassName="sticky" className="bg-textcolor" />
       <div className="xl:max-w-[1300px] lg:max-w-7xl m-auto">
-        <div className="mt-7 ">
+        <div className="mt-7 pl-7">
           <Breadcrumb />
         </div>
-        <div className="grid lg:grid-cols-2 grid-rows-[0.4fr_1fr] ">
-          <p className="lg:text-[40px] text-customNameBlack font-bold lg:mt-48 w-[90%] mt-1  text-center lg:text-start text-[28px] m-auto">
+        <div className="grid lg:grid-cols-2 grid-rows-[0.2fr_0.4fr]  lg:grid-rows-1">
+          <p className="lg:text-[60px] text-customNameBlack font-bold lg:mt-48 w-[90%] mt-3  text-center lg:text-start text-[28px] mx-auto">
             A fast and easy way to manage your rentals seamlessly
           </p>
           <Image
-            width="90%"
+            // width="90% "
+            className="w-[80%] lg:w-[90%] m-auto"
             src={rentalImage}
             draggable={false}
-            className="m-auto"
+            disableSkeleton
           />
         </div>
         <div>

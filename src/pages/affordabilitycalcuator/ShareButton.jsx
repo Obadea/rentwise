@@ -12,11 +12,16 @@ import React, { useEffect, useState } from "react";
 import ShareIcon from "@mui/icons-material/Share";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { MailIcon, SvgCopyIcon, SvgCopiedIcon } from "../../utils/SvgIcons";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../utils/AuthContext";
 
 const ShareButton = ({ total }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isCopied, setIsCopied] = useState(false);
   const [url, setUrl] = useState(window.location.href);
+  const navigate = useNavigate();
+  const { token } = useAuth();
 
   const handleCopy = () => {
     // Get the current URL
@@ -40,7 +45,18 @@ const ShareButton = ({ total }) => {
 
   return (
     <>
-      <Button isIconOnly isDisabled={!total} onPress={onOpen}>
+      <Button
+        isIconOnly
+        isDisabled={!total}
+        onPress={() => {
+          if (token) {
+            onOpen();
+          } else {
+            toast("Please login to share", { type: "error" });
+            navigate("/signin");
+          }
+        }}
+      >
         <ShareIcon className="text-customStreetcolor" />
       </Button>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="xs">

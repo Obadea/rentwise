@@ -65,7 +65,7 @@ const ShortletCard = () => {
               address={property?.address}
               bedroom={property?.bedrooms}
               bathroom={property?.bathrooms}
-              sittingroom={4}
+              sittingroom={2}
               amount={Number(property?.monthlyPrice)}
               propertyData={property}
               compareData={compareProperty}

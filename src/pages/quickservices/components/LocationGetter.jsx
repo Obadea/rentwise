@@ -69,25 +69,26 @@ const LocationGetter = () => {
 
   return (
     <div className="max-w-lg  p-4  text-gray-800">
-      {/* <h1 className="text-2xl font-bold mb-4">Your Time and Location</h1> */}
-      <div className="mb-4">
-        <h2 className="text-lg font-semibold">Current Time:</h2>
+      <h1 className="text-base font-bold">Your Time and Location</h1>
+      <div className="mb-1">
         <p className="text-gray-700">{time || "Fetching time..."}</p>
       </div>
       <div>
-        <h2 className="text-lg font-semibold">Location:</h2>
-        {location.latitude && location.longitude ? (
+        {/* <h2 className="text-lg font-semibold">Location:</h2> */}
+        {/* {location.latitude && location.longitude ? (
           <p className="text-gray-700">
             Latitude: {location.latitude.toFixed(2)}, Longitude:{" "}
             {location.longitude.toFixed(2)}
           </p>
         ) : (
           <p className="text-gray-700">Fetching location...</p>
-        )}
-        {location.city && location.country && (
+        )} */}
+        {location.city && location.country ? (
           <p className="text-gray-700">
             City: {location.city}, Country: {location.country}
           </p>
+        ) : (
+          <p className="text-gray-700">Fetching location...</p>
         )}
       </div>
       {error && <p className="text-red-500 mt-4">{error}</p>}

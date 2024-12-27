@@ -15,7 +15,7 @@ const ScheduleForShortlet = ({ className }) => {
         <p className="text-sm text-customdark mt-8 mb-2">
           Satisfied with apartment?
         </p>
-        <Button color="primary" className="w-60">
+        <Button color="primary" className="w-full">
           Proceed to Payment{" "}
         </Button>
       </div>

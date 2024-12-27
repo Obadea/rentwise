@@ -58,7 +58,7 @@ function SimilarListing({ id }) {
       {/* <div className="flex flex-wrap justify-evenly gap-y-3 gap-x-2 "> */}
       {/* <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4"> */}
       {/* <Propertycard className="flex-1 lg:w-[30%] lg:mx-1 lg:min-w-[240px] " /> */}
-      <div class="flex flex-wrap gap-6 p-4">
+      <div class="flex flex-wrap gap-6">
         {" "}
         {data?.properties ? (
           data?.properties.map((item) => (

@@ -120,12 +120,12 @@ const Hamburger = () => {
         </a>
         {token ? (
           <>
-            <a
+            {/* <a
               className="menu-item text-bold"
               onClick={() => mutation.mutate(token)}
             >
               Log out
-            </a>{" "}
+            </a>{" "} */}
             <Button
               className="w-full"
               color="primary"

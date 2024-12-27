@@ -79,7 +79,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
             {propertyData?.property?.property?.wiseman?.fullName
               ? propertyData?.property?.property?.wiseman?.fullName
               : forShortlet
-              ? propertyData?.shortlet?.wiseman
+              ? propertyData?.shortlet?.wiseman?.fullName
               : "Loading..."}
           </h3>
           <div className="flex gap-4 flex-wrap">
@@ -87,12 +87,16 @@ function ContactInfo({ id, propertyData, forShortlet }) {
               <PhoneIcon />{" "}
               {propertyData?.property?.property?.wiseman?.phoneNumber
                 ? propertyData?.property?.property?.wiseman?.phoneNumber
+                : forShortlet
+                ? propertyData?.shortlet?.wiseman?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
               <PhoneAndroidIcon />
               {propertyData?.property?.property?.wiseman?.phoneNumber
                 ? propertyData?.property?.property?.wiseman?.phoneNumber
+                : forShortlet
+                ? propertyData?.shortlet?.wiseman?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
@@ -100,7 +104,11 @@ function ContactInfo({ id, propertyData, forShortlet }) {
               <WhatsAppIcon />
               <Link
                 className="text-customStreetcolor"
-                href={propertyData?.property?.property?.wiseman?.whatsApp}
+                href={
+                  forShortlet
+                    ? propertyData?.shortlet?.wiseman?.whatsApp
+                    : propertyData?.property?.property?.wiseman?.whatsApp
+                }
                 isExternal
                 showAnchorIcon
               >
@@ -110,7 +118,11 @@ function ContactInfo({ id, propertyData, forShortlet }) {
           </div>
           <div className="flex  items-center gap-4">
             <Link
-              href={propertyData?.property?.property?.wiseman?.facebook}
+              href={
+                forShortlet
+                  ? propertyData?.shortlet?.wiseman?.facebook
+                  : propertyData?.property?.property?.wiseman?.facebook
+              }
               isExternal
             >
               <FacebookIcon style={{ fontSize: "30px" }} />
@@ -118,7 +130,11 @@ function ContactInfo({ id, propertyData, forShortlet }) {
 
             <Link
               className="text-black"
-              href={propertyData?.property?.property?.wiseman?.twitter}
+              href={
+                forShortlet
+                  ? propertyData?.shortlet?.wiseman?.twitter
+                  : propertyData?.property?.property?.wiseman?.twitter
+              }
               isExternal
             >
               <XIcon />
@@ -147,7 +163,9 @@ function ContactInfo({ id, propertyData, forShortlet }) {
             setIsLoading(true);
             mutation.mutate({
               formData: data,
-              propertyID: propertyData?.property?.property?.id,
+              propertyID: forShortlet
+                ? propertyData?.shortlet?._id
+                : propertyData?.property?.property?.id,
             });
           }}
         >

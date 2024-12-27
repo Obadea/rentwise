@@ -25,16 +25,19 @@ function ContactUsPage() {
     mutationFn: contactUs,
     onSuccess: async (data) => {
       setIsLoading(false);
-      // console.log(data);
-      toast(data?.message, { type: "success", draggable: true });
+      console.log(data);
+      toast("Sent Successful", { type: "success", draggable: true });
     },
 
     onError: async (err) => {
       setIsLoading(false);
-      toast(err.response ? err?.response?.data.message : err.message, {
-        type: "error",
-        draggable: true,
-      });
+      toast(
+        "error sending message" ? err?.response?.data.message : err.message,
+        {
+          type: "error",
+          draggable: true,
+        }
+      );
       console.log(err);
     },
   });

@@ -28,6 +28,7 @@ import ShareButton from "./ShareButton";
 import { useSearchParams } from "react-router-dom";
 import phoneMockup from "../../assets/phoemokup.png";
 import { toNaira } from "../../utils/helperFunction";
+import { useAuth } from "../../utils/AuthContext";
 function AffordabilityCalculator() {
   // const [num, setNum] = useState("");
   // const [num1, setNum1] = useState("");
@@ -370,7 +371,7 @@ function AffordabilityCalculator() {
                   monthlySavings
                     ? `${toNaira(monthlySavings)}  rentage Monthly`
                     : "your Expected Monthly Savings"
-                } for
+                }
                 to Avoid Landlord WAHALA`}
               </h2>
               <p className="mt-4 text-customwhite">

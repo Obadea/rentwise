@@ -130,10 +130,19 @@ const PropertiesCard = ({
           <p className="text-[13px]">{bedroom} Bed</p>
           <SvgBathIcon />
           <p className="text-[13px]">{bathroom} Bath</p>
-          {/* <SvgChairIcon />
-          <p className="text-[13px]">{sittingroom} Sitting Room</p> */}
-          <TungstenOutlinedIcon style={{ fontSize: "16px", fill: "#FC97AF" }} />
-          <p className="text-[13px]">10hrs of Light Daily</p>
+          {isShortlet ? (
+            <>
+              <SvgChairIcon />
+              <p className="text-[13px]">{sittingroom} Sitting Room</p>
+            </>
+          ) : (
+            <>
+              <TungstenOutlinedIcon
+                style={{ fontSize: "16px", fill: "#FC97AF" }}
+              />
+              <p className="text-[13px]">10hrs of Light Daily</p>
+            </>
+          )}
         </div>
         <div className="flex mt-5 items-center justify-between border-t-1 pt-2">
           <p className="font-medium text-xl pl-3">
@@ -141,7 +150,7 @@ const PropertiesCard = ({
             <span className="text-sm font-light">/{amountDate}</span>
           </p>
           <p className="text-[12px] font-bold text-customProfileblue pr-3">
-            DETAILS
+            {isShortlet ? "Pay Now" : "DETAILS"}
           </p>
         </div>
       </CardFooter>

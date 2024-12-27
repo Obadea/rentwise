@@ -101,7 +101,11 @@ const ShortletDetailsPage = () => {
       />
       <div className=" px-2 flex gap-3 lg:pl-[110px] lg:pr-[40px]">
         <div className="flex-[3] w-full">
-          <ImageSlider propertyData={data} isLoading={isLoading} />
+          <ImageSlider
+            propertyData={data}
+            isLoading={isLoading}
+            forShortlet={true}
+          />
           <ShortletPropertyName
             shortletData={data}
             className="flex lg:hidden"
@@ -136,6 +140,7 @@ const ShortletDetailsPage = () => {
             <ContactInfo id="contact" propertyData={data} forShortlet={true} />
             <Review id="review" propertyData={data} forShortlet={true} />
             <PostReview propertyID={data?.shortlet?._id} forShortlet={true} />
+            <ScheduleForShortlet className="lg:hidden block" />
             <SimilarListing id="imilar" />
             {/*
             <MortgageCalculator id="mortgage" propertyData={data} />

@@ -69,14 +69,19 @@ const Breadcrumb = () => {
           const path = `/${pathParts.slice(0, index + 1).join("/")}`;
           const decodedPart = decodeURLPart(part); // Decode each part of the path
           return (
-            <li key={index}>
+            <li key={index} className="flex items-center gap-2">
               <Link
                 to={path}
                 className="hover:underline font-semibold capitalize"
               >
                 {decodedPart.charAt(0).toUpperCase() + decodedPart.slice(1)}
               </Link>
-              {index < pathParts.length - 1 && <span> &gt; </span>}
+              {index < pathParts.length - 1 && (
+                <span>
+                  {" "}
+                  <SvgGreaterIcon />
+                </span>
+              )}
             </li>
           );
         })}
