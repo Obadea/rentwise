@@ -4,6 +4,7 @@ import Breadcrumb from "../../components/BreadCrumb";
 import ArtisanService from "./components/ArtisanService";
 import Footer from "../../components/Footer";
 import { Button } from "@nextui-org/react";
+import LocationGetter from "./components/LocationGetter";
 // import { Button } from "@mui/material";
 
 function QuickServicesPage() {
@@ -13,12 +14,13 @@ function QuickServicesPage() {
       <div className="flex flex-col gap-3 lg:px-10 px-3 w-full lg:w-[1010px] xl:w-[1200px] justify-center m-auto">
         <div className="flex flex-col gap-1 lg:mt-28  mt-16">
           <Breadcrumb />
-          <h4 className="font-medium text-base text-customStreetcolor mt-6">
+          {/* <h4 className="font-medium text-base text-customStreetcolor mt-6">
             Victoria Island, Lagos
           </h4>
           <button className="font-normal text-sm text-start text-customSearchblue">
             Edit service location
-          </button>
+          </button> */}
+          <LocationGetter />
         </div>
         <div className="flex flex-col gap-8 py-6">
           <h2 className="font-bold lg:text-3xl text-customdark text-center text-2xl">

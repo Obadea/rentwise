@@ -3,10 +3,19 @@ import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
 import Footer from "../../components/Footer";
 import imageInbackground from "../../assets/interior-workspace_inspired_by_technology.jpg";
-import { Button, Form, Input, Link, Textarea } from "@nextui-org/react";
+import {
+  Button,
+  Checkbox,
+  CheckboxGroup,
+  Form,
+  Input,
+  Link,
+  Textarea,
+} from "@nextui-org/react";
 import { toast } from "react-toastify";
 import { useMutation } from "@tanstack/react-query";
 import { contactUs } from "../../utils/endpoint";
+// import { Checkbox } from "@mui/material";
 
 function ContactUsPage() {
   const [action, setAction] = React.useState(null);
@@ -44,7 +53,7 @@ function ContactUsPage() {
       >
         <h3 className="font-bold text-white text-3xl">Contact Us</h3>
       </div>
-      <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-[10%] lg:items-start py-12 pb-6 px-2 lg:px-20">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-[10%] lg:items-start py-12 pb-6 px-2 lg:px-20 max-w-7xl mx-auto">
         <div className="flex flex-[3] flex-col  lg:gap-10 lg:py-4 lg:px-8 bg-white ">
           <h4 className="font-normal text-lg text-customStreetcolor">
             Our support team is available around the clock to address any
@@ -204,10 +213,13 @@ function ContactUsPage() {
               <h4 className="text-[#222222] font-bold text-sm">
                 GDPR Agreement
               </h4>
-              <p className="font-normal text-sm text-customNameBlack">
-                By sending this message, I consent to having this website store
-                my submitted information
-              </p>
+              <div className="flex items-center gap-2">
+                <Checkbox />
+                <p className="font-normal text-sm text-customNameBlack">
+                  By sending this message, I consent to having this website
+                  store my submitted information
+                </p>
+              </div>
             </div>
             <Button
               color="primary"
@@ -227,13 +239,14 @@ function ContactUsPage() {
           <div className="flex flex-col gap-1">
             <h4 className="font-medium text-base text-customdark">Lagos</h4>
             <p className="font-normal text-sm text-[#666666]">
-              3 Clatus Adebu Close
+              128 Lekki -Epe Road,{" "}
             </p>
             <p className="font-normal text-sm text-[#666666]">
-              Fidiso Estate, Lekki-Epe road,{" "}
+              Lekki Garden Phase 2, Lagos Nigeria{" "}
             </p>
+            <p>0805-555-3655</p>
             <p className="font-normal text-sm text-[#666666]">
-              wiseman@rentwise.rentals
+              contactwiseman@rentwise.rentals
             </p>
           </div>
 
@@ -245,8 +258,9 @@ function ContactUsPage() {
             <p className="font-normal text-sm text-[#666666]">
               Fidiso Estate, Lekki-Epe road,{" "}
             </p>
+            <p>0805-555-3655</p>
             <p className="font-normal text-sm text-[#666666]">
-              wiseman@rentwise.rentals
+              contactwiseman@rentwise.rentals
             </p>
           </div>
         </div>

@@ -388,3 +388,41 @@ export const manageRentalCardData = [
     buttonText: "Get Started",
   },
 ];
+
+export const rentWiseFAQs = [
+  {
+    title: "What is RentWise AI?",
+    content:
+      "RentWise AI is a smart rental platform designed to empower renters and landlords with data-driven insights. It simplifies the rental process, providing tools like the Wise-Report for informed decision-making.",
+  },
+  {
+    title: "What is the Wise-Report?",
+    content:
+      "The Wise-Report is a personalized rental guide that offers:\n• Affordability recommendations based on income.\n• Neighborhood safety ratings and tenant satisfaction scores.\n• Detailed property performance history.\n• Transparency about hidden costs.",
+  },
+  {
+    title: "How does RentWise benefit tenants?",
+    content:
+      "RentWise helps tenants:\n• Find affordable and suitable homes.\n• Avoid untrustworthy agents and hidden costs.\n• Make confident, data-backed rental decisions.",
+  },
+  {
+    title: "How does RentWise benefit landlords?",
+    content:
+      "RentWise supports landlords by:\n• Attracting quality tenants through verified listings.\n• Reducing tenant turnover with predictive analytics.\n• Offering insights into property performance and management.",
+  },
+  {
+    title: "Is the Wise-Report free?",
+    content:
+      "Access to the Wise-Report may involve a nominal fee depending on the level of detail required. Visit www.rentwise.rentals for pricing options.",
+  },
+  {
+    title: "How accurate is the data on RentWise?",
+    content:
+      "RentWise uses advanced AI and reliable data sources to provide accurate, up-to-date insights. However, we recommend cross-verifying critical information independently.",
+  },
+  {
+    title: "Can I list my property on RentWise?",
+    content:
+      "Yes, landlords can list their properties on RentWise to reach a wider audience of pre-screened, reliable tenants. Contact our support team for assistance.",
+  },
+];

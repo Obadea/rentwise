@@ -8,7 +8,7 @@ import MultiFooterLink from "../pages/landingpage/components/MultiFooterLink";
 
 const links1 = [
   { text: "Home", path: "/" },
-  { text: "Browse properties", path: "/" },
+  { text: "Browse properties", path: "/properties" },
   { text: "WiseReport", path: "/" },
   { text: "Virtual tours", path: "/" },
   { text: "Rent calculator", path: "/Rent affordability calculator" },
@@ -16,14 +16,14 @@ const links1 = [
 ];
 
 const links2 = [
-  { text: "Privacy policy", path: "/" },
-  { text: "Terms & Conditions", path: "/" },
+  { text: "Privacy policy", path: "/privacy-policy" },
+  { text: "Terms & Conditions", path: "/terms-conditions" },
   { text: "Cookie policy", path: "/" },
-  { text: "Disclaimer", path: "/" },
+  { text: "Disclaimer", path: "/disclaimer" },
 ];
 
 const links3 = [
-  { text: "FAQ", path: "/" },
+  { text: "FAQ", path: "/faq" },
   { text: "Live chat", path: "/" },
   { text: "Feedback", path: "/" },
   { text: "Contact Us", path: "/contact" },
@@ -56,11 +56,15 @@ function Footer() {
         <div>
           <h4 className="font-thin text-white mb-2">Follow Us</h4>
           <div className="flex gap-1 lg:gap-4 text-white">
-            <YouTubeIcon sx={{ fontSize: 20 }} />
+            <a href="https://www.youtube.com/@RentwiseAI">
+              <YouTubeIcon sx={{ fontSize: 20 }} />
+            </a>
             <FacebookIcon sx={{ fontSize: 20 }} />
             <XIcon sx={{ fontSize: 20 }} />
             <InstagramIcon sx={{ fontSize: 20 }} />
-            <LinkedInIcon sx={{ fontSize: 20 }} />
+            <a href="https://www.linkedin.com/company/rwiseai/" target="_blank">
+              <LinkedInIcon sx={{ fontSize: 20 }} />
+            </a>
           </div>
         </div>
       </div>

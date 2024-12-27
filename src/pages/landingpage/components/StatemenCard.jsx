@@ -1,3 +1,4 @@
+import { Link } from "@nextui-org/react";
 import React from "react";
 
 function StatemenCard(props) {
@@ -16,9 +17,16 @@ function StatemenCard(props) {
         {/* <p className="text-sm font-normal text-customBlackShade">
           {props.about}
         </p> */}
-        <button className="px-4 py-2 my-2 text-sm font-semibold text-customProfileblue hover:text-DownloadHover">
+        <Link
+          href="https://www.linkedin.com/company/rwiseai/}"
+          showAnchorIcon
+          isExternal
+        >
+          View Profile
+        </Link>
+        {/* <button className="px-4 py-2 my-2 text-sm font-semibold text-customProfileblue hover:text-DownloadHover">
           View profile
-        </button>
+        </button> */}
       </div>
     </div>
   );

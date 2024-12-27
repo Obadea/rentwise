@@ -6,7 +6,7 @@ function Partnership() {
       <h3 className="text-center text-customgGrayShade1 font-normal text-lg py-5">
         rentwise is in partnership with:
       </h3>
-      <div className="flex justify-around gap-6 lg:gap-0 text-xl font-bold overflow-x-hidden  lg:overflow-hidden">
+      <div className="flex justify-around gap-6 lg:gap-0 text-xl font-bold overflow-x-scroll  scrollbar-hide my-6 ">
         <h2>
           PrimeBank
           <span className="text-customyellow">.</span>
@@ -14,7 +14,6 @@ function Partnership() {
         <h2>Aspiration Technology</h2>
         <h2>TAD Building</h2>
         <h2>Abigial Apartment</h2>
-        <h2>Novarick</h2>
         <h2>Novarick</h2>
         <h2>
           ServiceN<span className="text-green-600">o</span>w

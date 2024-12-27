@@ -27,6 +27,11 @@ import ResetPasswordOtp from "./pages/resetPasswordOtp/ResetPasswordOtp.jsx";
 import PropertiesPage from "./pages/propertiesPage/PropertiesPage.jsx";
 import ShortletPage from "./pages/shortletPage/ShortletPage.jsx";
 import ShortletDetailsPage from "./pages/shortletDetailsPage/ShortletDetailsPage.jsx";
+import FaqPage from "./pages/faqPage/FaqPage.jsx";
+import PrivacyPolicyPage from "./pages/privacyPolicyPage/PrivacyPolicyPage.jsx";
+import { Terminal } from "@mui/icons-material";
+import TermsAndConditions from "./pages/termsAndConditions/TermsAndConditions.jsx";
+import DisclaimerPage from "./pages/disclaimerPage/DisclaimerPage.jsx";
 
 function App() {
   return (
@@ -50,6 +55,10 @@ function App() {
       <Route path="/contact us" element={<ContactUsPage />} />
       <Route path="/accessId" element={<AccessCodePage />} />
       <Route path="/rental management" element={<ManageRentals />} />
+      <Route path="/FAQ" element={<FaqPage />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+      <Route path="/terms-conditions" element={<TermsAndConditions />} />
+      <Route path="/disclaimer" element={<DisclaimerPage />} />
       <Route
         path="/search"
         element={<SearchResultpage forShortlet={false} />}

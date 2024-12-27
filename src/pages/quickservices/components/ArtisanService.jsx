@@ -17,10 +17,12 @@ import {
   Button,
   Checkbox,
   CheckboxGroup,
+  Link,
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@nextui-org/react";
+import { useNavigate } from "react-router-dom";
 
 const categories = [
   {
@@ -151,6 +153,8 @@ function ArtisanService() {
   const [activePopup, setActivePopup] = useState();
   const [activeSelection, setActiveSelection] = useState({});
 
+  const navigate = useNavigate();
+
   const handlePopup = (id) => {
     setActivePopup(id);
   };
@@ -191,10 +195,18 @@ function ArtisanService() {
                   label={category.name}
                   radius="sm"
                 >
-                  {category.options.map((option) => (
-                    <Checkbox value={option}>{option}</Checkbox>
+                  {category.options.map((option, index) => (
+                    <Checkbox key={index} value={option}>
+                      {option}
+                    </Checkbox>
                   ))}
-                  <Button radius="sm" color="primary" className="mb-3">
+                  <Button
+                    radius="sm"
+                    color="primary"
+                    className="mb-3"
+                    // href="/wisemen"
+                    onPress={() => navigate("/quickservices/agents")}
+                  >
                     Go
                   </Button>
                 </CheckboxGroup>
