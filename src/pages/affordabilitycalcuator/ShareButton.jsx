@@ -16,7 +16,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../utils/AuthContext";
 
-const ShareButton = ({ total }) => {
+const ShareButton = ({ total, whatsAppFunction }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isCopied, setIsCopied] = useState(false);
   const [url, setUrl] = useState(window.location.href);
@@ -76,7 +76,12 @@ const ShareButton = ({ total }) => {
                   </div>
 
                   <div className="flex flex-col items-center">
-                    <Button variant="bordered" isIconOnly size="lg">
+                    <Button
+                      variant="bordered"
+                      isIconOnly
+                      size="lg"
+                      onPress={whatsAppFunction}
+                    >
                       <WhatsAppIcon style={{ fontSize: "30px" }} />
                     </Button>
                     <p className="text-sm">WhatsApp</p>

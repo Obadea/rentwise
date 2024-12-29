@@ -27,7 +27,8 @@ function SignInPage() {
       // console.log(data);
       toast(data?.message, { type: "success", draggable: true });
       login(data);
-      navigate("/");
+      goBack();
+      // navigate("/");
     },
 
     onError: async (err) => {

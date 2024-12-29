@@ -10,6 +10,7 @@ import { formatValue } from "react-currency-input-field";
 import Footer from "../../components/Footer";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import LinkIcon from "@mui/icons-material/Link";
+import jsPDF from "jspdf";
 import {
   Button,
   Card,
@@ -94,6 +95,44 @@ function AffordabilityCalculator() {
   //   });
   // };
 
+  const downloadPDF = () => {
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("Rent Affordability Calculator Results", 10, 20);
+
+    doc.setFontSize(12);
+    doc.text(`Total Monthly Income: ₦${total.toLocaleString()}`, 10, 40);
+    doc.text(`Maximum Annual Rent: ₦${rent.toLocaleString()}`, 10, 50);
+    doc.text(
+      `Expected Monthly Savings: ₦${monthlySavings.toLocaleString()}`,
+      10,
+      60
+    );
+    doc.text(
+      `Outstanding Income for Home Expenses: ₦${(
+        total - monthlySavings
+      ).toLocaleString()}`,
+      10,
+      70
+    );
+
+    doc.save("Rent_Affordability_Calculator.pdf");
+  };
+
+  const shareOnWhatsApp = () => {
+    const message = `Rent Affordability Calculator Results:
+  - Total Monthly Income: ₦${total.toLocaleString()}
+  - Maximum Annual Rent: ₦${rent.toLocaleString()}
+  - Expected Monthly Savings: ₦${monthlySavings.toLocaleString()}
+  - Outstanding Income for Home Expenses: ₦${(
+    total - monthlySavings
+  ).toLocaleString()}`;
+
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className=" bg-[#F2F2F2] ">
       <Header newclassName="sticky" />
@@ -113,9 +152,12 @@ function AffordabilityCalculator() {
             <span className="font-bold">monthly household income</span>
           </p>
         </div>
+        <p className="font-bold text-customStreetcolor text-start text-2xl mt-14 mb-4">
+          My Rent Calculator
+        </p>
         <div className="flex flex-col items-center justify-center  w-full mx-auto">
-          <div className="grid lg:grid-cols-[1.3fr_1fr] lg:rounded-s-xl w-full my-14 gridrows-1 gap-6 lg:gap-0 rounded-xl">
-            <div className=" bg-white px-8 pt-11 pb-6 space-y-5 rounded-s-xl shadow-lg w-full">
+          <div className="grid lg:grid-cols-[1.3fr_1fr] lg:rounded-s-xl w-full mb-14 gridrows-1 gap-6 lg:gap-0 rounded-xl">
+            <div className=" bg-white px-8 pt-4 pb-6 space-y-5 rounded-s-xl shadow-lg w-full">
               <Input
                 variant="underlined"
                 label="Your Monthly Income"
@@ -226,8 +268,8 @@ function AffordabilityCalculator() {
                 {/* <Button isIconOnly isDisabled={!total}>
                   <ShareIcon className="text-customStreetcolor" />
                 </Button> */}
-                <ShareButton total={total} />
-                <Button isIconOnly isDisabled={!total}>
+                <ShareButton total={total} whatsAppFunction={shareOnWhatsApp} />
+                <Button isIconOnly isDisabled={!total} onPress={downloadPDF}>
                   <DownloadRoundedIcon className="text-customStreetcolor" />
                 </Button>
               </div>
