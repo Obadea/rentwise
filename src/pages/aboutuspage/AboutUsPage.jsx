@@ -44,7 +44,7 @@ function AboutUsPage() {
 
         <AboutTextContent
           header="Who We Are"
-          paragraph="Rentwise is an innovative platform focused on transforming the rental experience by empowering prospective tenants with insightful, data-rich information through the Wise-Report. The Wise-Report provides a comprehensive view of properties, incorporating social, financial, and environmental data to support informed rental decisions, RentWise is not just a platform; it’s a community of proactive individuals who value clarity, efficiency, and fairness in the real estate market."
+          paragraph="Rentwise is an innovative platform focused on transforming the rental experience by empowering prospective tenants with insightful, data-rich information through the Wise-Report. The Wise-Report provides a comprehensive view of properties, incorporating social, financial, and environmental data to support informed rental decisions."
           paragraph1=" Our mission is to simplify and elevate the rental process by leveraging cutting-edge AI technology to eliminate guesswork, reduce risks, and create seamless interactions between tenants and landlords. We believe that finding the perfect home or managing a property should be stress-free, empowering, and rooted in reliable insights."
         />
         <AboutTextContent
