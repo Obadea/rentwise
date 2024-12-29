@@ -7,6 +7,7 @@ import {
   ModalFooter,
   ModalHeader,
   useDisclosure,
+  useMediaQuery,
 } from "@nextui-org/react";
 import React, { useEffect, useState } from "react";
 import ShareIcon from "@mui/icons-material/Share";
@@ -22,6 +23,7 @@ const ShareButton = ({ total, whatsAppFunction }) => {
   const [url, setUrl] = useState(window.location.href);
   const navigate = useNavigate();
   const { token } = useAuth();
+  const [modalSize, setModalSize] = useState("xs");
 
   const handleCopy = () => {
     // Get the current URL
@@ -43,6 +45,19 @@ const ShareButton = ({ total, whatsAppFunction }) => {
     setUrl(window.location.href);
   }, [window.location.href, total]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setModalSize(window.innerWidth <= 768 ? "md" : "xs");
+    };
+
+    handleResize(); // Initialize on first render
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Button
@@ -59,7 +74,11 @@ const ShareButton = ({ total, whatsAppFunction }) => {
       >
         <ShareIcon className="text-customStreetcolor" />
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="xs">
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        size={modalSize} // Change size based on the screen size
+      >
         <ModalContent>
           {(onClose) => (
             <>
