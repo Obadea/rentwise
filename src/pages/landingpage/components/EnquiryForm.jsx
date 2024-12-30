@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { useMutation } from "@tanstack/react-query";
 import { sendEnquiry } from "../../../utils/endpoint";
 import { toast } from "react-toastify";
+import { majorCitiesInNigeria } from "../../../utils/constants";
 
 function EnquiryForm() {
   const formik = useFormik({
@@ -158,11 +159,14 @@ function EnquiryForm() {
             >
               All Cities in Lagos
             </option>
-            <option value="lagosIsland">Lagos Island</option>
+            {majorCitiesInNigeria.map((city) => (
+              <option value={city.value}>{city.label}</option>
+            ))}
+            {/* <option value="lagosIsland">Lagos Island</option>
             <option value="victoriaIsland">Victoria Island</option>
             <option value="lekki">Lekki</option>
             <option value="ajah">Ajah</option>
-            <option value="surulere">Surulere</option>
+            <option value="surulere">Surulere</option> */}
           </select>
         </div>
 

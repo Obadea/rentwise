@@ -102,7 +102,7 @@ function PropertyPage() {
             360° Virtual Tour
           </a>
           <a href="#workscore" data-to-scrollspy-id="workscore">
-            WorkScore
+            WalkScore
           </a>
           <a href="#contact" data-to-scrollspy-id="contact">
             Contact
@@ -129,7 +129,11 @@ function PropertyPage() {
 
           <ScrollSpy>
             <PropertyOverview id="overview" propertyData={data} />
-            <Description id="description" propertyData={data} />
+            <Description
+              id="description"
+              propertyData={data}
+              isLoading={isLoading}
+            />
             <Address id="address" propertyData={data} />
             {/* Note:todo */}
             <PropertyDetail id="details" propertyData={data} />
@@ -145,6 +149,7 @@ function PropertyPage() {
                 id="schedule"
                 className="relative top-0 flex-[2]"
                 newClassName="hidden"
+                propertyID={data?.property?._id}
               />
             </div>
 
@@ -153,12 +158,15 @@ function PropertyPage() {
             <WalkScore id="workscore" propertyData={data} />
             <ContactInfo id="contact" propertyData={data} />
             <Review id="review" propertyData={data} />
-            <PostReview propertyID={data?.property?.property?.id} />
+            <PostReview propertyID={data?.property?._id} />
             <SimilarListing id="imilar" />
           </ScrollSpy>
         </div>
         <div className="flex-0 items-center justify-center ">
-          <ScheduleATour className="sticky hidden" />
+          <ScheduleATour
+            className="sticky hidden"
+            propertyID={data?.property?._id}
+          />
         </div>
       </div>
       <Footer />

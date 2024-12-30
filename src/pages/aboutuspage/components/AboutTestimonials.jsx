@@ -64,18 +64,46 @@ function AboutTestimonials() {
           </p>
         </div>
         <div className="hidden lg:flex flex-row gap-4 justify-between ">
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
+          <TestimonialCard
+            text={
+              "RentWise made my house-hunting so much easier! I was able to find the perfect apartment that fit my budget, thanks to their income-based recommendations. No more wasting time on homes I couldn’t afford. I felt like they really understood my needs!"
+            }
+            name="Chinedu A."
+            location="Lekki, Lagos"
+          />
+          <TestimonialCard
+            text="Before using RentWise, I was always nervous about renting in Lagos because of all the hidden details. The WiseReport changed everything! I knew all about the landlord and neighborhood before I even visited. I felt confident and informed, which made my decision stress-free"
+            name="Sarah K."
+            location="Victoria Island"
+          />
+          <TestimonialCard
+            text="I have a busy schedule, and I was dreading the time-consuming process of visiting properties. RentWise’s virtual tours were a game-changer. I could explore homes from my couch, narrowing down my choices before visiting in person. It saved me so much time!"
+            name="Emeka O."
+            location="Yaba, Lagos"
+          />
         </div>
         <div className=" pb-12  lg:hidden">
           <div>
             <div className="slider-container px-10 mt-8 ">
               <Slider {...settings} className="">
-                <TestimonialCard className="w-full" />
-                <TestimonialCard className="w-full" />
-                <TestimonialCard className="w-full" />
-                <TestimonialCard className="w-full" />
+                <TestimonialCard
+                  text={
+                    "RentWise made my house-hunting so much easier! I was able to find the perfect apartment that fit my budget, thanks to their income-based recommendations. No more wasting time on homes I couldn’t afford. I felt like they really understood my needs!"
+                  }
+                  className="w-full"
+                />
+                <TestimonialCard
+                  text="Before using RentWise, I was always nervous about renting in Lagos because of all the hidden details. The WiseReport changed everything! I knew all about the landlord and neighborhood before I even visited. I felt confident and informed, which made my decision stress-free"
+                  className="w-full"
+                />
+                <TestimonialCard
+                  text="I have a busy schedule, and I was dreading the time-consuming process of visiting properties. RentWise’s virtual tours were a game-changer. I could explore homes from my couch, narrowing down my choices before visiting in person. It saved me so much time!"
+                  className="w-full"
+                />
+                <TestimonialCard
+                  text="I have a busy schedule, and I was dreading the time-consuming process of visiting properties. RentWise’s virtual tours were a game-changer. I could explore homes from my couch, narrowing down my choices before visiting in person. It saved me so much time!"
+                  className="w-full"
+                />
               </Slider>
             </div>
           </div>

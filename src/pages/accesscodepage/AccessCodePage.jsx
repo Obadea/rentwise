@@ -16,6 +16,7 @@ import { toast } from "react-toastify";
 import { useAuth } from "../../utils/AuthContext";
 import { signInForLandLord, signInForWisemen } from "../../utils/endpoint";
 import { goBack } from "../../utils/helperFunction";
+import GenerateAccessIdModal from "./GenerateAccessIdModal";
 function AccessCodePage() {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -57,20 +58,23 @@ function AccessCodePage() {
       <div className=" my-4 mx-auto px-4 w-full  lg:pl-24 lg:pr-16  lg:w-[50%] ">
         <div className="flex justify-between ">
           <Logo />
-          <button className="font-bold text-sm text-customSearchblue lg:hidden">
+          <button
+            className="font-bold text-sm text-customSearchblue lg:hidden"
+            onClick={goBack}
+          >
             Back
           </button>
         </div>
 
         <div className="flex flex-col gap-3 my-10">
-          <h2 className="text-customblue text-2xl font-bold capitalize ">
+          <h2 className="text-customblue text-2xl font-bold capitalize mt-12 ">
             Enter Access ID
           </h2>
           <p className="text-xs font-normal text-customBlackShade">
             Enter required access ID
           </p>
         </div>
-        <div className="lg:gap-6 mt-8 lg:flex lg:flex-col lg:justify-center lg:h-[60vh]">
+        <div className="lg:gap-6 mt-8 lg:flex lg:flex-col  lg:h-[60vh]">
           <Form
             className="w-full  flex flex-col gap-4"
             validationBehavior="native"
@@ -142,15 +146,16 @@ function AccessCodePage() {
                 Contact through Whatsapp
               </Button>
 
-              <Button
+              <GenerateAccessIdModal />
+              {/* <Button
                 variant="bordered"
                 startContent={
                   <MailOutlineIcon className="text-customNameBlack" />
                 }
                 className=" flex-1 flex border justify-center px-5 items-center cursor-pointer gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base"
               >
-                Send us a mail
-              </Button>
+                Generate Access ID
+              </Button> */}
             </div>
           </div>
         </div>

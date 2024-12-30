@@ -1,7 +1,8 @@
+import { IsoOutlined } from "@mui/icons-material";
 import { Skeleton } from "@nextui-org/react";
 import React from "react";
 
-function Description({ id, propertyData }) {
+function Description({ id, propertyData, forShortlet, isLoading }) {
   return (
     <div
       id={id}
@@ -11,9 +12,13 @@ function Description({ id, propertyData }) {
         Description
       </div>
 
-      {propertyData?.property?.property?.description ? (
+      {!isLoading && !forShortlet ? (
         <div className="font-normal text-sm text-customStreetcolor">
-          {propertyData?.property?.property?.description}
+          {propertyData?.property?.description}
+        </div>
+      ) : !isLoading && forShortlet ? (
+        <div className="font-normal text-sm text-customStreetcolor">
+          {propertyData?.shortlet?.description}
         </div>
       ) : (
         <Skeleton className="w-full h-60 rounded-md" />

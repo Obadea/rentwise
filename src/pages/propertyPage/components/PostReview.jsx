@@ -9,24 +9,24 @@ import {
   Textarea,
 } from "@nextui-org/react";
 import { useMutation } from "@tanstack/react-query";
-import { postReview } from "../../../utils/endpoint";
+import { postReview, postReviewForShortlet } from "../../../utils/endpoint";
 import { toast } from "react-toastify";
 import { useAuth } from "../../../utils/AuthContext";
 import { SvgSortIcon } from "../../../utils/SvgIcons";
 
-function PostReview({ propertyID }) {
+function PostReview({ propertyID, forShortlet }) {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const { token } = useAuth();
   const [review, setReview] = React.useState("");
 
   const mutation = useMutation({
-    mutationFn: postReview,
+    mutationFn: forShortlet ? postReviewForShortlet : postReview,
     onSuccess: async (data) => {
       setIsLoading(false);
       setReview("");
       toast(data?.messsage, { type: "success", draggable: true });
-      console.log(data);
+      // console.log(data);
     },
 
     onError: async (err) => {
@@ -59,10 +59,9 @@ function PostReview({ propertyID }) {
           mutation.mutate({
             propertyID: propertyID,
             userData: data,
-            token: token,
           });
 
-          // console.log(data);
+          console.log(data);
         }}
       >
         {/* <Input
@@ -111,7 +110,22 @@ function PostReview({ propertyID }) {
           <RatingControl />
         </div>
 
+        <Input
+          isRequired
+          errorMessage="Please enter a valid email"
+          label="Email"
+          labelPlacement="outside"
+          name="email"
+          placeholder="Enter your email"
+          type="email"
+          isDisabled={isLoading}
+          className=""
+          variant="bordered"
+        />
+
         <Textarea
+          isRequired
+          isClearable
           name="review"
           value={review}
           minRows={5}
@@ -123,13 +137,8 @@ function PostReview({ propertyID }) {
           variant="bordered"
         />
         <div className="flex justify-between w-full mt-8 items-center">
-          <Button
-            color="primary"
-            type="submit"
-            isDisabled={!token}
-            isLoading={isLoading}
-          >
-            {token ? "Submit Review" : "Please login to post"}
+          <Button color="primary" type="submit" isLoading={isLoading}>
+            Submit Review
           </Button>
           {/* <div>
             <RatingControl />

@@ -40,6 +40,7 @@ const PropertiesCard = ({
   removeProperty,
   className,
   containerClassName,
+  isShortlet,
 }) => {
   const navigate = useNavigate();
 
@@ -53,7 +54,11 @@ const PropertiesCard = ({
       isPressable={isPressable}
       shadow="none"
       onPress={() => {
-        navigate(`/property?id=${propertyData?.id}`);
+        if (isShortlet) {
+          return navigate(`/shortlet/property?id=${propertyData?.id}`);
+        } else {
+          return navigate(`/property?id=${propertyData?.id}`);
+        }
       }}
       className={`mb-6 mt-2 ml-2 ${containerClassName}`}
     >
@@ -116,19 +121,28 @@ const PropertiesCard = ({
             </Tooltip>
           </div>
         </div>
-        <div className="flex items-center mt-3 px-3">
+        <div className="flex items-center gap-2 mt-3 px-3">
           <SvgLocationIcon />
-          <p className="truncate text-nowrap w-[80%]">{address}</p>
+          <p className="truncate text-nowrap text-start w-[80%]">{address}</p>
         </div>
         <div className="flex items-center mt-5 gap-2 px-3">
           <SvgBedIcon className="stroke-3 w-4 h-4" />
           <p className="text-[13px]">{bedroom} Bed</p>
           <SvgBathIcon />
           <p className="text-[13px]">{bathroom} Bath</p>
-          {/* <SvgChairIcon />
-          <p className="text-[13px]">{sittingroom} Sitting Room</p> */}
-          <TungstenOutlinedIcon style={{ fontSize: "16px", fill: "#FC97AF" }} />
-          <p className="text-[13px]">10hrs of Light Daily</p>
+          {isShortlet ? (
+            <>
+              <SvgChairIcon />
+              <p className="text-[13px]">{sittingroom} Sitting Room</p>
+            </>
+          ) : (
+            <>
+              <TungstenOutlinedIcon
+                style={{ fontSize: "16px", fill: "#FC97AF" }}
+              />
+              <p className="text-[13px]">{`${propertyData?.hoursOfLight}hrs of Light Daily`}</p>
+            </>
+          )}
         </div>
         <div className="flex mt-5 items-center justify-between border-t-1 pt-2">
           <p className="font-medium text-xl pl-3">
@@ -136,7 +150,7 @@ const PropertiesCard = ({
             <span className="text-sm font-light">/{amountDate}</span>
           </p>
           <p className="text-[12px] font-bold text-customProfileblue pr-3">
-            DETAILS
+            {isShortlet ? "Pay Now" : "DETAILS"}
           </p>
         </div>
       </CardFooter>

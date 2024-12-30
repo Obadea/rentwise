@@ -331,7 +331,12 @@ const AdvanceSearchModal = ({
         )}
       </div>
 
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg">
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        size="lg"
+        backdrop="blur"
+      >
         <ModalContent>
           {(onClose) => (
             <>

@@ -2,8 +2,10 @@ import React from "react";
 import country from "../../../assets/country.png";
 import continent from "../../../assets/africa.png";
 import { Button } from "@nextui-org/react";
+import { useNavigate } from "react-router-dom";
 
 function Solution() {
+  const navigate = useNavigate();
   return (
     <div className="bg-customdark text-white px-6 lg:px-20 py-16">
       <div className="flex flex-col lg:flex-row gap-2">
@@ -27,6 +29,7 @@ function Solution() {
             <Button
               color="primary"
               className="mt-6 px-9 py-3  w-full  lg:w-auto rounded-lg"
+              onPress={() => navigate("/contact us")}
             >
               Contact Us
             </Button>

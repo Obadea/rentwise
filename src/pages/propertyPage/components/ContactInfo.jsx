@@ -22,7 +22,7 @@ import { useMutation } from "@tanstack/react-query";
 import { enquiryPropertyForm } from "../../../utils/endpoint";
 import { toast } from "react-toastify";
 
-function ContactInfo({ id, propertyData }) {
+function ContactInfo({ id, propertyData, forShortlet }) {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -37,12 +37,15 @@ function ContactInfo({ id, propertyData }) {
     mutationFn: enquiryPropertyForm,
     onSuccess: async (data) => {
       setIsLoading(false);
-      toast(data?.message, { type: "success", draggable: true });
+      toast(data?.response?.data?.message, {
+        type: "success",
+        draggable: true,
+      });
     },
 
     onError: async (err) => {
       setIsLoading(false);
-      toast(err?.response?.data.error.message, {
+      toast(err?.response?.data.message, {
         type: "error",
         draggable: true,
       });
@@ -67,7 +70,7 @@ function ContactInfo({ id, propertyData }) {
         <div>
           {/* <img src={contactPhoto} alt="" /> */}
           <Avatar
-            src={propertyData?.property?.property?.wiseman?.photo}
+            src={propertyData?.property?.listedByDetails[0]?.photo}
             size="lg"
             className="w-20 h-20 text-large"
             radius="sm"
@@ -76,21 +79,27 @@ function ContactInfo({ id, propertyData }) {
         <div className="flex flex-col gap-1 text-sm font-normal text-customStreetcolor">
           <h3 className="flex  gap-2 items-center">
             <PermIdentityIcon />{" "}
-            {propertyData?.property?.property?.wiseman?.fullName
-              ? propertyData?.property?.property?.wiseman?.fullName
+            {propertyData?.property?.listedByDetails[0]?.fullName
+              ? propertyData?.property?.listedByDetails[0]?.fullName
+              : forShortlet
+              ? propertyData?.shortlet?.listedByDetails?.fullName
               : "Loading..."}
           </h3>
           <div className="flex gap-4 flex-wrap">
             <p className="flex gap-1  items-center">
               <PhoneIcon />{" "}
-              {propertyData?.property?.property?.wiseman?.phoneNumber
-                ? propertyData?.property?.property?.wiseman?.phoneNumber
+              {propertyData?.property?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.property?.listedByDetails[0]?.phoneNumber
+                : forShortlet
+                ? propertyData?.shortlet?.listedByDetails?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
               <PhoneAndroidIcon />
-              {propertyData?.property?.property?.wiseman?.phoneNumber
-                ? propertyData?.property?.property?.wiseman?.phoneNumber
+              {propertyData?.property?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.property?.listedByDetails[0]?.phoneNumber
+                : forShortlet
+                ? propertyData?.shortlet?.listedByDetails?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
@@ -98,7 +107,11 @@ function ContactInfo({ id, propertyData }) {
               <WhatsAppIcon />
               <Link
                 className="text-customStreetcolor"
-                href={propertyData?.property?.property?.wiseman?.whatsApp}
+                href={
+                  forShortlet
+                    ? propertyData?.shortlet?.listedByDetails?.whatsApp
+                    : propertyData?.property?.listedByDetails[0]?.whatsApp
+                }
                 isExternal
                 showAnchorIcon
               >
@@ -108,7 +121,11 @@ function ContactInfo({ id, propertyData }) {
           </div>
           <div className="flex  items-center gap-4">
             <Link
-              href={propertyData?.property?.property?.wiseman?.facebook}
+              href={
+                forShortlet
+                  ? propertyData?.shortlet?.listedByDetails?.facebook
+                  : propertyData?.property?.listedByDetails[0]?.facebook
+              }
               isExternal
             >
               <FacebookIcon style={{ fontSize: "30px" }} />
@@ -116,7 +133,11 @@ function ContactInfo({ id, propertyData }) {
 
             <Link
               className="text-black"
-              href={propertyData?.property?.property?.wiseman?.twitter}
+              href={
+                forShortlet
+                  ? propertyData?.shortlet?.listedByDetails?.twitter
+                  : propertyData?.property?.listedByDetails[0]?.twitter
+              }
               isExternal
             >
               <XIcon />
@@ -145,8 +166,12 @@ function ContactInfo({ id, propertyData }) {
             setIsLoading(true);
             mutation.mutate({
               formData: data,
-              propertyID: propertyData?.property?.property?.id,
+              propertyID: forShortlet
+                ? propertyData?.shortlet?._id
+                : propertyData?.property?._id,
             });
+
+            console.log(data);
           }}
         >
           <div className="flex items-center justify-between w-full gap-11 mt-6 flex-col lg:flex-row">

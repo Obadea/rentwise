@@ -72,10 +72,10 @@ const Hamburger = () => {
             classNames={{ content: "pl-2 " }}
           >
             <div className=" flex flex-col gap-3">
-              <a href="/">
+              <a href="/rental management">
                 <p>Rental Management</p>
               </a>
-              <a href="/">
+              <a href="/Quick services">
                 <p>Quick Services</p>
               </a>
             </div>
@@ -115,17 +115,17 @@ const Hamburger = () => {
         <a className="menu-item" href="/shortlet">
           Shortlet
         </a>
-        <a className="menu-item" href="/properties">
+        <a className="menu-item mb-0" href="/properties">
           Properties
         </a>
         {token ? (
           <>
-            <a
+            {/* <a
               className="menu-item text-bold"
               onClick={() => mutation.mutate(token)}
             >
               Log out
-            </a>{" "}
+            </a>{" "} */}
             <Button
               className="w-full"
               color="primary"
@@ -136,12 +136,12 @@ const Hamburger = () => {
           </>
         ) : (
           <div className="relative right-2">
-            <a href="/signin" className="menu-item block">
+            <a href="/signin" className="mb-8 ml-2 block">
               <p>Sign in</p>
             </a>
             {/* <p>Add property</p> */}
             <Button
-              className="w-full"
+              className="w-full ml-2"
               color="primary"
               onPress={() => navigate("/accessId")}
             >

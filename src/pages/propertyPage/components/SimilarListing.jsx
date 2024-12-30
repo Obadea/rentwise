@@ -45,7 +45,7 @@ function SimilarListing({ id }) {
   const { status, data, error, isLoading } = useQuery({
     queryKey: ["properties"],
     queryFn: () => {
-      return getAllProperties(20);
+      return getAllProperties();
     },
   });
   return (
@@ -58,26 +58,28 @@ function SimilarListing({ id }) {
       {/* <div className="flex flex-wrap justify-evenly gap-y-3 gap-x-2 "> */}
       {/* <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4"> */}
       {/* <Propertycard className="flex-1 lg:w-[30%] lg:mx-1 lg:min-w-[240px] " /> */}
-      <div class="flex flex-wrap gap-6 p-4">
+      <div class="flex flex-wrap gap-6">
         {" "}
         {data?.properties ? (
-          data?.properties.map((item) => (
-            <PropertiesCard
-              key={item?.id}
-              img={item?.propertyImages[6]}
-              title={item?.name}
-              address={item?.address}
-              bedroom={item?.bedrooms}
-              bathroom={item?.bathrooms}
-              sittingroom={4}
-              amount={Number(item?.price)}
-              addProperty={addItem}
-              propertyData={item}
-              compareData={compareProperty}
-              removeProperty={removeImage}
-              containerClassName="flex-1 min-w-[320px]"
-            />
-          ))
+          data?.properties
+            ?.slice(0, 4)
+            ?.map((item) => (
+              <PropertiesCard
+                key={item?.id}
+                img={item?.propertyImages[6]}
+                title={item?.name}
+                address={item?.address}
+                bedroom={item?.bedrooms}
+                bathroom={item?.bathrooms}
+                sittingroom={4}
+                amount={Number(item?.price)}
+                addProperty={addItem}
+                propertyData={item}
+                compareData={compareProperty}
+                removeProperty={removeImage}
+                containerClassName="flex-1 min-w-[320px]"
+              />
+            ))
         ) : (
           <p className="m-auto font-bold text-lg">Loading...</p>
         )}

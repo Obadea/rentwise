@@ -1,6 +1,6 @@
 import React from "react";
 
-function VirtualTour({ id, propertyData }) {
+function VirtualTour({ id, propertyData, forShortlet }) {
   return (
     <div id={id} className="px-4 py-3 lg:p-10 flex flex-col bg-white gap-4 ">
       <div className="flex justify-between py-4 border-b-2 border-[#D9D9D9]  ">
@@ -13,7 +13,11 @@ function VirtualTour({ id, propertyData }) {
           width="100%"
           height="470"
           // src="https://www.youtube.com/embed/B4o8PvcqHC4?si=D4r69y3HGTRRZGz8"
-          src={propertyData?.property?.property?.virtualTourLink}
+          src={
+            forShortlet
+              ? propertyData?.shortlet?.virtualTourLink
+              : propertyData?.property?.virtualTourLink
+          }
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"

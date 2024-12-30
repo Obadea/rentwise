@@ -7,7 +7,7 @@ import { Avatar, Button, Select, SelectItem } from "@nextui-org/react";
 import { SvgLinkIcon, SvgSortIcon } from "../../../utils/SvgIcons";
 import { timeAgo } from "../../../utils/helperFunction";
 
-function Review({ id, propertyData }) {
+function Review({ id, propertyData, forShortlet }) {
   return (
     <div
       id={id}
@@ -16,16 +16,28 @@ function Review({ id, propertyData }) {
       <div className="flex flex-col lg:flex-row justify-normal lg:justify-between items-start lg:items-center">
         <div className="flex gap-2">
           <h3>
-            {propertyData?.property?.property?.reviews
-              ? `${propertyData?.property?.property?.reviews?.length} Reviews`
+            {propertyData?.property?.reviews
+              ? `${propertyData?.property?.reviews?.length} Reviews`
+              : forShortlet
+              ? propertyData?.shortlet?.reviews?.length
               : "Loading..."}
           </h3>
           <Rating
             name="read-only"
-            value={Number(propertyData?.property?.property?.ratingsAverage)}
+            value={Number(
+              forShortlet
+                ? propertyData?.shortlet?.ratingsAverage
+                : propertyData?.property?.ratingsAverage
+            )}
             readOnly
           />
-          <h3>({propertyData?.property?.property?.ratingsAverage} of 5)</h3>
+          <h3>
+            (
+            {forShortlet
+              ? propertyData?.shortlet?.ratingsAverage
+              : propertyData?.property?.ratingsAverage}{" "}
+            of 5)
+          </h3>
         </div>
         <div className="flex flex-col lg:flex-row gap-6  lg:items-center">
           {/* Sort by:<span>Default order</span> */}
@@ -53,47 +65,77 @@ function Review({ id, propertyData }) {
       </div>
 
       <div>
-        {propertyData?.property?.property?.reviews?.map((item) => (
-          <div className="mb-5">
-            <div className="flex gap-4">
-              <div>
-                {/* <img src={contactphoto} alt="" /> */}
-                <Avatar src="" size="lg" />
-              </div>
-              <div className="flex flex-col w-full">
-                <div className="flex gap-3">
-                  <h3>
-                    {item?.user?.firstName} {item?.user?.lastName}
-                  </h3>
-                  <Rating name="read-only" value={item?.rating} readOnly />
-                </div>
-                <p className="text-xs text-[#A6A6A6] flex  gap-2 mt-2">
-                  <SvgLinkIcon />
-                  {timeAgo(item?.updatedAt)}
-                </p>
-                <div className="flex items-center w-full justify-between">
-                  <h4 className="text-xs max-w-[88%] text-customBlackShade">
-                    {item?.review} Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Eaque officia reprehenderit pariatur ipsa
-                    illum, cum quas asperiores vitae dolorem qui quae in?
-                    Quaerat numquam aliquam, quasi vel corporis saepe.
-                    Consequuntur. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Suscipit excepturi quas id, qui ipsa
-                    temporibus, aspernatur et, vero vel ducimus neque quod fuga
-                    assumenda sapiente! Vitae quidem modi atque provident. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                    ipsam excepturi dolor id deserunt perspiciatis cupiditate
-                    omnis facere. Placeat vel doloremque error animi recusandae
-                    excepturi, cupiditate sed eaque? Culpa, iste!
-                  </h4>
-                  <div className="mt-10">
-                    <ThumbsRating />
+        {forShortlet
+          ? propertyData?.shortlet?.reviews?.map((item) => (
+              <div className="mb-5">
+                <div className="flex gap-4">
+                  <div>
+                    <Avatar src="" size="lg" />
+                  </div>
+                  <div className="flex flex-col w-full">
+                    <div className="flex gap-3">
+                      <h3>
+                        {item?.user?.firstName} {item?.user?.lastName}
+                      </h3>
+                      <Rating name="read-only" value={item?.rating} readOnly />
+                    </div>
+                    <p className="text-xs text-[#A6A6A6] flex  gap-2 mt-2">
+                      <SvgLinkIcon />
+                      {timeAgo(item?.updatedAt)}
+                    </p>
+                    <div className="flex items-center w-full justify-between">
+                      <h4 className="text-xs max-w-[88%] text-customBlackShade">
+                        {item?.review}
+                      </h4>
+                      <div className="mt-10">
+                        <ThumbsRating />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        ))}
+            ))
+          : propertyData?.property?.reviews?.map((item) => (
+              <div className="mb-5">
+                <div className="flex gap-4">
+                  <div>
+                    <Avatar src="" size="lg" />
+                  </div>
+                  <div className="flex flex-col w-full">
+                    <div className="flex gap-3">
+                      <h3>
+                        {item?.user?.firstName} {item?.user?.lastName}
+                      </h3>
+                      <Rating name="read-only" value={item?.rating} readOnly />
+                    </div>
+                    <p className="text-xs text-[#A6A6A6] flex  gap-2 mt-2">
+                      <SvgLinkIcon />
+                      {timeAgo(item?.updatedAt)}
+                    </p>
+                    <div className="flex items-center w-full justify-between">
+                      <h4 className="text-xs max-w-[88%] text-customBlackShade">
+                        {item?.review} Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Eaque officia reprehenderit pariatur
+                        ipsa illum, cum quas asperiores vitae dolorem qui quae
+                        in? Quaerat numquam aliquam, quasi vel corporis saepe.
+                        Consequuntur. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Suscipit excepturi quas id, qui ipsa
+                        temporibus, aspernatur et, vero vel ducimus neque quod
+                        fuga assumenda sapiente! Vitae quidem modi atque
+                        provident. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Dicta ipsam excepturi dolor id
+                        deserunt perspiciatis cupiditate omnis facere. Placeat
+                        vel doloremque error animi recusandae excepturi,
+                        cupiditate sed eaque? Culpa, iste!
+                      </h4>
+                      <div className="mt-10">
+                        <ThumbsRating />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
       </div>
     </div>
   );

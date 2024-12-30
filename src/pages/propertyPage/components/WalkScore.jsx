@@ -14,7 +14,7 @@ function WalkScore({ propertyData, id }) {
         <h4 className=" font-medium text-lg text-customdark">Walk score</h4>
       </div>
       <p className="text-customStreetcolor text-2xl mt-4">
-        {propertyData?.property?.property?.address}
+        {propertyData?.property?.address}
       </p>
       {/* Tabs */}
       <div className="flex w-full flex-col">
@@ -33,7 +33,7 @@ function WalkScore({ propertyData, id }) {
                   </div>
                   <div className="text-xs text-customStreetcolor pt-1">
                     <p className="text-sm">Walker's Paradise</p>
-                    <p>Daily errands do not require a car</p>
+                    <p>{propertyData?.property?.walkScores?.description}</p>
                   </div>
                 </div>
 

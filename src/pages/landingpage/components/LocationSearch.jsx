@@ -35,7 +35,7 @@ const propertyOptions = [
   {
     label: "Residential",
     options: [
-      { label: "Apartment", value: "apartment" },
+      { label: "Apartment", value: "Apartment" },
       { label: "Single Family Home", value: "singeFamilyHome" },
       { label: "Multi Family Home", value: "multiFamilyHome" },
     ],
@@ -48,33 +48,34 @@ const locationOptions = [
   { value: "lekki", label: "Lekki" },
   { value: "ajah", label: "Ajah" },
   { value: "surulere", label: "Surulere" },
+  { value: "New York", label: "New York" },
 ];
 
 const sizeOptions = [
-  { value: "one", label: "1" },
-  { value: "two", label: "2" },
-  { value: "three", label: "3" },
-  { value: "four", label: "4" },
-  { value: "five", label: "5" },
-  { value: "six", label: "6" },
-  { value: "seven", label: "7" },
-  { value: "eight", label: "8" },
-  { value: "nine", label: "9" },
-  { value: "ten", label: "10" },
+  { value: "1", label: "1" },
+  { value: "2", label: "2" },
+  { value: "3", label: "3" },
+  { value: "4", label: "4" },
+  { value: "5", label: "5" },
+  { value: "6", label: "6" },
+  { value: "7", label: "7" },
+  { value: "8", label: "8" },
+  { value: "9", label: "9" },
+  { value: "10", label: "10" },
   { value: "any", label: "Any" },
 ];
 
 const incomeOptions = [
-  { value: "500000", label: "500k -1M" },
-  { value: "2000000", label: "2M-3M" },
-  { value: "4000000", label: "4M-5M" },
-  { value: "6000000", label: "6M-7M" },
-  { value: "8000000", label: "8M-9M" },
-  { value: "10000000", label: "10M-15M" },
-  { value: "16000000", label: "16M Above" },
+  { value: "100000-2628000", label: "500k -1M" },
+  { value: "100000-2628000", label: "2M-3M" },
+  { value: "100000-2628000", label: "4M-5M" },
+  { value: "100000-2628000", label: "6M-7M" },
+  { value: "100000-2628000", label: "8M-9M" },
+  { value: "100000-2628000", label: "10M-15M" },
+  { value: "100000-2628000", label: "16M Above" },
 ];
 
-function LocationSearch() {
+function LocationSearch({ forShortlet, setPropertyProps, proppertyProps }) {
   const [filter, setFilter] = useState(false);
 
   const [num1, setNum1] = useState(null);
@@ -110,10 +111,10 @@ function LocationSearch() {
     "w-full sticky top-1 z-20 py-1.5 px-2 bg-default-100 shadow-small rounded-small";
 
   return (
-    <div>
+    <div className={`${forShortlet ? "mt-12 " : ""} `}>
       <div className=" flex  lg:flex justify-center lg:overflow-hidden ">
         <div className="max-w-[600px] flex lg:hidden justify-between items-center   gap-2 absolute -bottom-5  ">
-          <div className="bg-customsearchinput min-w-[294px] h-[52px] flex flex-grow justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] shadow-custompurple">
+          <div className="bg-customsearchinput min-w-[294px] h-[52px] flex flex-grow justify-center rounded-lg py-2 shadow-[0px_4px_4px_0px] ">
             <input
               type="text"
               placeholder="Search"
@@ -147,13 +148,24 @@ function LocationSearch() {
             options={propertyOptions}
             placeholder={"Property Type"}
             label={"LOOKING FOR"}
-            onChange={(value) => console.log(value)}
+            // onChange={(value) => console.log(value)}
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                propertyType: value,
+              })
+            }
           />
           <ReusableSelect
             options={majorCitiesInNigeria}
             placeholder={"All Cities in Lagos"}
             label={"LOCATION"}
-            onChange={(value) => console.log(value)}
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                city: value,
+              })
+            }
           />
           {/* <ReusableSelect
             options={locationOptions}
@@ -165,25 +177,38 @@ function LocationSearch() {
             options={sizeOptions}
             placeholder={"Bedroom"}
             label={"PROPERTY SIZE"}
-            onChange={(value) => console.log(value)}
+            // onChange={(value) => console.log(value)}
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                bedrooms: value,
+              })
+            }
           />
           <ReusableSelect
             options={incomeOptions}
             placeholder={"Max. Range"}
             label={"HOUSEHOLD INCOME"}
-            onChange={(value) => console.log(value)}
+            // onChange={(value) => console.log(value)}
+
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                price: value,
+              })
+            }
           />
-          <Link to="/search">
-            <button
-              // type="submit"
-              className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
-              // onClick={() => setActivePopup("pop1")}
-              // onPress={}
-              href="/search"
-            >
-              Search
-            </button>
-          </Link>
+          {/* <Link to="/search"> */}
+          <button
+            // type="submit"
+            className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
+            // onClick={() => setActivePopup("pop1")}
+            // onPress={}
+            // onClick={refetch}
+          >
+            Search
+          </button>
+          {/* </Link> */}
         </form>
         {/* <Form className="flex w-[80%]  ">
           <div className="flex  w-full">

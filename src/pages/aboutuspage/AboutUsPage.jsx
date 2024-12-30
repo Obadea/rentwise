@@ -39,13 +39,13 @@ function AboutUsPage() {
         />
         <AboutTextContent
           className="hidden lg:flex"
-          paragraph="Our team of real estate experts, tech enthusiasts, and customer service professionals is committed to bringing you a smarter and more efficient rental experience. We combine cutting-edge technology with local expertise to empower renters to make the best decisions for themselves and their families."
+          paragraph=" Our mission is to simplify and elevate the rental process by leveraging cutting-edge AI technology to eliminate guesswork, reduce risks, and create seamless interactions between tenants and landlords. We believe that finding the perfect home or managing a property should be stress-free, empowering, and rooted in reliable insights."
         />
 
         <AboutTextContent
           header="Who We Are"
-          paragraph="RentWise was created with a clear vision: to eliminate the frustrations and uncertainties often associated with the rental process. Lagos is a vibrant and dynamic city, but finding a trustworthy landlord, a safe neighborhood, and a home that fits your budget can be a daunting task. We are here to change that."
-          paragraph1="Our team of real estate experts, tech enthusiasts, and customer service professionals is committed to bringing you a smarter and more efficient rental experience. We combine cutting-edge technology with local expertise to empower renters to make the best decisions for themselves and their families."
+          paragraph="Rentwise is an innovative platform focused on transforming the rental experience by empowering prospective tenants with insightful, data-rich information through the Wise-Report. The Wise-Report provides a comprehensive view of properties, incorporating social, financial, and environmental data to support informed rental decisions."
+          paragraph1=" Our mission is to simplify and elevate the rental process by leveraging cutting-edge AI technology to eliminate guesswork, reduce risks, and create seamless interactions between tenants and landlords. We believe that finding the perfect home or managing a property should be stress-free, empowering, and rooted in reliable insights."
         />
         <AboutTextContent
           header="Our Vision"

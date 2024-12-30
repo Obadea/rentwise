@@ -26,6 +26,12 @@ import OtpConfirm from "./pages/otpConfirm/OtpConfirm.jsx";
 import ResetPasswordOtp from "./pages/resetPasswordOtp/ResetPasswordOtp.jsx";
 import PropertiesPage from "./pages/propertiesPage/PropertiesPage.jsx";
 import ShortletPage from "./pages/shortletPage/ShortletPage.jsx";
+import ShortletDetailsPage from "./pages/shortletDetailsPage/ShortletDetailsPage.jsx";
+import FaqPage from "./pages/faqPage/FaqPage.jsx";
+import PrivacyPolicyPage from "./pages/privacyPolicyPage/PrivacyPolicyPage.jsx";
+import { Terminal } from "@mui/icons-material";
+import TermsAndConditions from "./pages/termsAndConditions/TermsAndConditions.jsx";
+import DisclaimerPage from "./pages/disclaimerPage/DisclaimerPage.jsx";
 
 function App() {
   return (
@@ -36,6 +42,7 @@ function App() {
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/property" element={<PropertyPage />} />
       <Route path="/properties" element={<PropertiesPage />} />
+      <Route path="/shortlet/property" element={<ShortletDetailsPage />} />
       <Route
         path="/Rent affordability calculator"
         element={<AffordabilityCalculator />}
@@ -47,7 +54,11 @@ function App() {
       <Route path="/wisemen" element={<WiseMenPage />} />
       <Route path="/contact us" element={<ContactUsPage />} />
       <Route path="/accessId" element={<AccessCodePage />} />
-      <Route path="/landlord/manage rentals" element={<ManageRentals />} />
+      <Route path="/rental management" element={<ManageRentals />} />
+      <Route path="/FAQ" element={<FaqPage />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+      <Route path="/terms-conditions" element={<TermsAndConditions />} />
+      <Route path="/disclaimer" element={<DisclaimerPage />} />
       <Route
         path="/search"
         element={<SearchResultpage forShortlet={false} />}
