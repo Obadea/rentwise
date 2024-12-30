@@ -33,7 +33,7 @@ function WalkScore({ propertyData, id }) {
                   </div>
                   <div className="text-xs text-customStreetcolor pt-1">
                     <p className="text-sm">Walker's Paradise</p>
-                    <p>Daily errands do not require a car</p>
+                    <p>{propertyData?.property?.walkScores?.description}</p>
                   </div>
                 </div>
 

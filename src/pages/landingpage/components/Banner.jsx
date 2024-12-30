@@ -4,7 +4,7 @@ import { Button } from "@nextui-org/react";
 import houseInterior from "../../../assets/house_interior.png";
 import beachTown from "../../../assets/beach-town.png";
 
-function Banner({ forShortlet }) {
+function Banner({ forShortlet, setPropertyProps, proppertyProps }) {
   // State to track the selected button
   const [selectedButton, setSelectedButton] = useState(1);
 
@@ -84,7 +84,11 @@ function Banner({ forShortlet }) {
         </Button>
       </div>
 
-      <LocationSearch forShortlet={forShortlet} />
+      <LocationSearch
+        forShortlet={forShortlet}
+        setPropertyProps={setPropertyProps}
+        proppertyProps={proppertyProps}
+      />
     </div>
   );
 }

@@ -140,7 +140,7 @@ const PropertiesCard = ({
               <TungstenOutlinedIcon
                 style={{ fontSize: "16px", fill: "#FC97AF" }}
               />
-              <p className="text-[13px]">10hrs of Light Daily</p>
+              <p className="text-[13px]">{`${propertyData?.hoursOfLight}hrs of Light Daily`}</p>
             </>
           )}
         </div>

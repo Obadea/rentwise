@@ -26,7 +26,7 @@ import { useNavigate } from "react-router-dom";
 import { toNaira } from "../../../utils/helperFunction";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
-function TopProperties() {
+function TopProperties({ proppertyProps }) {
   const [compareProperty, setCompareProperty] = useState([]);
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
   const navigate = useNavigate();
@@ -49,10 +49,22 @@ function TopProperties() {
     setCompareProperty(compareProperty.filter((image) => image.id !== id));
   };
 
-  const { status, data, error, isLoading } = useQuery({
-    queryKey: ["properties"],
+  const { status, data, error, isLoading, refetch } = useQuery({
+    queryKey: [
+      "properties",
+      proppertyProps.propertyType,
+      proppertyProps.city,
+      proppertyProps.bedrooms,
+      proppertyProps.price,
+    ],
     queryFn: () => {
-      return getAllProperties(20);
+      return getAllProperties(
+        1,
+        proppertyProps.propertyType,
+        proppertyProps.city,
+        proppertyProps.bedrooms,
+        proppertyProps.price
+      );
     },
   });
 

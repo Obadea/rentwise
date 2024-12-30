@@ -35,7 +35,7 @@ const propertyOptions = [
   {
     label: "Residential",
     options: [
-      { label: "Apartment", value: "apartment" },
+      { label: "Apartment", value: "Apartment" },
       { label: "Single Family Home", value: "singeFamilyHome" },
       { label: "Multi Family Home", value: "multiFamilyHome" },
     ],
@@ -48,6 +48,7 @@ const locationOptions = [
   { value: "lekki", label: "Lekki" },
   { value: "ajah", label: "Ajah" },
   { value: "surulere", label: "Surulere" },
+  { value: "New York", label: "New York" },
 ];
 
 const sizeOptions = [
@@ -65,16 +66,16 @@ const sizeOptions = [
 ];
 
 const incomeOptions = [
-  { value: "500000", label: "500k -1M" },
-  { value: "2000000", label: "2M-3M" },
-  { value: "4000000", label: "4M-5M" },
-  { value: "6000000", label: "6M-7M" },
-  { value: "8000000", label: "8M-9M" },
-  { value: "10000000", label: "10M-15M" },
-  { value: "16000000", label: "16M Above" },
+  { value: "100000-2628000", label: "500k -1M" },
+  { value: "100000-2628000", label: "2M-3M" },
+  { value: "100000-2628000", label: "4M-5M" },
+  { value: "100000-2628000", label: "6M-7M" },
+  { value: "100000-2628000", label: "8M-9M" },
+  { value: "100000-2628000", label: "10M-15M" },
+  { value: "100000-2628000", label: "16M Above" },
 ];
 
-function LocationSearch({ forShortlet }) {
+function LocationSearch({ forShortlet, setPropertyProps, proppertyProps }) {
   const [filter, setFilter] = useState(false);
 
   const [num1, setNum1] = useState(null);
@@ -147,13 +148,24 @@ function LocationSearch({ forShortlet }) {
             options={propertyOptions}
             placeholder={"Property Type"}
             label={"LOOKING FOR"}
-            onChange={(value) => console.log(value)}
+            // onChange={(value) => console.log(value)}
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                propertyType: value,
+              })
+            }
           />
           <ReusableSelect
             options={majorCitiesInNigeria}
             placeholder={"All Cities in Lagos"}
             label={"LOCATION"}
-            onChange={(value) => console.log(value)}
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                city: value,
+              })
+            }
           />
           {/* <ReusableSelect
             options={locationOptions}
@@ -165,25 +177,38 @@ function LocationSearch({ forShortlet }) {
             options={sizeOptions}
             placeholder={"Bedroom"}
             label={"PROPERTY SIZE"}
-            onChange={(value) => console.log(value)}
+            // onChange={(value) => console.log(value)}
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                bedrooms: value,
+              })
+            }
           />
           <ReusableSelect
             options={incomeOptions}
             placeholder={"Max. Range"}
             label={"HOUSEHOLD INCOME"}
-            onChange={(value) => console.log(value)}
+            // onChange={(value) => console.log(value)}
+
+            onChange={(value) =>
+              setPropertyProps({
+                ...proppertyProps,
+                price: value,
+              })
+            }
           />
-          <Link to="/search">
-            <button
-              // type="submit"
-              className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
-              // onClick={() => setActivePopup("pop1")}
-              // onPress={}
-              href="/search"
-            >
-              Search
-            </button>
-          </Link>
+          {/* <Link to="/search"> */}
+          <button
+            // type="submit"
+            className="mx-auto h-10 bg-customSearchblue text-textcolor font-bold w-44 rounded-lg mt-6"
+            // onClick={() => setActivePopup("pop1")}
+            // onPress={}
+            // onClick={refetch}
+          >
+            Search
+          </button>
+          {/* </Link> */}
         </form>
         {/* <Form className="flex w-[80%]  ">
           <div className="flex  w-full">

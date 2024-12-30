@@ -33,16 +33,26 @@ export const sendEnquiry = async (enquiryData) => {
 };
 
 // Get All Properties
-export const getAllProperties = async (propertyNumber) => {
+export const getAllProperties = async (
+  page,
+  propertyType,
+  city,
+  bedrooms,
+  price
+) => {
   const response = await apiClient.get(
-    `${process.env.REACT_APP_API_URL}/api/v1/property?q=${propertyNumber}`
+    `${process.env.REACT_APP_API_URL}/api/v1/property?=${
+      page ? `&page=${page}` : ""
+    }${propertyType.city ? `&city=${city}` : ""}${
+      bedrooms ? `&bedrooms=${bedrooms}` : ""
+    }${price ? `&price=${price}` : ""}`
   );
   return response.data;
 };
 
-export const getAllShortlet = async (shortletNumber) => {
+export const getAllShortlet = async (shortletNumber, page) => {
   const response = await apiClient.get(
-    `${process.env.REACT_APP_API_URL}/api/v1/shortlet?q=${shortletNumber}`
+    `${process.env.REACT_APP_API_URL}/api/v1/shortlet?q=${shortletNumber}&page=${page}`
   );
   return response.data;
 };
@@ -278,3 +288,13 @@ export const contactUs = async (formData) => {
     return response.data;
   }
 };
+
+// export const contactUs = async (formData) => {
+//   if (formData) {
+//     const response = await apiClient.post(
+//       `${process.env.REACT_APP_API_URL}/api/v1/contact-us`,
+//       { ...formData, GDPRAgreement: true }
+//     );
+//     return response.data;
+//   }
+// };

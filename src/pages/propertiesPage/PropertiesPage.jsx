@@ -15,6 +15,7 @@ import {
   DrawerHeader,
   Image,
   Input,
+  Pagination,
   Select,
   SelectItem,
   useDisclosure,
@@ -32,12 +33,14 @@ import { Skeleton } from "@mui/material";
 const PropertiesPage = () => {
   const [compareProperty, setCompareProperty] = useState([]);
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
+  const [currentPage, setCurrentPage] = React.useState(1);
+
   const navigate = useNavigate();
 
   const { status, data, error, isLoading, refetch } = useQuery({
-    queryKey: ["properties"],
+    queryKey: ["properties", currentPage],
     queryFn: () => {
-      return getAllProperties(20);
+      return getAllProperties(currentPage);
     },
   });
 
@@ -125,6 +128,15 @@ const PropertiesPage = () => {
                 />
               ))}
             </div>
+            <Pagination
+              className="my-8"
+              showControls
+              initialPage={1}
+              size="lg"
+              page={currentPage}
+              onChange={setCurrentPage}
+              total={10}
+            />
           </div>
         )}
       </div>

@@ -16,6 +16,13 @@ function LandingPage() {
 
   const [userData, setUserData] = useState(null);
 
+  const [proppertyProps, setPropertyProps] = useState({
+    propertyType: "",
+    city: "",
+    bedrooms: "",
+    price: "",
+  });
+
   useEffect(() => {
     const data = getAuthData();
 
@@ -25,12 +32,19 @@ function LandingPage() {
     }
   }, []);
 
+  useEffect(() => {
+    console.log(proppertyProps);
+  }, [proppertyProps]);
+
   return (
     <div>
       <Header newclassName="sticky" className="bg-white" userData={userData} />
-      <Banner />
+      <Banner
+        setPropertyProps={setPropertyProps}
+        proppertyProps={proppertyProps}
+      />
       {/* <ComingSoon /> */}
-      <TopProperties />
+      <TopProperties proppertyProps={proppertyProps} />
       <WisePopup />
       <WiseeReport />
 

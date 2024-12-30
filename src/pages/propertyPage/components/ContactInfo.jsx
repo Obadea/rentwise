@@ -67,7 +67,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
         <div>
           {/* <img src={contactPhoto} alt="" /> */}
           <Avatar
-            src={propertyData?.property?.property?.wiseman?.photo}
+            src={propertyData?.property?.property?.listedByDetails[0]?.photo}
             size="lg"
             className="w-20 h-20 text-large"
             radius="sm"
@@ -76,27 +76,29 @@ function ContactInfo({ id, propertyData, forShortlet }) {
         <div className="flex flex-col gap-1 text-sm font-normal text-customStreetcolor">
           <h3 className="flex  gap-2 items-center">
             <PermIdentityIcon />{" "}
-            {propertyData?.property?.property?.wiseman?.fullName
-              ? propertyData?.property?.property?.wiseman?.fullName
+            {propertyData?.property?.property?.listedByDetails[0]?.fullName
+              ? propertyData?.property?.property?.listedByDetails[0]?.fullName
               : forShortlet
-              ? propertyData?.shortlet?.wiseman?.fullName
+              ? propertyData?.shortlet?.listedByDetails[0]?.fullName
               : "Loading..."}
           </h3>
           <div className="flex gap-4 flex-wrap">
             <p className="flex gap-1  items-center">
               <PhoneIcon />{" "}
-              {propertyData?.property?.property?.wiseman?.phoneNumber
-                ? propertyData?.property?.property?.wiseman?.phoneNumber
+              {propertyData?.property?.property?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.property?.property?.listedByDetails[0]
+                    ?.phoneNumber
                 : forShortlet
-                ? propertyData?.shortlet?.wiseman?.phoneNumber
+                ? propertyData?.shortlet?.listedByDetails[0]?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
               <PhoneAndroidIcon />
-              {propertyData?.property?.property?.wiseman?.phoneNumber
-                ? propertyData?.property?.property?.wiseman?.phoneNumber
+              {propertyData?.property?.property?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.property?.property?.listedByDetails[0]
+                    ?.phoneNumber
                 : forShortlet
-                ? propertyData?.shortlet?.wiseman?.phoneNumber
+                ? propertyData?.shortlet?.listedByDetails[0]?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
@@ -106,8 +108,9 @@ function ContactInfo({ id, propertyData, forShortlet }) {
                 className="text-customStreetcolor"
                 href={
                   forShortlet
-                    ? propertyData?.shortlet?.wiseman?.whatsApp
-                    : propertyData?.property?.property?.wiseman?.whatsApp
+                    ? propertyData?.shortlet?.listedByDetails[0]?.whatsApp
+                    : propertyData?.property?.property?.listedByDetails[0]
+                        ?.whatsApp
                 }
                 isExternal
                 showAnchorIcon
@@ -120,8 +123,9 @@ function ContactInfo({ id, propertyData, forShortlet }) {
             <Link
               href={
                 forShortlet
-                  ? propertyData?.shortlet?.wiseman?.facebook
-                  : propertyData?.property?.property?.wiseman?.facebook
+                  ? propertyData?.shortlet?.listedByDetails[0]?.facebook
+                  : propertyData?.property?.property?.listedByDetails[0]
+                      ?.facebook
               }
               isExternal
             >
@@ -132,8 +136,9 @@ function ContactInfo({ id, propertyData, forShortlet }) {
               className="text-black"
               href={
                 forShortlet
-                  ? propertyData?.shortlet?.wiseman?.twitter
-                  : propertyData?.property?.property?.wiseman?.twitter
+                  ? propertyData?.shortlet?.listedByDetails[0]?.twitter
+                  : propertyData?.property?.property?.listedByDetails[0]
+                      ?.twitter
               }
               isExternal
             >

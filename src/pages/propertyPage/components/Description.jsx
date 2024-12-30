@@ -12,11 +12,11 @@ function Description({ id, propertyData, forShortlet, isLoading }) {
         Description
       </div>
 
-      {isLoading && !forShortlet ? (
+      {!isLoading && !forShortlet ? (
         <div className="font-normal text-sm text-customStreetcolor">
           {propertyData?.property?.property?.description}
         </div>
-      ) : forShortlet ? (
+      ) : !isLoading && forShortlet ? (
         <div className="font-normal text-sm text-customStreetcolor">
           {propertyData?.shortlet?.description}
         </div>

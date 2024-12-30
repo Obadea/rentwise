@@ -129,7 +129,11 @@ function PropertyPage() {
 
           <ScrollSpy>
             <PropertyOverview id="overview" propertyData={data} />
-            <Description id="description" propertyData={data} />
+            <Description
+              id="description"
+              propertyData={data}
+              isLoading={isLoading}
+            />
             <Address id="address" propertyData={data} />
             {/* Note:todo */}
             <PropertyDetail id="details" propertyData={data} />
