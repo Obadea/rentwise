@@ -16,8 +16,8 @@ function Review({ id, propertyData, forShortlet }) {
       <div className="flex flex-col lg:flex-row justify-normal lg:justify-between items-start lg:items-center">
         <div className="flex gap-2">
           <h3>
-            {propertyData?.property?.property?.reviews
-              ? `${propertyData?.property?.property?.reviews?.length} Reviews`
+            {propertyData?.property?.reviews
+              ? `${propertyData?.property?.reviews?.length} Reviews`
               : forShortlet
               ? propertyData?.shortlet?.reviews?.length
               : "Loading..."}
@@ -27,7 +27,7 @@ function Review({ id, propertyData, forShortlet }) {
             value={Number(
               forShortlet
                 ? propertyData?.shortlet?.ratingsAverage
-                : propertyData?.property?.property?.ratingsAverage
+                : propertyData?.property?.ratingsAverage
             )}
             readOnly
           />
@@ -35,7 +35,7 @@ function Review({ id, propertyData, forShortlet }) {
             (
             {forShortlet
               ? propertyData?.shortlet?.ratingsAverage
-              : propertyData?.property?.property?.ratingsAverage}{" "}
+              : propertyData?.property?.ratingsAverage}{" "}
             of 5)
           </h3>
         </div>
@@ -95,7 +95,7 @@ function Review({ id, propertyData, forShortlet }) {
                 </div>
               </div>
             ))
-          : propertyData?.property?.property?.reviews?.map((item) => (
+          : propertyData?.property?.reviews?.map((item) => (
               <div className="mb-5">
                 <div className="flex gap-4">
                   <div>

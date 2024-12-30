@@ -33,20 +33,45 @@ export const sendEnquiry = async (enquiryData) => {
 };
 
 // Get All Properties
+// export const getAllProperties = async (
+//   page,
+//   propertyType,
+//   city,
+//   bedrooms,
+//   price
+// ) => {
+//   const response = await apiClient.get(
+//     `${process.env.REACT_APP_API_URL}/api/v1/property?${
+//       page ? `&page=${page}` : ""
+//     }${propertyType.city ? `&city=${city}` : ""}${
+//       bedrooms ? `&bedrooms=${bedrooms}` : ""
+//     }${price ? `&price=${price}` : ""}`
+//   );
+//   return response.data;
+// };
 export const getAllProperties = async (
   page,
   propertyType,
   city,
   bedrooms,
-  price
+  price,
+  limit = 10
 ) => {
+  const queryString = [
+    page ? `page=${page}` : "",
+    propertyType ? `propertyType=${propertyType}` : "",
+    city ? `city=${city}` : "",
+    bedrooms ? `bedrooms=${bedrooms}` : "",
+    price ? `price=${price}` : "",
+    limit ? `limit=${limit}` : "",
+  ]
+    .filter(Boolean) // Remove empty strings
+    .join("&"); // Join with "&"
+
   const response = await apiClient.get(
-    `${process.env.REACT_APP_API_URL}/api/v1/property?=${
-      page ? `&page=${page}` : ""
-    }${propertyType.city ? `&city=${city}` : ""}${
-      bedrooms ? `&bedrooms=${bedrooms}` : ""
-    }${price ? `&price=${price}` : ""}`
+    `${process.env.REACT_APP_API_URL}/api/v1/property?${queryString}`
   );
+
   return response.data;
 };
 
@@ -166,15 +191,10 @@ export const signInForWisemen = async (accessID) => {
 
 export const postReview = async (data) => {
   if (data) {
-    const { propertyID, userData, token } = data;
+    const { propertyID, userData } = data;
     const response = await apiClient.post(
       `${process.env.REACT_APP_API_URL}/api/v1/property-review/${propertyID}/create`,
-      userData,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
+      userData
     );
     return response.data;
   }
@@ -221,6 +241,7 @@ export const enquiryPropertyForm = async (data) => {
       formData
     );
     return response.data;
+    // console.log("Enquiry Property Form Data: ", data);
   }
 };
 
@@ -289,12 +310,24 @@ export const contactUs = async (formData) => {
   }
 };
 
-// export const contactUs = async (formData) => {
-//   if (formData) {
-//     const response = await apiClient.post(
-//       `${process.env.REACT_APP_API_URL}/api/v1/contact-us`,
-//       { ...formData, GDPRAgreement: true }
-//     );
-//     return response.data;
-//   }
-// };
+export const scheduleInPerson = async (data) => {
+  const { userData, propertyID } = data;
+  if (data) {
+    const response = await apiClient.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/meeting/in-person/${propertyID}`,
+      userData
+    );
+    return response.data;
+  }
+};
+
+export const scheduleVideo = async (data) => {
+  const { userData, propertyID } = data;
+  if (data) {
+    const response = await apiClient.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/meeting/schedule/${propertyID}`,
+      userData
+    );
+    return response.data;
+  }
+};

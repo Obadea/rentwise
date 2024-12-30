@@ -16,7 +16,7 @@ function VirtualTour({ id, propertyData, forShortlet }) {
           src={
             forShortlet
               ? propertyData?.shortlet?.virtualTourLink
-              : propertyData?.property?.property?.virtualTourLink
+              : propertyData?.property?.virtualTourLink
           }
           title="YouTube video player"
           frameborder="0"

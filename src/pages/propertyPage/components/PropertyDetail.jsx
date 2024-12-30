@@ -22,16 +22,16 @@ function PropertyDetail({ id, propertyData }) {
               Property ID:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.propertyId
-                ? propertyData?.property?.property?.propertyId
+              {propertyData?.property?.propertyId
+                ? propertyData?.property?.propertyId
                 : "Loading..."}
             </button>
           </div>
           <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
             <h4 className=" font-medium text-sm text-customdark">Price:</h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.price
-                ? toNaira(propertyData?.property?.property?.price)
+              {propertyData?.property?.price
+                ? toNaira(propertyData?.property?.price)
                 : "Loading..."}
             </button>
           </div>
@@ -41,32 +41,32 @@ function PropertyDetail({ id, propertyData }) {
               Property Size:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.sizeSquareFeet
-                ? `${propertyData?.property?.property?.sizeSquareFeet} Sq ft`
+              {propertyData?.property?.sizeSquareFeet
+                ? `${propertyData?.property?.sizeSquareFeet} Sq ft`
                 : "Loading..."}
             </button>
           </div>
           <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
             <h4 className=" font-medium text-sm text-customdark">Bedrooms:</h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.bedrooms
-                ? propertyData?.property?.property?.bedrooms
+              {propertyData?.property?.bedrooms
+                ? propertyData?.property?.bedrooms
                 : "Loading..."}
             </button>
           </div>
           <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
             <h4 className=" font-medium text-sm text-customdark">Bathrooms:</h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.bathrooms
-                ? propertyData?.property?.property?.bathrooms
+              {propertyData?.property?.bathrooms
+                ? propertyData?.property?.bathrooms
                 : "Loading..."}
             </button>
           </div>
           <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
             <h4 className=" font-medium text-sm text-customdark">Garage:</h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.garage
-                ? propertyData?.property?.property?.garage
+              {propertyData?.property?.garage
+                ? propertyData?.property?.garage
                 : "Loading..."}
             </button>
           </div>
@@ -75,8 +75,8 @@ function PropertyDetail({ id, propertyData }) {
               Garage Size:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.garageSize
-                ? `${propertyData?.property?.property?.garageSize} Sq ft`
+              {propertyData?.property?.garageSize
+                ? `${propertyData?.property?.garageSize} Sq ft`
                 : "Loading..."}
             </button>
           </div>
@@ -85,8 +85,8 @@ function PropertyDetail({ id, propertyData }) {
               Year Built:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.yearBuilt
-                ? propertyData?.property?.property?.yearBuilt
+              {propertyData?.property?.yearBuilt
+                ? propertyData?.property?.yearBuilt
                 : "Loading..."}
             </button>
           </div>
@@ -95,8 +95,8 @@ function PropertyDetail({ id, propertyData }) {
               Property Type:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.propertyType
-                ? propertyData?.property?.property?.propertyType
+              {propertyData?.property?.propertyType
+                ? propertyData?.property?.propertyType
                 : "Loading..."}
             </button>
           </div>
@@ -105,8 +105,8 @@ function PropertyDetail({ id, propertyData }) {
               Property Status:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.propertyStatus
-                ? propertyData?.property?.property?.propertyStatus
+              {propertyData?.property?.propertyStatus
+                ? propertyData?.property?.propertyStatus
                 : "Loading..."}
             </button>
           </div>
@@ -126,8 +126,8 @@ function PropertyDetail({ id, propertyData }) {
                 Deposit:
               </h4>
               <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-                {propertyData?.property?.property?.deposit
-                  ? `${propertyData?.property?.property?.deposit}%`
+                {propertyData?.property?.deposit
+                  ? `${propertyData?.property?.deposit}%`
                   : "Loading..."}
               </button>
             </div>
@@ -136,8 +136,8 @@ function PropertyDetail({ id, propertyData }) {
                 Pool Size:
               </h4>
               <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-                {propertyData?.property?.property?.poolSize
-                  ? `${propertyData?.property?.property?.poolSize}Sqft`
+                {propertyData?.property?.poolSize
+                  ? `${propertyData?.property?.poolSize}Sqft`
                   : "Loading..."}
               </button>
             </div>
@@ -146,20 +146,18 @@ function PropertyDetail({ id, propertyData }) {
                 Last remodel year:
               </h4>
               <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-                {propertyData?.property?.property?.lastRemodelYear
-                  ? `${propertyData?.property?.property?.lastRemodelYear}`
+                {propertyData?.property?.lastRemodelYear
+                  ? `${propertyData?.property?.lastRemodelYear}`
                   : "Loading..."}
               </button>
             </div>
-            <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
+            <div className="flex justify-between 3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
               <h4 className=" font-medium text-sm text-customdark">
                 Amenities:
               </h4>
               <button className="font-normal text-sm truncate  text-customStreetcolor flex justify-center items-center">
-                {propertyData?.property?.property?.amenities
-                  ? propertyData?.property?.property?.amenities.map(
-                      (item) => `${item},`
-                    )
+                {propertyData?.property?.amenities
+                  ? propertyData?.property?.amenities.map((item) => `${item},`)
                   : "Loading..."}
               </button>
             </div>
@@ -168,8 +166,8 @@ function PropertyDetail({ id, propertyData }) {
                 Additional Rooms:
               </h4>
               <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-                {propertyData?.property?.property?.additionalRooms
-                  ? propertyData?.property?.property?.additionalRooms
+                {propertyData?.property?.additionalRooms
+                  ? propertyData?.property?.additionalRooms
                   : "Loading..."}
               </button>
             </div>
@@ -178,10 +176,8 @@ function PropertyDetail({ id, propertyData }) {
                 Equipment:
               </h4>
               <button className="font-normal text-sm  truncate text-customStreetcolor flex justify-center items-center">
-                {propertyData?.property?.property?.equipment
-                  ? propertyData?.property?.property?.equipment.map(
-                      (item) => `${item},`
-                    )
+                {propertyData?.property?.equipment
+                  ? propertyData?.property?.equipment.map((item) => `${item},`)
                   : "Loading..."}
               </button>
             </div>

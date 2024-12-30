@@ -59,10 +59,9 @@ function PostReview({ propertyID, forShortlet }) {
           mutation.mutate({
             propertyID: propertyID,
             userData: data,
-            token: token,
           });
 
-          // console.log(data);
+          console.log(data);
         }}
       >
         {/* <Input
@@ -111,7 +110,22 @@ function PostReview({ propertyID, forShortlet }) {
           <RatingControl />
         </div>
 
+        <Input
+          isRequired
+          errorMessage="Please enter a valid email"
+          label="Email"
+          labelPlacement="outside"
+          name="email"
+          placeholder="Enter your email"
+          type="email"
+          isDisabled={isLoading}
+          className=""
+          variant="bordered"
+        />
+
         <Textarea
+          isRequired
+          isClearable
           name="review"
           value={review}
           minRows={5}
@@ -123,13 +137,8 @@ function PostReview({ propertyID, forShortlet }) {
           variant="bordered"
         />
         <div className="flex justify-between w-full mt-8 items-center">
-          <Button
-            color="primary"
-            type="submit"
-            isDisabled={!token}
-            isLoading={isLoading}
-          >
-            {token ? "Submit Review" : "Please login to post"}
+          <Button color="primary" type="submit" isLoading={isLoading}>
+            Submit Review
           </Button>
           {/* <div>
             <RatingControl />

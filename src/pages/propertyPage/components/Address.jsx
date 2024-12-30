@@ -23,8 +23,8 @@ function Address({ id, propertyData, forShortlet }) {
         <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-sm text-customdark">Address</h4>
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-            {propertyData?.property?.property?.address
-              ? propertyData?.property?.property?.address
+            {propertyData?.property?.address
+              ? propertyData?.property?.address
               : forShortlet
               ? propertyData?.shortlet?.address
               : "Loading..."}
@@ -43,8 +43,8 @@ function Address({ id, propertyData, forShortlet }) {
         <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-sm text-customdark">State</h4>
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-            {propertyData?.property?.property?.state
-              ? propertyData?.property?.property?.state
+            {propertyData?.property?.state
+              ? propertyData?.property?.state
               : forShortlet
               ? propertyData?.shortlet?.state
               : "Loading..."}
@@ -55,8 +55,8 @@ function Address({ id, propertyData, forShortlet }) {
             Zip/Postal Code
           </h4>
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-            {propertyData?.property?.property?.zipCode
-              ? propertyData?.property?.property?.zipCode
+            {propertyData?.property?.zipCode
+              ? propertyData?.property?.zipCode
               : forShortlet
               ? propertyData?.shortlet?.zipCode
               : "Loading..."}
@@ -65,8 +65,8 @@ function Address({ id, propertyData, forShortlet }) {
         <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-sm text-customdark">Area</h4>
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-            {propertyData?.property?.property?.Area
-              ? propertyData?.property?.property?.Area
+            {propertyData?.property?.Area
+              ? propertyData?.property?.Area
               : forShortlet
               ? propertyData?.shortlet?.Area
               : "Loading..."}
@@ -75,8 +75,8 @@ function Address({ id, propertyData, forShortlet }) {
         <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
           <h4 className=" font-medium text-sm text-customdark">Country</h4>
           <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-            {propertyData?.property?.property?.country
-              ? propertyData?.property?.property?.country
+            {propertyData?.property?.country
+              ? propertyData?.property?.country
               : forShortlet
               ? propertyData?.shortlet?.country
               : "Loading..."}

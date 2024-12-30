@@ -8,7 +8,7 @@ import palor6 from "../../../assets/palor6.jpg";
 import palor7 from "../../../assets/palor7.jpg";
 import { Image, Skeleton } from "@nextui-org/react";
 function PhotoGrid({ propertyData }) {
-  if (!propertyData?.property?.property?.propertyImages) {
+  if (!propertyData?.property?.propertyImages) {
     return <Skeleton className="w-[92%] m-auto h-52 rounded-md" />;
   }
 
@@ -16,18 +16,16 @@ function PhotoGrid({ propertyData }) {
     <div className=" flex justify-center px-6  lg:px-10">
       <div>
         <div className="grid lg:grid-cols-3">
-          {propertyData?.property?.property?.propertyImages
-            ?.slice(1, 10)
-            ?.map((item) => (
-              // <div className="w-[220px]  h-[220px] lg:h-60 ">
-              <Image
-                src={item}
-                alt="Property Image"
-                className="w-[501px]  h-[213px]"
-                radius="none"
-              />
-              // </div>
-            ))}
+          {propertyData?.property?.propertyImages?.slice(1, 10)?.map((item) => (
+            // <div className="w-[220px]  h-[220px] lg:h-60 ">
+            <Image
+              src={item}
+              alt="Property Image"
+              className="w-[501px]  h-[213px]"
+              radius="none"
+            />
+            // </div>
+          ))}
         </div>
       </div>
     </div>

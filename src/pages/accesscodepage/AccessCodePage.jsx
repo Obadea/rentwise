@@ -16,6 +16,7 @@ import { toast } from "react-toastify";
 import { useAuth } from "../../utils/AuthContext";
 import { signInForLandLord, signInForWisemen } from "../../utils/endpoint";
 import { goBack } from "../../utils/helperFunction";
+import GenerateAccessIdModal from "./GenerateAccessIdModal";
 function AccessCodePage() {
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -145,15 +146,16 @@ function AccessCodePage() {
                 Contact through Whatsapp
               </Button>
 
-              <Button
+              <GenerateAccessIdModal />
+              {/* <Button
                 variant="bordered"
                 startContent={
                   <MailOutlineIcon className="text-customNameBlack" />
                 }
                 className=" flex-1 flex border justify-center px-5 items-center cursor-pointer gap-3 border-customBlackShade p-2 text-customStreetcolor font-normal text-base"
               >
-                Send us a mail
-              </Button>
+                Generate Access ID
+              </Button> */}
             </div>
           </div>
         </div>

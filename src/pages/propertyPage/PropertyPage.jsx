@@ -149,6 +149,7 @@ function PropertyPage() {
                 id="schedule"
                 className="relative top-0 flex-[2]"
                 newClassName="hidden"
+                propertyID={data?.property?._id}
               />
             </div>
 
@@ -157,12 +158,15 @@ function PropertyPage() {
             <WalkScore id="workscore" propertyData={data} />
             <ContactInfo id="contact" propertyData={data} />
             <Review id="review" propertyData={data} />
-            <PostReview propertyID={data?.property?.property?.id} />
+            <PostReview propertyID={data?.property?._id} />
             <SimilarListing id="imilar" />
           </ScrollSpy>
         </div>
         <div className="flex-0 items-center justify-center ">
-          <ScheduleATour className="sticky hidden" />
+          <ScheduleATour
+            className="sticky hidden"
+            propertyID={data?.property?._id}
+          />
         </div>
       </div>
       <Footer />

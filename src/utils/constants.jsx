@@ -274,6 +274,7 @@ export const majorCitiesInNigeria = [
   { label: "Dutse", value: "dutse" },
   { label: "Gusau", value: "gusau" },
   { label: "Yenagoa", value: "yenagoa" },
+  { value: "New York", label: "New York" },
 ];
 
 export const propertyPageDropDown = [

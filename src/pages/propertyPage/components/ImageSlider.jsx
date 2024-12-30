@@ -163,9 +163,7 @@ const ImageSlider = ({ propertyData, isLoading, forShortlet }) => {
   useEffect(() => {
     if (!isLoading) {
       if (!forShortlet) {
-        setImages(
-          propertyData?.property?.property?.propertyImages?.slice(1, 9)
-        );
+        setImages(propertyData?.property?.propertyImages?.slice(1, 9));
       } else {
         setImages(propertyData?.shortlet?.shortletsImages?.slice(1, 9));
       }

@@ -269,6 +269,8 @@ function ContactUsPage() {
               let data = Object.fromEntries(new FormData(e.currentTarget));
               setIsLoading(true);
               mutation.mutate(data);
+
+              console.log(data);
             }}
           >
             <div className="flex w-full gap-4">
@@ -342,7 +344,7 @@ function ContactUsPage() {
                 GDPR Agreement
               </h4>
               <div className="flex items-center gap-2">
-                <Checkbox />
+                <Checkbox name="GDPRAgreement" />
                 <p className="font-normal text-sm text-customNameBlack">
                   By sending this message, I consent to having this website
                   store my submitted information
@@ -371,7 +373,14 @@ function ContactUsPage() {
             <p className="font-normal text-sm text-[#666666]">
               Lekki Garden Phase 2, Lagos Nigeria{" "}
             </p>
-            <p>0805-555-3655</p>
+
+            <a
+              href="https://wa.me/08055553655"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>0805-555-3655</p>
+            </a>
             <p className="font-normal text-sm text-[#666666]">
               contactwiseman@rentwise.rentals
             </p>
@@ -385,7 +394,13 @@ function ContactUsPage() {
             <p className="font-normal text-sm text-[#666666]">
               Fidiso Estate, Lekki-Epe road,{" "}
             </p>
-            <p>0805-555-3655</p>
+            <a
+              href="https://wa.me/08055553655"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>0805-555-3655</p>
+            </a>{" "}
             <p className="font-normal text-sm text-[#666666]">
               contactwiseman@rentwise.rentals
             </p>

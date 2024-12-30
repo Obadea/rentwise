@@ -16,7 +16,7 @@ function PropertyOverview({ id, propertyData, forShortlet }) {
             {" "}
             {forShortlet
               ? propertyData?.shortlet?.shortletId
-              : propertyData?.property?.property?.propertyId}
+              : propertyData?.property?.propertyId}
           </span>
         </p>
       </div>
@@ -25,7 +25,7 @@ function PropertyOverview({ id, propertyData, forShortlet }) {
           <h4 className="font-bold text-base text-[#333333]">
             {forShortlet
               ? propertyData?.shortlet?.shortletsType
-              : propertyData?.property?.property?.propertyType}
+              : propertyData?.property?.propertyType}
           </h4>
           <p className="font-normal text-sm text-[#666666]">Property Type</p>
         </div>
@@ -43,7 +43,7 @@ function PropertyOverview({ id, propertyData, forShortlet }) {
             <ShowerIcon className="text-[#5C6872]" />{" "}
             {forShortlet
               ? propertyData?.shortlet?.bathrooms
-              : propertyData?.property?.property?.bathrooms}
+              : propertyData?.property?.bathrooms}
           </h3>
           <p className="font-normal text-sm text-[#666666]">Bathrooms</p>
         </div>
@@ -54,7 +54,7 @@ function PropertyOverview({ id, propertyData, forShortlet }) {
             <GarageIcon className="text-[#5C6872]" />{" "}
             {forShortlet
               ? propertyData?.shortlet?.garage
-              : propertyData?.property?.property?.garage}
+              : propertyData?.property?.garage}
           </h3>
           <p className="font-normal text-sm text-[#666666] capitalize">
             garage
@@ -66,7 +66,7 @@ function PropertyOverview({ id, propertyData, forShortlet }) {
             <SquareFootIcon className="text-[#5C6872]" />{" "}
             {forShortlet
               ? propertyData?.shortlet?.sizeSquareFeet
-              : propertyData?.property?.property?.sizeSquareFeet}
+              : propertyData?.property?.sizeSquareFeet}
           </h3>
           <p className="font-normal text-sm text-[#666666]">Sq Ft</p>
         </div>
@@ -76,7 +76,7 @@ function PropertyOverview({ id, propertyData, forShortlet }) {
             <CalendarMonthIcon className="text-[#5C6872]" />{" "}
             {forShortlet
               ? propertyData?.shortlet?.yearBuilt
-              : propertyData?.property?.property?.yearBuilt}
+              : propertyData?.property?.yearBuilt}
           </h3>
           <p className="font-normal text-sm text-[#666666]">Year Built</p>
         </div>

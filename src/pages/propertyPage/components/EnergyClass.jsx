@@ -14,8 +14,8 @@ function EnergyClass({ id, propertyData, forShortlet }) {
               Energetic class:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.energeticClass
-                ? propertyData?.property?.property?.energeticClass
+              {propertyData?.property?.energeticClass
+                ? propertyData?.property?.energeticClass
                 : forShortlet
                 ? propertyData?.shortlet?.energeticClass
                 : "Loading..."}
@@ -26,8 +26,8 @@ function EnergyClass({ id, propertyData, forShortlet }) {
               Global Energy Performance Index:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.globalEnergyPerformanceIndex
-                ? `${propertyData?.property?.property?.globalEnergyPerformanceIndex} kWh / m²a`
+              {propertyData?.property?.globalEnergyPerformanceIndex
+                ? `${propertyData?.property?.globalEnergyPerformanceIndex} kWh / m²a`
                 : forShortlet
                 ? `${propertyData?.shortlet?.globalEnergyPerformanceIndex} KWh / m²a`
                 : "Loading..."}
@@ -40,8 +40,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
               {forShortlet
                 ? propertyData?.shortlet?.renewableEnergyPerformanceIndex
-                : propertyData?.property?.property
-                    ?.renewableEnergyPerformanceIndex}
+                : propertyData?.property?.renewableEnergyPerformanceIndex}
             </button>
           </div>
           <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] ">
@@ -49,8 +48,8 @@ function EnergyClass({ id, propertyData, forShortlet }) {
               Energy performance of the building:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.energyPerformanceOfBuilding
-                ? propertyData?.property?.property?.energyPerformanceOfBuilding
+              {propertyData?.property?.energyPerformanceOfBuilding
+                ? propertyData?.property?.energyPerformanceOfBuilding
                 : forShortlet
                 ? propertyData?.shortlet?.energyPerformanceOfBuilding
                 : "Loading..."}
@@ -61,8 +60,8 @@ function EnergyClass({ id, propertyData, forShortlet }) {
               IKEDC Current Rating:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.epcCurrentRating
-                ? `${propertyData?.property?.property?.epcCurrentRating}`
+              {propertyData?.property?.epcCurrentRating
+                ? `${propertyData?.property?.epcCurrentRating}`
                 : forShortlet
                 ? `${propertyData?.shortlet?.epcCurrentRating}`
                 : "Loading..."}
@@ -73,8 +72,8 @@ function EnergyClass({ id, propertyData, forShortlet }) {
               EPC Potential Rating:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.property?.epcPotentialRating
-                ? `${propertyData?.property?.property?.epcPotentialRating}`
+              {propertyData?.property?.epcPotentialRating
+                ? `${propertyData?.property?.epcPotentialRating}`
                 : forShortlet
                 ? `${propertyData?.shortlet?.epcPotentialRating}`
                 : "Loading..."}
@@ -101,7 +100,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.property?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class A`}
           showArrow
         >
@@ -114,7 +113,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.property?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class B`}
           showArrow
         >
@@ -127,7 +126,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.prope?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class C`}
           showArrow
         >
@@ -140,7 +139,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.property?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class D`}
           showArrow
         >
@@ -153,7 +152,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.property?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class E`}
           showArrow
         >
@@ -166,7 +165,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.property?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class F`}
           showArrow
         >
@@ -179,7 +178,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.property?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class G`}
           showArrow
         >
@@ -192,7 +191,7 @@ function EnergyClass({ id, propertyData, forShortlet }) {
           content={`${
             forShortlet
               ? propertyData?.shortlet?.globalEnergyPerformanceIndex
-              : propertyData?.property?.property?.globalEnergyPerformanceIndex
+              : propertyData?.property?.globalEnergyPerformanceIndex
           }kWh / m²a | Energy class H`}
           showArrow
         >

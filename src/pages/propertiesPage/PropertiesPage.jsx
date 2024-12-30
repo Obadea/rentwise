@@ -29,6 +29,7 @@ import Footer from "../../components/Footer";
 import { toNaira } from "../../utils/helperFunction";
 import { useNavigate } from "react-router-dom";
 import { Skeleton } from "@mui/material";
+import NoDataFound from "../../components/NoDataFound";
 
 const PropertiesPage = () => {
   const [compareProperty, setCompareProperty] = useState([]);
@@ -108,7 +109,7 @@ const PropertiesPage = () => {
             <Skeleton className="h-80 w-full rounded-lg" />
             {/* </div> */}
           </div>
-        ) : (
+        ) : !isLoading && data?.results >= 1 ? (
           <div className="properties-container flex justify-center flex-col items-center ">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-7xl">
               {data?.properties?.map((property) => (
@@ -128,17 +129,19 @@ const PropertiesPage = () => {
                 />
               ))}
             </div>
-            <Pagination
-              className="my-8"
-              showControls
-              initialPage={1}
-              size="lg"
-              page={currentPage}
-              onChange={setCurrentPage}
-              total={10}
-            />
           </div>
+        ) : (
+          <NoDataFound />
         )}
+        <Pagination
+          className="my-8 mx-auto place-items-center"
+          showControls
+          initialPage={1}
+          size="lg"
+          page={currentPage}
+          onChange={setCurrentPage}
+          total={30}
+        />
       </div>
       {/* Compare Drawer */}
       <Drawer

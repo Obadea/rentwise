@@ -37,12 +37,15 @@ function ContactInfo({ id, propertyData, forShortlet }) {
     mutationFn: enquiryPropertyForm,
     onSuccess: async (data) => {
       setIsLoading(false);
-      toast(data?.message, { type: "success", draggable: true });
+      toast(data?.response?.data?.message, {
+        type: "success",
+        draggable: true,
+      });
     },
 
     onError: async (err) => {
       setIsLoading(false);
-      toast(err?.response?.data.error.message, {
+      toast(err?.response?.data.message, {
         type: "error",
         draggable: true,
       });
@@ -67,7 +70,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
         <div>
           {/* <img src={contactPhoto} alt="" /> */}
           <Avatar
-            src={propertyData?.property?.property?.listedByDetails[0]?.photo}
+            src={propertyData?.property?.listedByDetails[0]?.photo}
             size="lg"
             className="w-20 h-20 text-large"
             radius="sm"
@@ -76,29 +79,27 @@ function ContactInfo({ id, propertyData, forShortlet }) {
         <div className="flex flex-col gap-1 text-sm font-normal text-customStreetcolor">
           <h3 className="flex  gap-2 items-center">
             <PermIdentityIcon />{" "}
-            {propertyData?.property?.property?.listedByDetails[0]?.fullName
-              ? propertyData?.property?.property?.listedByDetails[0]?.fullName
+            {propertyData?.property?.listedByDetails[0]?.fullName
+              ? propertyData?.property?.listedByDetails[0]?.fullName
               : forShortlet
-              ? propertyData?.shortlet?.listedByDetails[0]?.fullName
+              ? propertyData?.shortlet?.listedByDetails?.fullName
               : "Loading..."}
           </h3>
           <div className="flex gap-4 flex-wrap">
             <p className="flex gap-1  items-center">
               <PhoneIcon />{" "}
-              {propertyData?.property?.property?.listedByDetails[0]?.phoneNumber
-                ? propertyData?.property?.property?.listedByDetails[0]
-                    ?.phoneNumber
+              {propertyData?.property?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.property?.listedByDetails[0]?.phoneNumber
                 : forShortlet
-                ? propertyData?.shortlet?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.shortlet?.listedByDetails?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
               <PhoneAndroidIcon />
-              {propertyData?.property?.property?.listedByDetails[0]?.phoneNumber
-                ? propertyData?.property?.property?.listedByDetails[0]
-                    ?.phoneNumber
+              {propertyData?.property?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.property?.listedByDetails[0]?.phoneNumber
                 : forShortlet
-                ? propertyData?.shortlet?.listedByDetails[0]?.phoneNumber
+                ? propertyData?.shortlet?.listedByDetails?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
@@ -108,9 +109,8 @@ function ContactInfo({ id, propertyData, forShortlet }) {
                 className="text-customStreetcolor"
                 href={
                   forShortlet
-                    ? propertyData?.shortlet?.listedByDetails[0]?.whatsApp
-                    : propertyData?.property?.property?.listedByDetails[0]
-                        ?.whatsApp
+                    ? propertyData?.shortlet?.listedByDetails?.whatsApp
+                    : propertyData?.property?.listedByDetails[0]?.whatsApp
                 }
                 isExternal
                 showAnchorIcon
@@ -123,9 +123,8 @@ function ContactInfo({ id, propertyData, forShortlet }) {
             <Link
               href={
                 forShortlet
-                  ? propertyData?.shortlet?.listedByDetails[0]?.facebook
-                  : propertyData?.property?.property?.listedByDetails[0]
-                      ?.facebook
+                  ? propertyData?.shortlet?.listedByDetails?.facebook
+                  : propertyData?.property?.listedByDetails[0]?.facebook
               }
               isExternal
             >
@@ -136,9 +135,8 @@ function ContactInfo({ id, propertyData, forShortlet }) {
               className="text-black"
               href={
                 forShortlet
-                  ? propertyData?.shortlet?.listedByDetails[0]?.twitter
-                  : propertyData?.property?.property?.listedByDetails[0]
-                      ?.twitter
+                  ? propertyData?.shortlet?.listedByDetails?.twitter
+                  : propertyData?.property?.listedByDetails[0]?.twitter
               }
               isExternal
             >
@@ -170,8 +168,10 @@ function ContactInfo({ id, propertyData, forShortlet }) {
               formData: data,
               propertyID: forShortlet
                 ? propertyData?.shortlet?._id
-                : propertyData?.property?.property?.id,
+                : propertyData?.property?._id,
             });
+
+            console.log(data);
           }}
         >
           <div className="flex items-center justify-between w-full gap-11 mt-6 flex-col lg:flex-row">

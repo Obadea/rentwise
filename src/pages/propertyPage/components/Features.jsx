@@ -21,7 +21,7 @@ function Features({ id, propertyData, forShortlet, isLoading }) {
                   {item}
                 </h4>
               ))
-            : propertyData?.property?.property?.features?.map((item) => (
+            : propertyData?.property?.features?.map((item) => (
                 <h4 className="w-52 flex items-center">
                   <CheckCircleOutlineIcon />
                   {item}

@@ -13,7 +13,12 @@ export default function TimePickerCustom({ label, value, onChange }) {
         components={["DatePicker", "DesktopDatePicker", "MobileDatePicker"]}
       >
         <div className="w-32">
-          <TimePicker label={label} value={value} onChange={onChange} />
+          <TimePicker
+            label={label}
+            value={value}
+            onChange={onChange}
+            name="time"
+          />
         </div>
       </DemoContainer>
     </LocalizationProvider>

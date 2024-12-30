@@ -45,7 +45,7 @@ function SimilarListing({ id }) {
   const { status, data, error, isLoading } = useQuery({
     queryKey: ["properties"],
     queryFn: () => {
-      return getAllProperties(20);
+      return getAllProperties();
     },
   });
   return (
@@ -61,23 +61,25 @@ function SimilarListing({ id }) {
       <div class="flex flex-wrap gap-6">
         {" "}
         {data?.properties ? (
-          data?.properties.map((item) => (
-            <PropertiesCard
-              key={item?.id}
-              img={item?.propertyImages[6]}
-              title={item?.name}
-              address={item?.address}
-              bedroom={item?.bedrooms}
-              bathroom={item?.bathrooms}
-              sittingroom={4}
-              amount={Number(item?.price)}
-              addProperty={addItem}
-              propertyData={item}
-              compareData={compareProperty}
-              removeProperty={removeImage}
-              containerClassName="flex-1 min-w-[320px]"
-            />
-          ))
+          data?.properties
+            ?.slice(0, 4)
+            ?.map((item) => (
+              <PropertiesCard
+                key={item?.id}
+                img={item?.propertyImages[6]}
+                title={item?.name}
+                address={item?.address}
+                bedroom={item?.bedrooms}
+                bathroom={item?.bathrooms}
+                sittingroom={4}
+                amount={Number(item?.price)}
+                addProperty={addItem}
+                propertyData={item}
+                compareData={compareProperty}
+                removeProperty={removeImage}
+                containerClassName="flex-1 min-w-[320px]"
+              />
+            ))
         ) : (
           <p className="m-auto font-bold text-lg">Loading...</p>
         )}
