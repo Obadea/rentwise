@@ -26,7 +26,7 @@ import { SvgLinkIcon } from "../../utils/SvgIcons";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import ShareButton from "./ShareButton";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import phoneMockup from "../../assets/phoemokup.png";
 import { toNaira } from "../../utils/helperFunction";
 import { useAuth } from "../../utils/AuthContext";
@@ -45,6 +45,7 @@ function AffordabilityCalculator() {
   const [num1, setNum1] = useState(searchParams.get("num1") || "");
   const [num2, setNum2] = useState(searchParams.get("num2") || "");
   // const [isCopied, setIsCopied] = useState(false);
+  const navigate = useNavigate();
 
   // Function to update URL parameters
   const updateURLParams = (key, value) => {
@@ -432,6 +433,9 @@ function AffordabilityCalculator() {
                   className=" text-customwhite h-12"
                   radius="md"
                   color="primary"
+                  onPress={() => {
+                    navigate("/open-saver-account");
+                  }}
                 >
                   Open Rent-saver Account{" "}
                 </Button>

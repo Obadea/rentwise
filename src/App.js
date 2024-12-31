@@ -76,11 +76,9 @@
 
 // export default App;
 
-import { Route, Routes } from "react-router-dom";
-
 // Public Pages
 import "./fonts.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import SignUpPage from "./pages/signuppage/SignUpPage.jsx";
 import ComingSoon from "./pages/comingsoon/ComingSoon.jsx";
 import PropertyPage from "./pages/propertyPage/PropertyPage.jsx";
@@ -116,10 +114,29 @@ import PublicLayout from "./layouts/PublicLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
 import RequireAuth from "./components/RequireAuth";
 import Dashboard from "./dashboardPages/Dashboard";
+import OpenSaverPage from "./pages/openSaverPage/OpenSaverPage.jsx";
+import { useEffect } from "react";
+
+const TrackPageView = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    logPageView(location.pathname);
+  }, [location]);
+
+  return null;
+};
 
 function App() {
+  useEffect(() => {
+    initGA(); // Initialize Google Analytics
+    logPageView(window.location.pathname); // Log initial pageview
+  }, []);
+
   return (
     <Routes>
+      <TrackPageView />
+
       {/* Public Routes */}
       <Route element={<PublicLayout />}>
         <Route path="/" element={<LandingPage />} />
@@ -156,6 +173,7 @@ function App() {
         <Route path="/otpreset" element={<OtpReset />} />
         <Route path="/reset_password_otp" element={<ResetPasswordOtp />} />
         <Route path="/rental management" element={<ManageRentals />} />
+        <Route path="/open-saver-account" element={<OpenSaverPage />} />
       </Route>
 
       {/* Private (Dashboard) Routes */}

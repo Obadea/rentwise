@@ -331,3 +331,13 @@ export const scheduleVideo = async (data) => {
     return response.data;
   }
 };
+
+export const openRentSaver = async (data) => {
+  if (data) {
+    const response = await apiClient.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/rentsaver/whitelist`,
+      data
+    );
+    return response.data;
+  }
+};
