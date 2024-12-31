@@ -19,6 +19,16 @@ import rental10 from "../assets/rentalImg/image 20.png";
 import rental11 from "../assets/rentalImg/image 22.png";
 import rental12 from "../assets/rentalImg/image 24.png";
 import rental9f from "../assets/rentalImg/image 17.png";
+import {
+  SvgCalenderNavIcon,
+  SvgDashboardIcon,
+  SvgNotiificationIcon,
+  SvgProductsIcon,
+  SvgReportIcon,
+  SvgSettingsIcon,
+  SvgSupplyNavIcon,
+  SvgSupportIcon,
+} from "./SvgIcons";
 export const searchPageDropDown = [
   {
     title: "Price",
@@ -425,5 +435,59 @@ export const rentWiseFAQs = [
     title: "Can I list my property on RentWise?",
     content:
       "Yes, landlords can list their properties on RentWise to reach a wider audience of pre-screened, reliable tenants. Contact our support team for assistance.",
+  },
+];
+
+export const sidenavData = [
+  {
+    sideTitle: "Dashboard",
+    svgIcon: SvgDashboardIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Dashboard clicked"),
+    notification: false,
+  },
+  {
+    sideTitle: "Products",
+    svgIcon: SvgProductsIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Products clicked"),
+    notification: false,
+  },
+  {
+    sideTitle: "Calendar",
+    svgIcon: SvgCalenderNavIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Calendar clicked"),
+    notification: true, // Display the notification dot
+  },
+  {
+    sideTitle: "Suppliers",
+    svgIcon: SvgSupplyNavIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Suppliers clicked"),
+    notification: false,
+  },
+  {
+    sideTitle: "Reports",
+    svgIcon: SvgReportIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Reports clicked"),
+    notification: false,
+  },
+];
+
+export const section2 = [
+  {
+    sideTitle: "Notifications",
+    svgIcon: SvgNotiificationIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Notifications clicked"),
+    notification: true, // Display the notification dot
+  },
+  {
+    sideTitle: "Settings",
+    svgIcon: SvgSettingsIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Settings clicked"),
+    notification: false,
+  },
+  {
+    sideTitle: "Support",
+    svgIcon: SvgSupportIcon, // Replace with actual SVG for the icon
+    onClick: () => console.log("Support clicked"),
+    notification: false,
   },
 ];
