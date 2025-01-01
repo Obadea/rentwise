@@ -9,13 +9,14 @@ import Footer from "../../components/Footer";
 import Partnership from "./components/Partnership";
 import WiseeReport from "./components/WiseeReport";
 import WisePopup from "./components/WisePopup";
-import { getAuthData } from "../../utils/helperFunction";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
   // checking if user is logged in
 
   const [userData, setUserData] = useState(null);
-
+  const navigate = useNavigate();
+  const [navigated, setNavigated] = useState(false);
   const [proppertyProps, setPropertyProps] = useState({
     propertyType: "",
     city: "",
@@ -24,21 +25,21 @@ function LandingPage() {
   });
 
   useEffect(() => {
-    const data = getAuthData();
+    const hasNavigated = sessionStorage.getItem("hasNavigated");
 
-    if (data) {
-      setUserData(data);
-      // console.log(data);
+    if (!hasNavigated) {
+      navigate("/Rent-affordability-calculator");
+      sessionStorage.setItem("hasNavigated", "true");
     }
-  }, []);
+  }, [navigate]);
 
-  useEffect(() => {
-    console.log(proppertyProps);
-  }, [proppertyProps]);
+  // useEffect(() => {
+  //   console.log(proppertyProps);
+  // }, [proppertyProps]);
 
   return (
     <div>
-      <Header newclassName="sticky" className="bg-white" userData={userData} />
+      <Header newclassName="sticky" className="bg-white" />
       <Banner
         setPropertyProps={setPropertyProps}
         proppertyProps={proppertyProps}

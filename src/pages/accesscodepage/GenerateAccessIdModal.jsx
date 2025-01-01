@@ -13,11 +13,35 @@ import {
   Input,
 } from "@nextui-org/react";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "react-toastify";
+import { wisemenWiselist } from "../../utils/endpoint";
+import { useNavigate } from "react-router-dom";
 
 const GenerateAccessIdModal = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [isLoading, setIsLoading] = React.useState(false);
   const [action, setAction] = React.useState(null);
+  const navigate = useNavigate();
+
+  const mutation = useMutation({
+    mutationFn: wisemenWiselist,
+    onSuccess: async (data) => {
+      setIsLoading(false);
+      toast(data?.message, { type: "success", draggable: true });
+      navigate("/Rent-affordability-calculator");
+      console.log(data);
+    },
+
+    onError: async (err) => {
+      setIsLoading(false);
+      toast(err?.response?.data.message, {
+        type: "error",
+        draggable: true,
+      });
+      console.log(err);
+    },
+  });
 
   return (
     <>
@@ -29,7 +53,13 @@ const GenerateAccessIdModal = () => {
       >
         Generate Access ID
       </Button>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur">
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        backdrop="blur"
+        placement="center"
+        scrollBehavior="outside"
+      >
         <ModalContent>
           {(onClose) => (
             <>
@@ -49,6 +79,7 @@ const GenerateAccessIdModal = () => {
 
                     setAction(`submit ${JSON.stringify(data)}`);
                     setIsLoading(true);
+                    mutation.mutate(data);
                   }}
                 >
                   <Input
@@ -56,7 +87,7 @@ const GenerateAccessIdModal = () => {
                     errorMessage="Please enter a your name"
                     label="Name"
                     labelPlacement="outside"
-                    name="name"
+                    name="fullName"
                     placeholder="Enter your name"
                     type="text"
                     isDisabled={isLoading}
@@ -66,6 +97,8 @@ const GenerateAccessIdModal = () => {
                     labelPlacement="outside"
                     placeholder="Select"
                     isRequired
+                    name="info"
+                    isDisabled={isLoading}
                   >
                     <SelectItem key="Property Owner">Property Owner</SelectItem>
                     <SelectItem key="Agent">Agent</SelectItem>
@@ -75,7 +108,7 @@ const GenerateAccessIdModal = () => {
                     errorMessage="Please enter a valid number"
                     label="Phone"
                     labelPlacement="outside"
-                    name="phone"
+                    name="phoneNumber"
                     placeholder="Enter your phone number"
                     type="number"
                     isDisabled={isLoading}
@@ -91,7 +124,12 @@ const GenerateAccessIdModal = () => {
                     isDisabled={isLoading}
                   />
 
-                  <Button type="submit" className=" w-full " color="primary">
+                  <Button
+                    type="submit"
+                    className=" w-full "
+                    color="primary"
+                    isLoading={isLoading}
+                  >
                     Generate ID
                   </Button>
                 </Form>
