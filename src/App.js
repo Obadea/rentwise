@@ -162,7 +162,7 @@ function App() {
           <Route path="/wisemen" element={<WiseMenPage />} />
           <Route path="/contact us" element={<ContactUsPage />} />
           <Route path="/accessId" element={<AccessCodePage />} />
-          <Route path="/rental management" element={<ManageRentals />} />
+          <Route path="/manage rentals" element={<ManageRentals />} />
           <Route path="/FAQ" element={<FaqPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-conditions" element={<TermsAndConditions />} />
@@ -178,7 +178,6 @@ function App() {
           <Route path="/passwordreset" element={<PasswordReset />} />
           <Route path="/otpreset" element={<OtpReset />} />
           <Route path="/reset_password_otp" element={<ResetPasswordOtp />} />
-          <Route path="/rental management" element={<ManageRentals />} />
           <Route path="/open-saver-account" element={<OpenSaverPage />} />
         </Route>
 

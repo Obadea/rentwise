@@ -308,16 +308,16 @@ export const propertyPageDropDown = [
 
 export const manageRentalCardData = [
   {
-    title: "Add property",
+    title: "Property Listing Management",
     description:
-      "Add your property and have your property seen by millions of people",
+      "Add, edit, and manage property listings with details descriptions, photos and rental terms",
     image: rental1, // Add your image path here
     buttonText: "Get Started",
   },
   {
-    title: "Seamless rent collection",
+    title: "Rent Collection and Tracking",
     description:
-      "rentwise automates rent collection through a secure, integrated payment system",
+      "Set up and monitor rent collection, with reminders for tenants and real-time payment status updates",
     image: rental2,
     buttonText: "Get Started",
   },
@@ -329,37 +329,37 @@ export const manageRentalCardData = [
     buttonText: "Get Started",
   },
   {
-    title: "Fraud detection and identity verification",
+    title: "Tenant Screening and Verification",
     description:
-      "rentwise uses AI and secure verification systems to ensure that tenants provide accurate information during the application process",
+      "Access tenant screening tools to verify identity, rental history, and creditworthiness",
     image: rental4,
     buttonText: "Get Started",
   },
   {
-    title: "Regular property inspection",
+    title: " Financial Reporting and Expense Tracking",
     description:
-      "rentwise offers optional services for scheduling and conducting regular property inspections through vetted professionals",
+      "View detailed reports on rent collected, expenses incurred, and net income",
     image: rental5,
     buttonText: "Get Started",
   },
   {
-    title: "Utility bill management",
+    title: "Smart Document Management",
     description:
-      "Reduces the risk of landlords being burdened with unpaid utility bills and helps ensure transparency in financial obligations",
+      "AI categorizes and organizes all property-related documents (leases, payment receipts, maintenance records) for easy retrieval.",
     image: rental6,
     buttonText: "Get Started",
   },
   {
-    title: "Caution fee management",
+    title: "Maintenance Request Management",
     description:
-      "rentwise offers a secure way to manage and document security deposits, making it easy for landlords to log any deductions for damages",
+      "Receive, track, and resolve tenant maintenance requests directly on the dashboard",
     image: rental7,
     buttonText: "Get Started",
   },
   {
-    title: "Unauthorized subletting",
+    title: "Automated Renewal and Negotiation Alerts",
     description:
-      "Include specific clauses in digital rental agreements that prevent unauthorized subletting",
+      "AI-driven alerts for lease renewal deadlines and rent increment opportunities based on market trends",
     image: rental8,
     buttonText: "Get Started",
   },
@@ -371,9 +371,9 @@ export const manageRentalCardData = [
     buttonText: "Get Started",
   },
   {
-    title: "Rental Agreement Customization",
+    title: "Lease Agreement Management",
     description:
-      "Easily customize lease agreements with terms specific to their property, including rules about noise levels, property use, and more",
+      "Create, store, and manage digital lease agreements with e-signature capabilities",
     image: rental9,
     buttonText: "Get Started",
   },
@@ -385,9 +385,9 @@ export const manageRentalCardData = [
     buttonText: "Get Started",
   },
   {
-    title: "Real-Time Communication",
+    title: "Tenant Communication Hub",
     description:
-      "The platform provides a messaging system that facilitates direct communication between landlords and tenants for quick resolution of issues",
+      "Built-in messaging system for seamless landlordtenant communication",
     image: rental11,
     buttonText: "Get Started",
   },

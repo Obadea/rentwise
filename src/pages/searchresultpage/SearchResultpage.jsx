@@ -42,7 +42,7 @@ function SearchResultpage({ forShortlet }) {
   const { status, data, error, isLoading, refetch } = useQuery({
     queryKey: ["properties"],
     queryFn: () => {
-      return getAllProperties(20);
+      return getAllProperties();
     },
   });
 

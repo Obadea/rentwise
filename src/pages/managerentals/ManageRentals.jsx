@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import Breadcrumb from "../../components/BreadCrumb";
 import ManageRentalsCard from "./components/ManageRentalsCard";
-import { Image } from "@nextui-org/react";
+import { Image, Button } from "@nextui-org/react";
 import rentalImage from "../../assets/rentalimage.png";
 import { manageRentalCardData } from "../../utils/constants";
 import {
@@ -13,6 +13,22 @@ import {
 import Footer from "../../components/Footer";
 
 function ManageRentals() {
+  // State to control the number of items displayed
+  const [visibleCount, setVisibleCount] = useState(9);
+
+  // Function to show more items
+  const handleShowMore = () => {
+    setVisibleCount(manageRentalCardData.length); // Show all items
+  };
+
+  // Function to hide additional items (if needed)
+  const handleShowLess = () => {
+    setVisibleCount(9); // Reset to show only 9 items
+  };
+
+  // Items to display based on the visibleCount
+  const visibleItems = manageRentalCardData.slice(0, visibleCount);
+
   return (
     <div>
       <Header newclassName="sticky" className="bg-textcolor" />
@@ -25,7 +41,6 @@ function ManageRentals() {
             A fast and easy way to manage your rentals seamlessly
           </p>
           <Image
-            // width="90% "
             className="w-[80%] lg:w-[90%] m-auto"
             src={rentalImage}
             draggable={false}
@@ -43,14 +58,26 @@ function ManageRentals() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 w-full max-w-7xl mx-auto mt-7">
-          {manageRentalCardData.map((item) => (
+          {visibleItems.map((item, index) => (
             <ManageRentalsCard
+              key={index}
               img={item.image}
               title={item.title}
               description={item.description}
               buttonText={item.buttonText}
             />
           ))}
+        </div>
+        <div className="flex justify-center mt-4">
+          {visibleCount < manageRentalCardData.length ? (
+            <Button onPress={handleShowMore} color="primary">
+              Show More
+            </Button>
+          ) : (
+            <Button onPress={handleShowLess} color="primary" variant="bordered">
+              Show Less
+            </Button>
+          )}
         </div>
         <div className="bg-white p-12 w-full ">
           <p className="lg:text-[32px] text-center text-customNameBlack font-bold mt-18 w-[90%] m-auto text-[22px]">

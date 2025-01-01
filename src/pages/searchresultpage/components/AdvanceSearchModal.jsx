@@ -31,24 +31,12 @@ const ModalContent1 = ({ onClose, handleContentChange }) => {
       <Image draggable={false} src={binoculars} className="mt-10" />
       <div className="text-center mt-8 text-customStreetcolor">
         <h3 className="font-bold text-2xl mb-2 px-10 text-black">
-          Search better with Household Income
+          Avoid Rental WAHALA
         </h3>
         <p>
-          Max Annual Rent = 3 * Monthly household income [The household income
-          rule]
+          Use your household income to easily find out how much rent you can
+          comfortably afford? Annual rent: 3 x Monthly income
         </p>
-        <p>
-          Household income is the total amount of money earned by all members of
-          a household, typically from wages, salaries, investments, and other
-          sources
-        </p>
-        <p className="font-bold my-2 text-black">
-          How to Calculate Monthly Household Income
-        </p>
-        <p>Add up all sources of income, such as:</p>
-        <p>1. Job Earnings (salary, wages)</p>
-        <p>2. Business Income (if you own a business)</p>
-        <p>3. Investment Income (like interest or dividends)</p>
       </div>
       <div className="flex gap-2 mt-9 mb-6">
         <Button
@@ -102,6 +90,7 @@ const ModalContent2 = ({ onClose, handleContentChange, formik, amount }) => {
           name="monthly_income_I"
           onChange={formik.handleChange}
           value={formik.values.monthly_income_I}
+          isRequired
         />
         <AddIcon className="text-customgray2" />
         <Input
@@ -144,10 +133,10 @@ const ModalContent2 = ({ onClose, handleContentChange, formik, amount }) => {
           color="primary"
           className="lg:w-[200px]"
           onPress={() => {
-            // if (amount?.max_annual_rent) {
-            handleContentChange?.("content3");
-            // }
-            handleInomeSubmit();
+            if (formik.values.monthly_income_I) {
+              handleContentChange?.("content3");
+              handleInomeSubmit();
+            }
           }}
         >
           Next

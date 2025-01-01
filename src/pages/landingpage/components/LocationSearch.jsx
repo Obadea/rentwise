@@ -75,6 +75,17 @@ const incomeOptions = [
   { value: "100000-2628000", label: "16M Above" },
 ];
 
+const shortletIncomeOptions = [
+  { value: "100000-2628000", label: "10k-50K" },
+  { value: "100000-2628000", label: "60K-100K" },
+  { value: "100000-2628000", label: "100K-300K" },
+  { value: "100000-2628000", label: "300K-500K" },
+  { value: "100000-2628000", label: "500K-800K" },
+  { value: "100000-2628000", label: "800K–1M" },
+  { value: "100000-2628000", label: "1M-3M" },
+  { value: "100000-2628000", label: "3M ABOVE" },
+];
+
 function LocationSearch({ forShortlet, setPropertyProps, proppertyProps }) {
   const [filter, setFilter] = useState(false);
 
@@ -186,9 +197,9 @@ function LocationSearch({ forShortlet, setPropertyProps, proppertyProps }) {
             }
           />
           <ReusableSelect
-            options={incomeOptions}
+            options={forShortlet ? shortletIncomeOptions : incomeOptions}
             placeholder={"Max. Range"}
-            label={"HOUSEHOLD INCOME"}
+            label={forShortlet ? "Budget" : "HOUSEHOLD INCOME"}
             // onChange={(value) => console.log(value)}
 
             onChange={(value) =>

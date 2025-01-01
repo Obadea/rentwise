@@ -4,7 +4,14 @@ import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
-import { Button, Form, Input, Textarea } from "@nextui-org/react";
+import {
+  Button,
+  Form,
+  Input,
+  Select,
+  SelectItem,
+  Textarea,
+} from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
 import Breadcrumb from "../../components/BreadCrumb";
 import Footer from "../../components/Footer";
@@ -57,7 +64,7 @@ const OpenSaverPage = () => {
         </div>
         <div className="p-3 rounded-2xl bg-white grid lg:grid-cols-[0.48fr_1fr] mt-10 max-w-[62rem] mx-auto grid-rows-1">
           <div className="rounded-2xl w-full bg-customSearchblue p-6 text-white">
-            <p className="font-semibold text-2xl">Contact Information</p>
+            <p className="font-semibold text-xl">Contact Information</p>
             <p className="text-sm text-blue-200 leading-6 mt-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
               quasi repellendus soluta incidunt{" "}
@@ -122,14 +129,32 @@ const OpenSaverPage = () => {
                 <Input
                   isRequired
                   variant="underlined"
-                  label="Your Subject"
+                  label="Your Location"
                   classNames={{ label: "font-medium text-customStreetcolor" }}
                   type="text"
                   color="primary"
-                  name="subject"
+                  name="location"
                   isDisabled={isLoading}
                 />
-                <Textarea
+                <Select
+                  isRequired
+                  name="message"
+                  variant="underlined"
+                  label="Message"
+                  classNames={{
+                    label: "font-medium text-[14px] text-customStreetcolor",
+                  }}
+                  color="primary"
+                  defaultSelectedKeys={["Open rentsaver account"]}
+                >
+                  <SelectItem key="Open rentsaver account">
+                    Open rentsaver account
+                  </SelectItem>
+                  <SelectItem key="Know more about Rentwise">
+                    Know more about Rentwise
+                  </SelectItem>
+                </Select>
+                {/* <Textarea
                   isRequired
                   color="primary"
                   isClearable
@@ -142,7 +167,7 @@ const OpenSaverPage = () => {
                   name="message"
                   isDisabled={isLoading}
                   // eslint-disable-next-line no-console
-                />
+                /> */}
                 <Input
                   isRequired
                   variant="underlined"

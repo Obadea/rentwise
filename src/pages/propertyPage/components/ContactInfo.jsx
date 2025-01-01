@@ -37,10 +37,12 @@ function ContactInfo({ id, propertyData, forShortlet }) {
     mutationFn: enquiryPropertyForm,
     onSuccess: async (data) => {
       setIsLoading(false);
-      toast(data?.response?.data?.message, {
+      toast(data?.message, {
         type: "success",
         draggable: true,
       });
+
+      console.log(data);
     },
 
     onError: async (err) => {

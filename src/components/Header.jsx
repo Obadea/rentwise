@@ -62,7 +62,7 @@ const Header = ({ className, newclassName }) => {
 
           <DropdownMenu
             name="Landlords"
-            dropdown={(options = ["Rental Management", "Quick Services"])}
+            dropdown={(options = ["Manage Rentals", "Quick Services"])}
           />
 
           <a
