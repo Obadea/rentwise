@@ -32,6 +32,7 @@ import { toNaira } from "../../utils/helperFunction";
 import { useAuth } from "../../utils/AuthContext";
 import html2canvas from "html2canvas";
 import Logo from "../../components/Logo";
+import HowItWorks from "./HowItWorks";
 function AffordabilityCalculator() {
   // const [num, setNum] = useState("");
   // const [num1, setNum1] = useState("");
@@ -405,14 +406,15 @@ function AffordabilityCalculator() {
                   >
                     Open Rent-saver Account{" "}
                   </Button>
-                  <Button
+                  <HowItWorks />
+                  {/* <Button
                     className=" text-customwhite h-12"
                     radius="md"
                     color="primary"
                     variant="bordered"
                   >
-                    How it works{" "}
-                  </Button>
+                    How it works
+                  </Button> */}
                 </div>
               </div>
             </div>

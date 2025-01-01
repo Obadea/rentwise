@@ -142,6 +142,9 @@ function AccessCodePage() {
                 variant="bordered"
                 startContent={<WhatsAppIcon className="text-[#25D366]" />}
                 className=" px-5 flex-1 flex border gap-3 cursor-pointer justify-center items-center border-customBlackShade p-2 text-customStreetcolor font-normal text-base"
+                onPress={() => {
+                  window.open("https://wa.me/08055553655", "_blank");
+                }}
               >
                 Contact through Whatsapp
               </Button>

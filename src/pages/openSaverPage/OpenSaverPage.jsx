@@ -54,12 +54,15 @@ const OpenSaverPage = () => {
         <Breadcrumb />
         <div className="text-center mt-10">
           <p className="text-4xl font-bold text-customStreetcolor">
-            Get In Touch
+            RentWise Rent Saver Account Opening Form
           </p>
-          <p className="lg:text-lg text-sm text-customStreetcolor font-medium w-[80%] mx-auto mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum magni
-            voluptatibus officia maxime eius ipsa quia harum maiores esse ex,
-            alias dolorem iste ipsum mollitia!
+          <p className="lg:text-lg text-sm text-customStreetcolor font-medium w-[89%] mx-auto mt-3">
+            Welcome to RentWise, your trusted partner in affordable and
+            hassle-free rent solutions. Our Rent Saver Account is designed to
+            help you secure your dream home effortlessly.{" "}
+            <span className="font-bold">
+              "Fill out this form to get started"
+            </span>
           </p>
         </div>
         <div className="p-3 rounded-2xl bg-white grid lg:grid-cols-[0.48fr_1fr] mt-10 max-w-[62rem] mx-auto grid-rows-1">

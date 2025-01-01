@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 function DropdownMenu(props) {
   const [hover, setHover] = useState(false);
 
+  // Replace spaces with dashes
+  const formattedText = (text) => {
+    text.replace(/\s+/g, "-");
+  };
+
   return (
     <div
       className="relative inline-block text-left"
@@ -34,7 +39,7 @@ function DropdownMenu(props) {
           <div className="py-1" role="none">
             {props.dropdown.map((option, index) => (
               <Link
-                to={`/${option}`}
+                to={`/${option.replace(/\s+/g, "-")}`}
                 className="block px-4 py-2 text-md text-customNameBlack whitespace-nowrap hover:bg-gray-100 hover:text-gray-900 capitalize"
                 role="menuitem"
                 key={index}
