@@ -188,6 +188,7 @@ function TopProperties({ proppertyProps }) {
                   removeProperty={removeImage}
                   className=" lg:min-w-[320px] "
                   containerClassName="lg:max-w-96 max-w-[96%] m-auto"
+                  isPressable={false}
                 />
               ))}
             </Slider>
