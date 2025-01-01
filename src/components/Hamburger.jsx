@@ -47,13 +47,13 @@ const Hamburger = () => {
             classNames={{ content: "pl-2 " }}
           >
             <div className=" flex flex-col gap-3">
-              <a href="/Quick services">
+              <a href="/Quick-services">
                 <p>Quick services</p>
               </a>
-              <a href="/Rent affordability calculator">
+              <a href="/Rent-affordability-calculator">
                 <p>Rent affordability calculator</p>
               </a>
-              <a href="/RentSaver account">
+              <a href="/RentSaver-account">
                 <p>RentSaver account</p>
               </a>
               <a href="/WiseReport">
@@ -72,10 +72,10 @@ const Hamburger = () => {
             classNames={{ content: "pl-2 " }}
           >
             <div className=" flex flex-col gap-3">
-              <a href="/rental management">
+              <a href="/rental-management">
                 <p>Rental Management</p>
               </a>
-              <a href="/Quick services">
+              <a href="/Quick-services">
                 <p>Quick Services</p>
               </a>
             </div>
@@ -88,10 +88,10 @@ const Hamburger = () => {
             classNames={{ content: "pl-2 " }}
           >
             <div className=" flex flex-col gap-3 capitalize">
-              <a href="/About us">
+              <a href="/About-us">
                 <p>About us</p>
               </a>
-              <a href="/Our Services">
+              <a href="/Our-Services">
                 <p>Our Services</p>
               </a>
               <a href="/Products">
@@ -106,7 +106,7 @@ const Hamburger = () => {
               <a href="/blog">
                 <p>blog</p>
               </a>
-              <a href="/contact us">
+              <a href="/contact-us">
                 <p>contact us</p>
               </a>
             </div>

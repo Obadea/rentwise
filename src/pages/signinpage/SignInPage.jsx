@@ -78,7 +78,7 @@ function SignInPage() {
   // }
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen w-full ">
-      <div className=" my-4 mx-auto px-3 lg:px-16 mt-8  lg:w-[50%] w-[80%]">
+      <div className=" my-4 mx-auto px-3 lg:px-16 mt-8  lg:w-[50%] w-[97%]">
         <div className="flex justify-between ">
           <Logo />
           <button

@@ -43,7 +43,7 @@ function SignInPage() {
 
   return (
     <div className="flex flex-col lg:flex-row  min-h-screen  ">
-      <div className=" my-4 mx-auto px-3 lg:px-16 lg:w-[50%] ">
+      <div className=" my-4 mx-auto px-3 lg:px-16 lg:w-[50%] w-[98%] ">
         <div className="flex justify-between ">
           <Logo />
           <button
@@ -158,11 +158,19 @@ function SignInPage() {
               <div class="w-1/2 h-1 bg-gray-300"></div>
             </div>
           </div>
-          <div className="flex gap-2 justify-between w-[80%] mb-3 items-center m-auto">
-            <Button variant="bordered" startContent={<SvgGoogleIcon />}>
+          <div className="flex gap-2 justify-between w-[80%] mb-3 items-center m-auto flex-col lg:flex-row">
+            <Button
+              variant="bordered"
+              startContent={<SvgGoogleIcon />}
+              className="w-full lg:w-fit"
+            >
               Sign up Using Google
             </Button>
-            <Button startContent={<SvgFacebookIcon />} variant="bordered">
+            <Button
+              startContent={<SvgFacebookIcon />}
+              variant="bordered"
+              className="w-full lg:w-fit"
+            >
               Sign up Using Facebook
             </Button>
           </div>

@@ -148,7 +148,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
-          <Route path="/property" element={<PropertyPage />} />
+          {/* <Route path="/property" element={<PropertyPage />} /> */}
           {/* <Route path="/properties" element={<PropertiesPage />} /> */}
           {/* <Route path="/shortlet/property" element={<ShortletDetailsPage />} /> */}
           <Route
@@ -213,6 +213,8 @@ function App() {
           <Route path="/products" element={<ComingSoon />} />
           <Route path="/leadership" element={<ComingSoon />} />
           <Route path="/Partners" element={<ComingSoon />} />
+          <Route path="/property" element={<PropertyPage />} />
+          <Route path="/dashboard" element={<PropertyPage />} />
         </Route>
       </Routes>
     </>
