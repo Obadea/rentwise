@@ -94,7 +94,7 @@ function MortgageCalculator({ id, propertyData }) {
     <div id={id} className="lg:p-10 p-4  bg-white mt-10 rounded-md">
       <p className="font-medium text-xl text-customdark border-b-2 pb-4 border-[#D9D9D9] mb-10">
         {" "}
-        Mortgage Calculator
+        Total Package Calculator
       </p>
       {propertyData ? (
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-3">

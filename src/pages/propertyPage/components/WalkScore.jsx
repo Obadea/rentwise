@@ -26,14 +26,14 @@ function WalkScore({ propertyData, id }) {
                   <div className="relative">
                     <SvgWalkScoreIcon />
                     <p className="absolute inset-0 m-auto w-fit h-fit text-center font-bold text-[40px] text-customaccent top-4">
-                      {propertyData?.property?.walkScores?.walkScore
-                        ? propertyData?.property?.walkScores?.walkScore
+                      {propertyData?.walkScores?.walkScore
+                        ? propertyData?.walkScores?.walkScore
                         : 0}
                     </p>
                   </div>
                   <div className="text-xs text-customStreetcolor pt-1">
                     <p className="text-sm">Walker's Paradise</p>
-                    <p>{propertyData?.property?.walkScores?.description}</p>
+                    <p>{propertyData?.walkScores?.description}</p>
                   </div>
                 </div>
 
@@ -41,8 +41,8 @@ function WalkScore({ propertyData, id }) {
                   <div className="relative">
                     <SvgTransitScoreIcon />
                     <p className="absolute inset-0 m-auto w-fit h-fit text-center font-bold text-[40px] text-customaccent top-4">
-                      {propertyData?.property?.walkScores?.transitScore
-                        ? propertyData?.property?.walkScores?.transitScore
+                      {propertyData?.walkScores?.transitScore
+                        ? propertyData?.walkScores?.transitScore
                         : 0}
                     </p>
                   </div>
@@ -56,8 +56,8 @@ function WalkScore({ propertyData, id }) {
                   <div className="relative">
                     <SvgBikeScoreIcon />
                     <p className="absolute inset-0 m-auto w-fit h-fit text-center font-bold text-[40px] text-customaccent top-4">
-                      {propertyData?.property?.walkScores?.transitScore
-                        ? propertyData?.property?.walkScores?.transitScore
+                      {propertyData?.walkScores?.transitScore
+                        ? propertyData?.walkScores?.transitScore
                         : 0}
                     </p>
                   </div>

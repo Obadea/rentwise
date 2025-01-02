@@ -140,7 +140,10 @@ const ShortletDetailsPage = () => {
             <ContactInfo id="contact" propertyData={data} forShortlet={true} />
             <Review id="review" propertyData={data} forShortlet={true} />
             <PostReview propertyID={data?.shortlet?._id} forShortlet={true} />
-            <ScheduleForShortlet className="lg:hidden block" />
+            <ScheduleForShortlet
+              className="lg:hidden block"
+              propertyID={data?.shortlet?._id}
+            />
             <SimilarListing id="imilar" />
             {/*
             <MortgageCalculator id="mortgage" propertyData={data} />
@@ -160,7 +163,10 @@ const ShortletDetailsPage = () => {
         </div>
         <div className="flex-0 items-center justify-center ">
           {/* <ScheduleATour className="sticky hidden" /> */}
-          <ScheduleForShortlet className="sticky" />
+          <ScheduleForShortlet
+            className="sticky"
+            propertyID={data?.shortlet?._id}
+          />
         </div>
       </div>
       <Footer />

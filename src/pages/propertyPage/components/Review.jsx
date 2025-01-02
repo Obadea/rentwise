@@ -172,8 +172,9 @@ import {
 import { SvgLinkIcon, SvgSortIcon } from "../../../utils/SvgIcons";
 import { timeAgo } from "../../../utils/helperFunction";
 import { sortMethods } from "../../../utils/constants";
+import NoDataFound from "../../../components/NoDataFound";
 
-function Review({ id, propertyData, forShortlet }) {
+function Review({ id, propertyData, forShortlet, isLoading }) {
   const [currentPage, setCurrentPage] = useState(1); // Current page number
   const reviewsPerPage = 6; // Reviews to display per page
 
@@ -197,9 +198,7 @@ function Review({ id, propertyData, forShortlet }) {
     >
       <div className="flex flex-col lg:flex-row justify-normal lg:justify-between items-start lg:items-center">
         <div className="flex gap-2">
-          <h3>
-            {allReviews.length ? `${allReviews.length} Reviews` : "Loading..."}
-          </h3>
+          <h3>{!isLoading ? `${allReviews.length} Reviews` : "Loading..."}</h3>
           <Rating
             name="read-only"
             value={Number(
@@ -239,33 +238,37 @@ function Review({ id, propertyData, forShortlet }) {
       </div>
 
       <div>
-        {visibleReviews.map((item, index) => (
-          <div key={index} className="mb-5">
-            <div className="flex gap-4">
-              <Avatar src="" size="lg" />
-              <div className="flex flex-col w-full">
-                <div className="flex gap-3">
-                  <h3>
-                    {item?.user?.firstName} {item?.user?.lastName}
-                  </h3>
-                  <Rating name="read-only" value={item?.rating} readOnly />
-                </div>
-                <p className="text-xs text-[#A6A6A6] flex gap-2 mt-2">
-                  <SvgLinkIcon />
-                  {timeAgo(item?.updatedAt)}
-                </p>
-                <div className="flex items-center w-full justify-between">
-                  <h4 className="text-xs max-w-[88%] text-customBlackShade">
-                    {item?.review}
-                  </h4>
-                  <div className="mt-10">
-                    <ThumbsRating />
+        {visibleReviews.length ? (
+          visibleReviews.map((item, index) => (
+            <div key={index} className="mb-5">
+              <div className="flex gap-4">
+                <Avatar src="" size="lg" />
+                <div className="flex flex-col w-full">
+                  <div className="flex gap-3">
+                    <h3>
+                      {item?.user?.firstName} {item?.user?.lastName}
+                    </h3>
+                    <Rating name="read-only" value={item?.rating} readOnly />
+                  </div>
+                  <p className="text-xs text-[#A6A6A6] flex gap-2 mt-2">
+                    <SvgLinkIcon />
+                    {timeAgo(item?.updatedAt)}
+                  </p>
+                  <div className="flex items-center w-full justify-between">
+                    <h4 className="text-xs max-w-[88%] text-customBlackShade">
+                      {item?.review}
+                    </h4>
+                    <div className="mt-10">
+                      <ThumbsRating />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <NoDataFound message="No Review, be the frist to write" />
+        )}
       </div>
 
       {/* Pagination Component */}

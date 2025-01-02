@@ -72,11 +72,11 @@ function PropertyDetail({ id, propertyData }) {
           </div>
           <div className="flex justify-between py-3 border-b-2 border-[#D9D9D9] flex-1 min-w-[45%]">
             <h4 className=" font-medium text-sm text-customdark">
-              Garage Size:
+              Packing Space:
             </h4>
             <button className="font-normal text-sm   text-customStreetcolor flex justify-center items-center">
-              {propertyData?.property?.garageSize
-                ? `${propertyData?.property?.garageSize} Sq ft`
+              {propertyData?.property?.packingSpace
+                ? `${propertyData?.property?.packingSpace} Sq ft`
                 : "Loading..."}
             </button>
           </div>

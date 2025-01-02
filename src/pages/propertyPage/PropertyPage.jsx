@@ -92,7 +92,7 @@ function PropertyPage() {
             Features
           </a>
           <a href="#mortgage" data-to-scrollspy-id="mortgage">
-            Mortgage Calculator
+            Total Package Calculator
           </a>
           {/* <p data-to-scrollspy-id="schedule">Scehdule a Plan</p> */}
           <a href="#video" data-to-scrollspy-id="video">
@@ -157,7 +157,7 @@ function PropertyPage() {
             <VirtualTour id="virtual" propertyData={data} />
             <WalkScore id="workscore" propertyData={data} />
             <ContactInfo id="contact" propertyData={data} />
-            <Review id="review" propertyData={data} />
+            <Review id="review" propertyData={data} isLoading={isLoading} />
             <PostReview propertyID={data?.property?._id} />
             <SimilarListing id="imilar" />
           </ScrollSpy>

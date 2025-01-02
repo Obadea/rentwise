@@ -1,7 +1,14 @@
 import { Button } from "@nextui-org/react";
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const ScheduleForShortlet = ({ className }) => {
+const ScheduleForShortlet = ({ className, propertyID }) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(propertyID);
+  }, []);
+
   return (
     <div
       className={` lg:flex -top-1 bottom-0 z-10 py-5 pt-7 flex-col w-full gap-4  px-4 mb-6   ${className}`}
@@ -15,8 +22,14 @@ const ScheduleForShortlet = ({ className }) => {
         <p className="text-sm text-customdark mt-8 mb-2">
           Satisfied with apartment?
         </p>
-        <Button color="primary" className="w-full">
-          Proceed to Payment{" "}
+        <Button
+          color="primary"
+          className="w-full"
+          onPress={() => {
+            navigate(`/shortlet/checkout?id=${propertyID}`);
+          }}
+        >
+          Proceed to Payment
         </Button>
       </div>
     </div>

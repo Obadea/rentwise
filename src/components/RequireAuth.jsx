@@ -8,11 +8,9 @@ const RequireAuth = ({ children }) => {
 
   if (!token) {
     return <Navigate to="/signin" />;
-  } else {
-    return <Navigate to="/Rent-affordability-calculator" />;
   }
 
-  // return children;
+  return children;
 };
 
 export default RequireAuth;

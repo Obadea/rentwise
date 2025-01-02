@@ -9,8 +9,25 @@ import PrintIcon from "@mui/icons-material/Print";
 import { Button, Skeleton } from "@nextui-org/react";
 import { toNaira } from "../../../utils/helperFunction";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";
+import { toast } from "react-toastify";
 
 function PropertyName({ className, propertyData }) {
+  const handleCopyURL = () => {
+    const currentUrl = window.location.href; // Get the current URL
+    const cleanUrl = currentUrl.split("#")[0]; // Remove the hash and everything after it
+
+    navigator.clipboard
+      .writeText(cleanUrl) // Copy the cleaned URL to the clipboard
+      .then(() => {
+        // alert("URL copied to clipboard: " + cleanUrl);
+        toast("url copied", { type: "success" });
+      })
+      .catch((err) => {
+        console.error("Failed to copy URL: ", err);
+      });
+  };
+
   return (
     <div
       className={`flex-col-reverse lg:flex-row justify-between lg:px-8 mt-4 ${className}`}
@@ -25,14 +42,21 @@ function PropertyName({ className, propertyData }) {
           <Skeleton className="w-[80%] h-10 rounded-lg mt-2" />
         )}
         <div className="flex gap-3">
-          <button className="font-bold text-xs text-white bg-customSearchblue p-1">
-            DOWNLOAD WISEREPORT{" "}
-          </button>
-          <button className="font-bold text-xs text-white bg-customNameBlack  p-1">
+          <Button
+            className="bg-green-400"
+            startContent={<ArticleRoundedIcon />}
+            size="sm"
+          >
+            DOWNLOAD WISEREPORT
+          </Button>
+          {/* <button className="font-bold text-xs text-white bg-customNameBlack  p-1">
             {propertyData?.property?.propertyStatus
               ? propertyData?.property?.propertyStatus
               : "Loading..."}
-          </button>{" "}
+          </button>{" "} */}
+          <a href="#virtual">
+            <Button size="sm">Take a virtual Tour</Button>
+          </a>
         </div>
         <div className="flex text-customStreetcolor items-center mb-5 ">
           <LocationOnOutlinedIcon />
@@ -66,6 +90,7 @@ function PropertyName({ className, propertyData }) {
             variant="bordered"
             size="sm"
             radius="sm"
+            onPress={handleCopyURL}
           >
             <ShareOutlinedIcon
               style={{

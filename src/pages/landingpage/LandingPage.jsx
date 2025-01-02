@@ -24,14 +24,14 @@ function LandingPage() {
     price: "",
   });
 
-  useEffect(() => {
-    const hasNavigated = sessionStorage.getItem("hasNavigated");
+  // useEffect(() => {
+  //   const hasNavigated = sessionStorage.getItem("hasNavigated");
 
-    if (!hasNavigated) {
-      navigate("/Rent-affordability-calculator");
-      sessionStorage.setItem("hasNavigated", "true");
-    }
-  }, [navigate]);
+  //   if (!hasNavigated) {
+  //     navigate("/Rent-affordability-calculator");
+  //     sessionStorage.setItem("hasNavigated", "true");
+  //   }
+  // }, [navigate]);
 
   // useEffect(() => {
   //   console.log(proppertyProps);

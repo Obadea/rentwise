@@ -122,6 +122,7 @@ import Dashboard from "./dashboardPages/Dashboard";
 import OpenSaverPage from "./pages/openSaverPage/OpenSaverPage.jsx";
 import { useEffect } from "react";
 import { initGA, logPageView } from "./utils/analytics.js";
+import PaymentPage from "./pages/paymentPage/PaymentPage.jsx";
 
 const TrackPageView = () => {
   const location = useLocation();
@@ -180,20 +181,6 @@ function App() {
           <Route path="/reset_password_otp" element={<ResetPasswordOtp />} />
           <Route path="/open-saver-account" element={<OpenSaverPage />} />
           <Route path="/rentsaver-account" element={<OpenSaverPage />} />
-        </Route>
-
-        {/* Private (Dashboard) Routes */}
-        <Route
-          // path="/dashboard"
-          element={
-            <RequireAuth>
-              <DashboardLayout />
-            </RequireAuth>
-          }
-        >
-          {/* <Route index element={<Dashboard />} /> */}
-
-          {/* to be returned back */}
           <Route path="/shortlet" element={<ShortletPage />} />
           <Route path="/compare" element={<ComparePage />} />
           <Route
@@ -215,6 +202,21 @@ function App() {
           <Route path="/Partners" element={<ComingSoon />} />
           <Route path="/property" element={<PropertyPage />} />
           <Route path="/dashboard" element={<PropertyPage />} />
+          <Route path="/shortlet/checkout" element={<PaymentPage />} />
+        </Route>
+
+        {/* Private (Dashboard) Routes */}
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <DashboardLayout />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<Dashboard />} />
+
+          {/* to be returned back */}
         </Route>
       </Routes>
     </>
