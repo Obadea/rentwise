@@ -14,6 +14,7 @@ import {
 } from "@nextui-org/react";
 
 import binoculars from "../../../assets/binoculars.png";
+import head from "../../../assets/retwisehead.jpeg";
 import AddIcon from "@mui/icons-material/Add";
 import { useFormik } from "formik";
 import { useMutation } from "@tanstack/react-query";
@@ -27,8 +28,15 @@ import { SvgActiveIcon } from "../../../utils/SvgIcons";
 
 const ModalContent1 = ({ onClose, handleContentChange }) => {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <Image draggable={false} src={binoculars} className="mt-10" />
+    <div className="flex flex-col items-center justify-center mt-4">
+      <Image
+        draggable={false}
+        src={head}
+        className="w-32 h-32  "
+        radius="full"
+        isZoomed
+        isBlurred
+      />
       <div className="text-center mt-8 text-customStreetcolor">
         <h3 className="font-bold text-2xl mb-2 px-10 text-black">
           Avoid Rental WAHALA

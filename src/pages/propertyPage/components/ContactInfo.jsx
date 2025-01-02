@@ -84,7 +84,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
             {propertyData?.property?.listedByDetails[0]?.fullName
               ? propertyData?.property?.listedByDetails[0]?.fullName
               : forShortlet
-              ? propertyData?.shortlet?.listedByDetails?.fullName
+              ? propertyData?.shortlet?.listedByDetails[0]?.fullName
               : "Loading..."}
           </h3>
           <div className="flex gap-4 flex-wrap">
@@ -93,7 +93,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
               {propertyData?.property?.listedByDetails[0]?.phoneNumber
                 ? propertyData?.property?.listedByDetails[0]?.phoneNumber
                 : forShortlet
-                ? propertyData?.shortlet?.listedByDetails?.phoneNumber
+                ? propertyData?.shortlet?.listedByDetails[0]?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
@@ -101,7 +101,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
               {propertyData?.property?.listedByDetails[0]?.phoneNumber
                 ? propertyData?.property?.listedByDetails[0]?.phoneNumber
                 : forShortlet
-                ? propertyData?.shortlet?.listedByDetails?.phoneNumber
+                ? propertyData?.shortlet?.listedByDetails[0]?.phoneNumber
                 : "Loading..."}
             </p>
             <p className="flex gap-1 items-center">
@@ -111,7 +111,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
                 className="text-customStreetcolor"
                 href={
                   forShortlet
-                    ? propertyData?.shortlet?.listedByDetails?.whatsApp
+                    ? propertyData?.shortlet?.listedByDetails[0]?.whatsApp
                     : propertyData?.property?.listedByDetails[0]?.whatsApp
                 }
                 isExternal
@@ -125,7 +125,7 @@ function ContactInfo({ id, propertyData, forShortlet }) {
             <Link
               href={
                 forShortlet
-                  ? propertyData?.shortlet?.listedByDetails?.facebook
+                  ? propertyData?.shortlet?.listedByDetails[0]?.facebook
                   : propertyData?.property?.listedByDetails[0]?.facebook
               }
               isExternal

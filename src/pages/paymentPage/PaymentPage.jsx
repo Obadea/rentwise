@@ -13,7 +13,7 @@ const PaymentPage = () => {
       <div className="max-w-7xl mx-auto pt-10">
         <Breadcrumb />
 
-        <div className="grid lg:grid-cols-2 gap-24 grid-rows-2">
+        <div className="grid lg:grid-cols-2 gap-24 grid-rows-1">
           <div className="mt-10 p-6 lg:p-0">
             <p className="text-2xl font-bold mb-11">Paymennt Overview</p>
             <Image src={imageHeader} className="lg:w-[84%] w-full " isZoomed />

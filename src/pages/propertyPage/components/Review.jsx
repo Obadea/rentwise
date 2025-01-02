@@ -267,7 +267,7 @@ function Review({ id, propertyData, forShortlet, isLoading }) {
             </div>
           ))
         ) : (
-          <NoDataFound message="No Review, be the frist to write" />
+          <NoDataFound message="No Review, be the first to write" />
         )}
       </div>
 
