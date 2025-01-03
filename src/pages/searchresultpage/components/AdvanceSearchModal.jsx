@@ -284,6 +284,17 @@ const AdvanceSearchModal = ({
     },
   });
 
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    // Calculate position relative to the center
+    const { clientX, clientY } = e;
+    const offsetX = (clientX - window.innerWidth / 2) / 30; // Adjust factor for sensitivity
+    const offsetY = (clientY - window.innerHeight / 2) / 30;
+
+    setPosition({ x: offsetX, y: offsetY });
+  };
+
   return (
     <>
       <div className="flex items-end gap-3">
@@ -328,17 +339,22 @@ const AdvanceSearchModal = ({
         className="z-10 bg-transparent shadow-none"
         hideCloseButton
         radius="none"
+        onMouseMove={handleMouseMove}
       >
         <ModalContent className="z-10">
           {(onClose) => (
             <>
               <ModalHeader className=" bg-transparent place-content-center relative top-[70px]">
-                <div className="">
+                <div>
                   <Image
                     draggable={false}
                     src={head}
-                    className="w-32 h-32 animate-bounceSlow border-8 border-primary"
+                    className="w-32 h-32 border-8 border-white"
                     radius="full"
+                    style={{
+                      transform: `translate(${position.x}px, ${position.y}px)`,
+                      transition: "transform 0.1s ease-out", // Smooth movement
+                    }}
                   />
                 </div>
               </ModalHeader>

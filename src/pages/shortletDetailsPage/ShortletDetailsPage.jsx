@@ -148,7 +148,7 @@ const ShortletDetailsPage = () => {
             <ScheduleForShortlet
               className="lg:hidden block"
               propertyID={data?.shortlet?._id}
-              propertyData={data}
+              propertyData={data?.shortlet}
               selectedDuration={value}
               isLoading={isLoading}
             />
@@ -172,7 +172,7 @@ const ShortletDetailsPage = () => {
         <div className="flex-0 items-center justify-center ">
           {/* <ScheduleATour className="sticky hidden" /> */}
           <ScheduleForShortlet
-            className="sticky"
+            className="lg:sticky hidden"
             propertyID={data?.shortlet?._id}
             propertyData={data?.shortlet}
             selectedDuration={value}
