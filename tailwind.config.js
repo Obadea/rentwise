@@ -8,15 +8,26 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        bounceSlow: "bounce 2s infinite",
-        fadeIn: "fadeIn 1s ease-in-out",
-      },
       keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
+        scaleUp: {
+          "0%": { transform: "scale(0.5)", opacity: 0 },
+          "100%": { transform: "scale(1)", opacity: 1 },
         },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 15px 5px rgba(59, 130, 246, 0.5)" }, // Adjust color to your Tailwind primary color
+          "50%": { boxShadow: "0 0 25px 10px rgba(59, 130, 246, 0.8)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(5px, -5px)" },
+          "50%": { transform: "translate(-5px, 5px)" },
+          "75%": { transform: "translate(5px, 5px)" },
+        },
+      },
+      animation: {
+        scaleUp: "scaleUp 0.5s ease-out",
+        glow: "glow 2s infinite ease-in-out",
+        float: "float 3s infinite ease-in-out",
       },
       colors: {
         customblue: "#2E3C6B",

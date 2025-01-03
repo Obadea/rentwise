@@ -141,7 +141,7 @@ const Hamburger = () => {
             </a>
             {/* <p>Add property</p> */}
             <Button
-              className="w-full ml-2"
+              className="w-full ml-2 mt-4"
               color="primary"
               onPress={() => navigate("/accessId")}
             >

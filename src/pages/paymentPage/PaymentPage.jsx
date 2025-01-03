@@ -93,13 +93,13 @@ const PaymentPage = () => {
   return (
     <div>
       <Header newclassName="sticky" />
-      <div className="max-w-7xl mx-auto pt-10">
+      <div className="max-w-7xl mx-auto lg:pt-10 pt-2">
         <div className="px-10">
           <Breadcrumb />
         </div>
 
-        <div className="grid lg:grid-cols-2 lg:gap-24 gap-4 grid-rows-2 lg:grid-rows-1 lg:px-10">
-          <div className="mt-10 p-6 lg:p-0">
+        <div className="grid lg:grid-cols-2 lg:gap-24 gap-2 grid-rows-1 lg:grid-rows-1 lg:px-10">
+          <div className="lg:mt-10 mt-0 p-6 lg:p-0">
             <p className="text-2xl font-bold mb-11">Payment Overview</p>
             <Image
               src={propertyData?.shortletsImages[6]}
@@ -118,7 +118,7 @@ const PaymentPage = () => {
               </p>
             </div>
           </div>
-          <div className="mt-10 lg:p-0 p-6">
+          <div className="lg:mt-10 mt-3 lg:p-0 p-6">
             <p className="text-2xl font-bold mb-11">Payment Method</p>
             <div className="grid grid-cols-2 grid-rows-5 lg:w-[84%] w-full  text-xs lg:text-sm">
               <p className="text-customStreetcolor truncate">

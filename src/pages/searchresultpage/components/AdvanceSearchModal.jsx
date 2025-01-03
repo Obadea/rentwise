@@ -25,6 +25,7 @@ import {
 import { toNaira } from "../../../utils/helperFunction";
 import { toast } from "react-toastify";
 import { SvgActiveIcon } from "../../../utils/SvgIcons";
+import "./advanceModal.css";
 
 const ModalContent1 = ({ onClose, handleContentChange }) => {
   return (
@@ -345,17 +346,18 @@ const AdvanceSearchModal = ({
           {(onClose) => (
             <>
               <ModalHeader className=" bg-transparent place-content-center relative top-[70px]">
-                <div>
-                  <Image
+                <div className="image-container">
+                  <img src={head} alt="animated" draggable={false} />
+
+                  {/* <Image
                     draggable={false}
                     src={head}
-                    className="w-32 h-32 border-8 border-primary"
+                    alt="animated"
+                    // className="w-32 h-32 border-8 border-primary"
+                    className={`
+                      animate-appearance-in`}
                     radius="full"
-                    style={{
-                      transform: `translate(${position.x}px, ${position.y}px)`,
-                      transition: "transform 0.1s ease-out", // Smooth movement
-                    }}
-                  />
+                  /> */}
                 </div>
               </ModalHeader>
               <ModalBody className="bg-white p-0">
