@@ -289,8 +289,8 @@ const AdvanceSearchModal = ({
   const handleMouseMove = (e) => {
     // Calculate position relative to the center
     const { clientX, clientY } = e;
-    const offsetX = (clientX - window.innerWidth / 2) / 30; // Adjust factor for sensitivity
-    const offsetY = (clientY - window.innerHeight / 2) / 30;
+    const offsetX = (clientX - window.innerWidth / 2) / 40;
+    const offsetY = (clientY - window.innerHeight / 2) / 40;
 
     setPosition({ x: offsetX, y: offsetY });
   };
@@ -349,7 +349,7 @@ const AdvanceSearchModal = ({
                   <Image
                     draggable={false}
                     src={head}
-                    className="w-32 h-32 border-8 border-white"
+                    className="w-32 h-32 border-8 border-primary"
                     radius="full"
                     style={{
                       transform: `translate(${position.x}px, ${position.y}px)`,
