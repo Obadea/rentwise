@@ -73,3 +73,7 @@ export const clearAuthData = () => {
 export const goBack = () => {
   window.history.back(); // Go to the previous page
 };
+
+export const handleScrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};

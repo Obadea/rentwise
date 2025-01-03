@@ -341,11 +341,27 @@ export const openRentSaver = async (data) => {
     return response.data;
   }
 };
+
 export const wisemenWiselist = async (data) => {
   if (data) {
     const response = await apiClient.post(
       `${process.env.REACT_APP_API_URL}/api/v1/wise/whitelist`,
       data
+    );
+    return response.data;
+  }
+};
+export const payForShortlet = async (data) => {
+  if (data) {
+    const { shortletID, userData, token } = data;
+    const response = await apiClient.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/shortlet-checkout/${shortletID}`,
+      userData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
     );
     return response.data;
   }

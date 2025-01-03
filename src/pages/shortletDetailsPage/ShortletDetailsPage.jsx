@@ -26,6 +26,8 @@ import ShortletPropertyName from "./ShortletPropertyName";
 import ScheduleForShortlet from "./ScheduleForShortlet";
 
 const ShortletDetailsPage = () => {
+  const [value, setValue] = React.useState("Hour");
+
   const [propertyID, setPropertyID] = useState(() => {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get("id");
@@ -98,6 +100,8 @@ const ShortletDetailsPage = () => {
       <ShortletPropertyName
         shortletData={data}
         className="hidden lg:flex lg:px-[100px]"
+        value={value}
+        setValue={setValue}
       />
       <div className=" px-2 flex gap-3 lg:pl-[110px] lg:pr-[40px]">
         <div className="flex-[3] w-full">
@@ -109,7 +113,8 @@ const ShortletDetailsPage = () => {
           <ShortletPropertyName
             shortletData={data}
             className="flex lg:hidden"
-            for
+            value={value}
+            setValue={setValue}
           />
           {/* <PropertyName propertyData={data} className="flex lg:hidden" /> */}
 
@@ -143,6 +148,9 @@ const ShortletDetailsPage = () => {
             <ScheduleForShortlet
               className="lg:hidden block"
               propertyID={data?.shortlet?._id}
+              propertyData={data}
+              selectedDuration={value}
+              isLoading={isLoading}
             />
             <SimilarListing id="imilar" />
             {/*
@@ -166,6 +174,9 @@ const ShortletDetailsPage = () => {
           <ScheduleForShortlet
             className="sticky"
             propertyID={data?.shortlet?._id}
+            propertyData={data?.shortlet}
+            selectedDuration={value}
+            isLoading={isLoading}
           />
         </div>
       </div>

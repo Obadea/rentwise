@@ -7,8 +7,8 @@ import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import PrintOutlinedIcon from "@mui/icons-material/PrintOutlined";
 import { toNaira } from "../../utils/helperFunction";
 
-const ShortletPropertyName = ({ className, shortletData }) => {
-  const [value, setValue] = React.useState("hourlyPrice");
+const ShortletPropertyName = ({ className, shortletData, value, setValue }) => {
+  // const [value, setValue] = React.useState("hourlyPrice");
   const handleSelectionChange = (e) => {
     setValue(e.target.value);
   };
@@ -90,25 +90,29 @@ const ShortletPropertyName = ({ className, shortletData }) => {
           {" "}
           {shortletData?.shortlet
             ? `${toNaira(
-                value === "hourlyPrice"
+                value === "Hour"
                   ? shortletData?.shortlet?.hourlyPrice
-                  : value === "dailyPrice"
+                  : value === "Day"
                   ? shortletData?.shortlet?.dailyPrice
-                  : value === "weeklyPrice"
+                  : value === "Week"
                   ? shortletData?.shortlet?.weeklyPrice
-                  : shortletData?.shortlet?.monthlyPrice
+                  : value === "Month"
+                  ? shortletData?.shortlet?.monthlyPrice
+                  : ""
               )}`
             : "Loading..."}
         </p>
         <Select
+          aria-label="select"
           selectedKeys={[value]}
           onChange={handleSelectionChange}
           className="w-36"
+          disallowEmptySelection={true}
         >
-          <SelectItem key="hourlyPrice">hourlyPrice</SelectItem>
-          <SelectItem key="dailyPrice">dailyPrice</SelectItem>
-          <SelectItem key="weeklyPrice">weeklyPrice</SelectItem>
-          <SelectItem key="monthlyPrice">monthlyPrice</SelectItem>
+          <SelectItem key="Hour">Per Hourly</SelectItem>
+          <SelectItem key="Day">Per Day</SelectItem>
+          <SelectItem key="Week">Per Week</SelectItem>
+          <SelectItem key="Month">Per Month</SelectItem>
         </Select>
         {/* <p className="font-normal text-base text-[#666666]">
           {shortletData?.shortlet?.sizeSquareFeet

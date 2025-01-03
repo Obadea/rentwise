@@ -28,16 +28,14 @@ import { SvgActiveIcon } from "../../../utils/SvgIcons";
 
 const ModalContent1 = ({ onClose, handleContentChange }) => {
   return (
-    <div className="flex flex-col items-center justify-center mt-4">
+    <div className="flex flex-col items-center justify-center mt-8">
       <Image
         draggable={false}
         src={head}
-        className="w-32 h-32  "
+        className="w-32 h-32 animate-bounceSlow z-50 border border-primary"
         radius="full"
-        isZoomed
-        isBlurred
       />
-      <div className="text-center mt-8 text-customStreetcolor">
+      <div className="text-center mt-6 text-customStreetcolor">
         <h3 className="font-bold text-2xl mb-2 px-10 text-black">
           Avoid Rental WAHALA
         </h3>

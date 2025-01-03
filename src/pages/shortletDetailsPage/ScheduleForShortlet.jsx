@@ -1,13 +1,19 @@
 import { Button } from "@nextui-org/react";
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../utils/AuthContext";
+import { handleScrollToTop } from "../../utils/helperFunction";
 
-const ScheduleForShortlet = ({ className, propertyID }) => {
+const ScheduleForShortlet = ({
+  className,
+  propertyID,
+  propertyData,
+  selectedDuration,
+  isLoading,
+}) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(propertyID);
-  }, []);
+  const { token } = useAuth();
 
   return (
     <div
@@ -25,11 +31,16 @@ const ScheduleForShortlet = ({ className, propertyID }) => {
         <Button
           color="primary"
           className="w-full"
+          isLoading={isLoading}
+          isDisabled={!token}
           onPress={() => {
-            navigate(`/shortlet/checkout?id=${propertyID}`);
+            handleScrollToTop();
+            navigate(`/shortlet/checkout?id=${propertyID}`, {
+              state: { propertyData, selectedDuration, propertyID },
+            });
           }}
         >
-          Proceed to Payment
+          {token ? "Proceed to Payment" : "Please log in to pay"}
         </Button>
       </div>
     </div>

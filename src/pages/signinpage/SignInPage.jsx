@@ -148,7 +148,7 @@ function SignInPage() {
               setAction(`submit ${JSON.stringify(data)}`);
               setIsLoading(true);
               mutation.mutate(data);
-              // console.log(JSON.stringify(data));
+              // console.log(data);
             }}
           >
             <Input
