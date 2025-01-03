@@ -22,7 +22,7 @@ function Banner({ forShortlet, setPropertyProps, proppertyProps }) {
   url(${forShortlet ? houseInterior : beachTown})
       `,
         backgroundSize: "cover",
-        backgroundPosition: "bottom",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
       }}

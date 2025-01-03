@@ -6,7 +6,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import PrintOutlinedIcon from "@mui/icons-material/PrintOutlined";
 import PrintIcon from "@mui/icons-material/Print";
-import { Button, Skeleton } from "@nextui-org/react";
+import { Button, Link, Skeleton } from "@nextui-org/react";
 import { toNaira } from "../../../utils/helperFunction";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ArticleRoundedIcon from "@mui/icons-material/ArticleRounded";
@@ -55,7 +55,9 @@ function PropertyName({ className, propertyData }) {
               : "Loading..."}
           </button>{" "} */}
           <a href="#virtual">
-            <Button size="sm">Take a virtual Tour</Button>
+            <Button size="sm" showAnchorIcon>
+              Take a virtual Tour
+            </Button>
           </a>
         </div>
         <div className="flex text-customStreetcolor items-center mb-5 ">

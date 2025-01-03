@@ -6,6 +6,8 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import PrintOutlinedIcon from "@mui/icons-material/PrintOutlined";
 import { toNaira } from "../../utils/helperFunction";
+import { SvgGreaterIcon, SvgHomeIcon } from "../../utils/SvgIcons";
+import { Link } from "react-router-dom";
 
 const ShortletPropertyName = ({ className, shortletData, value, setValue }) => {
   // const [value, setValue] = React.useState("hourlyPrice");
@@ -17,7 +19,17 @@ const ShortletPropertyName = ({ className, shortletData, value, setValue }) => {
       className={`flex-col-reverse lg:flex-row justify-between lg:px-8 mt-4 ${className}`}
     >
       <div className=" ml-4 flex flex-col gap-4  ">
-        <Breadcrumb />
+        {/* <Breadcrumb /> */}
+        <div className="text-customStreetcolor flex items-center gap-2">
+          <SvgHomeIcon />
+          <Link to="/" className="hover:underline">
+            Home
+          </Link>
+          <SvgGreaterIcon />
+          <Link to="/shortlets" className="hover:underline font-semibold">
+            Shortlet
+          </Link>
+        </div>
         {shortletData?.shortlet?.name ? (
           <h3 className="font-bold text-3xl text-customblack1">
             {shortletData?.shortlet?.name}
@@ -26,11 +38,11 @@ const ShortletPropertyName = ({ className, shortletData, value, setValue }) => {
           <Skeleton className="w-[80%] h-10 rounded-lg mt-2" />
         )}
         <div className="flex gap-3">
-          <button className="font-bold text-xs text-white bg-customNameBlack  p-1">
-            {shortletData?.shortlet?.shortletsStatus
-              ? shortletData?.shortlet?.shortletsStatus
-              : "Loading..."}
-          </button>{" "}
+          <a href="#virtual">
+            <Button size="sm" href="#vitual" className="bg-green-400">
+              Take a virtual Tour
+            </Button>
+          </a>
         </div>
         <div className="flex text-customStreetcolor items-center mb-5 ">
           <LocationOnOutlinedIcon />
@@ -109,7 +121,7 @@ const ShortletPropertyName = ({ className, shortletData, value, setValue }) => {
           className="w-36"
           disallowEmptySelection={true}
         >
-          <SelectItem key="Hour">Per Hourly</SelectItem>
+          <SelectItem key="Hour">Per Hour</SelectItem>
           <SelectItem key="Day">Per Day</SelectItem>
           <SelectItem key="Week">Per Week</SelectItem>
           <SelectItem key="Month">Per Month</SelectItem>

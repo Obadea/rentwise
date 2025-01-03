@@ -356,12 +356,18 @@ export const payForShortlet = async (data) => {
     const { shortletID, userData, token } = data;
     const response = await apiClient.post(
       `${process.env.REACT_APP_API_URL}/api/v1/shortlet-checkout/${shortletID}`,
-      userData,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
+      userData
+    );
+    return response.data;
+  }
+};
+
+export const scheduleVideoShortlet = async (data) => {
+  if (data) {
+    const { shortletID, userData } = data;
+    const response = await apiClient.post(
+      `${process.env.REACT_APP_API_URL}/api/v1/video-meeting/schedule/${shortletID}`,
+      userData
     );
     return response.data;
   }

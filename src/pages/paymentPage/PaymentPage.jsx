@@ -27,6 +27,7 @@ const PaymentPage = () => {
   const navigate = useNavigate();
   const [action, setAction] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [isSelected, setIsSelected] = React.useState(true);
 
   const { user, token } = useAuth();
   const [defaultEmail, setDefaultEmail] = useState(user?.email);
@@ -174,6 +175,7 @@ const PaymentPage = () => {
                       email: data.email,
                       duration: `Per ${selectedDuration}`,
                       quantity: Number(durationNumber),
+                      sendInvoice: isSelected ? true : false,
                     },
                   });
 
@@ -183,19 +185,21 @@ const PaymentPage = () => {
                   //   duration: `Per ${selectedDuration}`,
                   //   quantity: Number(durationNumber),
                   //   propertyid: propertyID,
+                  //   sendInvoice: isSelected ? true : false,
                   // });
                 }}
               >
                 <Input
                   type="text"
                   variant="bordered"
-                  label="Full name"
+                  label="Nickname/Initials"
                   placeholder="enter full name"
                   labelPlacement="outside"
                   className="mb-10"
                   name="fullName"
                 />
                 <Input
+                  isRequired
                   type="email"
                   variant="bordered"
                   label="Email"
@@ -205,8 +209,13 @@ const PaymentPage = () => {
                   name="email"
                 />
                 <p className="my-6">
-                  <Checkbox defaultSelected>
-                    Save my details for future transactions
+                  <Checkbox
+                    defaultSelected
+                    name="sendInvoice"
+                    isSelected={isSelected}
+                    onValueChange={setIsSelected}
+                  >
+                    Receive Payment Invoice
                   </Checkbox>
                 </p>
                 <Button
