@@ -29,14 +29,8 @@ import { SvgActiveIcon } from "../../../utils/SvgIcons";
 const ModalContent1 = ({ onClose, handleContentChange }) => {
   return (
     <div className="flex flex-col items-center justify-center mt-8">
-      <Image
-        draggable={false}
-        src={head}
-        className="w-32 h-32 animate-bounceSlow z-50 border border-primary"
-        radius="full"
-      />
       <div className="text-center mt-6 text-customStreetcolor">
-        <h3 className="font-bold text-2xl mb-2 px-10 text-black">
+        <h3 className="font-bold text-2xl mb-2 px-10 text-black mt-10">
           Avoid Rental WAHALA
         </h3>
         <p>
@@ -44,11 +38,11 @@ const ModalContent1 = ({ onClose, handleContentChange }) => {
           comfortably afford? Annual rent: 3 x Monthly income
         </p>
       </div>
-      <div className="flex gap-2 mt-9 mb-6">
+      <div className="flex  mt-9 w-full">
         <Button
-          radius="sm"
+          radius="none"
           color="primary"
-          className="lg:w-[200px]"
+          className="w-full h-14"
           onPress={() => {
             handleContentChange?.("content2");
           }}
@@ -56,10 +50,10 @@ const ModalContent1 = ({ onClose, handleContentChange }) => {
           Continue Search
         </Button>
         <Button
-          radius="sm"
+          radius="none"
           variant="bordered"
           color="primary"
-          className="lg:w-[200px] "
+          className="w-full h-14"
           onPress={onClose}
         >
           Exit Advanced Search
@@ -75,12 +69,12 @@ const ModalContent2 = ({ onClose, handleContentChange, formik, amount }) => {
   };
   return (
     <div>
-      <h3 className="font-bold text-2xl mb-4 mt-14">Improve search</h3>
-      <p className="text-customgray2 text-[13px] mb-9 pr-8">
+      <h3 className="font-bold text-2xl mb-4 mt-16 px-8 ">Improve search</h3>
+      <p className="text-customgray2 text-[13px] mb-9 px-8">
         Enter requested details to help us provide better search results for
         your optimized results.
       </p>
-      <div className="flex items-center justify-center mb-6">
+      <div className="flex items-center justify-center mb-6 px-7">
         <Input
           startContent={
             <div className="pointer-events-none flex items-center">
@@ -133,11 +127,11 @@ const ModalContent2 = ({ onClose, handleContentChange, formik, amount }) => {
           value={formik.values.other_income}
         />
       </div>
-      <div className="flex gap-2 my-9 items-center justify-center">
+      <div className="flex mt-9 items-center justify-center">
         <Button
-          radius="sm"
+          radius="none"
           color="primary"
-          className="lg:w-[200px]"
+          className="w-full h-14"
           onPress={() => {
             if (formik.values.monthly_income_I) {
               handleContentChange?.("content3");
@@ -148,10 +142,10 @@ const ModalContent2 = ({ onClose, handleContentChange, formik, amount }) => {
           Next
         </Button>
         <Button
-          radius="sm"
+          radius="none"
           variant="bordered"
           color="primary"
-          className="lg:w-[200px] "
+          className="w-full h-14 "
           onPress={onClose}
         >
           Exit Advanced Search
@@ -164,8 +158,8 @@ const ModalContent2 = ({ onClose, handleContentChange, formik, amount }) => {
 const ModalContent3 = ({ onClose, handleContentChange, amount }) => {
   return (
     <div>
-      <h3 className="font-bold text-2xl mb-4 mt-14">Improve search</h3>
-      <p className="text-customgray2 text-[13px] mb-6 pr-8">
+      <h3 className="font-bold text-2xl mb-4 mt-16 pl-8">Improve search</h3>
+      <p className="text-customgray2 text-[13px] mb-6 pl-8">
         Total monthly household income
       </p>
       {amount?.max_annual_rent ? (
@@ -182,15 +176,15 @@ const ModalContent3 = ({ onClose, handleContentChange, amount }) => {
       ) : (
         <Skeleton className="h-10 w-[60%] m-auto my-6 rounded-lg" />
       )}
-      <p className="text-customgray2 text-[13px] pr-8">
+      <p className="text-customgray2 text-[13px] pl-8">
         Continued search based on calculated household income. Would you love to
         continue?{" "}
       </p>
-      <div className="flex gap-2 my-9 items-center justify-center">
+      <div className="flex  mt-9 items-center justify-center">
         <Button
-          radius="sm"
+          radius="none"
           color="primary"
-          className="lg:w-[200px]"
+          className="w-full h-14"
           // onPress={() => {
           //   handleContentChange?.('content3');
           // }}
@@ -199,10 +193,10 @@ const ModalContent3 = ({ onClose, handleContentChange, amount }) => {
           Continue Search
         </Button>
         <Button
-          radius="sm"
+          radius="none"
           variant="bordered"
           color="primary"
-          className="lg:w-[200px] "
+          className="w-full h-14"
           onPress={() => {
             handleContentChange?.("content2");
           }}
@@ -331,11 +325,24 @@ const AdvanceSearchModal = ({
         onOpenChange={onOpenChange}
         size="lg"
         backdrop="blur"
+        className="z-10 bg-transparent shadow-none"
+        hideCloseButton
+        radius="none"
       >
-        <ModalContent>
+        <ModalContent className="z-10">
           {(onClose) => (
             <>
-              <ModalBody>
+              <ModalHeader className=" bg-transparent place-content-center relative top-[70px]">
+                <div className="">
+                  <Image
+                    draggable={false}
+                    src={head}
+                    className="w-32 h-32 animate-bounceSlow border-8 border-primary"
+                    radius="full"
+                  />
+                </div>
+              </ModalHeader>
+              <ModalBody className="bg-white p-0">
                 {currentContent === "content2" ? (
                   <ModalContent2
                     onClose={onClose}
